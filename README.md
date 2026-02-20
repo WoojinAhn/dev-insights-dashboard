@@ -1,8 +1,14 @@
 # 🚀 Dev Insights Dashboard
 
-<p align="center">
+<div align="center">
+  <a href="https://woojinahn-dev.vercel.app">
+    <img src="https://img.shields.io/badge/LIVE_DEMO-woojinahn--dev.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+  <br />
   <a href="./README.ko.md">🇰🇷 한국어 버전으로 보기</a>
-</p>
+</div>
+
+<br />
 
 An automated, AI-powered developer portfolio dashboard that visualizes GitHub activity and provides professional insights using Gemini AI.
 
@@ -17,8 +23,8 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 
 - **📊 Real-time Data Sync:** Automatically fetches repository stats (stars, forks, languages) via GitHub GraphQL API.
 - **🤖 AI Portfolio Analysis:** Uses **Gemini 1.5 Flash** to analyze projects and generate professional summaries in English & Korean.
-- **🌐 Multilingual Support:** Seamless switching between English and Korean UI.
-- **🎨 Modern Glassmorphism UI:** A sleek, futuristic dashboard design with interactive hover effects and glowing gradients.
+- **🌐 Multilingual Support:** Seamless switching between English and Korean UI via modern Navigation Toggle.
+- **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects and glowing gradients.
 - **⚙️ Fully Automated Pipeline:** GitHub Actions refreshes data and AI insights daily at 00:00 KST.
 
 ## 🛠 Tech Stack
@@ -39,30 +45,19 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 1. Clone the repository:
    ```bash
    git clone https://github.com/WoojinAhn/dev-insights-dashboard.git
-   cd dev-insights-dashboard/insights-dashboard
+   cd dev-insights-dashboard
    ```
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Setup environment variables for local testing:
-   ```bash
-   export GEMINI_API_KEY=your_api_key_here
-   ```
-4. Run the dashboard:
+3. Run the dashboard:
    ```bash
    npm run dev
    ```
 
-## 🤖 Automation Setup
-
-To enable daily AI analysis:
-1. Add `GEMINI_API_KEY` to your **GitHub Repository Secrets**.
-2. The GitHub Action will run daily at 00:00 KST (`cron: '0 15 * * *'`).
-3. It will refresh `public/data/*.json`, commit changes, and trigger a Vercel redeploy.
-
 ---
 
-<p align="center">
+<div align="center">
   Crafted with ❤️ by Gemini CLI for <a href="https://github.com/WoojinAhn">WoojinAhn</a>
-</p>
+</div>
