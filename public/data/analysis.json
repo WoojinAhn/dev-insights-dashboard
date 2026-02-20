@@ -1,38 +1,38 @@
 {
   "en": {
-    "summary": "A seasoned engineer with a strong foundation in Java microservices and engineering excellence, currently specializing in AI-driven development tools and modern full-stack ecosystems. The portfolio demonstrates a transition from deep backend architecture (MSA, DDD, TDD) to high-productivity AI utilities and rapid prototyping.",
+    "summary": "This developer demonstrates a strong focus on AI-assisted development workflows, practical automation utilities, and modern full-stack web architectures. Their portfolio reflects a proactive approach to adopting emerging technologies such as LLM-based coding tools and cloud-native databases.",
     "strengths": [
-      "Expertise in Enterprise Java Architecture (MSA, DDD, and performance benchmarking).",
-      "Commitment to Engineering Excellence through TDD and automated testing frameworks.",
-      "Adaptability to Emerging AI Tech, creating specialized tools for Claude and Cursor.",
-      "Full-stack proficiency using modern stacks like Next.js, Supabase, and TypeScript."
+      "Active integration and experimentation with AI development ecosystems (Claude, Gemini, Cursor)",
+      "Ability to build practical automation tools like document crawlers and system utilities",
+      "Full-stack development proficiency using TypeScript, Next.js, and Supabase",
+      "Consistent focus on developer experience and interactive educational content"
     ]
   },
   "ko": {
-    "summary": "Java 마이크로서비스와 엔지니어링 원칙에 탄탄한 기초를 두고, 최근 AI 기반 개발 도구와 현대적 풀스택 생태계에 주력하고 있는 숙련된 엔지니어입니다. 백엔드 아키텍처(MSA, DDD, TDD)의 전문성을 바탕으로 AI 생산성 도구 제작 및 신속한 프로토타이핑 역량을 보여줍니다.",
+    "summary": "이 개발자는 AI 지원 개발 워크플로우, 실용적인 자동화 유틸리티, 그리고 현대적인 풀스택 웹 아키텍처 구축에 강점을 가지고 있습니다. 특히 LLM 기반 코딩 도구와 클라우드 네이티브 데이터베이스 등 최신 기술을 빠르게 학습하고 적용하는 능력이 돋보입니다.",
     "strengths": [
-      "엔터프라이즈 Java 아키텍처(MSA, DDD, 성능 벤치마킹) 전문성 보유.",
-      "TDD 및 자동화된 테스트 프레임워크를 통한 소프트웨어 품질 관리 역량.",
-      "Claude 및 Cursor 전용 도구 제작 등 최신 AI 기술에 대한 뛰어난 적응력.",
-      "Next.js, Supabase, TypeScript 등 현대적 스택을 활용한 풀스택 개발 능력."
+      "AI 개발 생태계(Claude, Gemini, Cursor)의 적극적인 도입 및 도구화 역량",
+      "문서 크롤러 및 시스템 유틸리티 등 실무에 유용한 자동화 도구 개발 능력",
+      "TypeScript, Next.js, Supabase를 활용한 현대적인 풀스택 웹 개발 숙련도",
+      "개발자 경험(DX) 향상과 대화형 교육 콘텐츠 제작에 대한 높은 관심"
     ]
   },
   "top_technologies": [
-    "Java",
-    "Python",
     "TypeScript",
-    "Spring Boot",
-    "Next.js"
+    "Python",
+    "Supabase",
+    "Next.js",
+    "Shell"
   ],
   "recommended_featured": [
-    "scavenger",
-    "cursor-docs-crawler",
-    "java-micro-optimizations",
-    "nice-msa",
     "supabase-anonymous-board",
-    "claude-code-tutorial",
-    "fixture-monkey",
+    "cursor-docs-crawler",
+    "dev-insights-dashboard",
     "chrome-cookie-reader",
-    "ddd-start"
+    "miniroom-demo",
+    "claude-code-tutorial",
+    "claude-tutorial-playground",
+    "tddworkshop",
+    "pwa_learning"
   ]
 }

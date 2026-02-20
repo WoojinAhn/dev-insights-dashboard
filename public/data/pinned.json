@@ -6,6 +6,7 @@
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/miniroom-demo",
     "isPrivate": false,
+    "isFork": false,
     "primaryLanguage": {
       "name": "TypeScript"
     },
@@ -18,6 +19,7 @@
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/claude-code-tutorial",
     "isPrivate": false,
+    "isFork": false,
     "primaryLanguage": {
       "name": "Shell"
     },
@@ -30,30 +32,11 @@
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/claude-config",
     "isPrivate": false,
+    "isFork": false,
     "primaryLanguage": {
       "name": "Shell"
     },
     "updatedAt": "2026-02-20T15:07:14Z"
-  },
-  {
-    "name": "developer-roadmap",
-    "description": "Roadmap to becoming a web developer in 2019",
-    "stargazerCount": 0,
-    "forkCount": 0,
-    "url": "https://github.com/WoojinAhn/developer-roadmap",
-    "isPrivate": false,
-    "primaryLanguage": null,
-    "updatedAt": "2019-01-30T07:38:04Z"
-  },
-  {
-    "name": "AGENTS.md",
-    "description": null,
-    "stargazerCount": 0,
-    "forkCount": 0,
-    "url": "https://github.com/WoojinAhn/AGENTS.md",
-    "isPrivate": false,
-    "primaryLanguage": null,
-    "updatedAt": "2025-08-24T16:04:35Z"
   },
   {
     "name": "github-star-checker",
@@ -62,7 +45,8 @@
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
+    "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-02-20T15:11:01Z"
+    "updatedAt": "2026-02-20T16:15:38Z"
   }
 ]
