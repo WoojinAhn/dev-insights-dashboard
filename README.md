@@ -1,12 +1,14 @@
 # 🚀 Dev Insights Dashboard
 
-<div align="center">
+<p align="center">
   <a href="https://woojinahn-dev.vercel.app">
     <img src="https://img.shields.io/badge/LIVE_DEMO-woojinahn--dev.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
-  <br />
-  <a href="./README.ko.md">🇰🇷 한국어 버전으로 보기</a>
-</div>
+</p>
+
+<p align="center">
+  <b>English</b> | <a href="./README.ko.md"><b>한국어</b></a>
+</p>
 
 <br />
 
@@ -21,10 +23,10 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 
 ## ✨ Key Features
 
-- **📊 Real-time Data Sync:** Automatically fetches repository stats (stars, forks, languages) via GitHub GraphQL API.
-- **🤖 AI Portfolio Analysis:** Uses **Gemini 1.5 Flash** to analyze projects and generate professional summaries in English & Korean.
-- **🌐 Multilingual Support:** Seamless switching between English and Korean UI via modern Navigation Toggle.
-- **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects and glowing gradients.
+- **📊 Real-time Data Sync:** Automatically fetches repository stats via GitHub GraphQL API.
+- **🤖 AI Portfolio Analysis:** Uses **Gemini 1.5 Flash** to analyze projects and generate professional summaries.
+- **🌐 Multilingual Support:** Seamless switching between English and Korean UI.
+- **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects.
 - **⚙️ Fully Automated Pipeline:** GitHub Actions refreshes data and AI insights daily at 00:00 KST.
 
 ## 🛠 Tech Stack
@@ -36,28 +38,15 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 20+
-- GitHub CLI (`gh`)
-- Google Gemini API Key
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/WoojinAhn/dev-insights-dashboard.git
-   cd dev-insights-dashboard
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the dashboard:
-   ```bash
-   npm run dev
-   ```
+```bash
+git clone https://github.com/WoojinAhn/dev-insights-dashboard.git
+cd dev-insights-dashboard
+npm install
+npm run dev
+```
 
 ---
 
-<div align="center">
+<p align="center">
   Crafted with ❤️ by Gemini CLI for <a href="https://github.com/WoojinAhn">WoojinAhn</a>
-</div>
+</p>
