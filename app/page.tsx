@@ -19,7 +19,8 @@ import {
   Zap,
   Globe,
   Heart,
-  Brain
+  Brain,
+  Target
 } from 'lucide-react';
 
 const STRENGTH_ICONS: any = {
@@ -27,6 +28,13 @@ const STRENGTH_ICONS: any = {
   1: Zap,
   2: Globe,
   3: Heart
+};
+
+const CAP_ICONS: any = {
+  Integration: Code2,
+  Automation: Zap,
+  Context: Target,
+  Agentic: Bot
 };
 import { translations, Lang } from '@/lib/translations';
 
@@ -274,32 +282,41 @@ export default function Dashboard() {
                 })}
               </div>
 
-              {/* AI Core Capabilities Dynamic Section */}
+              {/* AI Core Capabilities Dynamic Section (Hashtag Style) */}
               {analysis.ai_capabilities && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/5 pt-10">
-                  <div className="flex items-center gap-3 mb-2 md:col-span-2">
+                <div className="border-t border-white/5 pt-10 mt-10">
+                  <div className="flex items-center gap-3 mb-6">
                     <Brain className="w-5 h-5 text-violet-400" />
                     <h3 className="text-sm font-black uppercase tracking-[0.2em] text-violet-400">{t.aiCapabilities}</h3>
                   </div>
-                  {analysis.ai_capabilities.map((cap: any, i: number) => (
-                    <div key={i} className="group/cap">
-                      <div className="flex justify-between items-end mb-3">
-                        <div>
-                          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">{(t.aiCaps as any)[cap.key]}</p>
-                          <p className="text-sm text-slate-300 font-medium leading-relaxed max-w-xs">
-                            {lang === 'ko' ? cap.desc_ko : cap.desc_en}
-                          </p>
+                  
+                  <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-4xl font-light italic">
+                    &quot;{lang === 'ko' ? analysis.ko.ai_summary : analysis.en.ai_summary}&quot;
+                  </p>
+
+                  <div className="flex flex-wrap gap-4">
+                    {analysis.ai_capabilities.map((cap: any, i: number) => {
+                      const Icon = CAP_ICONS[cap.key] || Target;
+                      const title = (t.aiCaps as any)[cap.key];
+
+                      return (
+                        <div key={i} className="relative group/cap">
+                          <div className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-violet-500/5 border border-violet-500/10 text-violet-400 text-sm font-black uppercase tracking-widest hover:bg-violet-500/10 hover:border-violet-500/30 transition-all cursor-help shadow-lg">
+                            <Icon className="w-4 h-4" />
+                            #{title?.replace(/\s+/g, '_')}_{cap.score}%
+                          </div>
+                          
+                          {/* Hover Description Tooltip */}
+                          <div className="absolute bottom-full left-0 mb-4 w-72 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl opacity-0 invisible group-hover/cap:opacity-100 group-hover/cap:visible transition-all duration-300 z-30 translate-y-2 group-hover/cap:translate-y-0">
+                            <div className="absolute bottom-[-6px] left-6 w-3 h-3 bg-slate-900 border-r border-b border-white/10 rotate-45" />
+                            <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                              {lang === 'ko' ? cap.desc_ko : cap.desc_en}
+                            </p>
+                          </div>
                         </div>
-                        <span className="text-2xl font-black font-mono text-white tracking-tighter">{cap.score}%</span>
-                      </div>
-                      <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-gradient-to-r from-violet-600 to-cyan-500 transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(139,92,246,0.5)]"
-                          style={{ width: `${cap.score}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                      );
+                    })}
+                  </div>
                 </div>
               )}
             </div>

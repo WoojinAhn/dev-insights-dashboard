@@ -13,7 +13,7 @@ export const translations = {
     repos: "repos",
     craftedBy: "Crafted by Gemini CLI for WoojinAhn",
     langButton: "한국어",
-    badgePride: "PRIDE",
+    badgePride: "PINNED",
     badgeAiPick: "AI PICK",
     strengthTags: {
       ai: "AI Ecosystem",
@@ -43,7 +43,7 @@ export const translations = {
     repos: "개",
     craftedBy: "Gemini CLI가 제작한 WoojinAhn님의 대시보드",
     langButton: "English",
-    badgePride: "PRIDE",
+    badgePride: "PINNED",
     badgeAiPick: "AI PICK",
     strengthTags: {
       ai: "AI 생태계",

@@ -1,64 +1,69 @@
 {
   "en": {
-    "summary": "An AI-centric developer specialized in optimizing engineering workflows through the integration of modern LLMs like Claude and Gemini. Demonstrates a strong focus on building tools that bridge the gap between AI agents and practical development environments, particularly through CLI automation and specialized context gathering.",
+    "summary": "A versatile developer specializing in modern AI-driven developer experience (DevEx) and workflow automation. Demonstrates a strong focus on integrating Large Language Models (LLMs) like Gemini and Claude into practical applications, ranging from automated dashboards to documentation crawlers and CLI tools.",
     "strengths": [
-      "Expertise in AI-native developer tools (Claude Code, Cursor)",
-      "Automation of AI context preparation and documentation crawling",
-      "Multi-model API integration (Gemini, Anthropic)",
-      "Bridging traditional software engineering (TDD) with AI-driven development"
-    ]
+      "AI-Augmented Development: Deep expertise in leveraging and configuring agentic tools like Claude Code for enhanced productivity.",
+      "LLM Context Engineering: Proficient in preparing and structuring data for AI consumption through custom crawlers and PDF generators.",
+      "Full-stack AI Integration: Capable of building end-to-end applications that visualize AI-driven insights using TypeScript and Next.js.",
+      "Workflow Automation: Skilled in optimizing developer environments using GitHub Actions, Python, and Shell scripting for automated synchronization and monitoring."
+    ],
+    "ai_summary": "Expert in orchestrating agentic workflows and integrating LLMs into developer tools to enhance productivity and data visualization."
   },
   "ko": {
-    "summary": "Claude 및 Gemini와 같은 최신 LLM을 통합하여 엔지니어링 워크플로우를 최적화하는 데 특화된 AI 중심 개발자입니다. 특히 CLI 자동화 및 특화된 컨텍스트 수집 도구를 통해 AI 에이전트와 실제 개발 환경 사이의 간극을 메우는 툴링 구축에 강점을 보유하고 있습니다.",
+    "summary": "현대적인 AI 기반 개발자 경험(DevEx) 및 워크플로우 자동화에 특화된 다재다능한 개발자입니다. Gemini 및 Claude와 같은 대규모 언어 모델(LLM)을 자동화 대시보드, 문서 크롤러, CLI 도구 등 실무 애플리케이션에 통합하는 데 강점을 보유하고 있습니다.",
     "strengths": [
-      "AI 네이티브 개발 도구(Claude Code, Cursor)에 대한 높은 숙련도",
-      "AI 컨텍스트 준비 및 문서 크롤링 자동화 역량",
-      "다양한 모델 API(Gemini, Anthropic) 통합 및 실험",
-      "전통적 소프트웨어 공학(TDD)과 AI 주도 개발의 유기적 결합"
-    ]
+      "AI 증강 개발: Claude Code와 같은 에이전트 기반 도구를 활용하고 설정하여 개발 생산성을 극대화하는 깊은 이해도를 보유하고 있습니다.",
+      "LLM 컨텍스트 엔지니어링: 맞춤형 크롤러 및 PDF 생성기를 통해 AI가 소비하기 적합한 형태로 데이터를 구조화하고 준비하는 능력이 뛰어납니다.",
+      "풀스택 AI 통합: TypeScript와 Next.js를 사용하여 AI 기반 인사이트를 시각화하는 엔드투엔드 애플리케이션 구축이 가능합니다.",
+      "워크플로우 자동화: GitHub Actions, Python, Shell 스크립팅을 통해 개발 환경의 동기화 및 모니터링을 자동화하고 최적화하는 데 능숙합니다."
+    ],
+    "ai_summary": "에이전트 워크플로우를 조율하고 LLM을 개발자 도구에 통합하여 생산성과 데이터 시각화를 향상시키는 전문가입니다."
   },
   "top_technologies": [
-    "Python",
     "TypeScript",
+    "Python",
+    "Next.js",
+    "Gemini AI",
     "Claude Code",
-    "Gemini API",
-    "Supabase"
+    "Supabase",
+    "GitHub Actions",
+    "Shell"
   ],
   "recommended_featured": [
+    "dev-insights-dashboard",
     "claude-code-tutorial",
     "cursor-docs-crawler",
-    "dev-insights-dashboard",
     "claude-tutorial-playground",
-    "claude-config",
-    "supabase-anonymous-board",
-    "miniroom-demo",
+    "github-star-checker",
     "chrome-cookie-reader",
-    "tddworkshop"
+    "claude-config",
+    "miniroom-demo",
+    "supabase-anonymous-board"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
       "score": 88,
-      "desc_en": "Deeply integrates Gemini and Claude APIs into CLI tools and dashboards for real-time insights.",
-      "desc_ko": "실시간 인사이트를 위해 Gemini 및 Claude API를 CLI 도구와 대시보드에 깊이 있게 통합하였습니다."
+      "desc_en": "Successfully integrated Gemini AI into a live dashboard to provide real-time insights based on complex GitHub activity data.",
+      "desc_ko": "복잡한 GitHub 활동 데이터를 기반으로 실시간 인사이트를 제공하기 위해 Gemini AI를 실제 대시보드에 성공적으로 통합했습니다."
     },
     {
       "key": "Automation",
       "score": 92,
-      "desc_en": "Excellent at automating friction points, such as crawling documentation specifically for AI consumption and shell-based AI configs.",
-      "desc_ko": "AI 활용을 위한 문서 크롤링 및 쉘 기반 AI 설정 등 개발 마찰 지점을 자동화하는 능력이 탁월합니다."
+      "desc_en": "High proficiency in automating AI configurations and development cycles using Shell scripts and GitHub Actions for tools like Claude Code.",
+      "desc_ko": "Claude Code와 같은 도구를 위해 Shell 스크립트와 GitHub Actions를 사용하여 AI 설정 및 개발 사이클을 자동화하는 능력이 매우 뛰어납니다."
     },
     {
       "key": "Context",
       "score": 85,
-      "desc_en": "Shows advanced understanding of RAG-like needs by building custom crawlers to feed external docs into AI IDEs.",
-      "desc_ko": "외부 문서를 AI IDE에 주입하기 위한 전용 크롤러를 구축함으로써 context engineering 및 RAG 개념을 잘 이해하고 있습니다."
+      "desc_en": "Developed tools like 'cursor-docs-crawler' to bridge the gap between static documentation and LLM context requirements, showing strong RAG-adjacent logic.",
+      "desc_ko": "'cursor-docs-crawler'와 같은 도구를 개발하여 정적 문서와 LLM 컨텍스트 요구 사항 간의 간극을 메웠으며, RAG와 유사한 강력한 로직을 보여줍니다."
     },
     {
       "key": "Agentic",
-      "score": 82,
-      "desc_en": "Proficient in agentic workflows, evidenced by creating tutorials and playgrounds for Claude Code's autonomous capabilities.",
-      "desc_ko": "Claude Code의 자율적 기능을 위한 튜토리얼과 플레이그라운드를 제작하며 에이전트 기반 워크플로우를 능숙하게 다룹니다."
+      "score": 80,
+      "desc_en": "Early adopter and educator of agentic IDE interfaces (Claude Code), creating tutorials and playgrounds to master autonomous coding workflows.",
+      "desc_ko": "에이전트 기반 IDE 인터페이스(Claude Code)의 초기 수용자이자 교육자로서, 자율 코딩 워크플로우를 익히기 위한 튜토리얼과 플레이그라운드를 구축했습니다."
     }
   ]
 }

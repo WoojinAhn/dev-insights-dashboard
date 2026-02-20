@@ -36,26 +36,22 @@ def analyze_portfolio():
         Tasks:
         1. Professional summary (EN/KO).
         2. 4 Key strengths (EN/KO).
-        3. Top 5 technologies.
-        4. Select top 9 impressive projects (Repo names).
-        5. **NEW: AI Core Capabilities Evaluation**. Evaluate these 4 dimensions from 0-100 based on the projects:
-           - "AI Integration": Using LLM APIs and integrating AI into apps.
-           - "Workflow Automation": Solving friction with AI-driven scripts/tools.
-           - "Context Engineering": Sophisticated prompt/context design.
-           - "Agentic Thinking": Building self-correcting or multi-step AI tools.
-           Provide a short dynamic reason (EN/KO) for each score.
+        3. Top  tecnológica used.
+        4. Select top 9 impressive projects.
+        5. AI Core Capabilities Evaluation (4 dimensions):
+           - "Integration", "Automation", "Context", "Agentic".
+           - Score (0-100), Detailed reason (EN/KO).
+           - **NEW: AI Capabilities Overall Summary (EN/KO)**. A 1-sentence summary specifically for the AI section.
 
         Return ONLY a JSON object with this exact structure:
         {{
-          "en": {{ "summary": "...", "strengths": [...] }},
-          "ko": {{ "summary": "...", "strengths": [...] }},
+          "en": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
+          "ko": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
           "top_technologies": [...],
           "recommended_featured": [...],
           "ai_capabilities": [
             {{ "key": "Integration", "score": 85, "desc_en": "...", "desc_ko": "..." }},
-            {{ "key": "Automation", "score": 90, "desc_en": "...", "desc_ko": "..." }},
-            {{ "key": "Context", "score": 80, "desc_en": "...", "desc_ko": "..." }},
-            {{ "key": "Agentic", "score": 75, "desc_en": "...", "desc_ko": "..." }}
+            ...
           ]
         }}
         """
@@ -69,7 +65,7 @@ def analyze_portfolio():
         with open(analysis_path, "w", encoding="utf-8") as f:
             json.dump(analysis_data, f, ensure_ascii=False, indent=2)
         
-        print("✅ Dynamic AI Capabilities Analysis updated!")
+        print("✅ Dynamic AI Capabilities with Summaries updated!")
 
     except Exception as e:
         print(f"❌ Error: {str(e)}")

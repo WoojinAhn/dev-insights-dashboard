@@ -1,7 +1,7 @@
 [
   {
     "name": "miniroom-demo",
-    "description": null,
+    "description": "Drag & drop retro miniroom decorator built with Next.js and TypeScript",
     "stargazerCount": 1,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/miniroom-demo",
@@ -10,7 +10,7 @@
     "primaryLanguage": {
       "name": "TypeScript"
     },
-    "updatedAt": "2026-02-18T11:50:19Z"
+    "updatedAt": "2026-02-20T16:53:51Z"
   },
   {
     "name": "claude-code-tutorial",
@@ -27,7 +27,7 @@
   },
   {
     "name": "claude-config",
-    "description": null,
+    "description": "Sync and manage Claude Code global/home-level settings across machines",
     "stargazerCount": 0,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/claude-config",
@@ -36,17 +36,17 @@
     "primaryLanguage": {
       "name": "Shell"
     },
-    "updatedAt": "2026-02-20T15:07:14Z"
+    "updatedAt": "2026-02-20T16:53:51Z"
   },
   {
     "name": "github-star-checker",
-    "description": null,
+    "description": "GitHub Actions workflow that monitors star changes across your repos and sends notifications",
     "stargazerCount": 1,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-02-20T16:15:38Z"
+    "updatedAt": "2026-02-20T16:53:52Z"
   }
 ]
