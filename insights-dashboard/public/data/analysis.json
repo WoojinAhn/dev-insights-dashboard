@@ -1,0 +1,11 @@
+{
+  "en": {
+    "summary": "Woojin demonstrates a strong versatility across the full stack. The portfolio shows a solid foundation in enterprise-grade backend development (Java/Spring) while actively exploring modern frontend frameworks (Next.js/TypeScript) and AI/LLM integration (Python). Notable projects like 'github-star-checker' and 'chrome-cookie-reader' highlight a pragmatic approach to solving real-world developer friction points through automation.",
+    "strengths": ["Backend Architecture", "Automation Tooling", "Full Stack Development", "AI Integration"]
+  },
+  "ko": {
+    "summary": "우진님은 풀스택 전반에 걸쳐 강력한 범용성을 보여줍니다. 포트폴리오는 엔터프라이즈급 백엔드 개발(Java/Spring)에 대한 탄탄한 기반을 보여주는 동시에, 최신 프론트엔드 프레임워크(Next.js/TypeScript)와 AI/LLM 통합(Python)을 적극적으로 탐구하고 있습니다. 'github-star-checker' 및 'chrome-cookie-reader'와 같은 프로젝트들은 자동화를 통해 실제 개발 환경의 불편함을 해결하는 실용적인 접근 방식을 잘 보여줍니다.",
+    "strengths": ["백엔드 아키텍처", "자동화 도구 구축", "풀스택 개발", "AI 기술 통합"]
+  },
+  "top_technologies": ["Java", "TypeScript", "Python", "Spring Boot", "Next.js"]
+}

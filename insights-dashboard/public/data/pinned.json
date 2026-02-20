@@ -1,0 +1,68 @@
+[
+  {
+    "name": "miniroom-demo",
+    "description": null,
+    "stargazerCount": 1,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/miniroom-demo",
+    "isPrivate": false,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "updatedAt": "2026-02-18T11:50:19Z"
+  },
+  {
+    "name": "claude-code-tutorial",
+    "description": "Interactive slash command tutorial for Claude Code - learn by doing",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/claude-code-tutorial",
+    "isPrivate": false,
+    "primaryLanguage": {
+      "name": "Shell"
+    },
+    "updatedAt": "2026-02-08T13:17:54Z"
+  },
+  {
+    "name": "claude-config",
+    "description": null,
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/claude-config",
+    "isPrivate": false,
+    "primaryLanguage": {
+      "name": "Shell"
+    },
+    "updatedAt": "2026-02-20T15:07:14Z"
+  },
+  {
+    "name": "developer-roadmap",
+    "description": "Roadmap to becoming a web developer in 2019",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/developer-roadmap",
+    "isPrivate": false,
+    "primaryLanguage": null,
+    "updatedAt": "2019-01-30T07:38:04Z"
+  },
+  {
+    "name": "AGENTS.md",
+    "description": null,
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/AGENTS.md",
+    "isPrivate": false,
+    "primaryLanguage": null,
+    "updatedAt": "2025-08-24T16:04:35Z"
+  },
+  {
+    "name": "github-star-checker",
+    "description": null,
+    "stargazerCount": 1,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/github-star-checker",
+    "isPrivate": false,
+    "primaryLanguage": null,
+    "updatedAt": "2026-02-20T15:11:01Z"
+  }
+]
