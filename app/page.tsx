@@ -78,14 +78,17 @@ export default function Dashboard() {
         .slice(0, 5);
 
       const pinnedNames = new Set(publicPinned.map((p: any) => p.name));
-      const secondaryRepos = publicRepos
-        .filter((r: any) => !pinnedNames.has(r.name))
-        .sort((a: any, b: any) => {
-          if (b.stargazerCount !== a.stargazerCount) return (b.stargazerCount || 0) - (a.stargazerCount || 0);
-          return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
-        });
+      // Featured Logic: 1. Pinned first, 2. AI Recommended, 3. Top Public
+      const recommendedNames = analysis.recommended_featured || [];
+      const recommendedRepos = publicRepos
+        .filter((r: any) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
+        .sort((a: any, b: any) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
 
-      const featured = [...publicPinned, ...secondaryRepos].slice(0, 9);
+      const otherRepos = publicRepos
+        .filter((r: any) => !pinnedNames.has(r.name) && !recommendedNames.includes(r.name))
+        .sort((a: any, b: any) => (b.stargazerCount || 0) - (a.stargazerCount || 0));
+
+      const featured = [...publicPinned, ...recommendedRepos, ...otherRepos].slice(0, 9);
 
       setData({
         user,

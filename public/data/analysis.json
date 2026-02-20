@@ -1,11 +1,38 @@
 {
   "en": {
-    "summary": "Woojin demonstrates a strong versatility across the full stack. The portfolio shows a solid foundation in enterprise-grade backend development (Java/Spring) while actively exploring modern frontend frameworks (Next.js/TypeScript) and AI/LLM integration (Python). Notable projects like 'github-star-checker' and 'chrome-cookie-reader' highlight a pragmatic approach to solving real-world developer friction points through automation.",
-    "strengths": ["Backend Architecture", "Automation Tooling", "Full Stack Development", "AI Integration"]
+    "summary": "A seasoned engineer with a strong foundation in Java microservices and engineering excellence, currently specializing in AI-driven development tools and modern full-stack ecosystems. The portfolio demonstrates a transition from deep backend architecture (MSA, DDD, TDD) to high-productivity AI utilities and rapid prototyping.",
+    "strengths": [
+      "Expertise in Enterprise Java Architecture (MSA, DDD, and performance benchmarking).",
+      "Commitment to Engineering Excellence through TDD and automated testing frameworks.",
+      "Adaptability to Emerging AI Tech, creating specialized tools for Claude and Cursor.",
+      "Full-stack proficiency using modern stacks like Next.js, Supabase, and TypeScript."
+    ]
   },
   "ko": {
-    "summary": "우진님은 풀스택 전반에 걸쳐 강력한 범용성을 보여줍니다. 포트폴리오는 엔터프라이즈급 백엔드 개발(Java/Spring)에 대한 탄탄한 기반을 보여주는 동시에, 최신 프론트엔드 프레임워크(Next.js/TypeScript)와 AI/LLM 통합(Python)을 적극적으로 탐구하고 있습니다. 'github-star-checker' 및 'chrome-cookie-reader'와 같은 프로젝트들은 자동화를 통해 실제 개발 환경의 불편함을 해결하는 실용적인 접근 방식을 잘 보여줍니다.",
-    "strengths": ["백엔드 아키텍처", "자동화 도구 구축", "풀스택 개발", "AI 기술 통합"]
+    "summary": "Java 마이크로서비스와 엔지니어링 원칙에 탄탄한 기초를 두고, 최근 AI 기반 개발 도구와 현대적 풀스택 생태계에 주력하고 있는 숙련된 엔지니어입니다. 백엔드 아키텍처(MSA, DDD, TDD)의 전문성을 바탕으로 AI 생산성 도구 제작 및 신속한 프로토타이핑 역량을 보여줍니다.",
+    "strengths": [
+      "엔터프라이즈 Java 아키텍처(MSA, DDD, 성능 벤치마킹) 전문성 보유.",
+      "TDD 및 자동화된 테스트 프레임워크를 통한 소프트웨어 품질 관리 역량.",
+      "Claude 및 Cursor 전용 도구 제작 등 최신 AI 기술에 대한 뛰어난 적응력.",
+      "Next.js, Supabase, TypeScript 등 현대적 스택을 활용한 풀스택 개발 능력."
+    ]
   },
-  "top_technologies": ["Java", "TypeScript", "Python", "Spring Boot", "Next.js"]
+  "top_technologies": [
+    "Java",
+    "Python",
+    "TypeScript",
+    "Spring Boot",
+    "Next.js"
+  ],
+  "recommended_featured": [
+    "scavenger",
+    "cursor-docs-crawler",
+    "java-micro-optimizations",
+    "nice-msa",
+    "supabase-anonymous-board",
+    "claude-code-tutorial",
+    "fixture-monkey",
+    "chrome-cookie-reader",
+    "ddd-start"
+  ]
 }
