@@ -19,41 +19,44 @@ def analyze_portfolio():
         with open(repos_path, "r") as f:
             repos = json.load(f)
         
-        # Prepare data for AI (compact format)
+        # Prepare data for AI
         repo_summary = []
         for r in repos:
             if not r.get("isPrivate"):
                 repo_summary.append({
                     "name": r["name"],
                     "description": r.get("description", ""),
-                    "stars": r.get("stargazerCount", 0),
-                    "forks": r.get("forkCount", 0),
-                    "lang": r.get("primaryLanguage", {}).get("name", "N/A") if r.get("primaryLanguage") else "N/A",
-                    "updated": r.get("updatedAt", "")
+                    "lang": r.get("primaryLanguage", {}).get("name", "N/A") if r.get("primaryLanguage") else "N/A"
                 })
 
         prompt = f"""
-        Analyze the following GitHub repositories and provide professional insights.
+        Analyze the following GitHub repositories and provide a deep technical analysis of the developer's AI capabilities.
         Data: {json.dumps(repo_summary)}
 
         Tasks:
-        1. Provide a professional 1-2 sentence summary in English and Korean.
-        2. Identify 4 key professional strengths in English and Korean.
-        3. Determine the top 5 technologies used across all projects.
-        4. Evaluate each repository and select the top 9 most "impressive" or "proud" projects (excluding purely forked or low-effort ones). Rank them by their technical value and impact.
+        1. Professional summary (EN/KO).
+        2. 4 Key strengths (EN/KO).
+        3. Top 5 technologies.
+        4. Select top 9 impressive projects (Repo names).
+        5. **NEW: AI Core Capabilities Evaluation**. Evaluate these 4 dimensions from 0-100 based on the projects:
+           - "AI Integration": Using LLM APIs and integrating AI into apps.
+           - "Workflow Automation": Solving friction with AI-driven scripts/tools.
+           - "Context Engineering": Sophisticated prompt/context design.
+           - "Agentic Thinking": Building self-correcting or multi-step AI tools.
+           Provide a short dynamic reason (EN/KO) for each score.
 
         Return ONLY a JSON object with this exact structure:
         {{
-          "en": {{
-            "summary": "English summary",
-            "strengths": ["Strength 1", "Strength 2", "Strength 3", "Strength 4"]
-          }},
-          "ko": {{
-            "summary": "Korean summary",
-            "strengths": ["강점 1", "강점 2", "강점 3", "강점 4"]
-          }},
-          "top_technologies": ["Tech 1", "Tech 2", "Tech 3", "Tech 4", "Tech 5"],
-          "recommended_featured": ["RepoName1", "RepoName2", "RepoName3", ..., "RepoName9"]
+          "en": {{ "summary": "...", "strengths": [...] }},
+          "ko": {{ "summary": "...", "strengths": [...] }},
+          "top_technologies": [...],
+          "recommended_featured": [...],
+          "ai_capabilities": [
+            {{ "key": "Integration", "score": 85, "desc_en": "...", "desc_ko": "..." }},
+            {{ "key": "Automation", "score": 90, "desc_en": "...", "desc_ko": "..." }},
+            {{ "key": "Context", "score": 80, "desc_en": "...", "desc_ko": "..." }},
+            {{ "key": "Agentic", "score": 75, "desc_en": "...", "desc_ko": "..." }}
+          ]
         }}
         """
 
@@ -66,10 +69,10 @@ def analyze_portfolio():
         with open(analysis_path, "w", encoding="utf-8") as f:
             json.dump(analysis_data, f, ensure_ascii=False, indent=2)
         
-        print("✅ AI Portfolio Analysis and Recommendations updated!")
+        print("✅ Dynamic AI Capabilities Analysis updated!")
 
     except Exception as e:
-        print(f"❌ Error during AI analysis: {str(e)}")
+        print(f"❌ Error: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":

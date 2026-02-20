@@ -14,8 +14,20 @@ import {
   Workflow,
   Languages,
   Pin,
-  ChevronRight
+  ChevronRight,
+  Bot,
+  Zap,
+  Globe,
+  Heart,
+  Brain
 } from 'lucide-react';
+
+const STRENGTH_ICONS: any = {
+  0: Bot,
+  1: Zap,
+  2: Globe,
+  3: Heart
+};
 import { translations, Lang } from '@/lib/translations';
 
 const LANGUAGE_COLORS: Record<string, string> = {
@@ -236,14 +248,60 @@ export default function Dashboard() {
                 &quot;{currentAnalysis.summary}&quot;
               </p>
               
-              <div className="flex flex-wrap gap-3">
-                {currentAnalysis.strengths.map((strength: string, i: number) => (
-                  <div key={i} className="flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-bold uppercase tracking-wider hover:bg-white/10 transition-colors cursor-default">
-                    <ChevronRight className="w-3 h-3 text-cyan-500" />
-                    {strength}
-                  </div>
-                ))}
+              <div className="flex flex-wrap gap-4 mb-12">
+                {currentAnalysis.strengths.map((strength: string, i: number) => {
+                  const Icon = STRENGTH_ICONS[i] || ChevronRight;
+                  const tag = lang === 'ko' ? 
+                    [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i] : 
+                    [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i];
+
+                  return (
+                    <div key={i} className="relative group/tag">
+                      <div className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 text-cyan-400 text-sm font-black uppercase tracking-widest hover:bg-cyan-500/10 hover:border-cyan-500/30 transition-all cursor-help shadow-lg">
+                        <Icon className="w-4 h-4" />
+                        #{tag?.replace(/\s+/g, '_')}
+                      </div>
+                      
+                      {/* Hover Description Tooltip */}
+                      <div className="absolute bottom-full left-0 mb-4 w-72 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl opacity-0 invisible group-hover/tag:opacity-100 group-hover/tag:visible transition-all duration-300 z-30 translate-y-2 group-hover/tag:translate-y-0">
+                        <div className="absolute bottom-[-6px] left-6 w-3 h-3 bg-slate-900 border-r border-b border-white/10 rotate-45" />
+                        <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                          {strength}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
+
+              {/* AI Core Capabilities Dynamic Section */}
+              {analysis.ai_capabilities && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/5 pt-10">
+                  <div className="flex items-center gap-3 mb-2 md:col-span-2">
+                    <Brain className="w-5 h-5 text-violet-400" />
+                    <h3 className="text-sm font-black uppercase tracking-[0.2em] text-violet-400">{t.aiCapabilities}</h3>
+                  </div>
+                  {analysis.ai_capabilities.map((cap: any, i: number) => (
+                    <div key={i} className="group/cap">
+                      <div className="flex justify-between items-end mb-3">
+                        <div>
+                          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">{(t.aiCaps as any)[cap.key]}</p>
+                          <p className="text-sm text-slate-300 font-medium leading-relaxed max-w-xs">
+                            {lang === 'ko' ? cap.desc_ko : cap.desc_en}
+                          </p>
+                        </div>
+                        <span className="text-2xl font-black font-mono text-white tracking-tighter">{cap.score}%</span>
+                      </div>
+                      <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-gradient-to-r from-violet-600 to-cyan-500 transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(139,92,246,0.5)]"
+                          style={{ width: `${cap.score}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -310,13 +368,24 @@ export default function Dashboard() {
                 className="group bg-slate-900/40 border border-white/5 p-10 rounded-[2.5rem] hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-500 flex flex-col shadow-xl hover:shadow-cyan-500/5"
               >
                 <div className="flex items-center justify-between mb-6">
-                   <div className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest ${pinnedNames.has(repo.name) ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' : 'bg-white/5 text-slate-500 border border-white/5'}`}>
-                      {pinnedNames.has(repo.name) ? 'Featured' : 'Public'}
+                   <div className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${pinnedNames.has(repo.name) 
+                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
+                      : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'}`}>
+                      {pinnedNames.has(repo.name) ? (
+                        <>
+                          <Pin className="w-3 h-3" />
+                          {t.badgePride}
+                        </>
+                      ) : (
+                        <>
+                          <Cpu className="w-3 h-3" />
+                          {t.badgeAiPick}
+                        </>
+                      )}
                    </div>
-                   {pinnedNames.has(repo.name) && <Pin className="w-4 h-4 text-cyan-500/40 group-hover:text-cyan-500 transition-colors" />}
                 </div>
                 
-                <h3 className="font-black text-2xl group-hover:text-cyan-400 transition-colors truncate mb-4 uppercase tracking-tighter">
+                <h3 className="font-black text-xl md:text-2xl group-hover:text-cyan-400 transition-all mb-4 uppercase tracking-tighter break-all leading-tight min-h-[3.5rem] flex items-center">
                   {repo.name}
                 </h3>
                 <p className="text-slate-400 text-sm line-clamp-2 mb-10 flex-1 font-light leading-relaxed group-hover:text-slate-300 transition-colors">

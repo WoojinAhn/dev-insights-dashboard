@@ -1,38 +1,64 @@
 {
   "en": {
-    "summary": "This developer demonstrates a strong focus on AI-assisted development workflows, practical automation utilities, and modern full-stack web architectures. Their portfolio reflects a proactive approach to adopting emerging technologies such as LLM-based coding tools and cloud-native databases.",
+    "summary": "An AI-centric developer specialized in optimizing engineering workflows through the integration of modern LLMs like Claude and Gemini. Demonstrates a strong focus on building tools that bridge the gap between AI agents and practical development environments, particularly through CLI automation and specialized context gathering.",
     "strengths": [
-      "Active integration and experimentation with AI development ecosystems (Claude, Gemini, Cursor)",
-      "Ability to build practical automation tools like document crawlers and system utilities",
-      "Full-stack development proficiency using TypeScript, Next.js, and Supabase",
-      "Consistent focus on developer experience and interactive educational content"
+      "Expertise in AI-native developer tools (Claude Code, Cursor)",
+      "Automation of AI context preparation and documentation crawling",
+      "Multi-model API integration (Gemini, Anthropic)",
+      "Bridging traditional software engineering (TDD) with AI-driven development"
     ]
   },
   "ko": {
-    "summary": "이 개발자는 AI 지원 개발 워크플로우, 실용적인 자동화 유틸리티, 그리고 현대적인 풀스택 웹 아키텍처 구축에 강점을 가지고 있습니다. 특히 LLM 기반 코딩 도구와 클라우드 네이티브 데이터베이스 등 최신 기술을 빠르게 학습하고 적용하는 능력이 돋보입니다.",
+    "summary": "Claude 및 Gemini와 같은 최신 LLM을 통합하여 엔지니어링 워크플로우를 최적화하는 데 특화된 AI 중심 개발자입니다. 특히 CLI 자동화 및 특화된 컨텍스트 수집 도구를 통해 AI 에이전트와 실제 개발 환경 사이의 간극을 메우는 툴링 구축에 강점을 보유하고 있습니다.",
     "strengths": [
-      "AI 개발 생태계(Claude, Gemini, Cursor)의 적극적인 도입 및 도구화 역량",
-      "문서 크롤러 및 시스템 유틸리티 등 실무에 유용한 자동화 도구 개발 능력",
-      "TypeScript, Next.js, Supabase를 활용한 현대적인 풀스택 웹 개발 숙련도",
-      "개발자 경험(DX) 향상과 대화형 교육 콘텐츠 제작에 대한 높은 관심"
+      "AI 네이티브 개발 도구(Claude Code, Cursor)에 대한 높은 숙련도",
+      "AI 컨텍스트 준비 및 문서 크롤링 자동화 역량",
+      "다양한 모델 API(Gemini, Anthropic) 통합 및 실험",
+      "전통적 소프트웨어 공학(TDD)과 AI 주도 개발의 유기적 결합"
     ]
   },
   "top_technologies": [
-    "TypeScript",
     "Python",
-    "Supabase",
-    "Next.js",
-    "Shell"
+    "TypeScript",
+    "Claude Code",
+    "Gemini API",
+    "Supabase"
   ],
   "recommended_featured": [
-    "supabase-anonymous-board",
+    "claude-code-tutorial",
     "cursor-docs-crawler",
     "dev-insights-dashboard",
-    "chrome-cookie-reader",
-    "miniroom-demo",
-    "claude-code-tutorial",
     "claude-tutorial-playground",
-    "tddworkshop",
-    "pwa_learning"
+    "claude-config",
+    "supabase-anonymous-board",
+    "miniroom-demo",
+    "chrome-cookie-reader",
+    "tddworkshop"
+  ],
+  "ai_capabilities": [
+    {
+      "key": "Integration",
+      "score": 88,
+      "desc_en": "Deeply integrates Gemini and Claude APIs into CLI tools and dashboards for real-time insights.",
+      "desc_ko": "실시간 인사이트를 위해 Gemini 및 Claude API를 CLI 도구와 대시보드에 깊이 있게 통합하였습니다."
+    },
+    {
+      "key": "Automation",
+      "score": 92,
+      "desc_en": "Excellent at automating friction points, such as crawling documentation specifically for AI consumption and shell-based AI configs.",
+      "desc_ko": "AI 활용을 위한 문서 크롤링 및 쉘 기반 AI 설정 등 개발 마찰 지점을 자동화하는 능력이 탁월합니다."
+    },
+    {
+      "key": "Context",
+      "score": 85,
+      "desc_en": "Shows advanced understanding of RAG-like needs by building custom crawlers to feed external docs into AI IDEs.",
+      "desc_ko": "외부 문서를 AI IDE에 주입하기 위한 전용 크롤러를 구축함으로써 context engineering 및 RAG 개념을 잘 이해하고 있습니다."
+    },
+    {
+      "key": "Agentic",
+      "score": 82,
+      "desc_en": "Proficient in agentic workflows, evidenced by creating tutorials and playgrounds for Claude Code's autonomous capabilities.",
+      "desc_ko": "Claude Code의 자율적 기능을 위한 튜토리얼과 플레이그라운드를 제작하며 에이전트 기반 워크플로우를 능숙하게 다룹니다."
+    }
   ]
 }
