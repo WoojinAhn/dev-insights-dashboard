@@ -1,16 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { 
-  Github, 
-  Star, 
-  GitFork, 
-  Code2, 
-  ExternalLink, 
-  MapPin, 
-  Link as LinkIcon, 
-  Cpu, 
-  Layers, 
+import {
+  Github,
+  Star,
+  GitFork,
+  Code2,
+  ExternalLink,
+  MapPin,
+  Link as LinkIcon,
+  Cpu,
+  Layers,
   Workflow,
   Languages,
   Pin,
@@ -64,7 +64,7 @@ export default function Dashboard() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    
+
     async function fetchData() {
       const [userRes, reposRes, analysisRes, pinnedRes] = await Promise.all([
         fetch('/data/user.json'),
@@ -72,18 +72,18 @@ export default function Dashboard() {
         fetch('/data/analysis.json'),
         fetch('/data/pinned.json').catch(() => null)
       ]);
-      
+
       const user = await userRes.json();
       const allRepos = await reposRes.json();
       const analysis = await analysisRes.json();
       const pinnedRepos = pinnedRes ? await pinnedRes.json() : [];
-      
+
       const publicRepos = allRepos.filter((r: any) => !r.isPrivate);
       const publicPinned = pinnedRepos.filter((r: any) => !r.isPrivate);
-      
+
       const totalStars = publicRepos.reduce((acc: number, repo: any) => acc + (repo.stargazerCount || 0), 0);
       const totalForks = publicRepos.reduce((acc: number, repo: any) => acc + (repo.forkCount || 0), 0);
-      
+
       const languageCounts: Record<string, number> = {};
       publicRepos.forEach((repo: any) => {
         if (repo.primaryLanguage) {
@@ -146,7 +146,7 @@ export default function Dashboard() {
       {/* Modern Navigation Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4 bg-slate-950/80 backdrop-blur-xl border-b border-white/5 shadow-2xl' : 'py-8'}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+          <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 p-[1px]">
               <div className="w-full h-full bg-slate-950 rounded-xl flex items-center justify-center">
                 <Github className="w-5 h-5 text-white" />
@@ -156,13 +156,13 @@ export default function Dashboard() {
           </div>
 
           <div className="flex items-center gap-2 p-1 bg-slate-900/50 rounded-full border border-white/5 backdrop-blur-md">
-            <button 
+            <button
               onClick={() => setLang('ko')}
               className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${lang === 'ko' ? 'bg-cyan-500 text-slate-950 shadow-[0_0_15px_rgba(34,211,238,0.4)]' : 'text-slate-400 hover:text-white'}`}
             >
               KOR
             </button>
-            <button 
+            <button
               onClick={() => setLang('en')}
               className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${lang === 'en' ? 'bg-cyan-500 text-slate-950 shadow-[0_0_15px_rgba(34,211,238,0.4)]' : 'text-slate-400 hover:text-white'}`}
             >
@@ -173,20 +173,20 @@ export default function Dashboard() {
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pt-32 pb-12 relative z-10">
-        
+
         {/* Header / Profile */}
         <section className="mb-20 flex flex-col md:flex-row gap-10 items-center md:items-start text-center md:text-left">
           <div className="relative group">
             <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative p-1 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-3xl">
-              <img 
-                src={user.avatar_url} 
-                alt={user.name} 
+              <img
+                src={user.avatar_url}
+                alt={user.name}
                 className="w-40 h-40 rounded-2xl object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 shadow-2xl"
               />
             </div>
           </div>
-          
+
           <div className="flex-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-4">
               <span className="relative flex h-2 w-2">
@@ -199,7 +199,7 @@ export default function Dashboard() {
               {user.name || user.login}{t.headerTitle}
             </h1>
             <p className="text-slate-400 text-xl mb-6 max-w-2xl font-light leading-relaxed italic">&quot;{user.bio}&quot;</p>
-            
+
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
               <a href={user.html_url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-cyan-400 transition-colors font-medium">
                 <Github className="w-5 h-5" /> @{user.login}
@@ -244,23 +244,23 @@ export default function Dashboard() {
         <section className="mb-20">
           <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border border-white/5 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden group shadow-2xl">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-cyan-500/10 blur-[80px] group-hover:bg-cyan-500/20 transition-all duration-1000" />
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center">
-                  <Workflow className="w-4 h-4 text-cyan-400" />
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center">
+                  <Workflow className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h2 className="text-xs font-black uppercase tracking-[0.4em] text-cyan-500/80">{t.aiAnalysis}</h2>
+                <h2 className="text-2xl font-black uppercase tracking-tight text-white">{t.aiAnalysis}</h2>
               </div>
-              <p className="text-2xl md:text-3xl text-slate-200 leading-snug mb-10 max-w-5xl font-light tracking-tight">
+              <p className="text-xl md:text-2xl text-slate-200 leading-snug mb-10 max-w-5xl font-light tracking-tight">
                 &quot;{currentAnalysis.summary}&quot;
               </p>
-              
+
               <div className="flex flex-wrap gap-4 mb-12">
                 {currentAnalysis.strengths.map((strength: string, i: number) => {
                   const Icon = STRENGTH_ICONS[i] || ChevronRight;
-                  const tag = lang === 'ko' ? 
-                    [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i] : 
+                  const tag = lang === 'ko' ?
+                    [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i] :
                     [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i];
 
                   return (
@@ -269,7 +269,7 @@ export default function Dashboard() {
                         <Icon className="w-4 h-4" />
                         #{tag?.replace(/\s+/g, '_')}
                       </div>
-                      
+
                       {/* Hover Description Tooltip */}
                       <div className="absolute bottom-full left-0 mb-4 w-72 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl opacity-0 invisible group-hover/tag:opacity-100 group-hover/tag:visible transition-all duration-300 z-30 translate-y-2 group-hover/tag:translate-y-0">
                         <div className="absolute bottom-[-6px] left-6 w-3 h-3 bg-slate-900 border-r border-b border-white/10 rotate-45" />
@@ -286,11 +286,13 @@ export default function Dashboard() {
               {analysis.ai_capabilities && (
                 <div className="border-t border-white/5 pt-10 mt-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <Brain className="w-5 h-5 text-violet-400" />
-                    <h3 className="text-sm font-black uppercase tracking-[0.2em] text-violet-400">{t.aiCapabilities}</h3>
+                    <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
+                      <Brain className="w-6 h-6 text-violet-400" />
+                    </div>
+                    <h3 className="text-2xl font-black uppercase tracking-tight text-violet-400">{t.aiCapabilities}</h3>
                   </div>
-                  
-                  <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-4xl font-light italic">
+
+                  <p className="text-xl md:text-2xl text-slate-200 leading-snug mb-10 max-w-5xl font-light tracking-tight">
                     &quot;{lang === 'ko' ? analysis.ko.ai_summary : analysis.en.ai_summary}&quot;
                   </p>
 
@@ -303,9 +305,9 @@ export default function Dashboard() {
                         <div key={i} className="relative group/cap">
                           <div className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-violet-500/5 border border-violet-500/10 text-violet-400 text-sm font-black uppercase tracking-widest hover:bg-violet-500/10 hover:border-violet-500/30 transition-all cursor-help shadow-lg">
                             <Icon className="w-4 h-4" />
-                            #{title?.replace(/\s+/g, '_')}_{cap.score}%
+                            #{title?.replace(/\s+/g, '_')}
                           </div>
-                          
+
                           {/* Hover Description Tooltip */}
                           <div className="absolute bottom-full left-0 mb-4 w-72 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl opacity-0 invisible group-hover/cap:opacity-100 group-hover/cap:visible transition-all duration-300 z-30 translate-y-2 group-hover/cap:translate-y-0">
                             <div className="absolute bottom-[-6px] left-6 w-3 h-3 bg-slate-900 border-r border-b border-white/10 rotate-45" />
@@ -326,18 +328,18 @@ export default function Dashboard() {
         {/* Primary Stack */}
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-10">
-             <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
-                <Code2 className="w-6 h-6 text-violet-400" />
-             </div>
-             <h2 className="text-2xl font-black uppercase tracking-tight">{t.primaryStack}</h2>
+            <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
+              <Code2 className="w-6 h-6 text-violet-400" />
+            </div>
+            <h2 className="text-2xl font-black uppercase tracking-tight">{t.primaryStack}</h2>
           </div>
-          
+
           <div className="bg-slate-900/20 rounded-[2.5rem] p-8 md:p-12 border border-white/5 backdrop-blur-sm">
             <div className="flex h-5 w-full rounded-2xl overflow-hidden mb-12 bg-slate-950 shadow-inner p-1">
               {stats.languages.map((lang: any, i: number) => (
-                <div 
-                  key={i} 
-                  className={`${getLanguageColor(lang.name)} transition-all hover:brightness-110 relative group/bar`} 
+                <div
+                  key={i}
+                  className={`${getLanguageColor(lang.name)} transition-all hover:brightness-110 relative group/bar`}
                   style={{ width: `${(lang.count / stats.languages.reduce((a: any, b: any) => a + b.count, 0)) * 100}%` }}
                 >
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-[10px] rounded opacity-0 group-hover/bar:opacity-100 transition-opacity whitespace-nowrap border border-white/10 z-20">
@@ -346,7 +348,7 @@ export default function Dashboard() {
                 </div>
               ))}
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
               {stats.languages.map((lang: any, i: number) => (
                 <div key={i} className="group/item">
@@ -377,38 +379,38 @@ export default function Dashboard() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featured.map((repo: any, i: number) => (
-              <a 
-                key={i} 
-                href={repo.url} 
-                target="_blank" 
+              <a
+                key={i}
+                href={repo.url}
+                target="_blank"
                 rel="noreferrer"
                 className="group bg-slate-900/40 border border-white/5 p-10 rounded-[2.5rem] hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-500 flex flex-col shadow-xl hover:shadow-cyan-500/5"
               >
                 <div className="flex items-center justify-between mb-6">
-                   <div className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${pinnedNames.has(repo.name) 
-                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
-                      : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'}`}>
-                      {pinnedNames.has(repo.name) ? (
-                        <>
-                          <Pin className="w-3 h-3" />
-                          {t.badgePride}
-                        </>
-                      ) : (
-                        <>
-                          <Cpu className="w-3 h-3" />
-                          {t.badgeAiPick}
-                        </>
-                      )}
-                   </div>
+                  <div className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${pinnedNames.has(repo.name)
+                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                    : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'}`}>
+                    {pinnedNames.has(repo.name) ? (
+                      <>
+                        <Pin className="w-3 h-3" />
+                        {t.badgePride}
+                      </>
+                    ) : (
+                      <>
+                        <Cpu className="w-3 h-3" />
+                        {t.badgeAiPick}
+                      </>
+                    )}
+                  </div>
                 </div>
-                
+
                 <h3 className="font-black text-xl md:text-2xl group-hover:text-cyan-400 transition-all mb-4 uppercase tracking-tighter break-all leading-tight min-h-[3.5rem] flex items-center">
                   {repo.name}
                 </h3>
                 <p className="text-slate-400 text-sm line-clamp-2 mb-10 flex-1 font-light leading-relaxed group-hover:text-slate-300 transition-colors">
                   {repo.description || t.noDescription}
                 </p>
-                
+
                 <div className="flex items-center gap-6 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                   {repo.primaryLanguage && (
                     <div className="flex items-center gap-2">
