@@ -7,7 +7,7 @@ GH_USER="WoojinAhn"
 echo "🔄 Refreshing GitHub Data for $GH_USER (Excluding Forks)..."
 
 # 1. User Profile
-gh api user > "$DATA_DIR/user.json"
+gh api "users/$GH_USER" > "$DATA_DIR/user.json"
 
 # 2. Pinned Repositories (GraphQL)
 echo "📍 Fetching Pinned Repositories..."
