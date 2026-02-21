@@ -66,11 +66,12 @@ export default function Dashboard() {
     window.addEventListener('scroll', handleScroll);
 
     async function fetchData() {
+      const ts = new Date().getTime();
       const [userRes, reposRes, analysisRes, pinnedRes] = await Promise.all([
-        fetch('/data/user.json'),
-        fetch('/data/repos.json'),
-        fetch('/data/analysis.json'),
-        fetch('/data/pinned.json').catch(() => null)
+        fetch(`/data/user.json?t=${ts}`),
+        fetch(`/data/repos.json?t=${ts}`),
+        fetch(`/data/analysis.json?t=${ts}`),
+        fetch(`/data/pinned.json?t=${ts}`).catch(() => null)
       ]);
 
       const user = await userRes.json();
