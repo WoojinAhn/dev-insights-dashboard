@@ -24,10 +24,11 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 ## ✨ Key Features
 
 - **📊 Real-time Data Sync:** Automatically fetches repository stats via GitHub GraphQL API.
-- **🤖 AI Portfolio Analysis:** Uses **Gemini 3 Flash Preview** to analyze projects and generate professional summaries.
+- **🤖 Objective AI Portfolio Analysis:** Uses **Gemini 3 Flash Preview** to systematically analyze projects and generate professional, fact-based summaries devoid of exaggerated marketing terms.
+- **🚀 Advanced Caching & Webhooks:** Employs query-parameter cache busting for instantaneous Next.js data updates on Vercel upon every repository commit.
 - **🌐 Multilingual Support:** Seamless switching between English and Korean UI.
 - **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects.
-- **⚙️ Fully Automated Pipeline:** GitHub Actions refreshes data and AI insights daily at 00:00 KST.
+- **⚙️ Fully Automated Pipeline:** GitHub Actions automatically refreshes data and AI insights upon every `main` branch push or daily at 00:00 KST.
 
 ## 🛠 Tech Stack
 
