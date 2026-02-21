@@ -102,24 +102,31 @@ def analyze_portfolio():
 
         prompt = f"""
         [Role]: You are a Senior Technical Architect and Talent Scout.
-        [Task]: Perform a rigorous technical audit of the following GitHub portfolio to identify the developer's unique engineering signature, AI proficiency, and research trajectory.
+        [Task]: Perform a rigorous technical audit of the provided GitHub portfolio.
 
         [Data Inputs]:
-        - SOURCE REPOSITORIES (Own Work): {json.dumps(repo_summary)}
-        - FORKED REPOSITORIES (Research Interest): {json.dumps(forks_summary)}
+        1. **SOURCE REPOSITORIES** (The developer's actual work): 
+        {json.dumps(repo_summary)}
+        
+        2. **FORKED REPOSITORIES** (Reference/Study material only - DO NOT use for skills assessment): 
+        {json.dumps(forks_summary)}
+
+        [Analysis Constraints - CRITICAL]:
+        - **Summary, Strengths, Top Technologies, AI Capabilities**: MUST be based **ONLY** on [SOURCE REPOSITORIES]. Do NOT mention forked repos (like scavenger, fixture-monkey, etc.) in these sections.
+        - **Interests (Research Radar)**: This is the ONLY section where you should use [FORKED REPOSITORIES].
 
         [Requirements for Analysis]:
-        1. **Summary**: Define a 'Technical Persona' (e.g., 'Automation Architect', 'AI Integration Specialist').
-        2. **Key Strengths**: Identify 4 high-level engineering strengths based ONLY on [Source Repositories]. 
-           - For each, provide 'strength' (title) and 'evidence' (a concise technical explanation mentioning specific repos and technologies).
-        3. **Top Technologies**: Identify the core tech stack from [Source Repositories].
-        4. **AI Capabilities**: Evaluate 4 dimensions (Integration, Automation, Context, Agentic).
-           - Score (0-100) and 'Detailed Reason'. Reason must be evidence-based (e.g., "Score 90 in Automation due to the implementation of complex GitHub Action workflows in [Repo Name]").
-        5. **Interests (Research Radar)**: Analyze [Forked Repositories] only.
-           - Identify what the developer is currently studying or watching. Provide a creative section title, keywords, and a visionary description.
+        1. **Summary**: Define a 'Technical Persona' based ONLY on their own code.
+        2. **Key Strengths**: Identify 4 high-level engineering strengths based ONLY on [SOURCE REPOSITORIES].
+           - Evidence must point to specific source repos.
+        3. **Top Technologies**: Identify the core tech stack from [SOURCE REPOSITORIES].
+        4. **AI Capabilities**: Evaluate 4 dimensions (Integration, Automation, Context, Agentic) based ONLY on [SOURCE REPOSITORIES].
+           - Score (0-100) and 'Detailed Reason'.
+        5. **Interests (Research Radar)**: Analyze [FORKED REPOSITORIES] to see what they are studying.
+           - Provide a creative section title, keywords, and a visionary description.
 
         [Tone & Language Quality]:
-        - Professional, objective, and dry. Avoid "passionate", "talented", or "amazing".
+        - Professional, objective, and dry.
         - Korean Output: MUST be natural, sophisticated, and grammatically perfect (Senior level). Use professional endings like "~을 구축함", "~에 특화됨".
         - English Output: Standard industry-level technical prose.
 
