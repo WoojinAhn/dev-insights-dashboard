@@ -40,26 +40,20 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
+          # Force sync with remote to prevent conflicts
+          git fetch origin main
+          git reset --hard origin/main
+
           # 1. Refresh Data
           chmod +x ./refresh-data.sh
-          ./refresh-data.sh || echo "⚠️ Data refresh had some issues, continuing to push available data."
+          ./refresh-data.sh || echo "⚠️ Data refresh had some issues, continuing."
 
           # 2. Add and Commit
           git add public/data/
           git commit -m "📈 [AUTO] Refresh portfolio data and AI insights" || exit 0
 
-          # 3. Push with Retry
-          for i in {1..5}; do
-            git pull --rebase origin main
-            if git push origin main; then
-              echo "✅ Successfully pushed changes"
-              exit 0
-            fi
-            echo "🔄 Push failed, retrying in 5 seconds... ($i/5)"
-            sleep 5
-          done
-          echo "❌ Failed to push after 5 attempts"
-          exit 1
+          # 3. Force Push (since this is generated data, it's safer to ensure it gets updated)
+          git push origin main
 
       - name: Trigger Vercel Deployment
         if: always()
