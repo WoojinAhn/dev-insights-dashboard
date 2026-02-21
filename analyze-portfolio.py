@@ -9,9 +9,10 @@ from datetime import datetime
 # API Keys
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+GH_TOKEN = os.environ.get("GH_TOKEN") # Used for GitHub Models Fallback
 
-if not GEMINI_API_KEY and not GROQ_API_KEY:
-    print("❌ No API keys found (GEMINI_API_KEY or GROQ_API_KEY)")
+if not any([GEMINI_API_KEY, GROQ_API_KEY, GH_TOKEN]):
+    print("❌ No API keys found (GEMINI_API_KEY, GROQ_API_KEY, or GH_TOKEN)")
     sys.exit(1)
 
 def call_gemini(prompt):
@@ -20,15 +21,39 @@ def call_gemini(prompt):
     
     genai.configure(api_key=GEMINI_API_KEY)
     
-    # Use gemini-2.0-flash as it's confirmed available
     model_name = 'gemini-2.0-flash'
     try:
         model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
-        print(f"⚠️ Gemini ({model_name}) failed: {e}")
+        print(f"⚠️ Gemini failed: {e}")
         raise
+
+def call_github_gpt(prompt):
+    if not GH_TOKEN:
+        raise Exception("GH_TOKEN not provided for GitHub Models")
+    
+    print("🚀 Attempting Fallback to GitHub Models (GPT-4o-mini)...")
+    url = "https://models.inference.ai.azure.com/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {GH_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    data = {
+        "model": "gpt-4o-mini",
+        "messages": [
+            {"role": "system", "content": "You are a professional technical portfolio analyzer. Return ONLY pure JSON."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.1,
+        "response_format": {"type": "json_object"}
+    }
+    
+    response = requests.post(url, headers=headers, json=data, timeout=30)
+    response.raise_for_status()
+    result = response.json()
+    return result['choices'][0]['message']['content']
 
 def call_groq(prompt):
     if not GROQ_API_KEY:
@@ -124,12 +149,18 @@ def analyze_portfolio():
             print("✅ Analysis completed via Gemini")
         except Exception:
             try:
-                raw_response = call_groq(prompt)
-                used_provider = "Groq"
-                print("✅ Analysis completed via Groq (Fallback)")
+                raw_response = call_github_gpt(prompt)
+                used_provider = "GPT-4o-mini (GitHub)"
+                print("✅ Analysis completed via GPT-4o-mini")
             except Exception as e:
-                print(f"❌ Both Gemini and Groq failed: {e}")
-                sys.exit(1)
+                print(f"⚠️ GitHub Models failed: {e}")
+                try:
+                    raw_response = call_groq(prompt)
+                    used_provider = "Groq"
+                    print("✅ Analysis completed via Groq (Fallback)")
+                except Exception as e2:
+                    print(f"❌ All providers failed: {e2}")
+                    sys.exit(1)
 
         # --- Logging (History) ---
         history_dir = "public/data/history"
