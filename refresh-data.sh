@@ -99,10 +99,6 @@ fetch_data "forks" "$DATA_DIR/forks.json" "$CMD"
 
 # 5. Run AI Analysis
 echo "🧠 Running AI Analysis..."
-if python3 analyze-portfolio.py; then
-    echo "✅ AI Analysis complete."
-else
-    echo "❌ AI Analysis failed. Keeping old analysis data."
-fi
+python3 analyze-portfolio.py
 
 echo "✅ Data refresh process finished in $DATA_DIR"
