@@ -3,101 +3,31 @@
     "summary": "Highly skilled developer with expertise in AI, TypeScript, and Java, with a strong portfolio of projects showcasing proficiency in various technologies.",
     "strengths": [
       {
-        "name": "AI Development",
+        "strength": "AI Development",
         "evidence": "dev-insights-dashboard, claude-code-tutorial"
       },
       {
-        "name": "TypeScript Expertise",
+        "strength": "TypeScript Expertise",
         "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
       },
       {
-        "name": "Java Development",
+        "strength": "Java Development",
         "evidence": "tddworkshop, scavenger, fixture-monkey"
       },
       {
-        "name": "Automation",
+        "strength": "Automation",
         "evidence": "github-star-checker, claude-config"
       }
     ],
     "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on TypeScript and Java."
   },
-  "ko": {
-    "summary": "알는 어려 정보드 알 신행 어려 정보드, TypeScript 어 신행 어려 정보드 없는 정보드 정백단.",
-    "strengths": [
-      {
-        "name": "알는 정보드",
-        "evidence": "dev-insights-dashboard, claude-code-tutorial"
-      },
-      {
-        "name": "TypeScript 어려",
-        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
-      },
-      {
-        "name": "Java 정보드",
-        "evidence": "tddworkshop, scavenger, fixture-monkey"
-      },
-      {
-        "name": "연료드",
-        "evidence": "github-star-checker, claude-config"
-      }
-    ],
-    "ai_summary": "정보드는 알는 어려 정보드 정백단, 어려 신행 어려 정보드 없는 정보드 정백단."
-  },
-  "top_technologies": [
-    "TypeScript",
-    "Java",
-    "Python",
-    "JavaScript",
-    "HTML",
-    "Shell",
-    "CSS"
-  ],
-  "recommended_featured": [
-    "dev-insights-dashboard",
-    "miniroom-demo",
-    "supabase-anonymous-board",
-    "scavenger",
-    "fixture-monkey",
-    "claude-code-tutorial",
-    "chrome-cookie-reader",
-    "claude-config",
-    "github-star-checker"
-  ],
-  "ai_capabilities": [
-    {
-      "key": "Integration",
-      "score": 85,
-      "desc_en": "Strong integration capabilities demonstrated through projects like dev-insights-dashboard and claude-code-tutorial.",
-      "desc_ko": "알는 정보드 정백단, dev-insights-dashboard 어 claude-code-tutorial 없는 정보드 정백단."
-    },
-    {
-      "key": "Automation",
-      "score": 80,
-      "desc_en": "Automation capabilities demonstrated through projects like github-star-checker and claude-config.",
-      "desc_ko": "연료드 정보드 정백단, github-star-checker 어 claude-config 없는 정보드 정백단."
-    },
-    {
-      "key": "Context",
-      "score": 70,
-      "desc_en": "Contextual understanding demonstrated through projects like dev-insights-dashboard and chrome-cookie-reader.",
-      "desc_ko": "신행 정보드 정백단, dev-insights-dashboard 어 chrome-cookie-reader 없는 정보드 정백단."
-    },
-    {
-      "key": "Agentic",
-      "score": 60,
-      "desc_en": "Agentic capabilities demonstrated through projects like claude-code-tutorial and claude-config.",
-      "desc_ko": "알는 정보드 정백단, claude-code-tutorial 어 claude-config 없는 정보드 정백단."
-    }
-  ],
   "interests": {
-    "title": "AI and Web Development Enthusiast",
+    "title": "Research Radar",
     "keywords": [
       "AI",
-      "TypeScript",
-      "Java",
-      "Web Development"
+      "Open Source"
     ],
-    "desc_en": "The developer is interested in AI, TypeScript, Java, and web development, with a focus on creating innovative projects.",
-    "desc_ko": "정보드는 알는 정보드, TypeScript, Java, 원분 정보드 없는 정보드 정백단, 알는 정보드 정백단 없는 정보드 정백단."
+    "desc_en": "Exploring innovative tech through forked projects.",
+    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
   }
 }
