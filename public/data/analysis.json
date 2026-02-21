@@ -65,5 +65,15 @@
       "desc_en": "Experience with agentic CLI tools (Claude Code) through tutorial development and configuration optimization.",
       "desc_ko": "튜토리얼 개발 및 설정 최적화를 통해 Claude Code와 같은 에이전트형 CLI 도구를 활용한 경험을 보유함."
     }
-  ]
+  ],
+  "interests": {
+    "title": "Research Radar",
+    "keywords": [
+      "AI_Automation",
+      "LLM_Ops",
+      "Open_Source"
+    ],
+    "desc_en": "Currently researching advanced AI automation patterns and LLM integration workflows through various open-source projects.",
+    "desc_ko": "다양한 오픈소스 프로젝트를 통해 고급 AI 자동화 패턴과 LLM 통합 워크플로우를 연구하고 있습니다."
+  }
 }
