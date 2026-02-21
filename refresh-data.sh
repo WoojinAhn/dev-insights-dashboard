@@ -55,7 +55,7 @@ QUERY='query($login:String!) {
   }
 }'
 # Escape the query for the eval string
-SAFE_QUERY=$(echo "$QUERY" | tr -d '\n' | sed 's/"/\\"/g')
+SAFE_QUERY=$(echo "$QUERY" | tr -d '\n' | sed 's/"/\\"/g' | sed 's/\$/\\$/g')
 CMD="gh api graphql -f query=\"$SAFE_QUERY\" -F login=\"$GH_USER\" | jq '.data.user.pinnedItems.nodes | map(select(.isFork == false))'"
 fetch_data "pinned_repos" "$DATA_DIR/pinned.json" "$CMD"
 
@@ -93,7 +93,7 @@ FORK_QUERY='query($login:String!) {
     }
   }
 }'
-SAFE_FORK_QUERY=$(echo "$FORK_QUERY" | tr -d '\n' | sed 's/"/\\"/g')
+SAFE_FORK_QUERY=$(echo "$FORK_QUERY" | tr -d '\n' | sed 's/"/\\"/g' | sed 's/\$/\\$/g')
 CMD="gh api graphql -f query=\"$SAFE_FORK_QUERY\" -F login=\"$GH_USER\" | jq '.data.user.repositories.nodes'"
 fetch_data "forks" "$DATA_DIR/forks.json" "$CMD"
 
