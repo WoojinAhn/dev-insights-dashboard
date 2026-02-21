@@ -24,12 +24,14 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 ## ✨ Key Features
 
 - **📊 Real-time Data Sync:** Automatically fetches repository stats via GitHub GraphQL API.
-- **🤖 Objective AI Portfolio Analysis:** Uses **Gemini 3 Flash Preview** to systematically analyze projects and generate professional, fact-based summaries devoid of exaggerated marketing terms.
-- **🛡️ Reliability & Logging:** Automatically falls back to existing data if GitHub/Gemini API calls fail, ensuring zero downtime. Archives raw AI analysis responses (`public/data/history/`) for historical tracking and debugging.
-- **🚀 Advanced Caching & Webhooks:** Employs query-parameter cache busting for instantaneous Next.js data updates on Vercel upon every repository commit.
+- **🤖 Objective AI Portfolio Analysis:** Uses **Gemini 2.0 Flash** to systematically analyze projects and generate professional, fact-based summaries.
+- **🛡️ Multi-LLM Fallback:** Automatically switches to **Groq (Llama 3.3 70B)** if Gemini API limits are reached, ensuring stable analysis.
+- **📡 Research Radar:** Analyzes forked repositories to identify and visualize current technical interests and research trends with detailed tooltips.
+- **🔒 Reliability & Logging:** Automatically falls back to existing data if all APIs fail. Archives raw AI analysis responses for historical tracking.
+- **🚀 Advanced Caching & Webhooks:** Employs query-parameter cache busting for instantaneous Next.js data updates on Vercel via Deploy Hooks.
 - **🌐 Multilingual Support:** Seamless switching between English and Korean UI.
-- **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects.
-- **⚙️ Fully Automated Pipeline:** GitHub Actions automatically refreshes data and AI insights upon every `main` branch push or daily at 00:00 KST, triggering a Vercel deployment via Deploy Hook.
+- **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects and evidence-based tooltips.
+- **⚙️ Fully Automated Pipeline:** GitHub Actions automatically refreshes data and AI insights upon every push or daily, triggering a Vercel deployment.
 
 ## 🛠 Tech Stack
 
