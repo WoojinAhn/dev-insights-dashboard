@@ -88,7 +88,7 @@ export default function Dashboard() {
       // Process Forks: Public only, Sort by Stars DESC, Top 9
       const topForks = allForks
         .filter((r: any) => !r.isPrivate)
-        .sort((a: any, b: any) => (b.stargazerCount || 0) - (a.stargazerCount || 0))
+        .sort((a: any, b: any) => ((b.parent?.stargazerCount || b.stargazerCount) || 0) - ((a.parent?.stargazerCount || a.stargazerCount) || 0))
         .slice(0, 9);
 
       const totalStars = publicRepos.reduce((acc: number, repo: any) => acc + (repo.stargazerCount || 0), 0);
@@ -504,10 +504,10 @@ export default function Dashboard() {
                           {repo.primaryLanguage.name}
                         </div>
                       )}
-                      {repo.stargazerCount > 0 && (
+                      {(repo.parent?.stargazerCount || repo.stargazerCount) > 0 && (
                         <div className="flex items-center gap-1.5 group-hover:text-yellow-400 transition-colors">
                           <Star className="w-3.5 h-3.5" />
-                          {repo.stargazerCount}
+                          {repo.parent?.stargazerCount || repo.stargazerCount}
                         </div>
                       )}
                     </div>

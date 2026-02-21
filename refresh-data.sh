@@ -64,9 +64,37 @@ echo "🌐 Fetching Public Source Repositories..."
 CMD="gh repo list \"$GH_USER\" --visibility public --source --limit 100 --json name,description,stargazerCount,languages,url,updatedAt,isPrivate,isFork,primaryLanguage,forkCount"
 fetch_data "repos" "$DATA_DIR/repos.json" "$CMD"
 
-# 4. Forked Repositories (Interests)
-echo "🍴 Fetching Forked Repositories..."
-CMD="gh repo list \"$GH_USER\" --visibility public --fork --limit 100 --json name,description,stargazerCount,languages,url,updatedAt,isPrivate,isFork,primaryLanguage,forkCount"
+# 4. Forked Repositories (Interests) - Fetching Parent Stats via GraphQL
+echo "🍴 Fetching Forked Repositories (with Parent Stats)..."
+FORK_QUERY='query($login:String!) {
+  user(login: $login) {
+    repositories(first: 100, isFork: true, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      nodes {
+        name
+        description
+        url
+        isPrivate
+        isFork
+        updatedAt
+        stargazerCount
+        forkCount
+        primaryLanguage {
+          name
+        }
+        parent {
+          name
+          owner {
+            login
+          }
+          stargazerCount
+          forkCount
+        }
+      }
+    }
+  }
+}'
+SAFE_FORK_QUERY=$(echo "$FORK_QUERY" | tr -d '\n' | sed 's/"/\\"/g')
+CMD="gh api graphql -f query=\"$SAFE_FORK_QUERY\" -F login=\"$GH_USER\" | jq '.data.user.repositories.nodes'"
 fetch_data "forks" "$DATA_DIR/forks.json" "$CMD"
 
 # 5. Run AI Analysis
