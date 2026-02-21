@@ -21,13 +21,83 @@
     ],
     "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on TypeScript and Java."
   },
+  "ko": {
+    "summary": "알는 연료 있드를 수 었다, AI, TypeScript, 자 Java 소녀 연료 있드를 수 었다.",
+    "strengths": [
+      {
+        "strength": "백었집 연료",
+        "evidence": "dev-insights-dashboard, claude-code-tutorial"
+      },
+      {
+        "strength": "TypeScript 연료",
+        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
+      },
+      {
+        "strength": "Java 연료",
+        "evidence": "tddworkshop, scavenger, fixture-monkey"
+      },
+      {
+        "strength": "자드립",
+        "evidence": "github-star-checker, claude-config"
+      }
+    ],
+    "ai_summary": "연료를 연료 있드를 수 었다, 연료 연료 소녀 연료 있드를 수 었다."
+  },
+  "top_technologies": [
+    "TypeScript",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "Shell",
+    "CSS"
+  ],
+  "recommended_featured": [
+    "dev-insights-dashboard",
+    "miniroom-demo",
+    "supabase-anonymous-board",
+    "scavenger",
+    "fixture-monkey",
+    "claude-code-tutorial",
+    "chrome-cookie-reader",
+    "claude-tutorial-playground",
+    "github-star-checker"
+  ],
+  "ai_capabilities": [
+    {
+      "key": "Integration",
+      "score": 85,
+      "desc_en": "Strong integration capabilities demonstrated through projects like dev-insights-dashboard and claude-code-tutorial.",
+      "desc_ko": "백었집 연료 있드를 수 었다, dev-insights-dashboard 었다 claude-code-tutorial 소녀 연료 있드를 수 었다."
+    },
+    {
+      "key": "Automation",
+      "score": 90,
+      "desc_en": "Excellent automation capabilities demonstrated through projects like github-star-checker and claude-config.",
+      "desc_ko": "자드립 연료 있드를 수 었다, github-star-checker 었다 claude-config 소녀 연료 있드를 수 었다."
+    },
+    {
+      "key": "Context",
+      "score": 80,
+      "desc_en": "Good context understanding demonstrated through projects like dev-insights-dashboard and chrome-cookie-reader.",
+      "desc_ko": "속드 연료 있드를 수 었다, dev-insights-dashboard 었다 chrome-cookie-reader 소녀 연료 있드를 수 었다."
+    },
+    {
+      "key": "Agentic",
+      "score": 70,
+      "desc_en": "Fair agentic capabilities demonstrated through projects like claude-code-tutorial and claude-tutorial-playground.",
+      "desc_ko": "연료들 연료 있드를 수 었다, claude-code-tutorial 었다 claude-tutorial-playground 소녀 연료 있드를 수 었다."
+    }
+  ],
   "interests": {
-    "title": "Research Radar",
+    "title": "AI-Powered Development",
     "keywords": [
       "AI",
-      "Open Source"
+      "TypeScript",
+      "Java",
+      "Automation"
     ],
-    "desc_en": "Exploring innovative tech through forked projects.",
-    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
+    "desc_en": "The developer is interested in AI-powered development, with a focus on TypeScript, Java, and automation.",
+    "desc_ko": "연료를 백었집 연료 있드를 수 었다, TypeScript, Java, 자드립 소녀 연료 있드를 수 었다."
   }
 }
