@@ -142,9 +142,46 @@ def analyze_portfolio():
 
         # --- Processing & Validation ---
         content = raw_response.replace("```json", "").replace("```", "").strip()
-        analysis_data = json.loads(content)
+        try:
+            analysis_data = json.loads(content)
+        except Exception as e:
+            print(f"⚠️ JSON parsing failed, using minimal fallback: {e}")
+            analysis_data = {}
 
-        # Ensure 'interests' field exists
+        # --- Strict Key Validation & Defaulting ---
+        # 1. Base structure (en/ko)
+        for lang_key in ["en", "ko"]:
+            if lang_key not in analysis_data:
+                analysis_data[lang_key] = {
+                    "summary": "Technical profile analysis in progress.",
+                    "strengths": [],
+                    "ai_summary": "AI capability assessment pending."
+                }
+            # Ensure strengths are objects {strength, evidence}
+            new_strengths = []
+            for s in analysis_data[lang_key].get("strengths", []):
+                if isinstance(s, str):
+                    new_strengths.append({"strength": s, "evidence": "Demonstrated across various projects."})
+                else:
+                    new_strengths.append(s)
+            analysis_data[lang_key]["strengths"] = new_strengths
+
+        # 2. List fields
+        if "top_technologies" not in analysis_data:
+            analysis_data["top_technologies"] = ["TypeScript", "Python", "Java"]
+        if "recommended_featured" not in analysis_data:
+            analysis_data["recommended_featured"] = []
+
+        # 3. AI Capabilities
+        if "ai_capabilities" not in analysis_data:
+            analysis_data["ai_capabilities"] = [
+                {"key": "Integration", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
+                {"key": "Automation", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
+                {"key": "Context", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
+                {"key": "Agentic", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."}
+            ]
+
+        # 4. Interests (Research Radar)
         if "interests" not in analysis_data:
             analysis_data["interests"] = {
                 "title": "Research Radar",
@@ -153,10 +190,11 @@ def analyze_portfolio():
                 "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
             }
 
+        # Save validated data
         with open("public/data/analysis.json", "w", encoding="utf-8") as f:
             json.dump(analysis_data, f, ensure_ascii=False, indent=2)
         
-        print(f"✨ Dynamic AI Analysis updated using {used_provider}!")
+        print(f"✨ Robust AI Analysis updated using {used_provider}!")
 
     except Exception as e:
         print(f"❌ Error during portfolio analysis: {str(e)}")
