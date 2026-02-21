@@ -62,11 +62,13 @@ def analyze_portfolio():
         Tasks:
         1. Professional summary (EN/KO).
         2. 4 Key strengths (EN/KO).
+           - **CRITICAL:** For each strength, provide a detailed explanation (2-3 sentences) citing specific repositories, code patterns, or technologies observed. Do not just say "Strong Python skills"; explain *how* it is demonstrated (e.g., "Demonstrates advanced Python proficiency through complex data processing pipelines in 'repo-a' and asynchronous scraping logic in 'repo-b'.").
         3. Top technological used.
         4. Select top 9 impressive projects.
         5. AI Core Capabilities Evaluation (4 dimensions):
            - "Integration", "Automation", "Context", "Agentic".
-           - Score (0-100), Detailed reason (EN/KO).
+           - Score (0-100).
+           - **Detailed reason (EN/KO):** Must be specific and evidence-based. Mention exactly *which* project or feature supports this score. (e.g., "High automation score due to the CI/CD workflows in 'project-x' and auto-labeling bot in 'project-y'.").
            - **NEW: AI Capabilities Overall Summary (EN/KO)**. A 1-sentence summary specifically for the AI section.
         6. **Interest Analysis (Based on Forks)**:
            - Analyze the forked repositories to identify what the developer is currently researching or interested in.
