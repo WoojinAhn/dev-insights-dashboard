@@ -35,15 +35,10 @@ jobs:
       - name: Refresh Data
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           chmod +x ./refresh-data.sh
           ./refresh-data.sh
-
-      - name: Analyze with AI
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          python3 analyze-portfolio.py
 
       - name: Commit and Push Changes
         run: |
