@@ -1,93 +1,86 @@
 {
   "en": {
-    "summary": "Automation Architect",
+    "summary": "AI-Driven Automation Architect",
     "strengths": [
       {
-        "strength": "Cloud Integration",
-        "evidence": "Implementation of Supabase in supabase-anonymous-board and Next.js in miniroom-demo showcases expertise in cloud-based integrations."
+        "strength": "Automation Expertise",
+        "evidence": "Implementation of GitHub Actions workflow in github-star-checker and complex automation in dev-insights-dashboard"
       },
       {
-        "strength": "Automation",
-        "evidence": "GitHub Actions workflow in github-star-checker demonstrates automation capabilities."
+        "strength": "AI-Powered Development",
+        "evidence": "Integration of Gemini AI insights in dev-insights-dashboard for visualizing GitHub activity"
       },
       {
-        "strength": "Web Development",
-        "evidence": "Usage of TypeScript in dev-insights-dashboard and miniroom-demo highlights proficiency in web development."
+        "strength": "Cross-Platform Development",
+        "evidence": "Development of chrome-cookie-reader in Python for macOS and miniroom-demo in Next.js and TypeScript"
       },
       {
-        "strength": "Scripting",
-        "evidence": "Python scripts in chrome-cookie-reader and claude-tutorial-playground exhibit scripting skills."
+        "strength": "Scripting and Configuration Management",
+        "evidence": "Management of Claude Code global settings across machines using claude-config in Shell"
       }
     ],
-    "ai_summary": "The developer demonstrates a strong foundation in automation, web development, and scripting, with a growing interest in AI-powered tools."
+    "ai_summary": "The developer demonstrates a strong foundation in AI-driven automation, with a focus on integrating AI insights into development workflows."
   },
   "ko": {
-    "summary": "Automation Architect",
+    "summary": "AI 정보 소녀 연료 자드",
     "strengths": [
       {
-        "strength": "오기 총큰",
-        "evidence": "supabase-anonymous-board를 사회드립틀 신린 있다. miniroom-demo를 사회드립틀 Next.js를 사회드립틀 총큰 정보를 없는다."
+        "strength": "소녀 정보 유형",
+        "evidence": "github-star-checker 었러 GitHub Actions 연료 또는 소녀 정보 유형 었러 dev-insights-dashboard 었러 정보 연료 유형"
       },
       {
-        "strength": "애부드립",
-        "evidence": "github-star-checker를 사회드립 GitHub Actions 연룉다 애부드립 정보를 없는다."
+        "strength": "AI 정보 연료 유형",
+        "evidence": "dev-insights-dashboard 었러 Gemini AI 정보 연료 유형 었러 GitHub 연료 유형 었러 유형"
       },
       {
-        "strength": "원룰 사회",
-        "evidence": "dev-insights-dashboard를 사회드립 TypeScript를 사회드립 miniroom-demo를 사회드립 원룰 사회 정보를 없는다."
+        "strength": "소녀 연료 유형",
+        "evidence": "chrome-cookie-reader 었러 Python 었러 macOS 었러 었러 miniroom-demo 었러 Next.js 었러 TypeScript 었러 었러 유형"
       },
       {
-        "strength": "스타드립",
-        "evidence": "chrome-cookie-reader를 사회드립 Python 스타드립를 사회드립 claude-tutorial-playground를 사회드립 스타드립 정보를 없는다."
+        "strength": "소녀 연료 유형 었러 었러 유형",
+        "evidence": "claude-config 었러 Shell 었러 었러 었러 유형 었러 었러 었러 유형"
       }
-    ],
-    "ai_summary": "사회드립는 애부드립, 원룰 사회, 스타드립 정보를 없는다. AI 연룉다 총큰 정보를 없는다."
+    ]
   },
   "top_technologies": [
     "TypeScript",
     "Python",
-    "Next.js",
-    "Supabase"
+    "Java"
   ],
-  "recommended_featured": [
-    "dev-insights-dashboard",
-    "miniroom-demo"
-  ],
+  "recommended_featured": [],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 80,
-      "desc_en": "The developer demonstrates a strong foundation in integrating AI-powered tools, such as Gemini AI insights in dev-insights-dashboard.",
-      "desc_ko": "사회드립는 AI 연룉다 총큰 정보를 없는다. dev-insights-dashboard를 사회드립 Gemini AI 정보를 없는다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     },
     {
       "key": "Automation",
-      "score": 90,
-      "desc_en": "The implementation of complex GitHub Action workflows in github-star-checker showcases automation capabilities.",
-      "desc_ko": "github-star-checker를 사회드립 GitHub Actions 연룉다 애부드립 정보를 없는다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     },
     {
       "key": "Context",
-      "score": 70,
-      "desc_en": "The developer demonstrates a basic understanding of context-aware AI applications, but more exploration is needed.",
-      "desc_ko": "사회드립는 총큰 연룉다 정보를 없는다. 총큰 연룉다 정보를 없는다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     },
     {
       "key": "Agentic",
-      "score": 60,
-      "desc_en": "The developer shows a limited understanding of agentic AI concepts, with more research and exploration needed.",
-      "desc_ko": "사회드립는 총큰 연룉다 정보를 없는다. 총큰 연룉다 정보를 없는다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     }
   ],
   "interests": {
     "title": "Research Radar",
     "keywords": [
-      "Java",
-      "Spring",
-      "AWS",
-      "Blockchain"
+      "AI",
+      "Open Source"
     ],
-    "desc_en": "The developer is currently exploring Java, Spring, AWS, and blockchain technologies, indicating a growing interest in backend development and distributed systems.",
-    "desc_ko": "사회드립는 Java, Spring, AWS, 총큰 연룉다 정보를 없는다. 총큰 연룉다 정보를 없는다."
+    "desc_en": "Exploring innovative tech through forked projects.",
+    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
   }
 }
