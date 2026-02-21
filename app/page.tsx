@@ -67,69 +67,79 @@ export default function Dashboard() {
     window.addEventListener('scroll', handleScroll);
 
     async function fetchData() {
-      const ts = new Date().getTime();
-      const [userRes, reposRes, analysisRes, pinnedRes, forksRes] = await Promise.all([
-        fetch(`/data/user.json?t=${ts}`),
-        fetch(`/data/repos.json?t=${ts}`),
-        fetch(`/data/analysis.json?t=${ts}`),
-        fetch(`/data/pinned.json?t=${ts}`).catch(() => null),
-        fetch(`/data/forks.json?t=${ts}`).catch(() => null)
-      ]);
+      try {
+        const ts = new Date().getTime();
+        const [userRes, reposRes, analysisRes, pinnedRes, forksRes] = await Promise.all([
+          fetch(`/data/user.json?t=${ts}`),
+          fetch(`/data/repos.json?t=${ts}`),
+          fetch(`/data/analysis.json?t=${ts}`),
+          fetch(`/data/pinned.json?t=${ts}`).catch(() => null),
+          fetch(`/data/forks.json?t=${ts}`).catch(() => null)
+        ]);
 
-      const user = await userRes.json();
-      const allRepos = await reposRes.json();
-      const analysis = await analysisRes.json();
-      const pinnedRepos = pinnedRes ? await pinnedRes.json() : [];
-      const allForks = forksRes ? await forksRes.json() : [];
-
-      const publicRepos = allRepos.filter((r: any) => !r.isPrivate);
-      const publicPinned = pinnedRepos.filter((r: any) => !r.isPrivate);
-      
-      // Process Forks: Public only, Sort by Stars DESC, Top 9
-      const topForks = allForks
-        .filter((r: any) => !r.isPrivate)
-        .sort((a: any, b: any) => ((b.parent?.stargazerCount || b.stargazerCount) || 0) - ((a.parent?.stargazerCount || a.stargazerCount) || 0))
-        .slice(0, 9);
-
-      const totalStars = publicRepos.reduce((acc: number, repo: any) => acc + (repo.stargazerCount || 0), 0);
-      const totalForks = publicRepos.reduce((acc: number, repo: any) => acc + (repo.forkCount || 0), 0);
-
-      const languageCounts: Record<string, number> = {};
-      publicRepos.forEach((repo: any) => {
-        if (repo.primaryLanguage) {
-          const l = repo.primaryLanguage.name;
-          languageCounts[l] = (languageCounts[l] || 0) + 1;
+        const user = await userRes.json();
+        const allRepos = await reposRes.json();
+        const analysis = await analysisRes.json();
+        const pinnedRepos = pinnedRes ? await pinnedRes.json() : [];
+        
+        let topForks = [];
+        try {
+          const allForks = forksRes ? await forksRes.json() : [];
+          // Process Forks: Public only, Sort by Parent Stars DESC, Top 9
+          topForks = allForks
+            .filter((r: any) => !r.isPrivate)
+            .sort((a: any, b: any) => ((b.parent?.stargazerCount || b.stargazerCount) || 0) - ((a.parent?.stargazerCount || a.stargazerCount) || 0))
+            .slice(0, 9);
+        } catch (e) {
+          console.error("Failed to process forks:", e);
         }
-      });
 
-      const languages = Object.entries(languageCounts)
-        .map(([name, count]) => ({ name, count }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
+        const publicRepos = allRepos.filter((r: any) => !r.isPrivate);
+        const publicPinned = pinnedRepos.filter((r: any) => !r.isPrivate);
 
-      const pinnedNames = new Set(publicPinned.map((p: any) => p.name));
-      // Featured Logic: 1. Pinned first, 2. AI Recommended, 3. Top Public
-      const recommendedNames = analysis.recommended_featured || [];
-      const recommendedRepos = publicRepos
-        .filter((r: any) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
-        .sort((a: any, b: any) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
+        const totalStars = publicRepos.reduce((acc: number, repo: any) => acc + (repo.stargazerCount || 0), 0);
+        const totalForks = publicRepos.reduce((acc: number, repo: any) => acc + (repo.forkCount || 0), 0);
 
-      const otherRepos = publicRepos
-        .filter((r: any) => !pinnedNames.has(r.name) && !recommendedNames.includes(r.name))
-        .sort((a: any, b: any) => (b.stargazerCount || 0) - (a.stargazerCount || 0));
+        const languageCounts: Record<string, number> = {};
+        publicRepos.forEach((repo: any) => {
+          if (repo.primaryLanguage) {
+            const l = repo.primaryLanguage.name;
+            languageCounts[l] = (languageCounts[l] || 0) + 1;
+          }
+        });
 
-      const featured = [...publicPinned, ...recommendedRepos, ...otherRepos].slice(0, 9);
+        const languages = Object.entries(languageCounts)
+          .map(([name, count]) => ({ name, count }))
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 5);
 
-      setData({
-        user,
-        repos: publicRepos,
-        analysis,
-        pinned: publicPinned,
-        featured,
-        stats: { totalStars, totalForks, languages },
-        forks: topForks
-      });
-      setIsLoading(false);
+        const pinnedNames = new Set(publicPinned.map((p: any) => p.name));
+        // Featured Logic: 1. Pinned first, 2. AI Recommended, 3. Top Public
+        const recommendedNames = analysis.recommended_featured || [];
+        const recommendedRepos = publicRepos
+          .filter((r: any) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
+          .sort((a: any, b: any) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
+
+        const otherRepos = publicRepos
+          .filter((r: any) => !pinnedNames.has(r.name) && !recommendedNames.includes(r.name))
+          .sort((a: any, b: any) => (b.stargazerCount || 0) - (a.stargazerCount || 0));
+
+        const featured = [...publicPinned, ...recommendedRepos, ...otherRepos].slice(0, 9);
+
+        setData({
+          user,
+          repos: publicRepos,
+          analysis,
+          pinned: publicPinned,
+          featured,
+          stats: { totalStars, totalForks, languages },
+          forks: topForks
+        });
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      } finally {
+        setIsLoading(false);
+      }
     }
     fetchData();
     return () => window.removeEventListener('scroll', handleScroll);
