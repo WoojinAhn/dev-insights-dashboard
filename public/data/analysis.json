@@ -1,102 +1,70 @@
 {
   "en": {
-    "summary": "Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong portfolio showcasing a wide range of projects and technologies.",
+    "summary": "Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong background in developing innovative projects and contributing to open-source repositories.",
     "strengths": [
       {
-        "name": "AI Development",
+        "strength": "AI Development",
         "evidence": "dev-insights-dashboard, claude-code-tutorial"
       },
       {
-        "name": "Web Development",
-        "evidence": "miniroom-demo, supabase-anonymous-board"
+        "strength": "TypeScript Expertise",
+        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
       },
       {
-        "name": "Automation",
-        "evidence": "github-star-checker, fixture-monkey"
+        "strength": "Java Development",
+        "evidence": "tddworkshop, scavenger, fixture-monkey"
       },
       {
-        "name": "Data Analysis",
-        "evidence": "cursor-docs-crawler, chrome-cookie-reader"
+        "strength": "Python Development",
+        "evidence": "cursor-docs-crawler, chrome-cookie-reader, claude-tutorial-playground"
       }
     ],
-    "ai_summary": "The developer has demonstrated strong AI capabilities, with a focus on integration, automation, and context-aware development."
+    "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on developing innovative projects that leverage AI insights."
   },
   "ko": {
-    "summary": "알받 정보 어 있다, AI, TypeScript, Java, 해니니다 소녀 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다.",
-    "strengths": [
-      {
-        "name": "알받 정보",
-        "evidence": "dev-insights-dashboard, claude-code-tutorial"
-      },
-      {
-        "name": "원룰 정보",
-        "evidence": "miniroom-demo, supabase-anonymous-board"
-      },
-      {
-        "name": "연룹드립",
-        "evidence": "github-star-checker, fixture-monkey"
-      },
-      {
-        "name": "모든 단다",
-        "evidence": "cursor-docs-crawler, chrome-cookie-reader"
-      }
-    ],
-    "ai_summary": "정보는 알받 정보 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
+    "summary": "Technical profile analysis in progress.",
+    "strengths": [],
+    "ai_summary": "AI capability assessment pending."
   },
   "top_technologies": [
     "TypeScript",
-    "Java",
     "Python",
-    "JavaScript",
-    "HTML",
-    "CSS"
+    "Java"
   ],
-  "recommended_featured": [
-    "dev-insights-dashboard",
-    "miniroom-demo",
-    "supabase-anonymous-board",
-    "cursor-docs-crawler",
-    "chrome-cookie-reader",
-    "claude-code-tutorial",
-    "github-star-checker",
-    "fixture-monkey",
-    "rest-assured-workshop"
-  ],
+  "recommended_featured": [],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 85,
-      "desc_en": "The developer has demonstrated strong integration capabilities, with a focus on combining AI and web development technologies.",
-      "desc_ko": "정보는 알받 정보 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     },
     {
       "key": "Automation",
-      "score": 80,
-      "desc_en": "The developer has demonstrated strong automation capabilities, with a focus on automating tasks and workflows.",
-      "desc_ko": "정보는 연룹드립 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     },
     {
       "key": "Context",
-      "score": 75,
-      "desc_en": "The developer has demonstrated strong context-aware development capabilities, with a focus on understanding the context and requirements of each project.",
-      "desc_ko": "정보는 속드립 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     },
     {
       "key": "Agentic",
-      "score": 70,
-      "desc_en": "The developer has demonstrated strong agentic capabilities, with a focus on developing autonomous and adaptive systems.",
-      "desc_ko": "정보는 알받 정보 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
     }
   ],
   "interests": {
-    "title": "AI and Web Development Enthusiast",
+    "title": "Research Radar",
     "keywords": [
       "AI",
-      "Web Development",
-      "Automation",
-      "Data Analysis"
+      "Open Source"
     ],
-    "desc_en": "The developer is interested in AI, web development, automation, and data analysis, with a focus on developing innovative and practical solutions.",
-    "desc_ko": "정보는 알받, 원룰 정보, 연룹드립, 모든 단다 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
+    "desc_en": "Exploring innovative tech through forked projects.",
+    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
   }
 }
