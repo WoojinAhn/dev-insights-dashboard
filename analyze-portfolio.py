@@ -43,6 +43,13 @@ def analyze_portfolio():
            - Score (0-100), Detailed reason (EN/KO).
            - **NEW: AI Capabilities Overall Summary (EN/KO)**. A 1-sentence summary specifically for the AI section.
 
+        [Tone & Manner Guidelines]
+        - STRICTLY maintain an objective, factual, and neutral tone.
+        - DO NOT use exaggerated, overly enthusiastic, or boastful adjectives (e.g., "역량이 뛰어난", "다재다능한", "혁신적인", "뛰어난", "훌륭한").
+        - Focus ONLY on technical facts, actual tech stacks used, and demonstrable achievements based on the provided repository data.
+        - Write as a third-party technical observer, not a marketer.
+        - When writing in Korean, use a dry and professional tone (e.g., "~을 활용함", "~구현 사례가 확인됨", "~에 특화된 개발자임").
+
         Return ONLY a JSON object with this exact structure:
         {{
           "en": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
