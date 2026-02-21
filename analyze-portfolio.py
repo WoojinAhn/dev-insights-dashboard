@@ -82,7 +82,7 @@ def analyze_portfolio():
         - Focus ONLY on technical facts.
         - Write as a third-party technical observer.
 
-        Return ONLY a JSON object with this exact structure:
+        Return ONLY a JSON object with this exact structure. DO NOT omit any keys:
         {{
           "en": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
           "ko": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
@@ -123,6 +123,16 @@ def analyze_portfolio():
         # --- Processing & Validation ---
         content = response.text.replace("```json", "").replace("```", "").strip()
         analysis_data = json.loads(content)
+
+        # Ensure 'interests' field exists to avoid frontend errors
+        if "interests" not in analysis_data:
+            print("⚠️ 'interests' field missing in AI response. Adding default.")
+            analysis_data["interests"] = {
+                "title": "Research Radar",
+                "keywords": ["Tech Research", "Open Source"],
+                "desc_en": "Analyzing latest trends and exploring innovative technologies through forked projects.",
+                "desc_ko": "Fork된 프로젝트들을 통해 최신 기술 트렌드를 분석하고 혁신적인 기술들을 탐구하고 있습니다."
+            }
 
         # Save to analysis.json only if parsing succeeded
         analysis_path = "public/data/analysis.json"
