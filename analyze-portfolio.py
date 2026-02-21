@@ -14,27 +14,19 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 def get_model():
-    # Try multiple common names for 1.5 Flash
-    for model_name in ['gemini-1.5-flash', 'gemini-1.5-flash-latest']:
-        try:
-            m = genai.GenerativeModel(model_name)
-            # Test with a tiny prompt to see if it really exists
-            m.generate_content("test", generation_config={"max_output_tokens": 1})
-            print(f"✅ Using model: {model_name}")
-            return m
-        except Exception:
-            continue
-    
-    # If all fail, list models to debug
-    print("❌ All preferred models failed. Available models:")
+    # Use gemini-2.0-flash as it's confirmed available in the logs
+    model_name = 'gemini-2.0-flash'
     try:
+        m = genai.GenerativeModel(model_name)
+        print(f"✅ Using model: {model_name}")
+        return m
+    except Exception as e:
+        print(f"❌ Failed to load {model_name}: {e}")
+        # Fallback to listing models if still failing
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
                 print(f"- {m.name}")
-    except Exception as e:
-        print(f"Failed to list models: {e}")
-    
-    raise Exception("Could not find a suitable Gemini model.")
+        raise
 
 model = get_model()
 
