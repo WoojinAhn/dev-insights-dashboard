@@ -1,70 +1,99 @@
 {
   "en": {
-    "summary": "Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong background in developing innovative projects and contributing to open-source repositories.",
+    "summary": "Senior Automation Architect & AI Integration Specialist. Expert in streamlining development workflows and integrating LLMs into robust backend ecosystems.",
     "strengths": [
       {
-        "strength": "AI Development",
-        "evidence": "dev-insights-dashboard, claude-code-tutorial"
+        "strength": "LLM Integration & Orchestration",
+        "evidence": "Expertly integrated Gemini and Claude APIs into dev-insights-dashboard and automated CLI tools."
       },
       {
-        "strength": "TypeScript Expertise",
-        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
+        "strength": "Cloud-Native Backend Engineering",
+        "evidence": "Demonstrated deep Java & Spring Boot proficiency through fixture-monkey and scavenger."
       },
       {
-        "strength": "Java Development",
-        "evidence": "tddworkshop, scavenger, fixture-monkey"
+        "strength": "Advanced Workflow Automation",
+        "evidence": "Built complex CI/CD pipelines and environmental sync tools using GitHub Actions and Shell."
       },
       {
-        "strength": "Python Development",
-        "evidence": "cursor-docs-crawler, chrome-cookie-reader, claude-tutorial-playground"
+        "strength": "Context-Aware AI Tooling",
+        "evidence": "Developed specialized scrapers and crawlers to provide deep context for AI-assisted coding."
       }
     ],
-    "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on developing innovative projects that leverage AI insights."
+    "ai_summary": "Architecting the next generation of AI-driven developer tools through seamless LLM integration and robust automation."
   },
   "ko": {
-    "summary": "Technical profile analysis in progress.",
-    "strengths": [],
-    "ai_summary": "AI capability assessment pending."
+    "summary": "자동화 아키텍트 및 AI 통합 전문가. 개발 워크플로우를 혁신하고 LLM을 견고한 백엔드 생태계에 통합하는 데 특화된 엔지니어링 역량을 보유함.",
+    "strengths": [
+      {
+        "strength": "LLM 통합 및 오케스트레이션",
+        "evidence": "dev-insights-dashboard 및 자동화 CLI 도구를 통해 Gemini와 Claude API를 성공적으로 통합함."
+      },
+      {
+        "strength": "클라우드 네이티브 백엔드 엔지니어링",
+        "evidence": "fixture-monkey 및 scavenger 프로젝트를 통해 숙련된 Java 및 프레임워크 활용 능력을 증명함."
+      },
+      {
+        "strength": "고급 워크플로우 자동화",
+        "evidence": "GitHub Actions와 Shell 스크립트를 활용해 복잡한 CI/CD 및 환경 동기화 도구를 구축함."
+      },
+      {
+        "strength": "컨텍스트 기반 AI 툴링",
+        "evidence": "AI 보조 코딩의 정확도를 높이기 위한 전문 크롤러 및 데이터 추출 도구를 직접 개발함."
+      }
+    ],
+    "ai_summary": "원활한 LLM 통합과 강력한 자동화를 통해 차세대 AI 기반 개발자 도구를 설계하고 있음."
   },
   "top_technologies": [
     "TypeScript",
+    "Java",
     "Python",
-    "Java"
+    "GitHub Actions",
+    "Gemini AI",
+    "Supabase"
   ],
-  "recommended_featured": [],
+  "recommended_featured": [
+    "dev-insights-dashboard",
+    "scavenger",
+    "fixture-monkey",
+    "claude-code-tutorial",
+    "cursor-docs-crawler",
+    "chrome-cookie-reader",
+    "supabase-anonymous-board"
+  ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 94,
+      "desc_en": "Advanced LLM API orchestration.",
+      "desc_ko": "고급 LLM API 오케스트레이션 및 시스템 통합 역량 보유."
     },
     {
       "key": "Automation",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 90,
+      "desc_en": "Seamless CI/CD & DX automation.",
+      "desc_ko": "끊김 없는 CI/CD 및 개발자 경험 자동화 환경 구축."
     },
     {
       "key": "Context",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 88,
+      "desc_en": "Rich context injection for AI models.",
+      "desc_ko": "AI 모델을 위한 풍부한 컨텍스트 주입 및 데이터 가공 특화."
     },
     {
       "key": "Agentic",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 82,
+      "desc_en": "Interactive AI agent optimization.",
+      "desc_ko": "에이전트 기반 AI 도구 최적화 및 인터랙티브 인터페이스 설계."
     }
   ],
   "interests": {
     "title": "Research Radar",
     "keywords": [
-      "AI",
-      "Open Source"
+      "LLM_Ops",
+      "AI_Automation",
+      "NextGen_DX"
     ],
-    "desc_en": "Exploring innovative tech through forked projects.",
-    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
+    "desc_en": "Actively researching emerging LLM orchestration patterns and NextGen developer experience frameworks.",
+    "desc_ko": "최신 LLM 오케스트레이션 패턴과 차세대 개발자 경험 프레임워크를 심도 있게 연구 중입니다."
   }
 }

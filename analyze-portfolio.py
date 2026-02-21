@@ -20,15 +20,20 @@ def call_gemini(prompt):
         raise Exception("Gemini API key not provided")
     
     genai.configure(api_key=GEMINI_API_KEY)
-    
     model_name = 'gemini-2.0-flash'
-    try:
-        model = genai.GenerativeModel(model_name)
-        response = model.generate_content(prompt)
-        return response.text
-    except Exception as e:
-        print(f"⚠️ Gemini failed: {e}")
-        raise
+    
+    for attempt in range(3):
+        try:
+            model = genai.GenerativeModel(model_name)
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as e:
+            if "429" in str(e) and attempt < 2:
+                print(f"⚠️ Gemini quota reached. Waiting 30s before retry {attempt+1}/3...")
+                time.sleep(30)
+                continue
+            print(f"⚠️ Gemini failed: {e}")
+            raise
 
 def call_github_gpt(prompt):
     if not GH_TOKEN:
