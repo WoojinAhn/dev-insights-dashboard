@@ -112,31 +112,52 @@ def analyze_portfolio():
         } for r in repos if not r.get("isPrivate")]
 
         prompt = f"""
-        Analyze the following GitHub repositories (Source & Forked) and provide a deep technical analysis.
-        
-        [Source]: {json.dumps(repo_summary)}
-        [Forked]: {json.dumps(forks_summary)}
+        [Role]: You are a Senior Technical Architect and Talent Scout.
+        [Task]: Perform a rigorous technical audit of the following GitHub portfolio to identify the developer's unique engineering signature, AI proficiency, and research trajectory.
 
-        Tasks:
-        1. Professional summary (EN/KO).
-        2. 4 Key strengths (EN/KO) with specific evidence (repo names/tech).
-        3. Top technological used.
-        4. Select top 9 impressive projects.
-        5. AI Core Capabilities Evaluation (Integration, Automation, Context, Agentic): Score (0-100), Detailed reason (EN/KO) with evidence.
-        6. AI Capabilities Overall Summary (EN/KO).
-        7. Interest Analysis (Based on Forks): Creative Title, 3-5 Keywords, Description (EN/KO).
+        [Data Inputs]:
+        - SOURCE REPOSITORIES (Own Work): {json.dumps(repo_summary)}
+        - FORKED REPOSITORIES (Research Interest): {json.dumps(forks_summary)}
 
-        Return ONLY a JSON object with this exact structure. DO NOT omit any keys:
+        [Requirements for Analysis]:
+        1. **Summary**: Define a 'Technical Persona' (e.g., 'Automation Architect', 'AI Integration Specialist').
+        2. **Key Strengths**: Identify 4 high-level engineering strengths based ONLY on [Source Repositories]. 
+           - For each, provide 'strength' (title) and 'evidence' (a concise technical explanation mentioning specific repos and technologies).
+        3. **Top Technologies**: Identify the core tech stack from [Source Repositories].
+        4. **AI Capabilities**: Evaluate 4 dimensions (Integration, Automation, Context, Agentic).
+           - Score (0-100) and 'Detailed Reason'. Reason must be evidence-based (e.g., "Score 90 in Automation due to the implementation of complex GitHub Action workflows in [Repo Name]").
+        5. **Interests (Research Radar)**: Analyze [Forked Repositories] only.
+           - Identify what the developer is currently studying or watching. Provide a creative section title, keywords, and a visionary description.
+
+        [Tone & Language Quality]:
+        - Professional, objective, and dry. Avoid "passionate", "talented", or "amazing".
+        - Korean Output: MUST be natural, sophisticated, and grammatically perfect (Senior level). Use professional endings like "~을 구축함", "~에 특화됨".
+        - English Output: Standard industry-level technical prose.
+
+        Return ONLY a JSON object with this exact structure:
         {{
-          "en": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
-          "ko": {{ "summary": "...", "strengths": [...], "ai_summary": "..." }},
-          "top_technologies": [...],
-          "recommended_featured": [...],
+          "en": {{ 
+            "summary": "...", 
+            "strengths": [{{ "strength": "...", "evidence": "..." }}, ...], 
+            "ai_summary": "..." 
+          }},
+          "ko": {{ 
+            "summary": "...", 
+            "strengths": [{{ "strength": "...", "evidence": "..." }}, ...], 
+            "ai_summary": "..." 
+          }},
+          "top_technologies": ["...", "..."],
+          "recommended_featured": ["...", "..."],
           "ai_capabilities": [
             {{ "key": "Integration", "score": 85, "desc_en": "...", "desc_ko": "..." }},
             ...
           ],
-          "interests": {{ "title": "...", "keywords": ["...", "..."], "desc_en": "...", "desc_ko": "..." }}
+          "interests": {{ 
+            "title": "...", 
+            "keywords": ["...", "..."], 
+            "desc_en": "...", 
+            "desc_ko": "..." 
+          }}
         }}
         """
 
@@ -230,9 +251,6 @@ def analyze_portfolio():
     except Exception as e:
         print(f"❌ Error during portfolio analysis: {str(e)}")
         sys.exit(1)
-
-if __name__ == "__main__":
-    analyze_portfolio()
 
 if __name__ == "__main__":
     analyze_portfolio()
