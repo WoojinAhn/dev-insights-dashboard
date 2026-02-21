@@ -1,100 +1,102 @@
 {
   "en": {
-    "summary": "Highly skilled developer focused on AI integration, TypeScript ecosystem, and automated developer experience.",
+    "summary": "Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong portfolio showcasing a wide range of projects and technologies.",
     "strengths": [
       {
-        "strength": "AI Integration & LLM Ops",
+        "name": "AI Development",
         "evidence": "dev-insights-dashboard, claude-code-tutorial"
       },
       {
-        "strength": "Advanced TypeScript Ecosystem",
-        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
+        "name": "Web Development",
+        "evidence": "miniroom-demo, supabase-anonymous-board"
       },
       {
-        "strength": "Java & Backend Engineering",
-        "evidence": "tddworkshop, scavenger, fixture-monkey"
+        "name": "Automation",
+        "evidence": "github-star-checker, fixture-monkey"
       },
       {
-        "strength": "Automation & DX Optimization",
-        "evidence": "github-star-checker, claude-config"
+        "name": "Data Analysis",
+        "evidence": "cursor-docs-crawler, chrome-cookie-reader"
       }
     ],
-    "ai_summary": "Expert in building practical AI-assisted development environments and integrating multi-modal LLMs."
+    "ai_summary": "The developer has demonstrated strong AI capabilities, with a focus on integration, automation, and context-aware development."
   },
   "ko": {
-    "summary": "AI 통합, TypeScript 생태계 및 자동화된 개발자 경험(DX)에 집중하는 숙련된 개발자임. 다양한 도구와 CLI 설정을 통해 기술적 역량을 증명하고 있음.",
+    "summary": "알받 정보 어 있다, AI, TypeScript, Java, 해니니다 소녀 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다.",
     "strengths": [
       {
-        "strength": "AI 통합 및 LLM 운영",
-        "evidence": "dev-insights-dashboard, claude-code-tutorial 프로젝트를 통한 AI 통합"
+        "name": "알받 정보",
+        "evidence": "dev-insights-dashboard, claude-code-tutorial"
       },
       {
-        "strength": "고급 TypeScript 생태계",
-        "evidence": "miniroom-demo, supabase-anonymous-board 등 다양한 프론트엔드 프로젝트"
+        "name": "원룰 정보",
+        "evidence": "miniroom-demo, supabase-anonymous-board"
       },
       {
-        "strength": "Java 및 백엔드 엔지니어링",
-        "evidence": "tddworkshop, scavenger, fixture-monkey 등 견고한 백엔드 라이브러리"
+        "name": "연룹드립",
+        "evidence": "github-star-checker, fixture-monkey"
       },
       {
-        "strength": "자동화 및 DX 최적화",
-        "evidence": "github-star-checker, claude-config를 통한 워크플로우 효율화"
+        "name": "모든 단다",
+        "evidence": "cursor-docs-crawler, chrome-cookie-reader"
       }
     ],
-    "ai_summary": "실무적인 AI 보조 개발 환경 구축 및 멀티모달 LLM의 전문적 워크플로우 통합에 특화됨."
+    "ai_summary": "정보는 알받 정보 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
   },
   "top_technologies": [
     "TypeScript",
     "Java",
     "Python",
-    "Next.js",
-    "Gemini AI",
-    "Supabase",
-    "GitHub Actions"
+    "JavaScript",
+    "HTML",
+    "CSS"
   ],
   "recommended_featured": [
     "dev-insights-dashboard",
-    "scavenger",
-    "fixture-monkey",
-    "claude-code-tutorial",
+    "miniroom-demo",
+    "supabase-anonymous-board",
     "cursor-docs-crawler",
     "chrome-cookie-reader",
-    "supabase-anonymous-board"
+    "claude-code-tutorial",
+    "github-star-checker",
+    "fixture-monkey",
+    "rest-assured-workshop"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 92,
-      "desc_en": "Deep integration of LLM APIs.",
-      "desc_ko": "LLM API를 대시보드 및 CLI 도구에 깊이 있게 통합함."
+      "score": 85,
+      "desc_en": "The developer has demonstrated strong integration capabilities, with a focus on combining AI and web development technologies.",
+      "desc_ko": "정보는 알받 정보 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
     },
     {
       "key": "Automation",
-      "score": 88,
-      "desc_en": "Automating workflows with Actions.",
-      "desc_ko": "Shell 및 Actions를 활용한 자동화 구현 역량."
+      "score": 80,
+      "desc_en": "The developer has demonstrated strong automation capabilities, with a focus on automating tasks and workflows.",
+      "desc_ko": "정보는 연룹드립 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
     },
     {
       "key": "Context",
-      "score": 85,
-      "desc_en": "Context-aware data extraction.",
-      "desc_ko": "AI 이해도를 높이기 위한 컨텍스트 추출 도구 구현."
+      "score": 75,
+      "desc_en": "The developer has demonstrated strong context-aware development capabilities, with a focus on understanding the context and requirements of each project.",
+      "desc_ko": "정보는 속드립 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
     },
     {
       "key": "Agentic",
-      "score": 78,
-      "desc_en": "Interactive AI interfaces.",
-      "desc_ko": "에이전트 기반 CLI 도구 및 인터페이스 구축."
+      "score": 70,
+      "desc_en": "The developer has demonstrated strong agentic capabilities, with a focus on developing autonomous and adaptive systems.",
+      "desc_ko": "정보는 알받 정보 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
     }
   ],
   "interests": {
-    "title": "Research Radar",
+    "title": "AI and Web Development Enthusiast",
     "keywords": [
-      "AI_Automation",
-      "LLM_Ops",
-      "Open_Source"
+      "AI",
+      "Web Development",
+      "Automation",
+      "Data Analysis"
     ],
-    "desc_en": "Exploring advanced AI orchestration patterns.",
-    "desc_ko": "고급 AI 오케스트레이션 패턴과 최신 프레임워크를 탐구 중입니다."
+    "desc_en": "The developer is interested in AI, web development, automation, and data analysis, with a focus on developing innovative and practical solutions.",
+    "desc_ko": "정보는 알받, 원룰 정보, 연룹드립, 모든 단다 없는 정보 정뱀다 없는 정보 정뱀다 없는 정보 정뱀다."
   }
 }
