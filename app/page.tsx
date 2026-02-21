@@ -278,8 +278,13 @@ export default function Dashboard() {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-12">
-                {currentAnalysis.strengths.map((strength: string, i: number) => {
+                {currentAnalysis.strengths.map((item: any, i: number) => {
                   const Icon = STRENGTH_ICONS[i] || ChevronRight;
+                  
+                  // Handle both string and object formats
+                  const strengthText = typeof item === 'object' ? item.strength : item;
+                  const evidenceText = typeof item === 'object' ? item.evidence : item;
+
                   const tag = lang === 'ko' ?
                     [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i] :
                     [t.strengthTags.ai, t.strengthTags.automation, t.strengthTags.fullstack, t.strengthTags.dx][i];
@@ -294,9 +299,10 @@ export default function Dashboard() {
                       {/* Hover Description Tooltip */}
                       <div className="absolute bottom-full left-0 mb-4 w-72 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl opacity-0 invisible group-hover/tag:opacity-100 group-hover/tag:visible transition-all duration-300 z-30 translate-y-2 group-hover/tag:translate-y-0">
                         <div className="absolute bottom-[-6px] left-6 w-3 h-3 bg-slate-900 border-r border-b border-white/10 rotate-45" />
-                        <p className="text-slate-200 text-sm leading-relaxed font-medium">
-                          {strength}
-                        </p>
+                        <div className="text-slate-200 text-sm leading-relaxed font-medium">
+                          <p className="font-black text-cyan-400 mb-1 uppercase text-[10px] tracking-wider">{strengthText}</p>
+                          <p className="font-light">{evidenceText}</p>
+                        </div>
                       </div>
                     </div>
                   );
