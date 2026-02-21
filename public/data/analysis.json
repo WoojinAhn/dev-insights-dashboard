@@ -1,79 +1,103 @@
 {
   "en": {
-    "summary": "A developer focused on integrating Large Language Models (LLMs) into development workflows and web applications. Expertise includes building AI-powered dashboards, configuring AI CLI tools, and creating automation scripts for developer productivity.",
+    "summary": "Highly skilled developer with expertise in AI, TypeScript, and Java, with a strong portfolio of projects showcasing proficiency in various technologies.",
     "strengths": [
-      "LLM API integration for data visualization and insights",
-      "Configuration management and environment setup for AI-assisted coding tools",
-      "Automated documentation crawling and data extraction for AI context",
-      "Full-stack development with Next.js and Supabase for tool prototyping"
+      {
+        "name": "AI Development",
+        "evidence": "dev-insights-dashboard, claude-code-tutorial"
+      },
+      {
+        "name": "TypeScript Expertise",
+        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
+      },
+      {
+        "name": "Java Development",
+        "evidence": "tddworkshop, scavenger, fixture-monkey"
+      },
+      {
+        "name": "Automation",
+        "evidence": "github-star-checker, claude-config"
+      }
     ],
-    "ai_summary": "Concentrates on optimizing AI-assisted development environments and building practical interfaces for multi-modal LLM integration."
+    "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on TypeScript and Java."
   },
   "ko": {
-    "summary": "LLM(대규모 언어 모델)을 개발 워크플로우 및 웹 애플리케이션에 통합하는 데 주력하는 개발자임. AI 기반 대시보드 구축, AI CLI 도구 설정 관리, 개발 생산성 향상을 위한 자동화 스크립트 작성에 전문성을 보유함.",
+    "summary": "알는 어려 정보드 알 신행 어려 정보드, TypeScript 어 신행 어려 정보드 없는 정보드 정백단.",
     "strengths": [
-      "데이터 시각화 및 인사이트 도출을 위한 LLM API 연동 역량",
-      "AI 보조 코딩 도구의 구성 관리 및 환경 설정 자동화",
-      "AI 컨텍스트 제공을 위한 문서 크롤링 및 데이터 추출 자동화",
-      "Next.js 및 Supabase를 활용한 실용적 도구 프로토타이핑"
+      {
+        "name": "알는 정보드",
+        "evidence": "dev-insights-dashboard, claude-code-tutorial"
+      },
+      {
+        "name": "TypeScript 어려",
+        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
+      },
+      {
+        "name": "Java 정보드",
+        "evidence": "tddworkshop, scavenger, fixture-monkey"
+      },
+      {
+        "name": "연료드",
+        "evidence": "github-star-checker, claude-config"
+      }
     ],
-    "ai_summary": "AI 보조 개발 환경의 최적화와 멀티모달 LLM 인터페이스 구축을 통한 실무적 도구 개발에 집중하고 있음."
+    "ai_summary": "정보드는 알는 어려 정보드 정백단, 어려 신행 어려 정보드 없는 정보드 정백단."
   },
   "top_technologies": [
     "TypeScript",
+    "Java",
     "Python",
-    "Next.js",
+    "JavaScript",
+    "HTML",
     "Shell",
-    "Gemini AI",
-    "Claude Code",
-    "Supabase",
-    "GitHub Actions"
+    "CSS"
   ],
   "recommended_featured": [
     "dev-insights-dashboard",
-    "claude-code-tutorial",
-    "cursor-docs-crawler",
-    "claude-tutorial-playground",
-    "claude-config",
-    "chrome-cookie-reader",
-    "github-star-checker",
+    "miniroom-demo",
     "supabase-anonymous-board",
-    "miniroom-demo"
+    "scavenger",
+    "fixture-monkey",
+    "claude-code-tutorial",
+    "chrome-cookie-reader",
+    "claude-config",
+    "github-star-checker"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 88,
-      "desc_en": "Demonstrated capability in integrating Gemini AI into TypeScript-based dashboards and managing Claude Code interfaces.",
-      "desc_ko": "Gemini AI를 TypeScript 기반 대시보드에 통합하고 Claude Code 인터페이스를 관리하는 역량이 확인됨."
+      "score": 85,
+      "desc_en": "Strong integration capabilities demonstrated through projects like dev-insights-dashboard and claude-code-tutorial.",
+      "desc_ko": "알는 정보드 정백단, dev-insights-dashboard 어 claude-code-tutorial 없는 정보드 정백단."
     },
     {
       "key": "Automation",
-      "score": 82,
-      "desc_en": "Implemented automated workflows using GitHub Actions and Shell scripts to sync AI tool configurations and monitor metrics.",
-      "desc_ko": "GitHub Actions 및 Shell 스크립트를 사용하여 AI 도구 설정을 동기화하고 지표를 모니터링하는 자동화 워크플로우를 구현함."
+      "score": 80,
+      "desc_en": "Automation capabilities demonstrated through projects like github-star-checker and claude-config.",
+      "desc_ko": "연료드 정보드 정백단, github-star-checker 어 claude-config 없는 정보드 정백단."
     },
     {
       "key": "Context",
-      "score": 75,
-      "desc_en": "Developed a crawler specifically for documentation to provide external context to AI tools like Cursor.",
-      "desc_ko": "Cursor와 같은 AI 도구에 외부 컨텍스트를 제공하기 위해 문서 전용 크롤러를 개발한 사례가 있음."
+      "score": 70,
+      "desc_en": "Contextual understanding demonstrated through projects like dev-insights-dashboard and chrome-cookie-reader.",
+      "desc_ko": "신행 정보드 정백단, dev-insights-dashboard 어 chrome-cookie-reader 없는 정보드 정백단."
     },
     {
       "key": "Agentic",
-      "score": 65,
-      "desc_en": "Experience with agentic CLI tools (Claude Code) through tutorial development and configuration optimization.",
-      "desc_ko": "튜토리얼 개발 및 설정 최적화를 통해 Claude Code와 같은 에이전트형 CLI 도구를 활용한 경험을 보유함."
+      "score": 60,
+      "desc_en": "Agentic capabilities demonstrated through projects like claude-code-tutorial and claude-config.",
+      "desc_ko": "알는 정보드 정백단, claude-code-tutorial 어 claude-config 없는 정보드 정백단."
     }
   ],
   "interests": {
-    "title": "Research Radar",
+    "title": "AI and Web Development Enthusiast",
     "keywords": [
-      "AI_Automation",
-      "LLM_Ops",
-      "Open_Source"
+      "AI",
+      "TypeScript",
+      "Java",
+      "Web Development"
     ],
-    "desc_en": "Currently researching advanced AI automation patterns and LLM integration workflows through various open-source projects.",
-    "desc_ko": "다양한 오픈소스 프로젝트를 통해 고급 AI 자동화 패턴과 LLM 통합 워크플로우를 연구하고 있습니다."
+    "desc_en": "The developer is interested in AI, TypeScript, Java, and web development, with a focus on creating innovative projects.",
+    "desc_ko": "정보드는 알는 정보드, TypeScript, Java, 원분 정보드 없는 정보드 정백단, 알는 정보드 정백단 없는 정보드 정백단."
   }
 }
