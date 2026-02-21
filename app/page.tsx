@@ -20,7 +20,8 @@ import {
   Globe,
   Heart,
   Brain,
-  Target
+  Target,
+  Telescope
 } from 'lucide-react';
 
 const STRENGTH_ICONS: any = {
@@ -67,20 +68,28 @@ export default function Dashboard() {
 
     async function fetchData() {
       const ts = new Date().getTime();
-      const [userRes, reposRes, analysisRes, pinnedRes] = await Promise.all([
+      const [userRes, reposRes, analysisRes, pinnedRes, forksRes] = await Promise.all([
         fetch(`/data/user.json?t=${ts}`),
         fetch(`/data/repos.json?t=${ts}`),
         fetch(`/data/analysis.json?t=${ts}`),
-        fetch(`/data/pinned.json?t=${ts}`).catch(() => null)
+        fetch(`/data/pinned.json?t=${ts}`).catch(() => null),
+        fetch(`/data/forks.json?t=${ts}`).catch(() => null)
       ]);
 
       const user = await userRes.json();
       const allRepos = await reposRes.json();
       const analysis = await analysisRes.json();
       const pinnedRepos = pinnedRes ? await pinnedRes.json() : [];
+      const allForks = forksRes ? await forksRes.json() : [];
 
       const publicRepos = allRepos.filter((r: any) => !r.isPrivate);
       const publicPinned = pinnedRepos.filter((r: any) => !r.isPrivate);
+      
+      // Process Forks: Public only, Sort by Stars DESC, Top 9
+      const topForks = allForks
+        .filter((r: any) => !r.isPrivate)
+        .sort((a: any, b: any) => (b.stargazerCount || 0) - (a.stargazerCount || 0))
+        .slice(0, 9);
 
       const totalStars = publicRepos.reduce((acc: number, repo: any) => acc + (repo.stargazerCount || 0), 0);
       const totalForks = publicRepos.reduce((acc: number, repo: any) => acc + (repo.forkCount || 0), 0);
@@ -117,7 +126,8 @@ export default function Dashboard() {
         analysis,
         pinned: publicPinned,
         featured,
-        stats: { totalStars, totalForks, languages }
+        stats: { totalStars, totalForks, languages },
+        forks: topForks
       });
       setIsLoading(false);
     }
@@ -134,7 +144,7 @@ export default function Dashboard() {
     </div>
   );
 
-  const { user, analysis, stats, featured, pinned } = data;
+  const { user, analysis, stats, featured, pinned, forks } = data;
   const currentAnalysis = lang === 'ko' ? analysis.ko : analysis.en;
   const pinnedNames = new Set(pinned.map((p: any) => p.name));
 
@@ -436,6 +446,76 @@ export default function Dashboard() {
             ))}
           </div>
         </section>
+
+        {/* Interests / Forks Section */}
+        {forks && forks.length > 0 && (
+          <section className="mt-32">
+             <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                  <Telescope className="w-6 h-6 text-indigo-400" />
+                </div>
+                <h2 className="text-2xl font-black uppercase tracking-tight text-indigo-400">
+                  {analysis.interests?.title || 'Research Radar'}
+                </h2>
+              </div>
+
+              {analysis.interests && (
+                <div className="mb-12">
+                   <p className="text-xl md:text-2xl text-slate-200 leading-snug mb-6 max-w-5xl font-light tracking-tight">
+                    &quot;{lang === 'ko' ? analysis.interests.desc_ko : analysis.interests.desc_en}&quot;
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {analysis.interests.keywords?.map((keyword: string, i: number) => (
+                      <span key={i} className="px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider">
+                        #{keyword}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {forks.map((repo: any, i: number) => (
+                  <a
+                    key={i}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group bg-slate-900/40 border border-white/5 p-8 rounded-[2rem] hover:border-indigo-500/40 hover:bg-slate-900/80 transition-all duration-500 flex flex-col shadow-xl hover:shadow-indigo-500/5"
+                  >
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+                        <Telescope className="w-3 h-3" />
+                        RESEARCH
+                      </div>
+                    </div>
+
+                    <h3 className="font-black text-lg md:text-xl group-hover:text-indigo-400 transition-all mb-4 uppercase tracking-tighter break-all leading-tight min-h-[3rem] flex items-center">
+                      {repo.name}
+                    </h3>
+                    <p className="text-slate-400 text-xs line-clamp-2 mb-8 flex-1 font-light leading-relaxed group-hover:text-slate-300 transition-colors">
+                      {repo.description || t.noDescription}
+                    </p>
+
+                    <div className="flex items-center gap-6 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
+                      {repo.primaryLanguage && (
+                        <div className="flex items-center gap-2">
+                          <div className={`w-2.5 h-2.5 rounded-full ${getLanguageColor(repo.primaryLanguage.name)}`} />
+                          {repo.primaryLanguage.name}
+                        </div>
+                      )}
+                      {repo.stargazerCount > 0 && (
+                        <div className="flex items-center gap-1.5 group-hover:text-yellow-400 transition-colors">
+                          <Star className="w-3.5 h-3.5" />
+                          {repo.stargazerCount}
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                ))}
+              </div>
+          </section>
+        )}
 
         <footer className="mt-32 pt-12 border-t border-white/5 text-center text-slate-700 text-[10px] uppercase tracking-[0.3em] font-black">
           <p>{t.craftedBy}</p>

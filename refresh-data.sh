@@ -64,7 +64,12 @@ echo "🌐 Fetching Public Source Repositories..."
 CMD="gh repo list \"$GH_USER\" --visibility public --source --limit 100 --json name,description,stargazerCount,languages,url,updatedAt,isPrivate,isFork,primaryLanguage,forkCount"
 fetch_data "repos" "$DATA_DIR/repos.json" "$CMD"
 
-# 4. Run AI Analysis
+# 4. Forked Repositories (Interests)
+echo "🍴 Fetching Forked Repositories..."
+CMD="gh repo list \"$GH_USER\" --visibility public --fork --limit 100 --json name,description,stargazerCount,languages,url,updatedAt,isPrivate,isFork,primaryLanguage,forkCount"
+fetch_data "forks" "$DATA_DIR/forks.json" "$CMD"
+
+# 5. Run AI Analysis
 echo "🧠 Running AI Analysis..."
 if python3 analyze-portfolio.py; then
     echo "✅ AI Analysis complete."

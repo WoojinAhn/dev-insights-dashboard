@@ -24,6 +24,21 @@ def analyze_portfolio():
 
         with open(repos_path, "r") as f:
             repos = json.load(f)
+
+        # Load forks (Interests)
+        forks_path = "public/data/forks.json"
+        forks_summary = []
+        if os.path.exists(forks_path):
+            with open(forks_path, "r") as f:
+                forks = json.load(f)
+            for r in forks:
+                 if not r.get("isPrivate"):
+                    forks_summary.append({
+                        "name": r["name"],
+                        "description": r.get("description", ""),
+                        "lang": r.get("primaryLanguage", {}).get("name", "N/A") if r.get("primaryLanguage") else "N/A",
+                        "topics": r.get("topics", [])
+                    })
         
         # Prepare data for AI
         repo_summary = []
@@ -36,25 +51,34 @@ def analyze_portfolio():
                 })
 
         prompt = f"""
-        Analyze the following GitHub repositories and provide a deep technical analysis of the developer's AI capabilities.
-        Data: {json.dumps(repo_summary)}
+        Analyze the following GitHub repositories (Source & Forked) and provide a deep technical analysis of the developer's AI capabilities and interests.
+        
+        [Source Repositories (Main Portfolio)]:
+        {json.dumps(repo_summary)}
+
+        [Forked Repositories (Interests & Research)]:
+        {json.dumps(forks_summary)}
 
         Tasks:
         1. Professional summary (EN/KO).
         2. 4 Key strengths (EN/KO).
-        3. Top  tecnológica used.
+        3. Top technological used.
         4. Select top 9 impressive projects.
         5. AI Core Capabilities Evaluation (4 dimensions):
            - "Integration", "Automation", "Context", "Agentic".
            - Score (0-100), Detailed reason (EN/KO).
            - **NEW: AI Capabilities Overall Summary (EN/KO)**. A 1-sentence summary specifically for the AI section.
+        6. **Interest Analysis (Based on Forks)**:
+           - Analyze the forked repositories to identify what the developer is currently researching or interested in.
+           - **Creative Title**: Generate a short, cool, tech-savvy section title for these interests (e.g., "Radar", "Incoming Signals", "Lab", "R&D Watchlist").
+           - **Keywords**: 3-5 keywords representing these interests.
+           - **Description (EN/KO)**: A brief explanation of these interests.
 
         [Tone & Manner Guidelines]
         - STRICTLY maintain an objective, factual, and neutral tone.
-        - DO NOT use exaggerated, overly enthusiastic, or boastful adjectives (e.g., "역량이 뛰어난", "다재다능한", "혁신적인", "뛰어난", "훌륭한").
-        - Focus ONLY on technical facts, actual tech stacks used, and demonstrable achievements based on the provided repository data.
-        - Write as a third-party technical observer, not a marketer.
-        - When writing in Korean, use a dry and professional tone (e.g., "~을 활용함", "~구현 사례가 확인됨", "~에 특화된 개발자임").
+        - DO NOT use exaggerated, overly enthusiastic, or boastful adjectives.
+        - Focus ONLY on technical facts.
+        - Write as a third-party technical observer.
 
         Return ONLY a JSON object with this exact structure:
         {{
@@ -65,7 +89,13 @@ def analyze_portfolio():
           "ai_capabilities": [
             {{ "key": "Integration", "score": 85, "desc_en": "...", "desc_ko": "..." }},
             ...
-          ]
+          ],
+          "interests": {{
+            "title": "...",
+            "keywords": ["...", "..."],
+            "desc_en": "...",
+            "desc_ko": "..."
+          }}
         }}
         """
 
