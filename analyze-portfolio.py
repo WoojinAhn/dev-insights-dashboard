@@ -2,6 +2,8 @@ import os
 import json
 import google.generativeai as genai
 import sys
+import time
+from datetime import datetime
 
 # Configure Gemini API
 api_key = os.environ.get("GEMINI_API_KEY")
@@ -10,12 +12,16 @@ if not api_key:
     sys.exit(1)
 
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-3-flash-preview')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 def analyze_portfolio():
     try:
         # Load latest repos
         repos_path = "public/data/repos.json"
+        if not os.path.exists(repos_path):
+             print(f"❌ {repos_path} not found. Skipping analysis.")
+             sys.exit(1)
+
         with open(repos_path, "r") as f:
             repos = json.load(f)
         
@@ -64,10 +70,29 @@ def analyze_portfolio():
         """
 
         response = model.generate_content(prompt)
+        
+        # --- Logging (History) ---
+        history_dir = "public/data/history"
+        os.makedirs(history_dir, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        history_file = os.path.join(history_dir, f"gemini_response_{timestamp}.json")
+        
+        # Save raw response for debugging/history
+        log_data = {
+            "timestamp": timestamp,
+            "prompt_preview": prompt[:200] + "...",
+            "raw_text": response.text
+        }
+        
+        with open(history_file, "w", encoding="utf-8") as f:
+            json.dump(log_data, f, ensure_ascii=False, indent=2)
+        print(f"📝 Saved raw API response to {history_file}")
+
+        # --- Processing & Validation ---
         content = response.text.replace("```json", "").replace("```", "").strip()
         analysis_data = json.loads(content)
 
-        # Save to analysis.json
+        # Save to analysis.json only if parsing succeeded
         analysis_path = "public/data/analysis.json"
         with open(analysis_path, "w", encoding="utf-8") as f:
             json.dump(analysis_data, f, ensure_ascii=False, indent=2)
@@ -75,7 +100,7 @@ def analyze_portfolio():
         print("✅ Dynamic AI Capabilities with Summaries updated!")
 
     except Exception as e:
-        print(f"❌ Error: {str(e)}")
+        print(f"❌ Error during AI analysis: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
