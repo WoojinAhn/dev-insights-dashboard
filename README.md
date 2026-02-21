@@ -29,7 +29,7 @@ An automated, AI-powered developer portfolio dashboard that visualizes GitHub ac
 - **🚀 Advanced Caching & Webhooks:** Employs query-parameter cache busting for instantaneous Next.js data updates on Vercel upon every repository commit.
 - **🌐 Multilingual Support:** Seamless switching between English and Korean UI.
 - **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects.
-- **⚙️ Fully Automated Pipeline:** GitHub Actions automatically refreshes data and AI insights upon every `main` branch push or daily at 00:00 KST.
+- **⚙️ Fully Automated Pipeline:** GitHub Actions automatically refreshes data and AI insights upon every `main` branch push or daily at 00:00 KST, triggering a Vercel deployment via Deploy Hook.
 
 ## 🛠 Tech Stack
 
