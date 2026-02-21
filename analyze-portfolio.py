@@ -72,9 +72,10 @@ def analyze_portfolio():
            - **NEW: AI Capabilities Overall Summary (EN/KO)**. A 1-sentence summary specifically for the AI section.
         6. **Interest Analysis (Based on Forks)**:
            - Analyze the forked repositories to identify what the developer is currently researching or interested in.
-           - **Creative Title**: Generate a short, cool, tech-savvy section title for these interests (e.g., "Radar", "Incoming Signals", "Lab", "R&D Watchlist").
-           - **Keywords**: 3-5 keywords representing these interests.
-           - **Description (EN/KO)**: A brief explanation of these interests.
+           - **Creative Title**: Generate a short, cool, tech-savvy section title (e.g., "Research Radar", "Incoming Signals", "Lab", "R&D Watchlist").
+           - **Keywords**: 3-5 specific technology keywords (e.g., "LLM_Orchestration", "RAG", "Agentic_Workflows").
+           - **Description (EN/KO)**: A brief explanation (1-2 sentences) of these interests.
+           - **MANDATORY**: You MUST include this 'interests' field even if forked data is limited.
 
         [Tone & Manner Guidelines]
         - STRICTLY maintain an objective, factual, and neutral tone.
