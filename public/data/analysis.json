@@ -1,6 +1,6 @@
 {
   "en": {
-    "summary": "Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong portfolio of projects showcasing proficiency in various technologies.",
+    "summary": "Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong portfolio showcasing a wide range of projects and technologies.",
     "strengths": [
       {
         "strength": "AI Development",
@@ -12,92 +12,22 @@
       },
       {
         "strength": "Java Development",
-        "evidence": "tddworkshop, scavenger, rest-assured-workshop"
+        "evidence": "tddworkshop, scavenger, fixture-monkey"
       },
       {
         "strength": "Automation",
         "evidence": "github-star-checker, claude-config"
       }
     ],
-    "ai_summary": "The developer has demonstrated strong AI capabilities, with a focus on integration, automation, and context-aware development."
+    "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on TypeScript and Java."
   },
-  "ko": {
-    "summary": "알받 정보 어려 정받 소녀 신린 알받 정보 어려 소녀 신린 알받 정보 어려 소녀 신린",
-    "strengths": [
-      {
-        "strength": "알신 어려 소녀",
-        "evidence": "dev-insights-dashboard, claude-code-tutorial"
-      },
-      {
-        "strength": "TypeScript 어려 소녀",
-        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
-      },
-      {
-        "strength": "Java 어려 소녀",
-        "evidence": "tddworkshop, scavenger, rest-assured-workshop"
-      },
-      {
-        "strength": "열료드립",
-        "evidence": "github-star-checker, claude-config"
-      }
-    ],
-    "ai_summary": "어려 소녀 알받 정보 어려 소녀 신린 알받 정보 어려 소녀 신린"
-  },
-  "top_technologies": [
-    "TypeScript",
-    "Java",
-    "Python",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Shell"
-  ],
-  "recommended_featured": [
-    "dev-insights-dashboard",
-    "miniroom-demo",
-    "supabase-anonymous-board",
-    "scavenger",
-    "rest-assured-workshop",
-    "claude-code-tutorial",
-    "chrome-cookie-reader",
-    "claude-tutorial-playground",
-    "github-star-checker"
-  ],
-  "ai_capabilities": [
-    {
-      "key": "Integration",
-      "score": 85,
-      "desc_en": "Strong integration capabilities demonstrated through projects like dev-insights-dashboard and claude-code-tutorial.",
-      "desc_ko": "알받 정보 어려 소녀 신린 알받 정보 어려 소녀 신린"
-    },
-    {
-      "key": "Automation",
-      "score": 90,
-      "desc_en": "High level of automation demonstrated through projects like github-star-checker and claude-config.",
-      "desc_ko": "열료드립 어려 소녀 신린 열료드립 어려 소녀 신린"
-    },
-    {
-      "key": "Context",
-      "score": 80,
-      "desc_en": "Good understanding of context demonstrated through projects like dev-insights-dashboard and chrome-cookie-reader.",
-      "desc_ko": "신린 어려 소녀 신린 신린 어려 소녀 신린"
-    },
-    {
-      "key": "Agentic",
-      "score": 70,
-      "desc_en": "Some agentic capabilities demonstrated through projects like claude-code-tutorial and claude-tutorial-playground.",
-      "desc_ko": "알받 정보 어려 소녀 신린 알받 정보 어려 소녀 신린"
-    }
-  ],
   "interests": {
-    "title": "AI-Powered Developer",
+    "title": "Research Radar",
     "keywords": [
       "AI",
-      "TypeScript",
-      "Java",
-      "Automation"
+      "Open Source"
     ],
-    "desc_en": "The developer is interested in AI, TypeScript, Java, and automation, with a focus on building innovative projects that integrate these technologies.",
-    "desc_ko": "어려 소녀 알받 정보 어려 소녀 신린 알받 정보 어려 소녀 신린 알받 정보 어려 소녀 신린"
+    "desc_en": "Exploring innovative tech through forked projects.",
+    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
   }
 }
