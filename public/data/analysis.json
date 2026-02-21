@@ -1,103 +1,100 @@
 {
   "en": {
-    "summary": "Highly skilled developer with expertise in AI, TypeScript, and Java, with a strong portfolio of projects showcasing proficiency in various technologies.",
+    "summary": "Highly skilled developer focused on AI integration, TypeScript ecosystem, and automated developer experience.",
     "strengths": [
       {
-        "strength": "AI Development",
+        "strength": "AI Integration & LLM Ops",
         "evidence": "dev-insights-dashboard, claude-code-tutorial"
       },
       {
-        "strength": "TypeScript Expertise",
+        "strength": "Advanced TypeScript Ecosystem",
         "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
       },
       {
-        "strength": "Java Development",
+        "strength": "Java & Backend Engineering",
         "evidence": "tddworkshop, scavenger, fixture-monkey"
       },
       {
-        "strength": "Automation",
+        "strength": "Automation & DX Optimization",
         "evidence": "github-star-checker, claude-config"
       }
     ],
-    "ai_summary": "The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on TypeScript and Java."
+    "ai_summary": "Expert in building practical AI-assisted development environments and integrating multi-modal LLMs into professional workflows."
   },
   "ko": {
-    "summary": "알는 연료 있드를 수 었다, AI, TypeScript, 자 Java 소녀 연료 있드를 수 었다.",
+    "summary": "AI 통합, TypeScript 생태계 및 자동화된 개발자 경험(DX)에 집중하는 숙련된 개발자임. 다양한 전문 도구와 CLI 설정을 통해 기술적 역량을 증명하고 있음.",
     "strengths": [
       {
-        "strength": "백었집 연료",
-        "evidence": "dev-insights-dashboard, claude-code-tutorial"
+        "strength": "AI 통합 및 LLM 운영",
+        "evidence": "dev-insights-dashboard, claude-code-tutorial 프로젝트를 통한 AI 도구 통합"
       },
       {
-        "strength": "TypeScript 연료",
-        "evidence": "dev-insights-dashboard, miniroom-demo, supabase-anonymous-board"
+        "strength": "고급 TypeScript 생태계 활용",
+        "evidence": "miniroom-demo, supabase-anonymous-board 등 다양한 프론트엔드 프로젝트"
       },
       {
-        "strength": "Java 연료",
-        "evidence": "tddworkshop, scavenger, fixture-monkey"
+        "strength": "Java 및 백엔드 엔지니어링",
+        "evidence": "tddworkshop, scavenger, fixture-monkey 등 견고한 백엔드 라이브러리"
       },
       {
-        "strength": "자드립",
-        "evidence": "github-star-checker, claude-config"
+        "strength": "자동화 및 DX 최적화",
+        "evidence": "github-star-checker, claude-config를 통한 워크플로우 효율화"
       }
     ],
-    "ai_summary": "연료를 연료 있드를 수 었다, 연료 연료 소녀 연료 있드를 수 었다."
+    "ai_summary": "실무적인 AI 보조 개발 환경 구축 및 멀티모달 LLM의 전문적 워크플로우 통합에 특화되어 있음."
   },
   "top_technologies": [
     "TypeScript",
     "Java",
     "Python",
-    "JavaScript",
-    "HTML",
-    "Shell",
-    "CSS"
+    "Next.js",
+    "Gemini AI",
+    "Supabase",
+    "GitHub Actions"
   ],
   "recommended_featured": [
     "dev-insights-dashboard",
-    "miniroom-demo",
-    "supabase-anonymous-board",
     "scavenger",
     "fixture-monkey",
     "claude-code-tutorial",
+    "cursor-docs-crawler",
     "chrome-cookie-reader",
-    "claude-tutorial-playground",
-    "github-star-checker"
+    "supabase-anonymous-board"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 85,
-      "desc_en": "Strong integration capabilities demonstrated through projects like dev-insights-dashboard and claude-code-tutorial.",
-      "desc_ko": "백었집 연료 있드를 수 었다, dev-insights-dashboard 었다 claude-code-tutorial 소녀 연료 있드를 수 었다."
+      "score": 92,
+      "desc_en": "Deep integration of LLM APIs (Gemini, Claude) into custom dashboards and CLI tools.",
+      "desc_ko": "커스텀 대시보드 및 CLI 도구에 LLM API(Gemini, Claude)를 깊이 있게 통합함."
     },
     {
       "key": "Automation",
-      "score": 90,
-      "desc_en": "Excellent automation capabilities demonstrated through projects like github-star-checker and claude-config.",
-      "desc_ko": "자드립 연료 있드를 수 었다, github-star-checker 었다 claude-config 소녀 연료 있드를 수 었다."
+      "score": 88,
+      "desc_en": "Automating complex developer workflows and environment setups using Shell and GitHub Actions.",
+      "desc_ko": "Shell 및 GitHub Actions를 활용하여 복잡한 개발 워크플로우와 환경 설정을 자동화함."
     },
     {
       "key": "Context",
-      "score": 80,
-      "desc_en": "Good context understanding demonstrated through projects like dev-insights-dashboard and chrome-cookie-reader.",
-      "desc_ko": "속드 연료 있드를 수 었다, dev-insights-dashboard 었다 chrome-cookie-reader 소녀 연료 있드를 수 었다."
+      "score": 85,
+      "desc_en": "Implementing context-aware crawling and data extraction tools for enhanced AI understanding.",
+      "desc_ko": "AI의 이해도를 높이기 위한 컨텍스트 인식 크롤링 및 데이터 추출 도구를 구현함."
     },
     {
       "key": "Agentic",
-      "score": 70,
-      "desc_en": "Fair agentic capabilities demonstrated through projects like claude-code-tutorial and claude-tutorial-playground.",
-      "desc_ko": "연료들 연료 있드를 수 었다, claude-code-tutorial 었다 claude-tutorial-playground 소녀 연료 있드를 수 었다."
+      "score": 78,
+      "desc_en": "Optimizing agentic CLI tools and building interactive AI interfaces for better productivity.",
+      "desc_ko": "에이전트 기반 CLI 도구를 최적화하고 생산성 향상을 위한 인터랙티브 AI 인터페이스를 구축함."
     }
   ],
   "interests": {
-    "title": "AI-Powered Development",
+    "title": "Research Radar",
     "keywords": [
-      "AI",
-      "TypeScript",
-      "Java",
-      "Automation"
+      "AI_Automation",
+      "LLM_Ops",
+      "Open_Source_Research"
     ],
-    "desc_en": "The developer is interested in AI-powered development, with a focus on TypeScript, Java, and automation.",
-    "desc_ko": "연료를 백었집 연료 있드를 수 었다, TypeScript, Java, 자드립 소녀 연료 있드를 수 었다."
+    "desc_en": "Currently exploring advanced AI orchestration patterns and emerging LLM frameworks through various open-source contributions.",
+    "desc_ko": "다양한 오픈소스 프로젝트를 통해 고급 AI 오케스트레이션 패턴과 최신 LLM 프레임워크를 심도 있게 탐구하고 있습니다."
   }
 }
