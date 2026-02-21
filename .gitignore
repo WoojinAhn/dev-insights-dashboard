@@ -40,3 +40,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# python
+__pycache__/
+.venv/
+*.py[cod]
+
+# data history
+public/data/history/

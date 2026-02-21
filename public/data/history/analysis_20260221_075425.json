@@ -1,5 +1,0 @@
-{
-  "provider": "Groq",
-  "timestamp": "20260221_075425",
-  "response": "{\n  \"en\": {\n       \"summary\": \"Highly skilled developer with expertise in AI, TypeScript, Java, and Python, with a strong background in developing innovative projects and contributing to open-source repositories.\",\n       \"strengths\": [\n           {\"strength\": \"AI Development\", \"evidence\": \"dev-insights-dashboard, claude-code-tutorial\"},\n           {\"strength\": \"TypeScript Expertise\", \"evidence\": \"dev-insights-dashboard, miniroom-demo, supabase-anonymous-board\"},\n           {\"strength\": \"Java Development\", \"evidence\": \"tddworkshop, scavenger, fixture-monkey\"},\n           {\"strength\": \"Python Development\", \"evidence\": \"cursor-docs-crawler, chrome-cookie-reader, claude-tutorial-playground\"}\n       ],\n       \"ai_summary\": \"The developer has demonstrated strong AI capabilities, particularly in integration and automation, with a focus on developing innovative projects that leverage AI insights.\"\n   }}"
-}

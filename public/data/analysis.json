@@ -1,86 +1,97 @@
 {
   "en": {
-    "summary": "AI-Driven Automation Architect",
+    "summary": "AI & Automation Engineer specializing in developer tooling and efficient workflows. Combines strong backend foundations (Java/Spring) with modern AI integration (Gemini/Claude) to build productivity-enhancing solutions.",
     "strengths": [
       {
-        "strength": "Automation Expertise",
-        "evidence": "Implementation of GitHub Actions workflow in github-star-checker and complex automation in dev-insights-dashboard"
+        "strength": "AI-Integrated Tooling",
+        "evidence": "Developed 'dev-insights-dashboard' and 'claude-config', integrating LLMs (Gemini, Claude) directly into development workflows."
       },
       {
-        "strength": "AI-Powered Development",
-        "evidence": "Integration of Gemini AI insights in dev-insights-dashboard for visualizing GitHub activity"
+        "strength": "Developer Experience Automation",
+        "evidence": "Built 'cursor-docs-crawler' and 'github-star-checker' to automate documentation retrieval and repository monitoring."
       },
       {
-        "strength": "Cross-Platform Development",
-        "evidence": "Development of chrome-cookie-reader in Python for macOS and miniroom-demo in Next.js and TypeScript"
+        "strength": "System Utility Development",
+        "evidence": "Created practical system utilities like 'chrome-cookie-reader' using Python standard libraries for macOS security handling."
       },
       {
-        "strength": "Scripting and Configuration Management",
-        "evidence": "Management of Claude Code global settings across machines using claude-config in Shell"
+        "strength": "Backend & MSA Architecture",
+        "evidence": "Deep research into high-scale Java architectures evident from forking 'scavenger' (Dead Code Analysis) and 'fixture-monkey' (Test Generation)."
       }
     ],
-    "ai_summary": "The developer demonstrates a strong foundation in AI-driven automation, with a focus on integrating AI insights into development workflows."
+    "ai_summary": "Actively building the bridge between traditional engineering and AI agents, focusing on context-aware tools and automated insights."
   },
   "ko": {
-    "summary": "AI 정보 소녀 연료 자드",
+    "summary": "개발자 도구 및 워크플로우 효율화에 특화된 AI & 자동화 엔지니어. 탄탄한 백엔드(Java/Spring) 기반 위에 최신 AI(Gemini/Claude) 기술을 접목하여 생산성 향상 솔루션을 구축합니다.",
     "strengths": [
       {
-        "strength": "소녀 정보 유형",
-        "evidence": "github-star-checker 었러 GitHub Actions 연료 또는 소녀 정보 유형 었러 dev-insights-dashboard 었러 정보 연료 유형"
+        "strength": "AI 결합 도구 개발",
+        "evidence": "'dev-insights-dashboard' 및 'claude-config'를 통해 LLM(Gemini, Claude)을 개발 워크플로우에 직접 통합함."
       },
       {
-        "strength": "AI 정보 연료 유형",
-        "evidence": "dev-insights-dashboard 었러 Gemini AI 정보 연료 유형 었러 GitHub 연료 유형 었러 유형"
+        "strength": "개발자 경험(DX) 자동화",
+        "evidence": "'cursor-docs-crawler'로 문서화를 자동화하고, 'github-star-checker'로 리포지토리 모니터링을 구현하여 개발 효율을 높임."
       },
       {
-        "strength": "소녀 연료 유형",
-        "evidence": "chrome-cookie-reader 었러 Python 었러 macOS 었러 었러 miniroom-demo 었러 Next.js 었러 TypeScript 었러 었러 유형"
+        "strength": "시스템 유틸리티 엔지니어링",
+        "evidence": "'chrome-cookie-reader'와 같은 Python 기반 macOS 보안 유틸리티를 직접 개발하여 시스템 제어 능력을 입증함."
       },
       {
-        "strength": "소녀 연료 유형 었러 었러 유형",
-        "evidence": "claude-config 었러 Shell 었러 었러 었러 유형 었러 었러 었러 유형"
+        "strength": "백엔드 및 MSA 아키텍처",
+        "evidence": "'scavenger'(Dead Code 분석) 및 'fixture-monkey'(테스트 데이터 생성) 등의 네이버 오픈소스를 분석하며 고성능 Java 아키텍처를 연구함."
       }
-    ]
+    ],
+    "ai_summary": "전통적인 엔지니어링과 AI 에이전트 간의 가교를 구축하며, 컨텍스트 인식 도구와 자동화된 인사이트 제공에 주력하고 있습니다."
   },
   "top_technologies": [
-    "TypeScript",
     "Python",
-    "Java"
+    "TypeScript",
+    "Java",
+    "GitHub Actions",
+    "Gemini API",
+    "Shell"
   ],
-  "recommended_featured": [],
+  "recommended_featured": [
+    "dev-insights-dashboard",
+    "cursor-docs-crawler",
+    "github-star-checker",
+    "chrome-cookie-reader",
+    "claude-config"
+  ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 92,
+      "desc_en": "Seamlessly connecting LLMs with local dev environments.",
+      "desc_ko": "LLM을 로컬 개발 환경 및 대시보드와 유기적으로 연결하는 능력."
     },
     {
       "key": "Automation",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 88,
+      "desc_en": "Automating tedious tasks (docs, monitoring) via scripts.",
+      "desc_ko": "문서화, 모니터링 등 반복 업무를 스크립트와 워크플로우로 자동화."
     },
     {
       "key": "Context",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 85,
+      "desc_en": "Extracting rich context (cookies, docs) for AI usage.",
+      "desc_ko": "AI 활용을 위해 쿠키, 문서 등 다양한 소스에서 풍부한 컨텍스트 추출."
     },
     {
       "key": "Agentic",
-      "score": 0,
-      "desc_en": "Pending...",
-      "desc_ko": "분석 중..."
+      "score": 80,
+      "desc_en": "Exploring agentic workflows with Claude and Gemini.",
+      "desc_ko": "Claude와 Gemini를 활용한 에이전트 기반 워크플로우 실험 및 구축."
     }
   ],
   "interests": {
-    "title": "Research Radar",
+    "title": "Backend Evolution & AI",
     "keywords": [
-      "AI",
-      "Open Source"
+      "Java_Optimization",
+      "Test_Automation",
+      "AI_Agents"
     ],
-    "desc_en": "Exploring innovative tech through forked projects.",
-    "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
+    "desc_en": "Deep diving into Java ecosystem optimizations (Dead code analysis) while expanding into AI Agent architectures.",
+    "desc_ko": "Java 생태계 최적화(Dead Code 분석)를 깊이 파고드는 동시에 AI 에이전트 아키텍처로 영역을 확장하고 있습니다."
   }
 }
