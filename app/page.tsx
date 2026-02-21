@@ -342,6 +342,43 @@ export default function Dashboard() {
                   </div>
                 </div>
               )}
+
+              {/* Interests / Research Section (Hashtag Style) */}
+              {analysis.interests && (
+                <div className="border-t border-white/5 pt-10 mt-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                      <Telescope className="w-6 h-6 text-indigo-400" />
+                    </div>
+                    <h3 className="text-2xl font-black uppercase tracking-tight text-indigo-400">
+                      {analysis.interests.title || 'Research Radar'}
+                    </h3>
+                  </div>
+
+                  <p className="text-xl md:text-2xl text-slate-200 leading-snug mb-10 max-w-5xl font-light tracking-tight">
+                    &quot;{lang === 'ko' ? analysis.interests.desc_ko : analysis.interests.desc_en}&quot;
+                  </p>
+
+                  <div className="flex flex-wrap gap-4">
+                    {analysis.interests.keywords?.map((keyword: string, i: number) => (
+                      <div key={i} className="relative group/interest">
+                        <div className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 text-indigo-400 text-sm font-black uppercase tracking-widest hover:bg-indigo-500/10 hover:border-indigo-500/30 transition-all cursor-help shadow-lg">
+                          <Telescope className="w-4 h-4" />
+                          #{keyword?.replace(/\s+/g, '_')}
+                        </div>
+
+                        {/* Hover Description Tooltip - Reuse the same description for simplicity as requested */}
+                        <div className="absolute bottom-full left-0 mb-4 w-72 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl opacity-0 invisible group-hover/interest:opacity-100 group-hover/interest:visible transition-all duration-300 z-30 translate-y-2 group-hover/interest:translate-y-0">
+                          <div className="absolute bottom-[-6px] left-6 w-3 h-3 bg-slate-900 border-r border-b border-white/10 rotate-45" />
+                          <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                            {lang === 'ko' ? analysis.interests.desc_ko : analysis.interests.desc_en}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -457,32 +494,17 @@ export default function Dashboard() {
           </div>
         </section>
 
-        {/* Interests / Forks Section */}
+        {/* Interests / Forks Section (Repositories Only) */}
         {forks && forks.length > 0 && (
           <section className="mt-32">
-             <div className="flex items-center gap-3 mb-8">
+             <div className="flex items-center gap-3 mb-12">
                 <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
-                  <Telescope className="w-6 h-6 text-indigo-400" />
+                  <Layers className="w-6 h-6 text-indigo-400" />
                 </div>
                 <h2 className="text-2xl font-black uppercase tracking-tight text-indigo-400">
-                  {analysis.interests?.title || 'Research Radar'}
+                  Research Radar
                 </h2>
               </div>
-
-              {analysis.interests && (
-                <div className="mb-12">
-                   <p className="text-xl md:text-2xl text-slate-200 leading-snug mb-6 max-w-5xl font-light tracking-tight">
-                    &quot;{lang === 'ko' ? analysis.interests.desc_ko : analysis.interests.desc_en}&quot;
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    {analysis.interests.keywords?.map((keyword: string, i: number) => (
-                      <span key={i} className="px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider">
-                        #{keyword}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {forks.map((repo: any, i: number) => (
