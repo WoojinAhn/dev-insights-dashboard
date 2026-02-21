@@ -1,97 +1,93 @@
 {
   "en": {
-    "summary": "AI & Automation Engineer specializing in developer tooling and efficient workflows. Combines strong backend foundations (Java/Spring) with modern AI integration (Gemini/Claude) to build productivity-enhancing solutions.",
+    "summary": "The developer showcases a strong proficiency in building web applications and tools, particularly in TypeScript and Python. Their projects reflect a focus on developer experience and automation, indicating a commitment to enhancing productivity through technology.",
     "strengths": [
       {
-        "strength": "AI-Integrated Tooling",
-        "evidence": "Developed 'dev-insights-dashboard' and 'claude-config', integrating LLMs (Gemini, Claude) directly into development workflows."
+        "strength": "Web Application Development",
+        "evidence": "The 'dev-insights-dashboard' and 'miniroom-demo' projects demonstrate the ability to create interactive web applications using TypeScript and Next.js."
       },
       {
-        "strength": "Developer Experience Automation",
-        "evidence": "Built 'cursor-docs-crawler' and 'github-star-checker' to automate documentation retrieval and repository monitoring."
+        "strength": "Automation and Workflow Management",
+        "evidence": "The 'github-star-checker' project illustrates expertise in automating GitHub workflows, enhancing repository management."
       },
       {
-        "strength": "System Utility Development",
-        "evidence": "Created practical system utilities like 'chrome-cookie-reader' using Python standard libraries for macOS security handling."
+        "strength": "Data Handling and Processing",
+        "evidence": "The 'cursor-docs-crawler' and 'chrome-cookie-reader' projects show skills in data extraction and processing using Python."
       },
       {
-        "strength": "Backend Engineering",
-        "evidence": "Analyzing high-performance Java architectures through diverse technical studies and open source contributions."
+        "strength": "Cross-Platform Development",
+        "evidence": "The 'claude-config' project indicates the ability to manage configurations across different environments, showcasing versatility in Shell scripting."
       }
     ],
-    "ai_summary": "Actively building the bridge between traditional engineering and AI agents, focusing on context-aware tools and automated insights."
+    "ai_summary": "The developer's projects reflect a growing interest in AI integration, particularly in enhancing developer tools and workflows."
   },
   "ko": {
-    "summary": "개발자 도구 및 워크플로우 효율화에 특화된 AI & 자동화 엔지니어. 탄탄한 백엔드(Java/Spring) 기반 위에 최신 AI(Gemini/Claude) 기술을 접목하여 생산성 향상 솔루션을 구축합니다.",
+    "summary": "개발자는 TypeScript와 Python을 활용하여 웹 애플리케이션 및 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 프로젝트는 개발자 경험과 자동화에 중점을 두고 있으며, 기술을 통해 생산성을 향상시키려는 의지를 나타냅니다.",
     "strengths": [
       {
-        "strength": "AI 결합 도구 개발",
-        "evidence": "'dev-insights-dashboard' 및 'claude-config'를 통해 LLM(Gemini, Claude)을 개발 워크플로우에 직접 통합함."
+        "strength": "웹 애플리케이션 개발",
+        "evidence": "'dev-insights-dashboard'와 'miniroom-demo' 프로젝트는 TypeScript와 Next.js를 사용하여 상호작용하는 웹 애플리케이션을 만드는 능력을 보여줍니다."
       },
       {
-        "strength": "개발자 경험(DX) 자동화",
-        "evidence": "'cursor-docs-crawler'로 문서화를 자동화하고, 'github-star-checker'로 리포지토리 모니터링을 구현하여 개발 효율을 높임."
+        "strength": "자동화 및 워크플로우 관리",
+        "evidence": "'github-star-checker' 프로젝트는 GitHub 워크플로우를 자동화하여 리포지토리 관리를 향상시키는 전문성을 보여줍니다."
       },
       {
-        "strength": "시스템 유틸리티 엔지니어링",
-        "evidence": "'chrome-cookie-reader'와 같은 Python 기반 macOS 보안 유틸리티를 직접 개발하여 시스템 제어 능력을 입증함."
+        "strength": "데이터 처리 및 관리",
+        "evidence": "'cursor-docs-crawler'와 'chrome-cookie-reader' 프로젝트는 Python을 사용하여 데이터 추출 및 처리를 수행하는 능력을 보여줍니다."
       },
       {
-        "strength": "백엔드 엔지니어링",
-        "evidence": "다양한 기술적 연구와 오픈소스 기여를 통해 고성능 Java 아키텍처를 분석하고 있습니다."
+        "strength": "크로스 플랫폼 개발",
+        "evidence": "'claude-config' 프로젝트는 다양한 환경에서 설정을 관리하는 능력을 나타내며, Shell 스크립팅의 다재다능함을 보여줍니다."
       }
     ],
-    "ai_summary": "전통적인 엔지니어링과 AI 에이전트 간의 가교를 구축하며, 컨텍스트 인식 도구와 자동화된 인사이트 제공에 주력하고 있습니다."
+    "ai_summary": "개발자의 프로젝트는 특히 개발 도구와 워크플로우 향상을 위한 AI 통합에 대한 관심이 커지고 있음을 반영합니다."
   },
   "top_technologies": [
-    "Python",
     "TypeScript",
-    "Java",
-    "GitHub Actions",
-    "Gemini API",
-    "Shell"
+    "Python",
+    "Shell",
+    "Next.js"
   ],
   "recommended_featured": [
     "dev-insights-dashboard",
-    "cursor-docs-crawler",
-    "github-star-checker",
-    "chrome-cookie-reader",
-    "claude-config"
+    "cursor-docs-crawler"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 92,
-      "desc_en": "Seamlessly connecting LLMs with local dev environments.",
-      "desc_ko": "LLM을 로컬 개발 환경 및 대시보드와 유기적으로 연결하는 능력."
+      "score": 85,
+      "desc_en": "The developer effectively integrates AI insights into their projects, enhancing user experience and functionality.",
+      "desc_ko": "개발자는 프로젝트에 AI 통찰력을 효과적으로 통합하여 사용자 경험과 기능성을 향상시킴."
     },
     {
       "key": "Automation",
-      "score": 88,
-      "desc_en": "Automating tedious tasks (docs, monitoring) via scripts.",
-      "desc_ko": "문서화, 모니터링 등 반복 업무를 스크립트와 워크플로우로 자동화."
+      "score": 90,
+      "desc_en": "Strong automation capabilities are evident in the creation of workflows that streamline processes and reduce manual effort.",
+      "desc_ko": "프로세스를 간소화하고 수작업 노력을 줄이는 워크플로우 생성에서 강력한 자동화 능력이 드러남."
     },
     {
       "key": "Context",
-      "score": 85,
-      "desc_en": "Extracting rich context (cookies, docs) for AI usage.",
-      "desc_ko": "AI 활용을 위해 쿠키, 문서 등 다양한 소스에서 풍부한 컨텍스트 추출."
+      "score": 80,
+      "desc_en": "The projects demonstrate an understanding of context-aware applications, particularly in managing user data and preferences.",
+      "desc_ko": "프로젝트는 사용자 데이터 및 선호도를 관리하는 데 있어 컨텍스트 인식 애플리케이션에 대한 이해를 보여줌."
     },
     {
       "key": "Agentic",
-      "score": 80,
-      "desc_en": "Exploring agentic workflows with Claude and Gemini.",
-      "desc_ko": "Claude와 Gemini를 활용한 에이전트 기반 워크플로우 실험 및 구축."
+      "score": 75,
+      "desc_en": "While there is potential for more agentic capabilities, the current projects indicate a foundational understanding of AI-driven interactions.",
+      "desc_ko": "더 많은 에이전틱 기능의 잠재력이 있지만, 현재 프로젝트는 AI 기반 상호작용에 대한 기초적인 이해를 나타냄."
     }
   ],
   "interests": {
-    "title": "Backend Evolution & AI",
+    "title": "Exploring Advanced Java Techniques",
     "keywords": [
-      "Java_Optimization",
-      "Test_Automation",
-      "AI_Agents"
+      "Java",
+      "Microservices",
+      "Testing",
+      "Automation"
     ],
-    "desc_en": "Deep diving into Java ecosystem optimizations (Dead code analysis) while expanding into AI Agent architectures.",
-    "desc_ko": "Java 생태계 최적화(Dead Code 분석)를 깊이 파고드는 동시에 AI 에이전트 아키텍처로 영역을 확장하고 있습니다."
+    "desc_en": "The developer is delving into advanced Java concepts, particularly in microservices architecture and automated testing frameworks, indicating a desire to enhance their backend development skills.",
+    "desc_ko": "개발자는 마이크로서비스 아키텍처와 자동화 테스트 프레임워크와 같은 고급 Java 개념을 탐구하고 있으며, 이는 백엔드 개발 기술을 향상시키려는 열망을 나타냅니다."
   }
 }
