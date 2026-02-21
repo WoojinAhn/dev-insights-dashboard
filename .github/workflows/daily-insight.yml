@@ -54,7 +54,7 @@ jobs:
           git commit -m "📈 [AUTO] Refresh portfolio data and AI insights" || exit 0
 
           # 3. Force Push (since this is generated data, it's safer to ensure it gets updated)
-          git push origin main
+          git push --force origin main
 
       - name: Trigger Vercel Deployment
         if: always()
