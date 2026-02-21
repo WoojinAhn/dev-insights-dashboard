@@ -44,11 +44,12 @@ jobs:
           ./refresh-data.sh
 
       - name: Commit and Push Changes
+        if: always()
         run: |
           git add public/data/
           git commit -m "📈 [AUTO] Refresh portfolio data and AI insights" || echo "No changes to commit"
           git push origin main
 
       - name: Trigger Vercel Deployment
-        if: success()
+        if: always()
         run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
