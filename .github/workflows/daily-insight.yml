@@ -34,7 +34,7 @@ jobs:
 
       - name: Refresh, Commit and Push
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           git config --global user.name "github-actions[bot]"
