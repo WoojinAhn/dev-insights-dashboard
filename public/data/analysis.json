@@ -1,29 +1,29 @@
 {
   "en": {
-    "summary": "Full-stack developer specializing in building AI-integrated dashboards and automation utilities. The repository profile demonstrates a focus on the LLM ecosystem, specifically creating tooling for Claude Code, Gemini-powered analytics, and technical documentation processing for AI workflows.",
+    "summary": "A developer focused on integrating Large Language Models (LLMs) into development workflows and web applications. Expertise includes building AI-powered dashboards, configuring AI CLI tools, and creating automation scripts for developer productivity.",
     "strengths": [
-      "Integration of LLM APIs (Gemini) into data visualization dashboards.",
-      "Development of specialized configuration and educational tooling for AI coding assistants (Claude Code).",
-      "Automation of technical data extraction, including documentation crawling and decryption modules.",
-      "Implementation of automated monitoring workflows using GitHub Actions."
+      "LLM API integration for data visualization and insights",
+      "Configuration management and environment setup for AI-assisted coding tools",
+      "Automated documentation crawling and data extraction for AI context",
+      "Full-stack development with Next.js and Supabase for tool prototyping"
     ],
-    "ai_summary": "Demonstrates technical proficiency in integrating LLM APIs and building specialized configuration and educational tools for terminal-based AI coding assistants."
+    "ai_summary": "Concentrates on optimizing AI-assisted development environments and building practical interfaces for multi-modal LLM integration."
   },
   "ko": {
-    "summary": "AI 연동 대시보드 및 자동화 유틸리티 개발에 주력하는 풀스택 개발자임. Claude Code용 툴링, Gemini 기반 분석 대시보드, AI 워크플로우를 위한 기술 문서 처리 등 LLM 에코시스템 관련 프로젝트를 다수 보유하고 있음.",
+    "summary": "LLM(대규모 언어 모델)을 개발 워크플로우 및 웹 애플리케이션에 통합하는 데 주력하는 개발자임. AI 기반 대시보드 구축, AI CLI 도구 설정 관리, 개발 생산성 향상을 위한 자동화 스크립트 작성에 전문성을 보유함.",
     "strengths": [
-      "Gemini API를 데이터 시각화 대시보드에 연동하는 기술 스택 보유",
-      "Claude Code 등 AI 코딩 어시스턴트를 위한 전용 설정 및 교육용 툴링 구축",
-      "문서 크롤링 및 복호화 모듈을 통한 기술 데이터 추출 자동화 구현",
-      "GitHub Actions를 활용한 자동화된 모니터링 워크플로우 수립"
+      "데이터 시각화 및 인사이트 도출을 위한 LLM API 연동 역량",
+      "AI 보조 코딩 도구의 구성 관리 및 환경 설정 자동화",
+      "AI 컨텍스트 제공을 위한 문서 크롤링 및 데이터 추출 자동화",
+      "Next.js 및 Supabase를 활용한 실용적 도구 프로토타이핑"
     ],
-    "ai_summary": "LLM API 연동 및 터미널 기반 AI 코딩 어시스턴트를 위한 환경 설정과 교육 도구 구축에 특화된 기술 역량을 보유함."
+    "ai_summary": "AI 보조 개발 환경의 최적화와 멀티모달 LLM 인터페이스 구축을 통한 실무적 도구 개발에 집중하고 있음."
   },
   "top_technologies": [
     "TypeScript",
     "Python",
-    "Shell",
     "Next.js",
+    "Shell",
     "Gemini AI",
     "Claude Code",
     "Supabase",
@@ -34,36 +34,36 @@
     "claude-code-tutorial",
     "cursor-docs-crawler",
     "claude-tutorial-playground",
-    "github-star-checker",
-    "chrome-cookie-reader",
-    "supabase-anonymous-board",
     "claude-config",
+    "chrome-cookie-reader",
+    "github-star-checker",
+    "supabase-anonymous-board",
     "miniroom-demo"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
-      "score": 90,
-      "desc_en": "Direct implementation of Gemini AI for data insights and building interactive playgrounds for Claude Code commands.",
-      "desc_ko": "데이터 인사이트 도출을 위한 Gemini AI 연동 및 Claude Code 명령어용 인터랙티브 플레이그라운드 구현 사례가 확인됨."
+      "score": 88,
+      "desc_en": "Demonstrated capability in integrating Gemini AI into TypeScript-based dashboards and managing Claude Code interfaces.",
+      "desc_ko": "Gemini AI를 TypeScript 기반 대시보드에 통합하고 Claude Code 인터페이스를 관리하는 역량이 확인됨."
     },
     {
       "key": "Automation",
-      "score": 85,
-      "desc_en": "Developed GitHub Actions for repository monitoring and Python-based crawlers for automated documentation processing.",
-      "desc_ko": "GitHub Actions를 이용한 레포지토리 모니터링 및 Python 기반 크롤러를 통한 자동화된 문서 처리 로직을 구축함."
+      "score": 82,
+      "desc_en": "Implemented automated workflows using GitHub Actions and Shell scripts to sync AI tool configurations and monitor metrics.",
+      "desc_ko": "GitHub Actions 및 Shell 스크립트를 사용하여 AI 도구 설정을 동기화하고 지표를 모니터링하는 자동화 워크플로우를 구현함."
     },
     {
       "key": "Context",
       "score": 75,
-      "desc_en": "Created tools like cursor-docs-crawler to convert external documentation into formats suitable for AI context feeding.",
-      "desc_ko": "외부 문서를 AI 컨텍스트 주입에 적합한 형태로 변환하는 cursor-docs-crawler 등의 도구를 제작함."
+      "desc_en": "Developed a crawler specifically for documentation to provide external context to AI tools like Cursor.",
+      "desc_ko": "Cursor와 같은 AI 도구에 외부 컨텍스트를 제공하기 위해 문서 전용 크롤러를 개발한 사례가 있음."
     },
     {
       "key": "Agentic",
-      "score": 70,
-      "desc_en": "Built infrastructure for managing agentic CLI tool settings and tutorials for interactive AI-driven development.",
-      "desc_ko": "에이전틱 CLI 도구의 설정 관리 및 대화형 AI 기반 개발을 위한 교육용 인프라를 구축함."
+      "score": 65,
+      "desc_en": "Experience with agentic CLI tools (Claude Code) through tutorial development and configuration optimization.",
+      "desc_ko": "튜토리얼 개발 및 설정 최적화를 통해 Claude Code와 같은 에이전트형 CLI 도구를 활용한 경험을 보유함."
     }
   ]
 }
