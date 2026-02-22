@@ -1,5 +1,47 @@
 [
   {
+    "name": "claude-code-master",
+    "description": "Claude Code 마스터",
+    "url": "https://github.com/WoojinAhn/claude-code-master",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-02-22T09:01:22Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "MDX"
+    },
+    "parent": {
+      "name": "claude-code-master",
+      "owner": {
+        "login": "revfactory"
+      },
+      "stargazerCount": 106,
+      "forkCount": 20
+    }
+  },
+  {
+    "name": "claude-code-action",
+    "description": null,
+    "url": "https://github.com/WoojinAhn/claude-code-action",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-02-22T08:55:41Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "parent": {
+      "name": "claude-code-action",
+      "owner": {
+        "login": "anthropics"
+      },
+      "stargazerCount": 5782,
+      "forkCount": 1453
+    }
+  },
+  {
     "name": "scavenger",
     "description": "A runtime dead code analysis tool",
     "url": "https://github.com/WoojinAhn/scavenger",
@@ -264,8 +306,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 349538,
-      "forkCount": 43708
+      "stargazerCount": 349577,
+      "forkCount": 43707
     }
   },
   {
@@ -285,7 +327,7 @@
       "owner": {
         "login": "ethereum"
       },
-      "stargazerCount": 1030,
+      "stargazerCount": 1031,
       "forkCount": 387
     }
   },
