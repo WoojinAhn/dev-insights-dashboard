@@ -1,8 +1,8 @@
-# 🚀 Dev Insights Dashboard
+# Dev Insights Dashboard
 
 <p align="center">
   <a href="https://woojinahn-dev.vercel.app">
-    <img src="https://img.shields.io/badge/LIVE_DEMO-woojinahn--dev.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/LIVE-woojinahn--dev.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
 </p>
 
@@ -10,37 +10,47 @@
   <b>English</b> | <a href="./README.ko.md"><b>한국어</b></a>
 </p>
 
-<br />
+<p align="center">
+  <img src="docs/preview.png" alt="Dashboard Preview" width="720" />
+</p>
 
-An automated, AI-powered developer portfolio dashboard that visualizes GitHub activity and provides professional insights using Gemini AI.
+AI-powered portfolio dashboard that visualizes [WoojinAhn](https://github.com/WoojinAhn)'s GitHub activity. Data is refreshed daily via GitHub Actions and analyzed by LLM (Gemini 2.0 Flash, with GPT-4o-mini fallback).
 
-![Vercel Deployment](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+## Architecture
 
----
+```
+GitHub API ──→ refresh-data.sh ──→ public/data/*.json
+                                        │
+                                        ├──→ analyze-portfolio.py ──→ analysis.json
+                                        │         (Gemini / GPT-4o-mini)
+                                        │
+                                        └──→ Next.js client page (static JSON fetch)
+```
 
-## ✨ Key Features
+**Two-phase pipeline:**
 
-- **📊 Real-time Data Sync:** Automatically fetches repository stats via GitHub GraphQL API.
-- **🤖 Objective AI Portfolio Analysis:** Uses **Gemini 2.0 Flash** to systematically analyze projects and generate professional, fact-based summaries.
-- **🛡️ Multi-LLM Fallback:** Automatically switches to **GitHub Models (GPT-4o-mini)** if Gemini API limits are reached, ensuring stable analysis.
-- **📡 Research Radar:** Analyzes forked repositories to identify and visualize current technical interests and research trends with detailed tooltips.
-- **🔒 Reliability & Logging:** Automatically falls back to existing data if all APIs fail. Archives raw AI analysis responses for historical tracking.
-- **🚀 Advanced Caching & Webhooks:** Employs query-parameter cache busting for instantaneous Next.js data updates on Vercel via Deploy Hooks.
-- **🌐 Multilingual Support:** Seamless switching between English and Korean UI.
-- **🎨 Premium UI/UX:** Futuristic Glassmorphism design with interactive hover effects and evidence-based tooltips.
-- **⚙️ Fully Automated Pipeline:** GitHub Actions automatically refreshes data and AI insights upon every push or daily, triggering a Vercel deployment.
+1. **Data collection** (`refresh-data.sh`): Fetches user profile, repos, pinned repos, and forks via `gh` CLI, writes JSON to `public/data/`.
+2. **AI analysis** (`analyze-portfolio.py`): Sends repo data to Gemini 2.0 Flash (fallback: GitHub Models GPT-4o-mini), produces bilingual (en/ko) analysis with strengths, AI capabilities, and research interests.
 
-## 🛠 Tech Stack
+The frontend is a single `'use client'` page that fetches these static JSON files at runtime.
 
-- **Frontend:** Next.js 15 (App Router), Tailwind CSS 4.0, Lucide React
-- **Automation:** GitHub Actions, Python (Google Generative AI SDK)
-- **Deployment:** Vercel
-- **Data Source:** GitHub GraphQL & REST API
+## Features
 
-## 🚀 Getting Started
+- **AI-generated portfolio analysis** with multi-LLM fallback (Gemini → GPT-4o-mini)
+- **Bilingual UI** (English / Korean toggle)
+- **Research Radar** — visualizes technical interests from forked repos
+- **Daily auto-refresh** via GitHub Actions + Vercel deploy hook
+
+## Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Frontend | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React |
+| Data Pipeline | Python 3 (google-generativeai SDK), Bash (gh CLI) |
+| AI | Gemini 2.0 Flash, GitHub Models GPT-4o-mini (fallback) |
+| Deploy | Vercel, GitHub Actions |
+
+## Getting Started
 
 ```bash
 git clone https://github.com/WoojinAhn/dev-insights-dashboard.git
@@ -49,8 +59,13 @@ npm install
 npm run dev
 ```
 
----
+To refresh data locally:
 
-<p align="center">
-  Crafted with ❤️ by Gemini CLI for <a href="https://github.com/WoojinAhn">WoojinAhn</a>
-</p>
+```bash
+# Requires: gh CLI authenticated, GEMINI_API_KEY or GH_TOKEN env vars
+./refresh-data.sh
+```
+
+## Built With
+
+Initial scaffold by **Gemini CLI**, refined and maintained with **Claude Code**.

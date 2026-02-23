@@ -1,8 +1,8 @@
-# 🚀 Dev Insights Dashboard (개발자 인사이트 대시보드)
+# Dev Insights Dashboard
 
 <p align="center">
   <a href="https://woojinahn-dev.vercel.app">
-    <img src="https://img.shields.io/badge/실시간_데모-woojinahn--dev.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/라이브-woojinahn--dev.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
 </p>
 
@@ -10,37 +10,47 @@
   <a href="./README.md"><b>English</b></a> | <b>한국어</b>
 </p>
 
-<br />
+<p align="center">
+  <img src="docs/preview.png" alt="대시보드 미리보기" width="720" />
+</p>
 
-GitHub 활동을 시각화하고 Gemini AI를 통해 전문적인 기술 분석을 제공하는 **완전 자동화된 AI 기반 개발자 포트폴리오 대시보드**입니다.
+[WoojinAhn](https://github.com/WoojinAhn)의 GitHub 활동을 시각화하는 AI 기반 포트폴리오 대시보드. GitHub Actions를 통해 매일 데이터를 갱신하고 LLM(Gemini 2.0 Flash, GPT-4o-mini 폴백)으로 분석합니다.
 
-![Vercel Deployment](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+## 아키텍처
 
----
+```
+GitHub API ──→ refresh-data.sh ──→ public/data/*.json
+                                        │
+                                        ├──→ analyze-portfolio.py ──→ analysis.json
+                                        │         (Gemini / GPT-4o-mini)
+                                        │
+                                        └──→ Next.js 클라이언트 페이지 (정적 JSON fetch)
+```
 
-## ✨ 핵심 기능
+**2단계 파이프라인:**
 
-- **📊 실시간 데이터 동기화:** GitHub GraphQL API를 통해 리포지토리 통계를 자동으로 수집합니다.
-- **🤖 객관적인 AI 포트폴리오 분석:** **Gemini 2.0 Flash**를 활용하여 프로젝트를 분석하고 사실 기반의 전문적인 요약을 생성합니다.
-- **🛡️ Multi-LLM Fallback:** Gemini API 할당량 초과 시 자동으로 **GitHub Models (GPT-4o-mini)** 모델로 전환하여 중단 없는 분석을 보장합니다.
-- **📡 Research Radar (관심사 분석):** 사용자가 Fork한 리포지토리를 분석하여 현재의 기술적 관심사와 연구 트렌드를 시각화하고 상세 툴팁을 제공합니다.
-- **🔒 안정성 및 로깅:** 모든 API 호출 실패 시 기존 데이터를 유지하며, AI 분석 원본 데이터를 아카이빙하여 히스토리 추적을 지원합니다.
-- **🚀 강력한 캐싱 무력화 및 자동 배포:** Vercel Deploy Hook과 타임스탬프 기반 캐시 무력화 기법을 적용하여 즉각적인 UI 갱신을 보장합니다.
-- **🌐 다국어 지원:** 한국어와 영어 UI를 자유롭게 전환할 수 있습니다.
-- **🎨 프리미엄 UI/UX:** 인터랙티브한 효과, 근거 기반 툴팁, 글로우 그라데이션이 적용된 세련된 디자인.
-- **⚙️ 완전 자동화 파이프라인:** GitHub Actions가 매일 또는 푸시 발생 시 자동으로 데이터와 AI 인사이트를 갱신하고 배포합니다.
+1. **데이터 수집** (`refresh-data.sh`): `gh` CLI로 사용자 프로필, 레포, 핀 레포, 포크를 가져와 `public/data/`에 JSON으로 저장.
+2. **AI 분석** (`analyze-portfolio.py`): 레포 데이터를 Gemini 2.0 Flash(폴백: GitHub Models GPT-4o-mini)에 전송, 한영 이중 언어 분석(강점, AI 역량, 연구 관심사) 생성.
 
-## 🛠 기술 스택
+프론트엔드는 단일 `'use client'` 페이지로, 런타임에 정적 JSON 파일을 fetch합니다.
 
-- **프론트엔드:** Next.js 15 (App Router), Tailwind CSS 4.0, Lucide React
-- **자동화:** GitHub Actions, Python (Google Generative AI SDK)
-- **배포:** Vercel
-- **데이터 소스:** GitHub GraphQL & REST API
+## 주요 기능
 
-## 🚀 시작하기
+- **AI 생성 포트폴리오 분석** — Multi-LLM 폴백 (Gemini → GPT-4o-mini)
+- **한영 전환 UI**
+- **Research Radar** — 포크한 레포 기반 기술 관심사 시각화
+- **일일 자동 갱신** — GitHub Actions + Vercel deploy hook
+
+## 기술 스택
+
+| 영역 | 기술 |
+|------|------|
+| 프론트엔드 | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React |
+| 데이터 파이프라인 | Python 3 (google-generativeai SDK), Bash (gh CLI) |
+| AI | Gemini 2.0 Flash, GitHub Models GPT-4o-mini (폴백) |
+| 배포 | Vercel, GitHub Actions |
+
+## 시작하기
 
 ```bash
 git clone https://github.com/WoojinAhn/dev-insights-dashboard.git
@@ -49,8 +59,13 @@ npm install
 npm run dev
 ```
 
----
+로컬에서 데이터 갱신:
 
-<p align="center">
-  Gemini CLI가 <a href="https://github.com/WoojinAhn">WoojinAhn</a>님을 위해 정성껏 제작했습니다. ❤️
-</p>
+```bash
+# 필요: gh CLI 인증, GEMINI_API_KEY 또는 GH_TOKEN 환경변수
+./refresh-data.sh
+```
+
+## Built With
+
+초기 스캐폴딩 **Gemini CLI**, 리팩토링 및 유지보수 **Claude Code**.
