@@ -1,47 +1,47 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building web applications and automation tools, with a focus on TypeScript and Python. Their projects reflect a commitment to enhancing developer experiences through innovative solutions.",
+    "summary": "The developer demonstrates a strong proficiency in building web applications and automation tools, particularly in TypeScript and Python. Their portfolio showcases a blend of AI integration and practical utility, indicating a focus on enhancing developer experiences through innovative solutions.",
     "strengths": [
       {
         "strength": "Web Application Development",
-        "evidence": "The 'dev-insights-dashboard' and 'miniroom-demo' showcase the ability to create interactive web applications using TypeScript and Next.js."
+        "evidence": "The 'dev-insights-dashboard' and 'supabase-anonymous-board' projects highlight the developer's capability in creating interactive web applications using TypeScript and Next.js."
       },
       {
         "strength": "Automation and Workflow Management",
-        "evidence": "The 'github-star-checker' project exemplifies skills in automating GitHub workflows, enhancing repository management."
+        "evidence": "The 'github-star-checker' repository exemplifies the developer's skill in automating GitHub workflows, showcasing an understanding of CI/CD practices."
+      },
+      {
+        "strength": "AI Integration",
+        "evidence": "The 'dev-insights-dashboard' utilizes AI insights, indicating the developer's ability to incorporate AI technologies into practical applications."
       },
       {
         "strength": "Cross-Platform Scripting",
-        "evidence": "The 'claude-config' demonstrates expertise in Shell scripting for managing configurations across different environments."
-      },
-      {
-        "strength": "Data Processing and Crawling",
-        "evidence": "The 'cursor-docs-crawler' indicates proficiency in Python for data extraction and processing tasks."
+        "evidence": "The 'claude-config' project demonstrates proficiency in Shell scripting for managing configurations across different environments."
       }
     ],
-    "ai_summary": "The developer's projects indicate a foundational understanding of AI integration, particularly in enhancing developer tools and experiences."
+    "ai_summary": "The developer effectively integrates AI capabilities into their projects, particularly in enhancing user experience and automating tasks, showcasing a forward-thinking approach to software development."
   },
   "ko": {
-    "summary": "개발자는 TypeScript와 Python에 중점을 두고 웹 애플리케이션 및 자동화 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 프로젝트는 혁신적인 솔루션을 통해 개발자 경험을 향상시키려는 의지를 반영합니다.",
+    "summary": "개발자는 TypeScript와 Python을 활용하여 웹 애플리케이션 및 자동화 도구를 구축하는 데 강한 능력을 보여줍니다. 포트폴리오는 AI 통합과 실용성을 혼합하여 혁신적인 솔루션을 통해 개발자 경험을 향상시키는 데 중점을 두고 있음을 나타냅니다.",
     "strengths": [
       {
         "strength": "웹 애플리케이션 개발",
-        "evidence": "'dev-insights-dashboard'와 'miniroom-demo'는 TypeScript와 Next.js를 사용하여 상호작용하는 웹 애플리케이션을 만드는 능력을 보여줍니다."
+        "evidence": "'dev-insights-dashboard'와 'supabase-anonymous-board' 프로젝트는 TypeScript와 Next.js를 사용하여 상호작용하는 웹 애플리케이션을 만드는 능력을 강조합니다."
       },
       {
         "strength": "자동화 및 워크플로우 관리",
-        "evidence": "'github-star-checker' 프로젝트는 GitHub 워크플로우를 자동화하여 리포지토리 관리를 향상시키는 기술을 입증합니다."
+        "evidence": "'github-star-checker' 리포지토리는 GitHub 워크플로우를 자동화하는 기술을 보여주며, CI/CD 관행에 대한 이해를 나타냅니다."
+      },
+      {
+        "strength": "AI 통합",
+        "evidence": "'dev-insights-dashboard'는 AI 통찰력을 활용하여 개발자가 실용적인 애플리케이션에 AI 기술을 통합할 수 있는 능력을 나타냅니다."
       },
       {
         "strength": "크로스 플랫폼 스크립팅",
-        "evidence": "'claude-config'는 다양한 환경에서 설정을 관리하기 위한 Shell 스크립팅 전문성을 보여줍니다."
-      },
-      {
-        "strength": "데이터 처리 및 크롤링",
-        "evidence": "'cursor-docs-crawler'는 데이터 추출 및 처리 작업을 위한 Python 능력을 나타냅니다."
+        "evidence": "'claude-config' 프로젝트는 다양한 환경에서 설정을 관리하기 위한 Shell 스크립팅 능력을 보여줍니다."
       }
     ],
-    "ai_summary": "개발자의 프로젝트는 특히 개발자 도구 및 경험을 향상시키기 위한 AI 통합에 대한 기초적인 이해를 나타냅니다."
+    "ai_summary": "개발자는 프로젝트에 AI 기능을 효과적으로 통합하여 사용자 경험을 향상시키고 작업을 자동화하는 데 있어 소프트웨어 개발에 대한 미래 지향적인 접근 방식을 보여줍니다."
   },
   "top_technologies": [
     "TypeScript",
@@ -51,44 +51,43 @@
   ],
   "recommended_featured": [
     "dev-insights-dashboard",
-    "github-star-checker"
+    "supabase-anonymous-board"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
       "score": 85,
-      "desc_en": "The developer effectively integrates AI insights into their projects, enhancing functionality and user experience.",
-      "desc_ko": "개발자는 프로젝트에 AI 통찰력을 효과적으로 통합하여 기능성과 사용자 경험을 향상시킴."
+      "desc_en": "The developer effectively integrates AI insights into applications, enhancing functionality and user experience.",
+      "desc_ko": "개발자는 애플리케이션에 AI 통찰력을 효과적으로 통합하여 기능성과 사용자 경험을 향상시킴."
     },
     {
       "key": "Automation",
-      "score": 90,
-      "desc_en": "Strong automation capabilities are demonstrated through the creation of workflows that streamline processes.",
-      "desc_ko": "프로세스를 간소화하는 워크플로우 생성으로 강력한 자동화 능력을 입증함."
+      "score": 80,
+      "desc_en": "The automation of workflows, as seen in the GitHub Actions project, indicates a strong capability in streamlining processes.",
+      "desc_ko": "GitHub Actions 프로젝트에서 볼 수 있듯이 워크플로우 자동화는 프로세스를 간소화하는 강력한 능력을 나타냄."
     },
     {
       "key": "Context",
       "score": 75,
-      "desc_en": "The context-aware features in their projects suggest a good understanding of user needs and scenarios.",
-      "desc_ko": "프로젝트의 맥락 인식 기능은 사용자 요구와 시나리오에 대한 좋은 이해를 시사함."
+      "desc_en": "The use of AI for contextual insights in the developer dashboard shows an understanding of user needs and behavior.",
+      "desc_ko": "개발자 대시보드에서의 맥락적 통찰력을 위한 AI 사용은 사용자 요구와 행동에 대한 이해를 보여줌."
     },
     {
       "key": "Agentic",
       "score": 70,
-      "desc_en": "While there are elements of agentic behavior, further development in this area could enhance project interactivity.",
-      "desc_ko": "주체적인 행동 요소가 있지만, 이 분야의 추가 개발이 프로젝트의 상호작용성을 향상시킬 수 있음."
+      "desc_en": "The projects indicate a proactive approach to using AI as a tool for enhancing developer productivity.",
+      "desc_ko": "프로젝트는 개발자 생산성을 향상시키기 위한 도구로 AI를 사용하는 능동적인 접근 방식을 나타냄."
     }
   ],
   "interests": {
     "title": "Exploring Advanced Development Techniques",
     "keywords": [
-      "AI Integration",
       "Microservices",
-      "Test Automation",
-      "Web Development"
+      "Java",
+      "AI Tools"
     ],
-    "desc_en": "The developer is studying advanced topics such as microservices architecture and test automation frameworks, indicating a desire to deepen their expertise in modern software development practices.",
-    "desc_ko": "개발자는 마이크로서비스 아키텍처 및 테스트 자동화 프레임워크와 같은 고급 주제를 연구하고 있으며, 현대 소프트웨어 개발 관행에 대한 전문성을 심화하고자 하는 의지를 나타냄."
+    "desc_en": "The developer is studying advanced topics such as microservices architecture and Java frameworks, indicating a desire to deepen their understanding of scalable systems and modern development practices.",
+    "desc_ko": "개발자는 마이크로서비스 아키텍처 및 Java 프레임워크와 같은 고급 주제를 연구하고 있으며, 확장 가능한 시스템 및 현대 개발 관행에 대한 이해를 심화하고자 하는 의지를 나타냄."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
