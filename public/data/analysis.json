@@ -1,47 +1,47 @@
 {
   "en": {
-    "summary": "The developer exhibits a strong proficiency in building tools that enhance productivity and streamline workflows, particularly in the context of GitHub and AI integration. Their portfolio showcases a blend of automation, data visualization, and user interface development, indicating a well-rounded technical persona focused on practical applications of technology.",
+    "summary": "The developer demonstrates a strong proficiency in building tools that enhance developer experience and automate workflows, particularly in the context of GitHub and AI integration.",
     "strengths": [
       {
-        "strength": "Automation and Workflow Management",
-        "evidence": "The 'github-star-checker' repository demonstrates the ability to create automated workflows that monitor and notify users of changes in GitHub stars."
+        "strength": "Workflow Automation",
+        "evidence": "The 'github-star-checker' repository showcases the ability to create GitHub Actions workflows that automate monitoring and notifications."
       },
       {
-        "strength": "Cross-Platform Configuration Management",
-        "evidence": "The 'claude-config' project highlights expertise in managing global settings across different machines, showcasing skills in Shell scripting."
+        "strength": "AI Integration",
+        "evidence": "The 'dev-insights-dashboard' project illustrates the capability to integrate AI insights into developer tools, enhancing the visualization of GitHub activity."
       },
       {
-        "strength": "AI-Driven Insights and Visualization",
-        "evidence": "The 'dev-insights-dashboard' repository illustrates the capability to integrate AI for visualizing developer activity, indicating a strong understanding of data analytics."
+        "strength": "Web Development",
+        "evidence": "The 'miniroom-demo' and 'supabase-anonymous-board' repositories highlight skills in building web applications using Next.js and TypeScript."
       },
       {
-        "strength": "Web Development with Modern Frameworks",
-        "evidence": "Projects like 'miniroom-demo' and 'supabase-anonymous-board' reflect proficiency in using Next.js and TypeScript for building interactive web applications."
+        "strength": "Cross-Platform Development",
+        "evidence": "The 'chrome-cookie-reader' demonstrates the ability to create Python modules that work across different operating systems, specifically macOS."
       }
     ],
-    "ai_summary": "The developer's work indicates a solid foundation in integrating AI capabilities into software solutions, particularly in automating tasks and providing insights through data visualization."
+    "ai_summary": "The developer exhibits a solid understanding of AI applications in software development, particularly in automating tasks and providing insights through data visualization."
   },
   "ko": {
-    "summary": "개발자는 생산성을 향상시키고 워크플로우를 간소화하는 도구를 구축하는 데 강한 능력을 보이며, 특히 GitHub 및 AI 통합의 맥락에서 두드러진다. 그들의 포트폴리오는 자동화, 데이터 시각화 및 사용자 인터페이스 개발의 조화를 보여주며, 기술의 실용적 응용에 중점을 둔 균형 잡힌 기술 인격을 나타낸다.",
+    "summary": "개발자는 GitHub 및 AI 통합의 맥락에서 개발자 경험을 향상시키고 워크플로우를 자동화하는 도구를 구축하는 데 강한 능력을 보여줍니다.",
     "strengths": [
       {
-        "strength": "자동화 및 워크플로우 관리",
-        "evidence": "'github-star-checker' 리포지토리는 GitHub 별표 변경 사항을 모니터링하고 사용자에게 알림을 보내는 자동화된 워크플로우를 생성하는 능력을 보여준다."
+        "strength": "워크플로우 자동화",
+        "evidence": "'github-star-checker' 리포지토리는 모니터링 및 알림을 자동화하는 GitHub Actions 워크플로우를 생성하는 능력을 보여줍니다."
       },
       {
-        "strength": "크로스 플랫폼 구성 관리",
-        "evidence": "'claude-config' 프로젝트는 다양한 머신에서 전역 설정을 관리하는 전문성을 강조하며, Shell 스크립팅 기술을 보여준다."
+        "strength": "AI 통합",
+        "evidence": "'dev-insights-dashboard' 프로젝트는 개발 도구에 AI 통찰력을 통합하여 GitHub 활동의 시각화를 향상시키는 능력을 보여줍니다."
       },
       {
-        "strength": "AI 기반 통찰력 및 시각화",
-        "evidence": "'dev-insights-dashboard' 리포지토리는 개발자 활동을 시각화하기 위해 AI를 통합하는 능력을 보여주며, 데이터 분석에 대한 강한 이해를 나타낸다."
+        "strength": "웹 개발",
+        "evidence": "'miniroom-demo'와 'supabase-anonymous-board' 리포지토리는 Next.js와 TypeScript를 사용하여 웹 애플리케이션을 구축하는 기술을 강조합니다."
       },
       {
-        "strength": "최신 프레임워크를 활용한 웹 개발",
-        "evidence": "'miniroom-demo' 및 'supabase-anonymous-board'와 같은 프로젝트는 Next.js 및 TypeScript를 사용하여 인터랙티브한 웹 애플리케이션을 구축하는 능력을 반영한다."
+        "strength": "크로스 플랫폼 개발",
+        "evidence": "'chrome-cookie-reader'는 macOS를 포함한 다양한 운영 체제에서 작동하는 Python 모듈을 생성하는 능력을 보여줍니다."
       }
     ],
-    "ai_summary": "개발자의 작업은 소프트웨어 솔루션에 AI 기능을 통합하는 데 있어 탄탄한 기초를 나타내며, 특히 작업 자동화 및 데이터 시각화를 통한 통찰력 제공에 중점을 둔다."
+    "ai_summary": "개발자는 소프트웨어 개발에서 AI 응용 프로그램에 대한 확고한 이해를 보여주며, 특히 작업 자동화 및 데이터 시각화를 통한 통찰력 제공에 중점을 두고 있습니다."
   },
   "top_technologies": [
     "Python",
@@ -50,43 +50,44 @@
     "Java"
   ],
   "recommended_featured": [
-    "AI-Powered Developer Tools",
-    "Cross-Platform Configuration Management"
+    "dev-insights-dashboard",
+    "miniroom-demo"
   ],
   "ai_capabilities": [
     {
       "key": "Integration",
       "score": 85,
-      "desc_en": "The developer effectively integrates AI into their projects, enhancing functionality and user experience.",
-      "desc_ko": "개발자는 프로젝트에 AI를 효과적으로 통합하여 기능성과 사용자 경험을 향상시킴."
+      "desc_en": "The developer effectively integrates AI capabilities into existing workflows, enhancing productivity and insights.",
+      "desc_ko": "개발자는 기존 워크플로우에 AI 기능을 효과적으로 통합하여 생산성과 통찰력을 향상시킴."
     },
     {
       "key": "Automation",
       "score": 90,
-      "desc_en": "Strong automation capabilities are evident through the creation of workflows that reduce manual effort.",
-      "desc_ko": "수동 노력을 줄이는 워크플로우 생성으로 강력한 자동화 능력이 드러남."
+      "desc_en": "Strong automation skills are evident through the creation of tools that streamline repetitive tasks.",
+      "desc_ko": "반복 작업을 간소화하는 도구를 생성함으로써 강력한 자동화 기술이 드러남."
     },
     {
       "key": "Context",
       "score": 80,
-      "desc_en": "The ability to provide contextual insights through data visualization indicates a solid understanding of user needs.",
-      "desc_ko": "데이터 시각화를 통한 맥락적 통찰력을 제공하는 능력은 사용자 요구에 대한 확고한 이해를 나타냄."
+      "desc_en": "The ability to provide contextual insights through AI-driven dashboards indicates a strong understanding of user needs.",
+      "desc_ko": "AI 기반 대시보드를 통해 맥락적 통찰력을 제공하는 능력은 사용자 요구에 대한 강한 이해를 나타냄."
     },
     {
       "key": "Agentic",
       "score": 75,
-      "desc_en": "The developer shows potential for creating agentic systems that can operate autonomously based on user interactions.",
+      "desc_en": "The developer shows potential in creating agentic systems that can act autonomously based on user interactions.",
       "desc_ko": "개발자는 사용자 상호작용에 따라 자율적으로 작동할 수 있는 에이전틱 시스템을 구축할 가능성을 보여줌."
     }
   ],
   "interests": {
-    "title": "Exploring Advanced Java Techniques",
+    "title": "Exploring Advanced Development Techniques",
     "keywords": [
-      "Java",
+      "AI",
       "Microservices",
-      "Testing"
+      "Java",
+      "Web Development"
     ],
-    "desc_en": "The developer is delving into advanced Java concepts, particularly in microservices architecture and testing methodologies, indicating a commitment to mastering complex systems.",
-    "desc_ko": "개발자는 고급 Java 개념, 특히 마이크로서비스 아키텍처 및 테스트 방법론에 대해 탐구하고 있으며, 복잡한 시스템을 마스터하려는 의지를 나타냄."
+    "desc_en": "The developer is studying advanced topics in AI, microservices architecture, and Java development, indicating a commitment to staying at the forefront of technology.",
+    "desc_ko": "개발자는 AI, 마이크로서비스 아키텍처 및 Java 개발의 고급 주제를 연구하고 있으며, 기술의 최전선에 머물기 위한 의지를 나타냄."
   }
 }

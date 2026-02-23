@@ -1,5 +1,26 @@
 [
   {
+    "name": "arscontexta",
+    "description": "Claude Code plugin that generates individualized knowledge systems from conversation. You describe how you think and work, have a conversation and get a complete second brain as markdown files you own.",
+    "url": "https://github.com/WoojinAhn/arscontexta",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-02-22T15:47:34Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Shell"
+    },
+    "parent": {
+      "name": "arscontexta",
+      "owner": {
+        "login": "agenticnotetaking"
+      },
+      "stargazerCount": 1671,
+      "forkCount": 96
+    }
+  },
+  {
     "name": "claude-code-master",
     "description": "Claude Code 마스터",
     "url": "https://github.com/WoojinAhn/claude-code-master",
@@ -16,7 +37,7 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 106,
+      "stargazerCount": 108,
       "forkCount": 20
     }
   },
@@ -37,8 +58,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 5782,
-      "forkCount": 1453
+      "stargazerCount": 5803,
+      "forkCount": 1459
     }
   },
   {
@@ -120,7 +141,7 @@
         "login": "joneconsulting"
       },
       "stargazerCount": 270,
-      "forkCount": 195
+      "forkCount": 194
     }
   },
   {
@@ -306,8 +327,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 349577,
-      "forkCount": 43707
+      "stargazerCount": 349647,
+      "forkCount": 43709
     }
   },
   {
@@ -328,7 +349,7 @@
         "login": "ethereum"
       },
       "stargazerCount": 1031,
-      "forkCount": 387
+      "forkCount": 386
     }
   },
   {

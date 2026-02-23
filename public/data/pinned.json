@@ -2,13 +2,13 @@
   {
     "name": "github-star-checker",
     "description": "GitHub Actions workflow that monitors star changes across your repos and sends notifications",
-    "stargazerCount": 2,
+    "stargazerCount": 3,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-02-22T15:06:12Z"
+    "updatedAt": "2026-02-23T14:58:59Z"
   },
   {
     "name": "miniroom-demo",
@@ -26,7 +26,7 @@
   {
     "name": "cursor-docs-crawler",
     "description": "Cursor documentation crawler - Convert docs.cursor.com to PDF",
-    "stargazerCount": 1,
+    "stargazerCount": 3,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/cursor-docs-crawler",
     "isPrivate": false,
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-02-22T02:19:34Z"
+    "updatedAt": "2026-02-23T06:25:39Z"
   },
   {
     "name": "claude-config",
