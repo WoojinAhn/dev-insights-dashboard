@@ -63,6 +63,11 @@ export interface Analysis {
   recommended_featured: string[];
   ai_capabilities: AiCapability[];
   interests: AnalysisInterests;
+  model_provider?: string;
+}
+
+export interface Meta {
+  last_updated: string;
 }
 
 export interface ForkParent {

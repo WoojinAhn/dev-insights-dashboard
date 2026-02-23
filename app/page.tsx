@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { translations, Lang } from '@/lib/translations';
 import { STRENGTH_ICONS, CAP_ICONS, getLanguageColor, Target } from '@/lib/constants';
-import type { User, Repository, Analysis, ForkRepository, PinnedRepository, AiCapability } from '@/lib/data';
+import type { User, Repository, Analysis, ForkRepository, PinnedRepository, AiCapability, Meta } from '@/lib/data';
 
 interface LanguageStat {
   name: string;
@@ -41,6 +41,7 @@ interface DashboardData {
   featured: (Repository | PinnedRepository)[];
   stats: DashboardStats;
   forks: ForkRepository[];
+  meta?: Meta;
 }
 
 export default function Dashboard() {
@@ -58,18 +59,20 @@ export default function Dashboard() {
     async function fetchData() {
       try {
         const ts = new Date().getTime();
-        const [userRes, reposRes, analysisRes, pinnedRes, forksRes] = await Promise.all([
+        const [userRes, reposRes, analysisRes, pinnedRes, forksRes, metaRes] = await Promise.all([
           fetch(`/data/user.json?t=${ts}`),
           fetch(`/data/repos.json?t=${ts}`),
           fetch(`/data/analysis.json?t=${ts}`),
           fetch(`/data/pinned.json?t=${ts}`).catch(() => null),
-          fetch(`/data/forks.json?t=${ts}`).catch(() => null)
+          fetch(`/data/forks.json?t=${ts}`).catch(() => null),
+          fetch(`/data/meta.json?t=${ts}`).catch(() => null)
         ]);
 
         const user = await userRes.json();
         const allRepos = await reposRes.json();
         const analysis = await analysisRes.json();
         const pinnedRepos = pinnedRes ? await pinnedRes.json() : [];
+        const meta: Meta | null = metaRes ? await metaRes.json().catch(() => null) : null;
 
         let topForks: ForkRepository[] = [];
         try {
@@ -122,7 +125,8 @@ export default function Dashboard() {
           pinned: publicPinned,
           featured,
           stats: { totalStars, totalForks, languages },
-          forks: topForks
+          forks: topForks,
+          meta: meta ?? undefined
         });
       } catch (error) {
         console.error("Failed to fetch data:", error);
@@ -263,6 +267,11 @@ export default function Dashboard() {
                   <Workflow className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h2 className="text-2xl font-black uppercase tracking-tight text-white">{t.aiAnalysis}</h2>
+                {analysis.model_provider && (
+                  <span className="ml-3 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-widest">
+                    Powered by {analysis.model_provider}
+                  </span>
+                )}
               </div>
               <p className="text-xl md:text-2xl text-slate-200 leading-snug mb-10 max-w-5xl font-light tracking-tight">
                 &quot;{currentAnalysis.summary}&quot;
@@ -548,6 +557,11 @@ export default function Dashboard() {
 
         <footer className="mt-32 pt-12 border-t border-white/5 text-center text-slate-700 text-[10px] uppercase tracking-[0.3em] font-black">
           <p>{t.craftedBy}</p>
+          {data.meta?.last_updated && (
+            <p className="mt-2 text-slate-800">
+              Last updated: {new Date(data.meta.last_updated).toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Seoul' })} KST
+            </p>
+          )}
         </footer>
       </main>
     </div>

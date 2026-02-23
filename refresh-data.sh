@@ -101,4 +101,8 @@ fetch_data "forks" "$DATA_DIR/forks.json" "$CMD"
 echo "🧠 Running AI Analysis..."
 python3 analyze-portfolio.py
 
+# 6. Generate meta info
+echo "📋 Generating meta.json..."
+echo "{\"last_updated\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > "$DATA_DIR/meta.json"
+
 echo "✅ Data refresh process finished in $DATA_DIR"

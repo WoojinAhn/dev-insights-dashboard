@@ -233,6 +233,7 @@ def analyze_portfolio():
             }
 
         # Save validated data
+        analysis_data["model_provider"] = used_provider
         with open("public/data/analysis.json", "w", encoding="utf-8") as f:
             json.dump(analysis_data, f, ensure_ascii=False, indent=2)
         
