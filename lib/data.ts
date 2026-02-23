@@ -70,6 +70,28 @@ export interface Meta {
   last_updated: string;
 }
 
+export interface LanguageStat {
+  name: string;
+  count: number;
+}
+
+export interface DashboardStats {
+  totalStars: number;
+  totalForks: number;
+  languages: LanguageStat[];
+}
+
+export interface DashboardData {
+  user: User;
+  repos: Repository[];
+  analysis: Analysis;
+  pinned: PinnedRepository[];
+  featured: (Repository | PinnedRepository)[];
+  stats: DashboardStats;
+  forks: ForkRepository[];
+  meta?: Meta;
+}
+
 export interface ForkParent {
   name: string;
   owner: {
