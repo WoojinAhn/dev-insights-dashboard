@@ -24,7 +24,7 @@ export function DashboardFooter({ meta, lang, t }: DashboardFooterProps) {
         </div>
       </div>
       {meta?.last_updated && (
-        <p className="mt-2 text-slate-800">
+        <p className="mt-2 text-slate-800" suppressHydrationWarning>
           Last updated:{' '}
           {new Date(meta.last_updated).toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', {
             year: 'numeric',

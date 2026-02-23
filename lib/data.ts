@@ -126,48 +126,76 @@ export interface PinnedRepository {
   updatedAt: string;
 }
 
-export async function getUser(): Promise<User> {
-  const filePath = path.join(process.cwd(), 'public/data/user.json');
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(fileContent);
+function readJson<T>(fileName: string): T | null {
+  try {
+    const filePath = path.join(process.cwd(), 'public/data', fileName);
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  } catch {
+    return null;
+  }
 }
 
-export async function getRepos(): Promise<Repository[]> {
-  const filePath = path.join(process.cwd(), 'public/data/repos.json');
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(fileContent);
-}
+function computeStats(repos: Repository[]): DashboardStats {
+  const totalStars = repos.reduce((acc, repo) => acc + (repo.stargazerCount || 0), 0);
+  const totalForks = repos.reduce((acc, repo) => acc + (repo.forkCount || 0), 0);
 
-export async function getAnalysis(): Promise<Analysis> {
-  const filePath = path.join(process.cwd(), 'public/data/analysis.json');
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(fileContent);
-}
-
-export async function getStats() {
-  const repos = await getRepos();
-  
-  const totalStars = repos.reduce((acc, repo) => acc + repo.stargazerCount, 0);
-  const totalForks = repos.reduce((acc, repo) => acc + repo.forkCount, 0);
-  
-  // Calculate language distribution
   const languageCounts: Record<string, number> = {};
-  
-  repos.forEach(repo => {
+  repos.forEach((repo) => {
     if (repo.primaryLanguage) {
-      const lang = repo.primaryLanguage.name;
-      languageCounts[lang] = (languageCounts[lang] || 0) + 1;
+      const l = repo.primaryLanguage.name;
+      languageCounts[l] = (languageCounts[l] || 0) + 1;
     }
   });
 
-  const languages = Object.entries(languageCounts)
+  const languages: LanguageStat[] = Object.entries(languageCounts)
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count)
-    .slice(0, 5); // Top 5
+    .slice(0, 5);
+
+  return { totalStars, totalForks, languages };
+}
+
+export function getDashboardData(): DashboardData {
+  const user = readJson<User>('user.json')!;
+  const allRepos = readJson<Repository[]>('repos.json') ?? [];
+  const analysis = readJson<Analysis>('analysis.json')!;
+  const pinnedRepos = readJson<PinnedRepository[]>('pinned.json') ?? [];
+  const allForks = readJson<ForkRepository[]>('forks.json') ?? [];
+  const meta = readJson<Meta>('meta.json') ?? undefined;
+
+  const publicRepos = allRepos.filter((r) => !r.isPrivate);
+  const publicPinned = pinnedRepos.filter((r) => !r.isPrivate);
+
+  const topForks = allForks
+    .filter((r) => !r.isPrivate)
+    .sort(
+      (a, b) =>
+        (b.parent?.stargazerCount || b.stargazerCount || 0) -
+        (a.parent?.stargazerCount || a.stargazerCount || 0),
+    )
+    .slice(0, 9);
+
+  const stats = computeStats(publicRepos);
+
+  // Featured: pinned first, then AI-recommended, then by stars
+  const pinnedNames = new Set(publicPinned.map((p) => p.name));
+  const recommendedNames: string[] = analysis.recommended_featured || [];
+  const recommendedRepos = publicRepos
+    .filter((r) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
+    .sort((a, b) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
+  const otherRepos = publicRepos
+    .filter((r) => !pinnedNames.has(r.name) && !recommendedNames.includes(r.name))
+    .sort((a, b) => (b.stargazerCount || 0) - (a.stargazerCount || 0));
+  const featured = [...publicPinned, ...recommendedRepos, ...otherRepos].slice(0, 9);
 
   return {
-    totalStars,
-    totalForks,
-    languages
+    user,
+    repos: publicRepos,
+    analysis,
+    pinned: publicPinned,
+    featured,
+    stats,
+    forks: topForks,
+    meta,
   };
 }
