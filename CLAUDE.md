@@ -32,9 +32,12 @@ Requires `gh` CLI authenticated, plus env vars: `GEMINI_API_KEY`, `GH_TOKEN` (PA
    - `analyze-portfolio.py` sends repo data to Gemini 2.0 Flash (fallback: GitHub Models GPT-4o-mini) → writes `public/data/analysis.json`
    - Analysis produces bilingual (en/ko) content: summary, strengths, AI capabilities, research interests
 
-2. **Frontend** (Next.js App Router, single-page client component):
-   - `app/page.tsx` — the entire dashboard UI as a single `'use client'` component. Fetches all JSON from `public/data/` at runtime with cache-busting query params.
-   - `lib/data.ts` — server-side data loading utilities with TypeScript interfaces (used during build, not by the client page)
+2. **Frontend** (Next.js App Router, server + client split):
+   - `app/page.tsx` — server component, loads all data via `getDashboardData()` and passes to client wrapper
+   - `app/components/DashboardClient.tsx` — `'use client'` wrapper handling lang toggle and scroll state
+   - `app/components/` — UI section components (NavigationHeader, ProfileSection, StatsGrid, AiAnalysis, PrimaryStack, FeaturedProjects, ResearchRadar, DashboardFooter)
+   - `lib/data.ts` — TypeScript interfaces + `getDashboardData()` for server-side data loading (fs.readFileSync)
+   - `lib/constants.ts` — icon mappings (STRENGTH_ICONS, CAP_ICONS) and language color utilities
    - `lib/translations.ts` — i18n strings for en/ko toggle
 
 ### Data Flow
@@ -42,7 +45,7 @@ Requires `gh` CLI authenticated, plus env vars: `GEMINI_API_KEY`, `GH_TOKEN` (PA
 ```
 GitHub API → refresh-data.sh → public/data/*.json → analyze-portfolio.py → public/data/analysis.json
                                                    ↓
-                                        app/page.tsx (client-side fetch)
+                                        page.tsx (server) → getDashboardData() → DashboardClient (client)
 ```
 
 All data files in `public/data/` are committed to git and auto-updated by the `daily-insight.yml` GitHub Actions workflow (daily at 00:00 KST + on push to main). The workflow force-pushes data changes and triggers a Vercel deploy hook.
@@ -53,7 +56,8 @@ All data files in `public/data/` are committed to git and auto-updated by the `d
 - `public/data/repos.json` — public source repositories
 - `public/data/pinned.json` — pinned repositories
 - `public/data/forks.json` — forked repositories (with parent stats)
-- `public/data/analysis.json` — AI-generated bilingual analysis (en/ko sections, ai_capabilities, interests)
+- `public/data/analysis.json` — AI-generated bilingual analysis (en/ko sections, ai_capabilities, interests, model_provider)
+- `public/data/meta.json` — pipeline metadata (last_updated timestamp)
 - `public/data/history/` — archived raw AI responses
 
 ## Tech Stack
@@ -64,7 +68,7 @@ All data files in `public/data/` are committed to git and auto-updated by the `d
 
 ## Conventions
 
-- The dashboard is a single-page app — all UI lives in `app/page.tsx`
+- The dashboard is a single-page client app — `app/page.tsx` (server) orchestrates components via `DashboardClient` (client)
 - Glassmorphism design with `bg-slate-900/40 backdrop-blur-xl border border-white/5` pattern
 - Rounded corners use large values: `rounded-[2rem]`, `rounded-[2.5rem]`
 - Color scheme: cyan for primary accents, violet for AI capabilities, indigo for research/interests
