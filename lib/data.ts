@@ -31,10 +31,72 @@ export interface User {
   updated_at: string;
 }
 
-export interface Analysis {
+export interface AnalysisStrength {
+  strength: string;
+  evidence: string;
+}
+
+export interface AnalysisSection {
   summary: string;
-  strengths: string[];
+  strengths: AnalysisStrength[];
+  ai_summary: string;
+}
+
+export interface AiCapability {
+  key: string;
+  score: number;
+  desc_en: string;
+  desc_ko: string;
+}
+
+export interface AnalysisInterests {
+  title: string;
+  keywords: string[];
+  desc_en: string;
+  desc_ko: string;
+}
+
+export interface Analysis {
+  en: AnalysisSection;
+  ko: AnalysisSection;
   top_technologies: string[];
+  recommended_featured: string[];
+  ai_capabilities: AiCapability[];
+  interests: AnalysisInterests;
+}
+
+export interface ForkParent {
+  name: string;
+  owner: {
+    login: string;
+  };
+  stargazerCount: number;
+  forkCount: number;
+}
+
+export interface ForkRepository {
+  name: string;
+  description: string | null;
+  url: string;
+  isPrivate: boolean;
+  isFork: boolean;
+  updatedAt: string;
+  stargazerCount: number;
+  forkCount: number;
+  primaryLanguage: { name: string } | null;
+  parent: ForkParent;
+}
+
+export interface PinnedRepository {
+  name: string;
+  description: string | null;
+  stargazerCount: number;
+  forkCount: number;
+  url: string;
+  isPrivate: boolean;
+  isFork: boolean;
+  primaryLanguage: { name: string } | null;
+  updatedAt: string;
 }
 
 export async function getUser(): Promise<User> {

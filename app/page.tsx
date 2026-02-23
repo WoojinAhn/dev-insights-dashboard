@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Github,
   Star,
@@ -15,48 +15,37 @@ import {
   Languages,
   Pin,
   ChevronRight,
-  Bot,
-  Zap,
-  Globe,
-  Heart,
   Brain,
-  Target,
   Telescope
 } from 'lucide-react';
-
-const STRENGTH_ICONS: any = {
-  0: Bot,
-  1: Zap,
-  2: Globe,
-  3: Heart
-};
-
-const CAP_ICONS: any = {
-  Integration: Code2,
-  Automation: Zap,
-  Context: Target,
-  Agentic: Bot
-};
 import { translations, Lang } from '@/lib/translations';
+import { STRENGTH_ICONS, CAP_ICONS, getLanguageColor, Target } from '@/lib/constants';
+import type { User, Repository, Analysis, ForkRepository, PinnedRepository, AiCapability } from '@/lib/data';
 
-const LANGUAGE_COLORS: Record<string, string> = {
-  Java: 'bg-orange-600',
-  Python: 'bg-blue-500',
-  TypeScript: 'bg-cyan-400',
-  JavaScript: 'bg-yellow-400',
-  Shell: 'bg-green-500',
-  HTML: 'bg-orange-400',
-  CSS: 'bg-violet-500',
-  C: 'bg-slate-500',
-  'C++': 'bg-pink-500',
-  Rust: 'bg-red-500',
-};
+interface LanguageStat {
+  name: string;
+  count: number;
+}
 
-const getLanguageColor = (lang: string) => LANGUAGE_COLORS[lang] || 'bg-slate-400';
+interface DashboardStats {
+  totalStars: number;
+  totalForks: number;
+  languages: LanguageStat[];
+}
+
+interface DashboardData {
+  user: User;
+  repos: Repository[];
+  analysis: Analysis;
+  pinned: PinnedRepository[];
+  featured: (Repository | PinnedRepository)[];
+  stats: DashboardStats;
+  forks: ForkRepository[];
+}
 
 export default function Dashboard() {
   const [lang, setLang] = useState<Lang>('ko');
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<DashboardData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
@@ -81,48 +70,48 @@ export default function Dashboard() {
         const allRepos = await reposRes.json();
         const analysis = await analysisRes.json();
         const pinnedRepos = pinnedRes ? await pinnedRes.json() : [];
-        
-        let topForks = [];
+
+        let topForks: ForkRepository[] = [];
         try {
-          const allForks = forksRes ? await forksRes.json() : [];
+          const allForks: ForkRepository[] = forksRes ? await forksRes.json() : [];
           // Process Forks: Public only, Sort by Parent Stars DESC, Top 9
           topForks = allForks
-            .filter((r: any) => !r.isPrivate)
-            .sort((a: any, b: any) => ((b.parent?.stargazerCount || b.stargazerCount) || 0) - ((a.parent?.stargazerCount || a.stargazerCount) || 0))
+            .filter((r) => !r.isPrivate)
+            .sort((a, b) => ((b.parent?.stargazerCount || b.stargazerCount) || 0) - ((a.parent?.stargazerCount || a.stargazerCount) || 0))
             .slice(0, 9);
         } catch (e) {
           console.error("Failed to process forks:", e);
         }
 
-        const publicRepos = allRepos.filter((r: any) => !r.isPrivate);
-        const publicPinned = pinnedRepos.filter((r: any) => !r.isPrivate);
+        const publicRepos: Repository[] = allRepos.filter((r: Repository) => !r.isPrivate);
+        const publicPinned: PinnedRepository[] = pinnedRepos.filter((r: PinnedRepository) => !r.isPrivate);
 
-        const totalStars = publicRepos.reduce((acc: number, repo: any) => acc + (repo.stargazerCount || 0), 0);
-        const totalForks = publicRepos.reduce((acc: number, repo: any) => acc + (repo.forkCount || 0), 0);
+        const totalStars = publicRepos.reduce((acc, repo) => acc + (repo.stargazerCount || 0), 0);
+        const totalForks = publicRepos.reduce((acc, repo) => acc + (repo.forkCount || 0), 0);
 
         const languageCounts: Record<string, number> = {};
-        publicRepos.forEach((repo: any) => {
+        publicRepos.forEach((repo) => {
           if (repo.primaryLanguage) {
             const l = repo.primaryLanguage.name;
             languageCounts[l] = (languageCounts[l] || 0) + 1;
           }
         });
 
-        const languages = Object.entries(languageCounts)
+        const languages: LanguageStat[] = Object.entries(languageCounts)
           .map(([name, count]) => ({ name, count }))
           .sort((a, b) => b.count - a.count)
           .slice(0, 5);
 
-        const pinnedNames = new Set(publicPinned.map((p: any) => p.name));
+        const pinnedNames = new Set(publicPinned.map((p) => p.name));
         // Featured Logic: 1. Pinned first, 2. AI Recommended, 3. Top Public
-        const recommendedNames = analysis.recommended_featured || [];
+        const recommendedNames: string[] = analysis.recommended_featured || [];
         const recommendedRepos = publicRepos
-          .filter((r: any) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
-          .sort((a: any, b: any) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
+          .filter((r) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
+          .sort((a, b) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
 
         const otherRepos = publicRepos
-          .filter((r: any) => !pinnedNames.has(r.name) && !recommendedNames.includes(r.name))
-          .sort((a: any, b: any) => (b.stargazerCount || 0) - (a.stargazerCount || 0));
+          .filter((r) => !pinnedNames.has(r.name) && !recommendedNames.includes(r.name))
+          .sort((a, b) => (b.stargazerCount || 0) - (a.stargazerCount || 0));
 
         const featured = [...publicPinned, ...recommendedRepos, ...otherRepos].slice(0, 9);
 
@@ -154,9 +143,11 @@ export default function Dashboard() {
     </div>
   );
 
+  if (!data) return null;
+
   const { user, analysis, stats, featured, pinned, forks } = data;
   const currentAnalysis = lang === 'ko' ? analysis.ko : analysis.en;
-  const pinnedNames = new Set(pinned.map((p: any) => p.name));
+  const pinnedNames = new Set(pinned.map((p) => p.name));
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
@@ -278,9 +269,9 @@ export default function Dashboard() {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-12">
-                {currentAnalysis.strengths.map((item: any, i: number) => {
+                {currentAnalysis.strengths.map((item, i: number) => {
                   const Icon = STRENGTH_ICONS[i] || ChevronRight;
-                  
+
                   // Handle both string and object formats
                   const strengthText = typeof item === 'object' ? item.strength : item;
                   const evidenceText = typeof item === 'object' ? item.evidence : item;
@@ -324,9 +315,9 @@ export default function Dashboard() {
                   </p>
 
                   <div className="flex flex-wrap gap-4">
-                    {analysis.ai_capabilities.map((cap: any, i: number) => {
+                    {analysis.ai_capabilities.map((cap: AiCapability, i: number) => {
                       const Icon = CAP_ICONS[cap.key] || Target;
-                      const title = (t.aiCaps as any)[cap.key];
+                      const title = (t.aiCaps as Record<string, string>)[cap.key];
 
                       return (
                         <div key={i} className="relative group/cap">
@@ -400,11 +391,11 @@ export default function Dashboard() {
 
           <div className="bg-slate-900/20 rounded-[2.5rem] p-8 md:p-12 border border-white/5 backdrop-blur-sm">
             <div className="flex h-5 w-full rounded-2xl overflow-hidden mb-12 bg-slate-950 shadow-inner p-1">
-              {stats.languages.map((lang: any, i: number) => (
+              {stats.languages.map((lang: LanguageStat, i: number) => (
                 <div
                   key={i}
                   className={`${getLanguageColor(lang.name)} transition-all hover:brightness-110 relative group/bar`}
-                  style={{ width: `${(lang.count / stats.languages.reduce((a: any, b: any) => a + b.count, 0)) * 100}%` }}
+                  style={{ width: `${(lang.count / stats.languages.reduce((a, b) => a + b.count, 0)) * 100}%` }}
                 >
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-[10px] rounded opacity-0 group-hover/bar:opacity-100 transition-opacity whitespace-nowrap border border-white/10 z-20">
                     {lang.name}
@@ -414,7 +405,7 @@ export default function Dashboard() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-              {stats.languages.map((lang: any, i: number) => (
+              {stats.languages.map((lang: LanguageStat, i: number) => (
                 <div key={i} className="group/item">
                   <div className="flex items-center gap-3 mb-2">
                     <div className={`w-3 h-3 rounded-full ${getLanguageColor(lang.name)} shadow-[0_0_10px_rgba(255,255,255,0.1)]`} />
@@ -442,7 +433,7 @@ export default function Dashboard() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featured.map((repo: any, i: number) => (
+            {featured.map((repo: Repository | PinnedRepository, i: number) => (
               <a
                 key={i}
                 href={repo.url}
@@ -513,7 +504,7 @@ export default function Dashboard() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {forks.map((repo: any, i: number) => (
+                {forks.map((repo: ForkRepository, i: number) => (
                   <a
                     key={i}
                     href={repo.url}
