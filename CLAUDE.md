@@ -37,7 +37,7 @@ Requires `gh` CLI authenticated, plus env vars: `GEMINI_API_KEY`, `GH_TOKEN` (PA
    - `app/components/DashboardClient.tsx` — `'use client'` wrapper handling lang toggle and scroll state
    - `app/components/` — UI section components (NavigationHeader, ProfileSection, StatsGrid, AiAnalysis, PrimaryStack, FeaturedProjects, ResearchRadar, DashboardFooter)
    - `lib/data.ts` — TypeScript interfaces + `getDashboardData()` for server-side data loading (fs.readFileSync)
-   - `lib/constants.ts` — icon mappings (STRENGTH_ICONS, CAP_ICONS) and language color utilities
+   - `lib/constants.ts` — language color utilities (LANGUAGE_COLORS, getLanguageColor)
    - `lib/translations.ts` — i18n strings for en/ko toggle
 
 ### Data Flow
