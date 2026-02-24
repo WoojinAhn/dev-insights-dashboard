@@ -34,6 +34,8 @@ export interface User {
 export interface AnalysisStrength {
   strength: string;
   evidence: string;
+  tag_en: string;
+  tag_ko: string;
 }
 
 export interface AnalysisSection {
@@ -44,14 +46,23 @@ export interface AnalysisSection {
 
 export interface AiCapability {
   key: string;
+  title_en: string;
+  title_ko: string;
   score: number;
   desc_en: string;
   desc_ko: string;
 }
 
+export interface AnalysisInterestKeyword {
+  name: string;
+  desc_en: string;
+  desc_ko: string;
+}
+
 export interface AnalysisInterests {
-  title: string;
-  keywords: string[];
+  title_en: string;
+  title_ko: string;
+  keywords: AnalysisInterestKeyword[];
   desc_en: string;
   desc_ko: string;
 }

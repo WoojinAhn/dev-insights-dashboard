@@ -1,22 +1,3 @@
-import React from 'react';
-import { Bot, Zap, Globe, Heart, Code2, Target } from 'lucide-react';
-
-export { Target };
-
-export const STRENGTH_ICONS: Record<number, React.ElementType> = {
-  0: Bot,
-  1: Zap,
-  2: Globe,
-  3: Heart
-};
-
-export const CAP_ICONS: Record<string, React.ElementType> = {
-  Integration: Code2,
-  Automation: Zap,
-  Context: Target,
-  Agentic: Bot
-};
-
 export const LANGUAGE_COLORS: Record<string, string> = {
   Java: 'bg-orange-600',
   Python: 'bg-blue-500',

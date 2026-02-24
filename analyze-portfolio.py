@@ -117,13 +117,16 @@ def analyze_portfolio():
 
         [Requirements for Analysis]:
         1. **Summary**: Define a 'Technical Persona' based ONLY on their own code.
-        2. **Key Strengths**: Identify 4 high-level engineering strengths based ONLY on [SOURCE REPOSITORIES].
+        2. **Key Strengths**: Identify 3-5 high-level engineering strengths based ONLY on [SOURCE REPOSITORIES].
            - Evidence must point to specific source repos.
+           - Each strength must include `tag_en` (1-3 word English hashtag) and `tag_ko` (1-3 word Korean hashtag).
         3. **Top Technologies**: Identify the core tech stack from [SOURCE REPOSITORIES].
-        4. **AI Capabilities**: Evaluate 4 dimensions (Integration, Automation, Context, Agentic) based ONLY on [SOURCE REPOSITORIES].
-           - Score (0-100) and 'Detailed Reason'.
+        4. **AI Capabilities**: Freely identify 3-5 AI capability dimensions based ONLY on [SOURCE REPOSITORIES].
+           - Do NOT use fixed keys. Choose descriptive snake_case keys (e.g. "llm_integration", "workflow_automation").
+           - Each must include `title_en` and `title_ko` (short display title), `score` (0-100), and detailed desc.
         5. **Interests (Research Radar)**: Analyze [FORKED REPOSITORIES] to see what they are studying.
-           - Provide a creative section title, keywords, and a visionary description.
+           - Provide a bilingual section title (`title_en`, `title_ko`).
+           - `keywords` must be an array of objects, each with `name`, `desc_en`, `desc_ko`.
 
         [Tone & Language Quality]:
         - Professional, objective, and dry.
@@ -132,27 +135,28 @@ def analyze_portfolio():
 
         Return ONLY a JSON object with this exact structure:
         {{
-          "en": {{ 
-            "summary": "...", 
-            "strengths": [{{ "strength": "...", "evidence": "..." }}, ...], 
-            "ai_summary": "..." 
+          "en": {{
+            "summary": "...",
+            "strengths": [{{ "strength": "...", "evidence": "...", "tag_en": "Web Apps", "tag_ko": "웹 앱" }}, ...],
+            "ai_summary": "..."
           }},
-          "ko": {{ 
-            "summary": "...", 
-            "strengths": [{{ "strength": "...", "evidence": "..." }}, ...], 
-            "ai_summary": "..." 
+          "ko": {{
+            "summary": "...",
+            "strengths": [{{ "strength": "...", "evidence": "...", "tag_en": "Web Apps", "tag_ko": "웹 앱" }}, ...],
+            "ai_summary": "..."
           }},
           "top_technologies": ["...", "..."],
           "recommended_featured": ["...", "..."],
           "ai_capabilities": [
-            {{ "key": "Integration", "score": 85, "desc_en": "...", "desc_ko": "..." }},
+            {{ "key": "llm_integration", "title_en": "LLM Integration", "title_ko": "LLM 통합", "score": 85, "desc_en": "...", "desc_ko": "..." }},
             ...
           ],
-          "interests": {{ 
-            "title": "...", 
-            "keywords": ["...", "..."], 
-            "desc_en": "...", 
-            "desc_ko": "..." 
+          "interests": {{
+            "title_en": "...",
+            "title_ko": "...",
+            "keywords": [{{ "name": "AI Integration", "desc_en": "...", "desc_ko": "..." }}, ...],
+            "desc_en": "...",
+            "desc_ko": "..."
           }}
         }}
         """
@@ -199,13 +203,16 @@ def analyze_portfolio():
                     "strengths": [],
                     "ai_summary": "AI capability assessment pending."
                 }
-            # Ensure strengths are objects {strength, evidence}
+            # Ensure strengths are objects {strength, evidence, tag_en, tag_ko}
             new_strengths = []
             for s in analysis_data[lang_key].get("strengths", []):
                 if isinstance(s, str):
-                    new_strengths.append({"strength": s, "evidence": "Demonstrated across various projects."})
-                else:
-                    new_strengths.append(s)
+                    s = {"strength": s, "evidence": "Demonstrated across various projects."}
+                if "tag_en" not in s:
+                    s["tag_en"] = " ".join(s.get("strength", "").split()[:2])
+                if "tag_ko" not in s:
+                    s["tag_ko"] = " ".join(s.get("strength", "").split()[:2])
+                new_strengths.append(s)
             analysis_data[lang_key]["strengths"] = new_strengths
 
         # 2. List fields
@@ -217,20 +224,40 @@ def analyze_portfolio():
         # 3. AI Capabilities
         if "ai_capabilities" not in analysis_data:
             analysis_data["ai_capabilities"] = [
-                {"key": "Integration", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
-                {"key": "Automation", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
-                {"key": "Context", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
-                {"key": "Agentic", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."}
+                {"key": "llm_integration", "title_en": "LLM Integration", "title_ko": "LLM 통합", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
+                {"key": "workflow_automation", "title_en": "Workflow Automation", "title_ko": "워크플로우 자동화", "score": 0, "desc_en": "Pending...", "desc_ko": "분석 중..."},
             ]
+        else:
+            for cap in analysis_data["ai_capabilities"]:
+                if "title_en" not in cap:
+                    cap["title_en"] = cap.get("key", "").replace("_", " ").title()
+                if "title_ko" not in cap:
+                    cap["title_ko"] = cap.get("key", "").replace("_", " ").title()
 
         # 4. Interests (Research Radar)
         if "interests" not in analysis_data:
             analysis_data["interests"] = {
-                "title": "Research Radar",
-                "keywords": ["AI", "Open Source"],
+                "title_en": "Research Radar",
+                "title_ko": "리서치 레이더",
+                "keywords": [{"name": "AI", "desc_en": "Exploring AI trends.", "desc_ko": "AI 트렌드 탐구 중."}],
                 "desc_en": "Exploring innovative tech through forked projects.",
                 "desc_ko": "Fork된 프로젝트들을 통해 기술 트렌드를 분석 중입니다."
             }
+        else:
+            interests = analysis_data["interests"]
+            if "title_en" not in interests:
+                interests["title_en"] = interests.get("title", "Research Radar")
+            if "title_ko" not in interests:
+                interests["title_ko"] = interests.get("title", "리서치 레이더")
+            interests.pop("title", None)
+            # Convert string keywords to objects
+            new_keywords = []
+            for kw in interests.get("keywords", []):
+                if isinstance(kw, str):
+                    new_keywords.append({"name": kw, "desc_en": interests.get("desc_en", ""), "desc_ko": interests.get("desc_ko", "")})
+                else:
+                    new_keywords.append(kw)
+            interests["keywords"] = new_keywords
 
         # Save validated data
         analysis_data["model_provider"] = used_provider

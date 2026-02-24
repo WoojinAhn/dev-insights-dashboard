@@ -16,19 +16,7 @@ export const translations = {
     langButton: "한국어",
     badgePride: "PINNED",
     badgeAiPick: "AI PICK",
-    strengthTags: {
-      ai: "AI Ecosystem",
-      automation: "Automation",
-      fullstack: "Full Stack",
-      dx: "Dev Experience"
-    },
     aiCapabilities: "AI Core Capabilities",
-    aiCaps: {
-      Integration: "AI Integration",
-      Automation: "Workflow Automation",
-      Context: "Context Engineering",
-      Agentic: "Agentic thinking"
-    }
   },
   ko: {
     headerTitle: "님의 코드 넥서스",
@@ -47,19 +35,7 @@ export const translations = {
     langButton: "English",
     badgePride: "PINNED",
     badgeAiPick: "AI PICK",
-    strengthTags: {
-      ai: "AI 생태계",
-      automation: "자동화 도구",
-      fullstack: "풀스택 개발",
-      dx: "개발자 경험"
-    },
     aiCapabilities: "AI 핵심 역량",
-    aiCaps: {
-      Integration: "AI 통합 능력",
-      Automation: "워크플로우 자동화",
-      Context: "컨텍스트 엔지니어링",
-      Agentic: "에이전트 사고력"
-    }
   }
 };
 
