@@ -1,5 +1,26 @@
 [
   {
+    "name": "CodexBar",
+    "description": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
+    "url": "https://github.com/WoojinAhn/CodexBar",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-02-24T15:05:24Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Swift"
+    },
+    "parent": {
+      "name": "CodexBar",
+      "owner": {
+        "login": "steipete"
+      },
+      "stargazerCount": 6355,
+      "forkCount": 429
+    }
+  },
+  {
     "name": "arscontexta",
     "description": "Claude Code plugin that generates individualized knowledge systems from conversation. You describe how you think and work, have a conversation and get a complete second brain as markdown files you own.",
     "url": "https://github.com/WoojinAhn/arscontexta",
@@ -16,8 +37,8 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 1676,
-      "forkCount": 98
+      "stargazerCount": 1752,
+      "forkCount": 102
     }
   },
   {
@@ -37,8 +58,8 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 108,
-      "forkCount": 20
+      "stargazerCount": 109,
+      "forkCount": 21
     }
   },
   {
@@ -58,8 +79,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 5804,
-      "forkCount": 1459
+      "stargazerCount": 5824,
+      "forkCount": 1463
     }
   },
   {
@@ -183,7 +204,7 @@
         "login": "naver"
       },
       "stargazerCount": 686,
-      "forkCount": 117
+      "forkCount": 118
     }
   },
   {
@@ -225,7 +246,7 @@
         "login": "mapstruct"
       },
       "stargazerCount": 7618,
-      "forkCount": 1012
+      "forkCount": 1011
     }
   },
   {
@@ -327,8 +348,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 349656,
-      "forkCount": 43709
+      "stargazerCount": 349704,
+      "forkCount": 43708
     }
   },
   {
