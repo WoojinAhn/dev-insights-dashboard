@@ -4,13 +4,13 @@
     "strengths": [
       {
         "strength": "Web Application Development",
-        "evidence": "The developer created multiple web applications such as 'dev-insights-dashboard' and 'supabase-anonymous-board', showcasing their ability to build interactive and user-friendly interfaces.",
+        "evidence": "The developer has created multiple web applications, such as 'dev-insights-dashboard' and 'supabase-anonymous-board', showcasing their ability to build interactive and user-friendly interfaces.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
       },
       {
         "strength": "Automation and Workflow Tools",
-        "evidence": "The 'github-star-checker' and 'hound' projects illustrate the developer's expertise in creating automation tools that enhance workflow efficiency.",
+        "evidence": "Projects like 'github-star-checker' and 'hound' illustrate the developer's expertise in creating automation tools that enhance workflow efficiency.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
       },
@@ -22,31 +22,31 @@
       },
       {
         "strength": "Cross-Platform Development",
-        "evidence": "The developer's work on 'chrome-cookie-reader' and 'claude-config' shows their ability to create tools that operate across different platforms and environments.",
+        "evidence": "The developer has experience with various programming languages and frameworks, as seen in projects like 'miniroom-demo' and 'cursor-docs-crawler', indicating versatility in cross-platform development.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "Documentation and Educational Tools",
-        "evidence": "The 'claude-tutorial-playground' project serves as a lightweight educational tool, indicating the developer's commitment to knowledge sharing and documentation.",
-        "tag_en": "Education",
-        "tag_ko": "교육"
+        "strength": "Documentation and User Guidance",
+        "evidence": "The 'WoojinAhn' repository serves as a README for their GitHub profile, highlighting the importance they place on documentation and user guidance.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "The developer effectively integrates AI capabilities into their projects, particularly in enhancing user experience and automating processes."
+    "ai_summary": "The developer effectively incorporates AI technologies into their projects, particularly in enhancing user experience and automating tasks."
   },
   "ko": {
     "summary": "개발자는 TypeScript와 Python을 사용하여 웹 애플리케이션 및 자동화 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 프로젝트는 개발자 생산성을 향상시키고 소프트웨어 솔루션에 AI 기능을 통합하는 데 중점을 두고 있습니다.",
     "strengths": [
       {
         "strength": "웹 애플리케이션 개발",
-        "evidence": "'dev-insights-dashboard'와 'supabase-anonymous-board'와 같은 여러 웹 애플리케이션을 생성하여 인터랙티브하고 사용자 친화적인 인터페이스를 구축하는 능력을 보여줍니다.",
+        "evidence": "'dev-insights-dashboard'와 'supabase-anonymous-board'와 같은 여러 웹 애플리케이션을 생성하여 상호작용적이고 사용자 친화적인 인터페이스를 구축하는 능력을 보여줍니다.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
       },
       {
         "strength": "자동화 및 워크플로 도구",
-        "evidence": "'github-star-checker'와 'hound' 프로젝트는 워크플로 효율성을 향상시키는 자동화 도구를 만드는 전문성을 보여줍니다.",
+        "evidence": "'github-star-checker'와 'hound'와 같은 프로젝트는 워크플로 효율성을 향상시키는 자동화 도구를 만드는 전문성을 보여줍니다.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
       },
@@ -58,18 +58,18 @@
       },
       {
         "strength": "크로스 플랫폼 개발",
-        "evidence": "'chrome-cookie-reader'와 'claude-config' 작업은 다양한 플랫폼과 환경에서 작동하는 도구를 만드는 능력을 보여줍니다.",
+        "evidence": "'miniroom-demo'와 'cursor-docs-crawler'와 같은 프로젝트에서 다양한 프로그래밍 언어와 프레임워크에 대한 경험을 보여주며, 크로스 플랫폼 개발의 다재다능함을 나타냅니다.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "문서화 및 교육 도구",
-        "evidence": "'claude-tutorial-playground' 프로젝트는 경량 교육 도구로서 지식 공유 및 문서화에 대한 개발자의 헌신을 나타냅니다.",
-        "tag_en": "Education",
-        "tag_ko": "교육"
+        "strength": "문서화 및 사용자 안내",
+        "evidence": "'WoojinAhn' 리포지토리는 GitHub 프로필에 대한 README로 사용되어 문서화 및 사용자 안내의 중요성을 강조합니다.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "개발자는 프로젝트에 AI 기능을 효과적으로 통합하여 사용자 경험을 향상시키고 프로세스를 자동화합니다."
+    "ai_summary": "개발자는 프로젝트에 AI 기술을 효과적으로 통합하여 사용자 경험을 향상시키고 작업을 자동화합니다."
   },
   "top_technologies": [
     "TypeScript",
@@ -88,40 +88,32 @@
       "title_en": "LLM Integration",
       "title_ko": "LLM 통합",
       "score": 85,
-      "desc_en": "The developer integrates large language models into their projects, as seen in the 'dev-insights-dashboard' which utilizes AI insights.",
-      "desc_ko": "'dev-insights-dashboard'에서 AI 통찰력을 활용하여 대형 언어 모델을 프로젝트에 통합합니다."
+      "desc_en": "The 'dev-insights-dashboard' project showcases the developer's ability to integrate large language models for enhanced insights.",
+      "desc_ko": "'dev-insights-dashboard' 프로젝트는 향상된 통찰력을 위해 대형 언어 모델을 통합하는 능력을 보여줍니다."
     },
     {
       "key": "workflow_automation",
       "title_en": "Workflow Automation",
       "title_ko": "워크플로 자동화",
       "score": 90,
-      "desc_en": "The developer creates automation tools like 'github-star-checker' that streamline GitHub repository management.",
-      "desc_ko": "'github-star-checker'와 같은 자동화 도구를 만들어 GitHub 리포지토리 관리를 간소화합니다."
+      "desc_en": "The 'github-star-checker' project exemplifies the developer's skills in automating workflows to monitor repository activity.",
+      "desc_ko": "'github-star-checker' 프로젝트는 리포지토리 활동을 모니터링하기 위한 워크플로 자동화 기술을 보여줍니다."
+    },
+    {
+      "key": "ai_insights",
+      "title_en": "AI Insights",
+      "title_ko": "AI 통찰력",
+      "score": 80,
+      "desc_en": "The 'dev-insights-dashboard' project provides AI-driven insights into GitHub activity, demonstrating the developer's capability in this area.",
+      "desc_ko": "'dev-insights-dashboard' 프로젝트는 GitHub 활동에 대한 AI 기반 통찰력을 제공하여 이 분야에서 개발자의 능력을 보여줍니다."
     },
     {
       "key": "data_visualization",
       "title_en": "Data Visualization",
       "title_ko": "데이터 시각화",
-      "score": 80,
-      "desc_en": "The 'dev-insights-dashboard' project showcases the developer's ability to visualize data effectively.",
-      "desc_ko": "'dev-insights-dashboard' 프로젝트는 데이터를 효과적으로 시각화하는 능력을 보여줍니다."
-    },
-    {
-      "key": "cross_platform_development",
-      "title_en": "Cross-Platform Development",
-      "title_ko": "크로스 플랫폼 개발",
       "score": 75,
-      "desc_en": "The developer demonstrates cross-platform capabilities through projects like 'chrome-cookie-reader'.",
-      "desc_ko": "'chrome-cookie-reader'와 같은 프로젝트를 통해 크로스 플랫폼 기능을 보여줍니다."
-    },
-    {
-      "key": "educational_tools",
-      "title_en": "Educational Tools",
-      "title_ko": "교육 도구",
-      "score": 70,
-      "desc_en": "The 'claude-tutorial-playground' project indicates the developer's focus on creating educational resources.",
-      "desc_ko": "'claude-tutorial-playground' 프로젝트는 교육 자료를 만드는 데 중점을 두고 있음을 나타냅니다."
+      "desc_en": "The 'dev-insights-dashboard' effectively visualizes GitHub activity, showcasing the developer's skills in data visualization.",
+      "desc_ko": "'dev-insights-dashboard'는 GitHub 활동을 효과적으로 시각화하여 데이터 시각화 기술을 보여줍니다."
     }
   ],
   "interests": {
@@ -130,22 +122,17 @@
     "keywords": [
       {
         "name": "AI Integration",
-        "desc_en": "The developer shows interest in AI integration through projects like 'claude-code-action', which focuses on enhancing coding capabilities.",
-        "desc_ko": "'claude-code-action'과 같은 프로젝트를 통해 AI 통합에 관심을 보입니다."
-      },
-      {
-        "name": "Microservices Architecture",
-        "desc_en": "The developer explores microservices architecture as seen in the 'nice-msa' and 'msa_with_spring_cloud' repositories.",
-        "desc_ko": "'nice-msa'와 'msa_with_spring_cloud' 리포지토리에서 마이크로서비스 아키텍처를 탐구합니다."
+        "desc_en": "The developer has shown interest in AI integration through their forked repositories, such as 'claude-code-action', which focuses on AI-driven functionalities.",
+        "desc_ko": "개발자는 AI 기반 기능에 중점을 둔 'claude-code-action'과 같은 포크된 리포지토리를 통해 AI 통합에 대한 관심을 보여주었습니다."
       },
       {
         "name": "Java Development",
-        "desc_en": "The developer has a strong interest in Java development, evidenced by multiple Java-related projects.",
-        "desc_ko": "여러 Java 관련 프로젝트에서 Java 개발에 대한 강한 관심을 보입니다."
+        "desc_en": "The developer has explored Java development through various forked repositories, indicating a keen interest in this programming language.",
+        "desc_ko": "개발자는 다양한 포크된 리포지토리를 통해 Java 개발을 탐구하여 이 프로그래밍 언어에 대한 높은 관심을 나타냈습니다."
       }
     ],
-    "desc_en": "The developer's interests reflect a commitment to exploring advanced technologies and methodologies in software development.",
-    "desc_ko": "개발자의 관심사는 소프트웨어 개발에서 고급 기술과 방법론을 탐구하는 데 대한 헌신을 반영합니다."
+    "desc_en": "The developer's interests reflect a focus on AI integration and Java development, as evidenced by their forked repositories.",
+    "desc_ko": "개발자의 관심사는 포크된 리포지토리를 통해 AI 통합 및 Java 개발에 중점을 두고 있음을 보여줍니다."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
