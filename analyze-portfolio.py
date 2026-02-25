@@ -123,10 +123,10 @@ def analyze_portfolio():
         3. **Top Technologies**: Identify the core tech stack from [SOURCE REPOSITORIES].
         4. **AI Capabilities**: Freely identify 3-5 AI capability dimensions based ONLY on [SOURCE REPOSITORIES].
            - Do NOT use fixed keys. Choose descriptive snake_case keys (e.g. "llm_integration", "workflow_automation").
-           - Each must include `title_en` and `title_ko` (short display title), `score` (0-100), and `desc_en`/`desc_ko` as complete descriptive sentences.
+           - Each must include `title_en` and `title_ko` (short display title), `score` (0-100), and `desc_en`/`desc_ko` as complete descriptive sentences that reference specific source repos as evidence.
         5. **Interests (Research Radar)**: Analyze [FORKED REPOSITORIES] to see what they are studying.
            - Provide a bilingual section title (`title_en`, `title_ko`).
-           - `keywords` must be an array of objects, each with `name`, `desc_en`, `desc_ko` as complete descriptive sentences.
+           - `keywords` must be an array of objects, each with `name`, `desc_en`, `desc_ko` as complete descriptive sentences that reference specific forked repos as evidence.
 
         [Tone & Language Quality]:
         - Professional, objective, and dry.
