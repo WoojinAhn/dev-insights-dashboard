@@ -81,6 +81,21 @@ export interface Meta {
   last_updated: string;
 }
 
+export interface StatsHistoryEntry {
+  date: string;
+  totalStars: number;
+  totalForks: number;
+  repoCount: number;
+  followers: number;
+}
+
+export interface StatsDeltas {
+  totalStars: number | null;
+  totalForks: number | null;
+  repoCount: number | null;
+  followers: number | null;
+}
+
 export interface LanguageStat {
   name: string;
   count: number;
@@ -102,6 +117,7 @@ export interface DashboardData {
   forks: ForkRepository[];
   meta?: Meta;
   aiSignals: Record<string, string[]>;
+  statsDeltas: StatsDeltas;
 }
 
 export interface ForkParent {
@@ -167,6 +183,27 @@ function computeStats(repos: Repository[]): DashboardStats {
   return { totalStars, totalForks, languages };
 }
 
+function computeDeltas(
+  history: StatsHistoryEntry[],
+  current: { totalStars: number; totalForks: number; repoCount: number; followers: number },
+): StatsDeltas {
+  if (!history || history.length < 1) {
+    return { totalStars: null, totalForks: null, repoCount: null, followers: null };
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  const lastEntry = history[history.length - 1];
+  const baseEntry = lastEntry.date === today ? history[history.length - 2] : lastEntry;
+  if (!baseEntry) {
+    return { totalStars: null, totalForks: null, repoCount: null, followers: null };
+  }
+  return {
+    totalStars: current.totalStars - baseEntry.totalStars,
+    totalForks: current.totalForks - baseEntry.totalForks,
+    repoCount:  current.repoCount  - baseEntry.repoCount,
+    followers:  current.followers  - baseEntry.followers,
+  };
+}
+
 export function getDashboardData(): DashboardData {
   const user = readJson<User>('user.json')!;
   const allRepos = readJson<Repository[]>('repos.json') ?? [];
@@ -175,6 +212,7 @@ export function getDashboardData(): DashboardData {
   const allForks = readJson<ForkRepository[]>('forks.json') ?? [];
   const meta = readJson<Meta>('meta.json') ?? undefined;
   const aiSignals = readJson<Record<string, string[]>>('ai-signals.json') ?? {};
+  const statsHistory = readJson<StatsHistoryEntry[]>('stats-history.json') ?? [];
 
   const publicRepos = allRepos.filter((r) => !r.isPrivate);
   const publicPinned = pinnedRepos.filter((r) => !r.isPrivate);
@@ -189,6 +227,12 @@ export function getDashboardData(): DashboardData {
     .slice(0, 9);
 
   const stats = computeStats(publicRepos);
+  const statsDeltas = computeDeltas(statsHistory, {
+    totalStars: stats.totalStars,
+    totalForks: stats.totalForks,
+    repoCount: publicRepos.length,
+    followers: user.followers,
+  });
 
   // Featured: pinned first, then AI-recommended, then by stars
   const pinnedNames = new Set(publicPinned.map((p) => p.name));
@@ -211,5 +255,6 @@ export function getDashboardData(): DashboardData {
     forks: topForks,
     meta,
     aiSignals,
+    statsDeltas,
   };
 }

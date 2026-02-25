@@ -38,7 +38,7 @@ export function DashboardClient({ data }: DashboardClientProps) {
 
       <main className="max-w-6xl mx-auto px-6 pt-32 pb-12 relative z-10">
         <ProfileSection user={data.user} t={t} />
-        <StatsGrid stats={data.stats} user={data.user} t={t} />
+        <StatsGrid stats={data.stats} user={data.user} t={t} deltas={data.statsDeltas} />
         <AiAnalysis analysis={data.analysis} lang={lang} t={t} />
         <PrimaryStack stats={data.stats} t={t} />
         <FeaturedProjects featured={data.featured} pinned={data.pinned} user={data.user} aiSignals={data.aiSignals} t={t} />

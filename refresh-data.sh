@@ -105,6 +105,39 @@ python3 analyze-portfolio.py
 echo "🤖 Detecting AI tools per repo..."
 python3 detect-ai-tools.py
 
+# 6.5. Update stats history
+echo "📊 Updating stats history..."
+export TOTAL_STARS=$(jq '[.[].stargazerCount] | add // 0' "$DATA_DIR/repos.json")
+export TOTAL_FORKS=$(jq '[.[].forkCount] | add // 0' "$DATA_DIR/repos.json")
+export REPO_COUNT=$(jq '[.[] | select(.isPrivate == false)] | length' "$DATA_DIR/repos.json")
+export FOLLOWERS=$(jq '.followers' "$DATA_DIR/user.json")
+export TODAY=$(date -u +%Y-%m-%d)
+
+python3 - <<'PYEOF'
+import json, os
+
+history_file = "./public/data/stats-history.json"
+new_entry = {
+    "date":       os.environ["TODAY"],
+    "totalStars": int(os.environ["TOTAL_STARS"]),
+    "totalForks": int(os.environ["TOTAL_FORKS"]),
+    "repoCount":  int(os.environ["REPO_COUNT"]),
+    "followers":  int(os.environ["FOLLOWERS"]),
+}
+history = []
+if os.path.exists(history_file):
+    try:
+        with open(history_file) as f:
+            history = json.load(f)
+    except Exception:
+        pass
+history.append(new_entry)
+history = history[-32:]
+with open(history_file, "w") as f:
+    json.dump(history, f, indent=2)
+print(f"✅ stats-history.json updated ({len(history)} entries)")
+PYEOF
+
 # 7. Generate meta info
 echo "📋 Generating meta.json..."
 echo "{\"last_updated\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > "$DATA_DIR/meta.json"
