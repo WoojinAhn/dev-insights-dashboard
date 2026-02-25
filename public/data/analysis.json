@@ -1,75 +1,75 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building web applications and automation tools, particularly using TypeScript and Python. Their projects reflect a focus on enhancing developer productivity and integrating AI capabilities into software solutions.",
+    "summary": "The developer demonstrates a strong proficiency in building web applications and tools that leverage AI capabilities. Their portfolio showcases a blend of frontend and backend technologies, with a focus on TypeScript and Python, indicating a versatile skill set in modern software development.",
     "strengths": [
       {
         "strength": "Web Application Development",
-        "evidence": "The developer has created multiple web applications, including 'dev-insights-dashboard' and 'supabase-anonymous-board', showcasing their ability to build interactive and user-friendly interfaces.",
+        "evidence": "The developer has created multiple web applications, such as 'dev-insights-dashboard' and 'supabase-anonymous-board', showcasing their ability to build interactive and user-friendly interfaces.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "Automation and Workflow Tools",
-        "evidence": "The 'github-star-checker' and 'claude-config' projects illustrate the developer's capability in creating automation tools that enhance workflow efficiency.",
-        "tag_en": "Automation",
-        "tag_ko": "자동화"
       },
       {
         "strength": "AI Integration",
-        "evidence": "The 'dev-insights-dashboard' project integrates AI insights, demonstrating the developer's ability to leverage AI technologies in practical applications.",
-        "tag_en": "AI",
-        "tag_ko": "인공지능"
+        "evidence": "The 'dev-insights-dashboard' utilizes AI insights from Gemini AI, demonstrating the developer's capability to integrate AI functionalities into applications.",
+        "tag_en": "AI Integration",
+        "tag_ko": "AI 통합"
       },
       {
         "strength": "Cross-Platform Development",
-        "evidence": "The developer has experience with both web and mobile platforms, as seen in the 'hound' iOS application and various web projects.",
+        "evidence": "The developer has experience in creating applications for different platforms, as seen in 'hound' for iOS and 'chrome-cookie-reader' for macOS.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "Documentation and Educational Tools",
-        "evidence": "The 'cursor-docs-crawler' project indicates a commitment to improving documentation accessibility and usability.",
-        "tag_en": "Documentation",
-        "tag_ko": "문서화"
-      }
-    ],
-    "ai_summary": "The developer effectively integrates AI capabilities into their projects, enhancing functionality and user experience."
-  },
-  "ko": {
-    "summary": "개발자는 TypeScript와 Python을 사용하여 웹 애플리케이션 및 자동화 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 프로젝트는 개발자 생산성을 향상시키고 소프트웨어 솔루션에 AI 기능을 통합하는 데 중점을 두고 있습니다.",
-    "strengths": [
-      {
-        "strength": "웹 애플리케이션 개발",
-        "evidence": "'dev-insights-dashboard'와 'supabase-anonymous-board'와 같은 여러 웹 애플리케이션을 생성하여 상호작용적이고 사용자 친화적인 인터페이스를 구축하는 능력을 보여줍니다.",
-        "tag_en": "Web Apps",
-        "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "자동화 및 워크플로 도구",
-        "evidence": "'github-star-checker'와 'claude-config' 프로젝트는 워크플로 효율성을 향상시키는 자동화 도구를 만드는 능력을 보여줍니다.",
+        "strength": "Automation and Workflow Tools",
+        "evidence": "The 'github-star-checker' demonstrates the developer's ability to create automation tools that enhance workflow efficiency on GitHub.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
       },
       {
-        "strength": "AI 통합",
-        "evidence": "'dev-insights-dashboard' 프로젝트는 AI 통찰력을 통합하여 실용적인 애플리케이션에서 AI 기술을 활용하는 능력을 보여줍니다.",
-        "tag_en": "AI",
-        "tag_ko": "인공지능"
-      },
-      {
-        "strength": "크로스 플랫폼 개발",
-        "evidence": "개발자는 'hound' iOS 애플리케이션과 다양한 웹 프로젝트에서 볼 수 있듯이 웹 및 모바일 플랫폼 모두에서 경험이 있습니다.",
-        "tag_en": "Cross-Platform",
-        "tag_ko": "크로스 플랫폼"
-      },
-      {
-        "strength": "문서화 및 교육 도구",
-        "evidence": "'cursor-docs-crawler' 프로젝트는 문서 접근성과 사용성을 개선하려는 의지를 나타냅니다.",
+        "strength": "Documentation and Crawling Tools",
+        "evidence": "The 'cursor-docs-crawler' shows the developer's capability in building tools that facilitate documentation management and conversion.",
         "tag_en": "Documentation",
         "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "개발자는 프로젝트에 AI 기능을 효과적으로 통합하여 기능성과 사용자 경험을 향상시킵니다."
+    "ai_summary": "The developer exhibits a strong understanding of AI integration within software applications, particularly in the context of enhancing user experience and automating workflows."
+  },
+  "ko": {
+    "summary": "개발자는 AI 기능을 활용한 웹 애플리케이션 및 도구 구축에 강한 능력을 보여줍니다. 그들의 포트폴리오는 현대 소프트웨어 개발에서의 다재다능한 기술 세트를 나타내며, TypeScript와 Python에 중점을 두고 있습니다.",
+    "strengths": [
+      {
+        "strength": "웹 애플리케이션 개발",
+        "evidence": "'dev-insights-dashboard'와 'supabase-anonymous-board'와 같은 여러 웹 애플리케이션을 개발하여 상호작용적이고 사용자 친화적인 인터페이스를 구축할 수 있는 능력을 보여줍니다.",
+        "tag_en": "Web Apps",
+        "tag_ko": "웹 앱"
+      },
+      {
+        "strength": "AI 통합",
+        "evidence": "'dev-insights-dashboard'는 Gemini AI의 AI 통찰력을 활용하여 애플리케이션에 AI 기능을 통합할 수 있는 능력을 보여줍니다.",
+        "tag_en": "AI Integration",
+        "tag_ko": "AI 통합"
+      },
+      {
+        "strength": "크로스 플랫폼 개발",
+        "evidence": "'hound'는 iOS용 애플리케이션을, 'chrome-cookie-reader'는 macOS용 애플리케이션을 개발하여 다양한 플랫폼을 위한 애플리케이션을 만드는 경험이 있음을 보여줍니다.",
+        "tag_en": "Cross-Platform",
+        "tag_ko": "크로스 플랫폼"
+      },
+      {
+        "strength": "자동화 및 워크플로우 도구",
+        "evidence": "'github-star-checker'는 GitHub에서의 워크플로우 효율성을 높이는 자동화 도구를 만드는 능력을 보여줍니다.",
+        "tag_en": "Automation",
+        "tag_ko": "자동화"
+      },
+      {
+        "strength": "문서화 및 크롤링 도구",
+        "evidence": "'cursor-docs-crawler'는 문서 관리 및 변환을 용이하게 하는 도구를 구축할 수 있는 능력을 보여줍니다.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
+      }
+    ],
+    "ai_summary": "개발자는 소프트웨어 애플리케이션 내에서 AI 통합에 대한 강한 이해를 보여주며, 특히 사용자 경험 향상 및 워크플로우 자동화의 맥락에서 그러합니다."
   },
   "top_technologies": [
     "TypeScript",
@@ -88,40 +88,40 @@
       "title_en": "LLM Integration",
       "title_ko": "LLM 통합",
       "score": 85,
-      "desc_en": "The developer integrates large language models into applications, as evidenced by the AI insights in 'dev-insights-dashboard'.",
-      "desc_ko": "'dev-insights-dashboard'에서 AI 통찰력을 통해 대형 언어 모델을 애플리케이션에 통합합니다."
+      "desc_en": "The developer effectively integrates large language models into applications, as evidenced by the AI features in 'dev-insights-dashboard'.",
+      "desc_ko": "'dev-insights-dashboard'에서 AI 기능을 통해 대형 언어 모델을 애플리케이션에 효과적으로 통합합니다."
     },
     {
       "key": "workflow_automation",
       "title_en": "Workflow Automation",
-      "title_ko": "워크플로 자동화",
+      "title_ko": "워크플로우 자동화",
       "score": 80,
-      "desc_en": "The developer automates workflows effectively, demonstrated by the 'github-star-checker' project that monitors repository stars.",
-      "desc_ko": "'github-star-checker' 프로젝트에서 리포지토리 별을 모니터링하여 워크플로를 효과적으로 자동화합니다."
+      "desc_en": "The developer creates automation tools that streamline processes, demonstrated by the 'github-star-checker' project.",
+      "desc_ko": "'github-star-checker' 프로젝트를 통해 프로세스를 간소화하는 자동화 도구를 만듭니다."
     },
     {
       "key": "data_visualization",
       "title_en": "Data Visualization",
       "title_ko": "데이터 시각화",
       "score": 75,
-      "desc_en": "The developer creates visual representations of data, as seen in the 'dev-insights-dashboard' which visualizes GitHub activity.",
-      "desc_ko": "'dev-insights-dashboard'에서 GitHub 활동을 시각화하여 데이터의 시각적 표현을 만듭니다."
+      "desc_en": "The developer showcases skills in data visualization through the 'dev-insights-dashboard', which presents GitHub activity insights.",
+      "desc_ko": "'dev-insights-dashboard'를 통해 GitHub 활동 통찰력을 제공하여 데이터 시각화 기술을 보여줍니다."
     },
     {
       "key": "cross_platform_development",
       "title_en": "Cross-Platform Development",
       "title_ko": "크로스 플랫폼 개발",
       "score": 70,
-      "desc_en": "The developer builds applications for multiple platforms, including web and mobile, as shown in the 'hound' iOS app.",
-      "desc_ko": "'hound' iOS 앱에서 볼 수 있듯이 여러 플랫폼을 위한 애플리케이션을 구축합니다."
+      "desc_en": "The developer demonstrates cross-platform development skills with projects like 'hound' and 'chrome-cookie-reader'.",
+      "desc_ko": "'hound'와 'chrome-cookie-reader'와 같은 프로젝트를 통해 크로스 플랫폼 개발 기술을 보여줍니다."
     },
     {
-      "key": "educational_tools",
-      "title_en": "Educational Tools",
-      "title_ko": "교육 도구",
+      "key": "documentation_tools",
+      "title_en": "Documentation Tools",
+      "title_ko": "문서화 도구",
       "score": 65,
-      "desc_en": "The developer creates tools for educational purposes, such as the 'cursor-docs-crawler' which enhances documentation accessibility.",
-      "desc_ko": "문서 접근성을 향상시키는 'cursor-docs-crawler'와 같은 교육 목적의 도구를 만듭니다."
+      "desc_en": "The developer builds tools for documentation management, as seen in the 'cursor-docs-crawler' project.",
+      "desc_ko": "'cursor-docs-crawler' 프로젝트에서 문서 관리 도구를 구축합니다."
     }
   ],
   "interests": {
@@ -130,22 +130,22 @@
     "keywords": [
       {
         "name": "AI Integration",
-        "desc_en": "The developer studies AI integration techniques, as evidenced by their interest in projects like 'claude-code-action'.",
-        "desc_ko": "개발자는 'claude-code-action'과 같은 프로젝트에 대한 관심을 통해 AI 통합 기술을 연구합니다."
+        "desc_en": "The developer is interested in AI integration, as evidenced by their fork of 'claude-code-action', which focuses on enhancing AI functionalities.",
+        "desc_ko": "개발자는 AI 기능 향상에 중점을 둔 'claude-code-action'을 포크하여 AI 통합에 관심이 있음을 보여줍니다."
       },
       {
         "name": "Microservices",
-        "desc_en": "The developer explores microservices architecture, as shown by their interest in 'nice-msa' and 'msa_with_spring_cloud'.",
-        "desc_ko": "개발자는 'nice-msa'와 'msa_with_spring_cloud'에 대한 관심을 통해 마이크로서비스 아키텍처를 탐구합니다."
+        "desc_en": "The developer explores microservices architecture, as indicated by their fork of 'nice-msa', which deals with microservices best practices.",
+        "desc_ko": "개발자는 마이크로서비스 모범 사례를 다룬 'nice-msa'를 포크하여 마이크로서비스 아키텍처를 탐구하고 있습니다."
       },
       {
-        "name": "Java Development",
-        "desc_en": "The developer is interested in Java development practices, as indicated by their engagement with repositories like 'rest-assured-workshop'.",
-        "desc_ko": "개발자는 'rest-assured-workshop'와 같은 리포지토리에 대한 참여를 통해 Java 개발 관행에 관심을 가지고 있습니다."
+        "name": "Testing Frameworks",
+        "desc_en": "The developer shows interest in testing frameworks, as seen in their fork of 'rest-assured-workshop', which provides resources for REST testing.",
+        "desc_ko": "개발자는 REST 테스트를 위한 리소스를 제공하는 'rest-assured-workshop'을 포크하여 테스트 프레임워크에 관심이 있음을 보여줍니다."
       }
     ],
-    "desc_en": "The developer's interests reflect a focus on AI, microservices, and Java development, indicating a desire to stay updated with current trends.",
-    "desc_ko": "개발자의 관심사는 AI, 마이크로서비스 및 Java 개발에 중점을 두고 있으며, 현재 트렌드를 최신 상태로 유지하려는 욕구를 나타냅니다."
+    "desc_en": "The developer's interests reflect a strong inclination towards AI, microservices, and testing methodologies, indicating a desire to enhance their skills in these areas.",
+    "desc_ko": "개발자의 관심사는 AI, 마이크로서비스 및 테스트 방법론에 대한 강한 성향을 반영하며, 이러한 분야에서 기술을 향상시키고자 하는 열망을 나타냅니다."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
