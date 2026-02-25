@@ -123,14 +123,15 @@ def analyze_portfolio():
         3. **Top Technologies**: Identify the core tech stack from [SOURCE REPOSITORIES].
         4. **AI Capabilities**: Freely identify 3-5 AI capability dimensions based ONLY on [SOURCE REPOSITORIES].
            - Do NOT use fixed keys. Choose descriptive snake_case keys (e.g. "llm_integration", "workflow_automation").
-           - Each must include `title_en` and `title_ko` (short display title), `score` (0-100), and detailed desc.
+           - Each must include `title_en` and `title_ko` (short display title), `score` (0-100), and `desc_en`/`desc_ko` as complete descriptive sentences.
         5. **Interests (Research Radar)**: Analyze [FORKED REPOSITORIES] to see what they are studying.
            - Provide a bilingual section title (`title_en`, `title_ko`).
-           - `keywords` must be an array of objects, each with `name`, `desc_en`, `desc_ko`.
+           - `keywords` must be an array of objects, each with `name`, `desc_en`, `desc_ko` as complete descriptive sentences.
 
         [Tone & Language Quality]:
         - Professional, objective, and dry.
-        - Korean Output: MUST be natural, sophisticated, and grammatically perfect (Senior level). Use professional endings like "~을 구축함", "~에 특화됨".
+        - Korean `desc` fields (`evidence`, `desc_ko`): MUST be complete sentences ending with "~합니다", "~있습니다", "~보여줍니다" etc. Short forms ("~을 구축함", "~에 특화됨") are only allowed for titles and tags.
+        - English `desc` fields (`evidence`, `desc_en`): MUST be complete sentences with Subject + Verb structure. Do NOT use noun phrases or gerund phrases.
         - English Output: Standard industry-level technical prose.
 
         Return ONLY a JSON object with this exact structure:
