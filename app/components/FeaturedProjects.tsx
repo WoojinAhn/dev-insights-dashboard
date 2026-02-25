@@ -1,6 +1,6 @@
 import { Star, GitFork, ChevronRight, Pin, Cpu } from 'lucide-react';
 import { siClaude, siCursor, siGooglegemini, siGithubcopilot, siWindsurf } from 'simple-icons';
-import { getLanguageColor } from '@/lib/constants';
+import { getLanguageColor, getLanguageIcon } from '@/lib/constants';
 import type { Repository, PinnedRepository, User } from '@/lib/data';
 
 interface FeaturedProjectsProps {
@@ -77,6 +77,7 @@ export function FeaturedProjects({ featured, pinned, user, aiSignals, t }: Featu
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {featured.map((repo, i: number) => {
           const tools = aiSignals[repo.name] ?? [];
+          const langIcon = repo.primaryLanguage ? getLanguageIcon(repo.primaryLanguage.name) : null;
           return (
             <a
               key={i}
@@ -117,7 +118,13 @@ export function FeaturedProjects({ featured, pinned, user, aiSignals, t }: Featu
               <div className="flex items-center gap-6 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                 {repo.primaryLanguage && (
                   <div className="flex items-center gap-2">
-                    <div className={`w-2.5 h-2.5 rounded-full ${getLanguageColor(repo.primaryLanguage.name)}`} />
+                    {langIcon ? (
+                      <svg role="img" viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0" style={{ fill: `#${langIcon.hex}` }} aria-label={repo.primaryLanguage.name}>
+                        <path d={langIcon.path} />
+                      </svg>
+                    ) : (
+                      <div className={`w-2.5 h-2.5 rounded-full ${getLanguageColor(repo.primaryLanguage.name)} shrink-0`} />
+                    )}
                     {repo.primaryLanguage.name}
                   </div>
                 )}

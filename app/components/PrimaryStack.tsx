@@ -1,5 +1,5 @@
 import { Code2 } from 'lucide-react';
-import { getLanguageColor } from '@/lib/constants';
+import { getLanguageColor, getLanguageIcon } from '@/lib/constants';
 import type { DashboardStats, LanguageStat } from '@/lib/data';
 
 interface PrimaryStackProps {
@@ -35,19 +35,28 @@ export function PrimaryStack({ stats, t }: PrimaryStackProps) {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          {stats.languages.map((lang: LanguageStat, i: number) => (
-            <div key={i} className="group/item">
-              <div className="flex items-center gap-3 mb-2">
-                <div className={`w-3 h-3 rounded-full ${getLanguageColor(lang.name)} shadow-[0_0_10px_rgba(255,255,255,0.1)]`} />
-                <span className="text-lg font-bold text-slate-200 group-hover/item:text-white transition-colors">
-                  {lang.name}
-                </span>
+          {stats.languages.map((lang: LanguageStat, i: number) => {
+            const icon = getLanguageIcon(lang.name);
+            return (
+              <div key={i} className="group/item">
+                <div className="flex items-center gap-3 mb-2">
+                  {icon ? (
+                    <svg role="img" viewBox="0 0 24 24" className="w-4 h-4 shrink-0" style={{ fill: `#${icon.hex}` }} aria-label={lang.name}>
+                      <path d={icon.path} />
+                    </svg>
+                  ) : (
+                    <div className={`w-3 h-3 rounded-full ${getLanguageColor(lang.name)} shadow-[0_0_10px_rgba(255,255,255,0.1)] shrink-0`} />
+                  )}
+                  <span className="text-lg font-bold text-slate-200 group-hover/item:text-white transition-colors">
+                    {lang.name}
+                  </span>
+                </div>
+                <div className="text-xs text-slate-500 font-mono pl-7 uppercase tracking-widest">
+                  {lang.count} {t.repos}
+                </div>
               </div>
-              <div className="text-xs text-slate-500 font-mono pl-6 uppercase tracking-widest">
-                {lang.count} {t.repos}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
