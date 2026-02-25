@@ -17,8 +17,9 @@ npm run lint     # ESLint
 ### Data Pipeline (runs in GitHub Actions, can run locally)
 
 ```bash
-./refresh-data.sh          # Fetch GitHub data via gh CLI + run AI analysis
+./refresh-data.sh          # Fetch GitHub data via gh CLI + run AI analysis + detect AI tools
 python3 analyze-portfolio.py  # AI analysis only (requires GEMINI_API_KEY or GH_TOKEN)
+python3 detect-ai-tools.py    # AI tool detection only (scans repos for indicator files)
 ```
 
 Requires `gh` CLI authenticated, plus env vars: `GEMINI_API_KEY`, `GH_TOKEN` (PAT for GitHub Models fallback).
@@ -57,12 +58,13 @@ All data files in `public/data/` are committed to git and auto-updated by the `d
 - `public/data/pinned.json` — pinned repositories
 - `public/data/forks.json` — forked repositories (with parent stats)
 - `public/data/analysis.json` — AI-generated bilingual analysis (en/ko sections, ai_capabilities, interests, model_provider)
+- `public/data/ai-signals.json` — AI tool detection results per repo (claude-code, cursor, gemini, etc.)
 - `public/data/meta.json` — pipeline metadata (last_updated timestamp)
 - `public/data/history/` — archived raw AI responses
 
 ## Tech Stack
 
-- **Frontend:** Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React
+- **Frontend:** Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React, simple-icons
 - **Data Pipeline:** Python 3 (google-generativeai SDK), Bash (gh CLI)
 - **Deployment:** Vercel (auto-deploy via webhook), GitHub Actions
 

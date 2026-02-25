@@ -24,19 +24,24 @@ GitHub API ──→ refresh-data.sh ──→ public/data/*.json
                                         ├──→ analyze-portfolio.py ──→ analysis.json
                                         │         (Gemini / GPT-4o-mini)
                                         │
+                                        ├──→ detect-ai-tools.py ──→ ai-signals.json
+                                        │         (GitHub API, 규칙 기반)
+                                        │
                                         └──→ Next.js 클라이언트 페이지 (정적 JSON fetch)
 ```
 
-**2단계 파이프라인:**
+**3단계 파이프라인:**
 
 1. **데이터 수집** (`refresh-data.sh`): `gh` CLI로 사용자 프로필, 레포, 핀 레포, 포크를 가져와 `public/data/`에 JSON으로 저장.
 2. **AI 분석** (`analyze-portfolio.py`): 레포 데이터를 Gemini 2.0 Flash(폴백: GitHub Models GPT-4o-mini)에 전송, 한영 이중 언어 분석(강점, AI 역량, 연구 관심사) 생성.
+3. **AI 도구 탐지** (`detect-ai-tools.py`): 각 레포의 indicator 파일(`CLAUDE.md`, `.cursor/`, 의존성 파일 등)을 GitHub API로 스캔 — 규칙 기반, AI 토큰 추가 없음.
 
 프론트엔드는 단일 `'use client'` 페이지로, 런타임에 정적 JSON 파일을 fetch합니다.
 
 ## 주요 기능
 
 - **AI 생성 포트폴리오 분석** — Multi-LLM 폴백 (Gemini → GPT-4o-mini)
+- **AI 도구 탐지** — 레포 파일 흔적 기반으로 프로젝트 카드에 아이콘 표시 (Claude Code, Cursor, Gemini, Copilot 등)
 - **한영 전환 UI**
 - **Research Radar** — 포크한 레포 기반 기술 관심사 시각화
 - **일일 자동 갱신** — GitHub Actions + Vercel deploy hook
@@ -45,7 +50,7 @@ GitHub API ──→ refresh-data.sh ──→ public/data/*.json
 
 | 영역 | 기술 |
 |------|------|
-| 프론트엔드 | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React |
+| 프론트엔드 | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React, simple-icons |
 | 데이터 파이프라인 | Python 3 (google-generativeai SDK), Bash (gh CLI) |
 | AI | Gemini 2.0 Flash, GitHub Models GPT-4o-mini (폴백) |
 | 배포 | Vercel, GitHub Actions |

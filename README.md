@@ -24,19 +24,24 @@ GitHub API ──→ refresh-data.sh ──→ public/data/*.json
                                         ├──→ analyze-portfolio.py ──→ analysis.json
                                         │         (Gemini / GPT-4o-mini)
                                         │
+                                        ├──→ detect-ai-tools.py ──→ ai-signals.json
+                                        │         (GitHub API, rule-based)
+                                        │
                                         └──→ Next.js client page (static JSON fetch)
 ```
 
-**Two-phase pipeline:**
+**Three-phase pipeline:**
 
 1. **Data collection** (`refresh-data.sh`): Fetches user profile, repos, pinned repos, and forks via `gh` CLI, writes JSON to `public/data/`.
 2. **AI analysis** (`analyze-portfolio.py`): Sends repo data to Gemini 2.0 Flash (fallback: GitHub Models GPT-4o-mini), produces bilingual (en/ko) analysis with strengths, AI capabilities, and research interests.
+3. **AI tool detection** (`detect-ai-tools.py`): Scans each repo for indicator files (`CLAUDE.md`, `.cursor/`, dependency files, etc.) via GitHub API — rule-based, no extra AI tokens.
 
 The frontend is a single `'use client'` page that fetches these static JSON files at runtime.
 
 ## Features
 
 - **AI-generated portfolio analysis** with multi-LLM fallback (Gemini → GPT-4o-mini)
+- **AI tool detection** — displays icons (Claude Code, Cursor, Gemini, Copilot, etc.) on project cards based on repo file indicators
 - **Bilingual UI** (English / Korean toggle)
 - **Research Radar** — visualizes technical interests from forked repos
 - **Daily auto-refresh** via GitHub Actions + Vercel deploy hook
@@ -45,7 +50,7 @@ The frontend is a single `'use client'` page that fetches these static JSON file
 
 | Layer | Tech |
 |-------|------|
-| Frontend | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React |
+| Frontend | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide React, simple-icons |
 | Data Pipeline | Python 3 (google-generativeai SDK), Bash (gh CLI) |
 | AI | Gemini 2.0 Flash, GitHub Models GPT-4o-mini (fallback) |
 | Deploy | Vercel, GitHub Actions |
