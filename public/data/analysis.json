@@ -1,75 +1,63 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building web applications and automation tools, with a focus on TypeScript and Python. Their projects reflect a blend of practical utility and innovative AI integration, showcasing their ability to create solutions that enhance developer productivity.",
+    "summary": "The developer demonstrates a strong proficiency in building web applications, particularly with TypeScript and Python. Their projects reflect a focus on enhancing developer productivity and integrating AI capabilities into tools that streamline workflows.",
     "strengths": [
       {
         "strength": "Web Application Development",
-        "evidence": "The developer has created multiple web applications using TypeScript, such as 'miniroom-demo' and 'supabase-anonymous-board'.",
+        "evidence": "Projects like 'dev-insights-dashboard' and 'supabase-anonymous-board' showcase expertise in building interactive web applications using TypeScript.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "Automation and Monitoring Tools",
-        "evidence": "The 'github-star-checker' project exemplifies their capability in developing automation tools that monitor GitHub activities.",
-        "tag_en": "Automation",
-        "tag_ko": "자동화"
       },
       {
         "strength": "AI Integration",
-        "evidence": "The 'dev-insights-dashboard' project showcases the use of AI to provide insights into developer activities, indicating a strong understanding of AI applications.",
-        "tag_en": "AI",
-        "tag_ko": "인공지능"
+        "evidence": "'dev-insights-dashboard' utilizes AI insights to visualize GitHub activity, indicating a strong capability in integrating AI into applications.",
+        "tag_en": "AI Integration",
+        "tag_ko": "AI 통합"
       },
       {
         "strength": "Cross-Platform Development",
-        "evidence": "The 'hound' project demonstrates their ability to create applications for iOS, indicating versatility in platform development.",
+        "evidence": "'hound' and 'claude-config' demonstrate the ability to create tools that work across different platforms, including iOS and shell environments.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "Documentation and Crawling Tools",
-        "evidence": "The 'cursor-docs-crawler' project highlights their skills in creating tools that enhance documentation accessibility.",
+        "strength": "Documentation and Tooling",
+        "evidence": "'cursor-docs-crawler' reflects a commitment to improving documentation accessibility, showcasing skills in creating tools that enhance user experience.",
         "tag_en": "Documentation",
         "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "The developer exhibits a strong capability in integrating AI into their projects, particularly in enhancing user experience and automating workflows."
+    "ai_summary": "The developer's projects indicate a strong focus on AI capabilities, particularly in enhancing developer tools and workflows through intelligent insights and automation."
   },
   "ko": {
-    "summary": "개발자는 TypeScript와 Python을 중심으로 웹 애플리케이션 및 자동화 도구 구축에 강한 능력을 보여줍니다. 그들의 프로젝트는 실용성과 혁신적인 AI 통합의 조화를 반영하며, 개발자 생산성을 향상시키는 솔루션을 만드는 능력을 보여줍니다.",
+    "summary": "개발자는 TypeScript와 Python을 활용하여 웹 애플리케이션 구축에 강한 능력을 보이고 있습니다. 그들의 프로젝트는 개발자 생산성을 향상시키고 워크플로우를 간소화하는 도구에 AI 기능을 통합하는 데 중점을 두고 있습니다.",
     "strengths": [
       {
         "strength": "웹 애플리케이션 개발",
-        "evidence": "'miniroom-demo'와 'supabase-anonymous-board'와 같은 TypeScript를 사용한 여러 웹 애플리케이션을 개발하였습니다.",
+        "evidence": "'dev-insights-dashboard'와 'supabase-anonymous-board'와 같은 프로젝트는 TypeScript를 사용하여 인터랙티브한 웹 애플리케이션을 구축하는 전문성을 보여줍니다.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
       },
       {
-        "strength": "자동화 및 모니터링 도구",
-        "evidence": "'github-star-checker' 프로젝트는 GitHub 활동을 모니터링하는 자동화 도구 개발 능력을 보여줍니다.",
-        "tag_en": "Automation",
-        "tag_ko": "자동화"
-      },
-      {
         "strength": "AI 통합",
-        "evidence": "'dev-insights-dashboard' 프로젝트는 개발자 활동에 대한 통찰력을 제공하기 위해 AI를 활용한 사례를 보여줍니다.",
-        "tag_en": "AI",
-        "tag_ko": "인공지능"
+        "evidence": "'dev-insights-dashboard'는 GitHub 활동을 시각화하기 위해 AI 통찰력을 활용하여 애플리케이션에 AI를 통합하는 강한 능력을 나타냅니다.",
+        "tag_en": "AI Integration",
+        "tag_ko": "AI 통합"
       },
       {
         "strength": "크로스 플랫폼 개발",
-        "evidence": "'hound' 프로젝트는 iOS 애플리케이션을 개발하는 능력을 보여주며, 플랫폼 개발의 다양성을 나타냅니다.",
+        "evidence": "'hound'와 'claude-config'는 iOS 및 셸 환경을 포함한 다양한 플랫폼에서 작동하는 도구를 만드는 능력을 보여줍니다.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "문서화 및 크롤링 도구",
-        "evidence": "'cursor-docs-crawler' 프로젝트는 문서 접근성을 향상시키는 도구를 만드는 능력을 강조합니다.",
+        "strength": "문서화 및 도구화",
+        "evidence": "'cursor-docs-crawler'는 문서 접근성을 개선하기 위한 도구를 생성하는 기술을 보여주며 사용자 경험을 향상시키는 데 기여하고 있습니다.",
         "tag_en": "Documentation",
         "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "개발자는 프로젝트에 AI를 통합하는 강한 능력을 보여주며, 특히 사용자 경험 향상 및 워크플로우 자동화에 중점을 두고 있습니다."
+    "ai_summary": "개발자의 프로젝트는 특히 개발자 도구와 워크플로우를 지능적으로 개선하는 AI 기능에 강한 중점을 두고 있음을 나타냅니다."
   },
   "top_technologies": [
     "TypeScript",
@@ -80,7 +68,7 @@
   ],
   "recommended_featured": [
     "dev-insights-dashboard",
-    "miniroom-demo"
+    "supabase-anonymous-board"
   ],
   "ai_capabilities": [
     {
@@ -88,32 +76,24 @@
       "title_en": "LLM Integration",
       "title_ko": "LLM 통합",
       "score": 85,
-      "desc_en": "The ability to integrate large language models into applications for enhanced user interaction and automation.",
-      "desc_ko": "사용자 상호작용 및 자동화를 향상시키기 위해 애플리케이션에 대형 언어 모델을 통합하는 능력입니다."
+      "desc_en": "The ability to integrate large language models into applications for enhanced functionality and user interaction.",
+      "desc_ko": "애플리케이션에 대규모 언어 모델을 통합하여 기능과 사용자 상호작용을 향상시키는 능력."
     },
     {
       "key": "workflow_automation",
       "title_en": "Workflow Automation",
       "title_ko": "워크플로우 자동화",
-      "score": 90,
-      "desc_en": "Expertise in creating tools that automate repetitive tasks, improving efficiency and productivity.",
-      "desc_ko": "반복적인 작업을 자동화하여 효율성과 생산성을 향상시키는 도구를 만드는 전문성입니다."
+      "score": 80,
+      "desc_en": "Creating tools that automate repetitive tasks, improving efficiency and productivity.",
+      "desc_ko": "반복적인 작업을 자동화하여 효율성과 생산성을 향상시키는 도구를 만드는 것."
     },
     {
       "key": "data_visualization",
       "title_en": "Data Visualization",
       "title_ko": "데이터 시각화",
-      "score": 80,
-      "desc_en": "Skill in visualizing complex data sets to provide actionable insights for developers.",
-      "desc_ko": "개발자에게 실행 가능한 통찰력을 제공하기 위해 복잡한 데이터 세트를 시각화하는 능력입니다."
-    },
-    {
-      "key": "ai_insights",
-      "title_en": "AI Insights",
-      "title_ko": "AI 통찰력",
-      "score": 75,
-      "desc_en": "Ability to leverage AI for generating insights and recommendations based on user activity.",
-      "desc_ko": "사용자 활동에 기반하여 통찰력과 추천을 생성하기 위해 AI를 활용하는 능력입니다."
+      "score": 90,
+      "desc_en": "The capability to present data in a visual format, making it easier to understand and analyze.",
+      "desc_ko": "데이터를 시각적 형식으로 표현하여 이해하고 분석하기 쉽게 만드는 능력."
     }
   ],
   "interests": {
@@ -122,22 +102,17 @@
     "keywords": [
       {
         "name": "AI Integration",
-        "desc_en": "Exploring methods to integrate AI into various applications for enhanced functionality.",
+        "desc_en": "Exploring ways to integrate AI into various applications for enhanced functionality.",
         "desc_ko": "다양한 애플리케이션에 AI를 통합하여 기능을 향상시키는 방법을 탐구함."
       },
       {
         "name": "Microservices Architecture",
         "desc_en": "Studying the design and implementation of microservices for scalable applications.",
         "desc_ko": "확장 가능한 애플리케이션을 위한 마이크로서비스 설계 및 구현을 연구함."
-      },
-      {
-        "name": "Developer Tools",
-        "desc_en": "Researching tools that improve developer productivity and workflow.",
-        "desc_ko": "개발자 생산성과 워크플로우를 개선하는 도구를 연구함."
       }
     ],
-    "desc_en": "The developer is actively exploring the integration of AI into applications, microservices architecture, and tools that enhance developer productivity.",
-    "desc_ko": "개발자는 애플리케이션에 AI 통합, 마이크로서비스 아키텍처, 개발자 생산성을 향상시키는 도구를 적극적으로 탐구하고 있습니다."
+    "desc_en": "The developer is actively exploring the integration of AI and microservices architecture in their projects.",
+    "desc_ko": "개발자는 프로젝트에서 AI 통합 및 마이크로서비스 아키텍처를 적극적으로 탐구하고 있습니다."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
