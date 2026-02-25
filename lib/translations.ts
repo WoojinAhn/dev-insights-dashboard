@@ -2,6 +2,7 @@ export const translations = {
   en: {
     headerTitle: "'s Code Nexus",
     repositories: "Repositories",
+    followers: "Followers",
     totalStars: "Total Stars",
     forksEarned: "Forks Earned",
     topLang: "Top Language",
@@ -21,6 +22,7 @@ export const translations = {
   ko: {
     headerTitle: "님의 코드 넥서스",
     repositories: "리포지토리",
+    followers: "팔로워",
     totalStars: "총 스타 수",
     forksEarned: "포크(Fork) 횟수",
     topLang: "주요 언어",
