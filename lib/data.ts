@@ -101,6 +101,7 @@ export interface DashboardData {
   stats: DashboardStats;
   forks: ForkRepository[];
   meta?: Meta;
+  aiSignals: Record<string, string[]>;
 }
 
 export interface ForkParent {
@@ -173,6 +174,7 @@ export function getDashboardData(): DashboardData {
   const pinnedRepos = readJson<PinnedRepository[]>('pinned.json') ?? [];
   const allForks = readJson<ForkRepository[]>('forks.json') ?? [];
   const meta = readJson<Meta>('meta.json') ?? undefined;
+  const aiSignals = readJson<Record<string, string[]>>('ai-signals.json') ?? {};
 
   const publicRepos = allRepos.filter((r) => !r.isPrivate);
   const publicPinned = pinnedRepos.filter((r) => !r.isPrivate);
@@ -208,5 +210,6 @@ export function getDashboardData(): DashboardData {
     stats,
     forks: topForks,
     meta,
+    aiSignals,
   };
 }

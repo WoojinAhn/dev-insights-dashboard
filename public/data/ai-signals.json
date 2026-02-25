@@ -1,0 +1,29 @@
+{
+  "WoojinAhn": [],
+  "chrome-cookie-reader": [
+    "claude-code"
+  ],
+  "claude-config": [
+    "claude-code"
+  ],
+  "claude-tutorial-playground": [],
+  "cursor-docs-crawler": [
+    "claude-code"
+  ],
+  "dev-insights-dashboard": [
+    "claude-code"
+  ],
+  "github-star-checker": [
+    "claude-code"
+  ],
+  "hound": [],
+  "miniroom-demo": [],
+  "mobile-claude-setup": [
+    "claude-code"
+  ],
+  "my-first-blog": [],
+  "pwa_learning": [],
+  "supabase-anonymous-board": [],
+  "tddworkshop": [],
+  "yolo-achievement": []
+}
