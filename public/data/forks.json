@@ -5,8 +5,8 @@
     "url": "https://github.com/WoojinAhn/CodexBar",
     "isPrivate": false,
     "isFork": true,
-    "updatedAt": "2026-02-24T15:05:24Z",
-    "stargazerCount": 0,
+    "updatedAt": "2026-02-26T10:48:26Z",
+    "stargazerCount": 1,
     "forkCount": 0,
     "primaryLanguage": {
       "name": "Swift"
@@ -16,8 +16,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 6386,
-      "forkCount": 433
+      "stargazerCount": 6762,
+      "forkCount": 466
     }
   },
   {
@@ -37,8 +37,8 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 1855,
-      "forkCount": 110
+      "stargazerCount": 1933,
+      "forkCount": 112
     }
   },
   {
@@ -79,8 +79,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 5849,
-      "forkCount": 1465
+      "stargazerCount": 5866,
+      "forkCount": 1466
     }
   },
   {
@@ -203,7 +203,7 @@
       "owner": {
         "login": "naver"
       },
-      "stargazerCount": 686,
+      "stargazerCount": 687,
       "forkCount": 118
     }
   },
@@ -348,8 +348,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 349758,
-      "forkCount": 43714
+      "stargazerCount": 349806,
+      "forkCount": 43715
     }
   },
   {
@@ -369,7 +369,7 @@
       "owner": {
         "login": "ethereum"
       },
-      "stargazerCount": 1031,
+      "stargazerCount": 1030,
       "forkCount": 386
     }
   },
