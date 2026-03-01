@@ -41,7 +41,7 @@ export function DashboardClient({ data }: DashboardClientProps) {
         <StatsGrid stats={data.stats} user={data.user} t={t} deltas={data.statsDeltas} />
         <AiAnalysis analysis={data.analysis} lang={lang} t={t} />
         <PrimaryStack stats={data.stats} t={t} />
-        <FeaturedProjects featured={data.featured} pinned={data.pinned} user={data.user} aiSignals={data.aiSignals} t={t} />
+        <FeaturedProjects featured={data.featured} pinned={data.pinned} user={data.user} aiSignals={data.aiSignals} aiPickReasons={data.aiPickReasons} lang={lang} t={t} />
         <ResearchRadar forks={data.forks} t={t} />
         <DashboardFooter meta={data.meta} lang={lang} t={t} />
       </main>

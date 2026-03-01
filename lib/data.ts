@@ -67,11 +67,17 @@ export interface AnalysisInterests {
   desc_ko: string;
 }
 
+export interface RecommendedFeatured {
+  name: string;
+  reason_en: string;
+  reason_ko: string;
+}
+
 export interface Analysis {
   en: AnalysisSection;
   ko: AnalysisSection;
   top_technologies: string[];
-  recommended_featured: string[];
+  recommended_featured: (string | RecommendedFeatured)[];
   ai_capabilities: AiCapability[];
   interests: AnalysisInterests;
   model_provider?: string;
@@ -118,6 +124,7 @@ export interface DashboardData {
   meta?: Meta;
   aiSignals: Record<string, string[]>;
   statsDeltas: StatsDeltas;
+  aiPickReasons: Record<string, { reason_en: string; reason_ko: string }>;
 }
 
 export interface ForkParent {
@@ -236,7 +243,16 @@ export function getDashboardData(): DashboardData {
 
   // Featured: pinned first, then AI-recommended, then by stars
   const pinnedNames = new Set(publicPinned.map((p) => p.name));
-  const recommendedNames: string[] = analysis.recommended_featured || [];
+  const rawFeatured = analysis.recommended_featured || [];
+  const recommendedNames: string[] = rawFeatured.map((item) =>
+    typeof item === 'string' ? item : item.name,
+  );
+  const aiPickReasons: Record<string, { reason_en: string; reason_ko: string }> = {};
+  for (const item of rawFeatured) {
+    if (typeof item !== 'string' && item.reason_en && item.reason_ko) {
+      aiPickReasons[item.name] = { reason_en: item.reason_en, reason_ko: item.reason_ko };
+    }
+  }
   const recommendedRepos = publicRepos
     .filter((r) => !pinnedNames.has(r.name) && recommendedNames.includes(r.name))
     .sort((a, b) => recommendedNames.indexOf(a.name) - recommendedNames.indexOf(b.name));
@@ -256,5 +272,6 @@ export function getDashboardData(): DashboardData {
     meta,
     aiSignals,
     statsDeltas,
+    aiPickReasons,
   };
 }

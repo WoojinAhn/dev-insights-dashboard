@@ -8,6 +8,8 @@ interface FeaturedProjectsProps {
   pinned: PinnedRepository[];
   user: User;
   aiSignals: Record<string, string[]>;
+  aiPickReasons: Record<string, { reason_en: string; reason_ko: string }>;
+  lang: string;
   t: {
     featuredProjects: string;
     viewAll: string;
@@ -54,7 +56,7 @@ function AiToolBadge({ toolId }: { toolId: string }) {
   );
 }
 
-export function FeaturedProjects({ featured, pinned, user, aiSignals, t }: FeaturedProjectsProps) {
+export function FeaturedProjects({ featured, pinned, user, aiSignals, aiPickReasons, lang, t }: FeaturedProjectsProps) {
   const pinnedNames = new Set(pinned.map((p) => p.name));
 
   return (
@@ -78,6 +80,10 @@ export function FeaturedProjects({ featured, pinned, user, aiSignals, t }: Featu
         {featured.map((repo, i: number) => {
           const tools = aiSignals[repo.name] ?? [];
           const langIcon = repo.primaryLanguage ? getLanguageIcon(repo.primaryLanguage.name) : null;
+          const isPinned = pinnedNames.has(repo.name);
+          const isAiPick = !isPinned && !!aiPickReasons[repo.name];
+          const pickReason = isAiPick ? aiPickReasons[repo.name] : undefined;
+          const reasonText = pickReason ? (lang === 'ko' ? pickReason.reason_ko : pickReason.reason_en) : undefined;
           return (
             <a
               key={i}
@@ -86,34 +92,42 @@ export function FeaturedProjects({ featured, pinned, user, aiSignals, t }: Featu
               rel="noreferrer"
               className="group bg-slate-900/40 border border-white/5 p-10 rounded-[2.5rem] hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-500 flex flex-col shadow-xl hover:shadow-cyan-500/5"
             >
-              <div className="flex items-center justify-between mb-6">
-                <div
-                  className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${
-                    pinnedNames.has(repo.name)
-                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                      : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'
-                  }`}
-                >
-                  {pinnedNames.has(repo.name) ? (
-                    <>
-                      <Pin className="w-3 h-3" />
-                      {t.badgePride}
-                    </>
-                  ) : (
-                    <>
-                      <Cpu className="w-3 h-3" />
-                      {t.badgeAiPick}
-                    </>
-                  )}
+              {(isPinned || isAiPick) && (
+                <div className="flex items-center justify-between mb-6">
+                  <div
+                    className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${
+                      isPinned
+                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                        : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'
+                    }`}
+                  >
+                    {isPinned ? (
+                      <>
+                        <Pin className="w-3 h-3" />
+                        {t.badgePride}
+                      </>
+                    ) : (
+                      <>
+                        <Cpu className="w-3 h-3" />
+                        {t.badgeAiPick}
+                      </>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <h3 className="font-black text-xl md:text-2xl group-hover:text-cyan-400 transition-all mb-4 uppercase tracking-tighter break-all leading-tight min-h-[3.5rem] flex items-center">
                 {repo.name}
               </h3>
-              <p className="text-slate-400 text-sm line-clamp-2 mb-10 flex-1 font-light leading-relaxed group-hover:text-slate-300 transition-colors">
+              <p className="text-slate-400 text-sm line-clamp-2 mb-4 font-light leading-relaxed group-hover:text-slate-300 transition-colors">
                 {repo.description || t.noDescription}
               </p>
+              {reasonText && (
+                <p className="text-violet-400/70 text-xs leading-relaxed mb-6 line-clamp-3 border-l-2 border-violet-500/30 pl-3 italic">
+                  {reasonText}
+                </p>
+              )}
+              {!reasonText && <div className="mb-6" />}
 
               <div className="flex items-center gap-6 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                 {repo.primaryLanguage && (

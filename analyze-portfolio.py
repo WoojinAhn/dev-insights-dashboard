@@ -147,7 +147,10 @@ def analyze_portfolio():
             "ai_summary": "..."
           }},
           "top_technologies": ["...", "..."],
-          "recommended_featured": ["...", "..."],
+          "recommended_featured": [
+            {{ "name": "repo-name", "reason_en": "1-3 sentence reason why this repo stands out.", "reason_ko": "이 레포가 돋보이는 이유를 1-3문장으로 작성합니다." }},
+            ... (Pick 3-5 standout repos from SOURCE REPOSITORIES. Exclude trivial or boilerplate repos.)
+          ],
           "ai_capabilities": [
             {{ "key": "llm_integration", "title_en": "LLM Integration", "title_ko": "LLM 통합", "score": 85, "desc_en": "...", "desc_ko": "..." }},
             ...
@@ -221,6 +224,17 @@ def analyze_portfolio():
             analysis_data["top_technologies"] = ["TypeScript", "Python", "Java"]
         if "recommended_featured" not in analysis_data:
             analysis_data["recommended_featured"] = []
+        else:
+            # Normalize: convert old string format to object format
+            new_featured = []
+            for item in analysis_data["recommended_featured"]:
+                if isinstance(item, str):
+                    new_featured.append({"name": item, "reason_en": "", "reason_ko": ""})
+                elif isinstance(item, dict) and "name" in item:
+                    item.setdefault("reason_en", "")
+                    item.setdefault("reason_ko", "")
+                    new_featured.append(item)
+            analysis_data["recommended_featured"] = new_featured
 
         # 3. AI Capabilities
         if "ai_capabilities" not in analysis_data:
