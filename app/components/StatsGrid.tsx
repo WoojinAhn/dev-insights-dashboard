@@ -34,14 +34,16 @@ export function StatsGrid({ stats, user, t, deltas }: StatsGridProps) {
                 <stat.icon className="w-5 h-5 text-white" />
               </div>
             </div>
-            <p className="text-3xl md:text-4xl font-black font-mono tracking-tighter group-hover:scale-105 transition-transform origin-left duration-500">
-              {stat.value}
-            </p>
-            {stat.delta !== null && stat.delta > 0 && (
-              <p className="mt-2 text-[10px] font-bold text-emerald-400 tracking-wide">
-                +{stat.delta} ↑
+            <div className="flex items-baseline gap-2">
+              <p className="text-3xl md:text-4xl font-black font-mono tracking-tighter group-hover:scale-105 transition-transform origin-left duration-500">
+                {stat.value}
               </p>
-            )}
+              {stat.delta !== null && stat.delta > 0 && (
+                <span className="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full whitespace-nowrap">
+                  +{stat.delta} ↑
+                </span>
+              )}
+            </div>
           </div>
         </div>
       ))}
