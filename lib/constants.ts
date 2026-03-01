@@ -1,6 +1,6 @@
 import {
   siTypescript, siJavascript, siPython, siOpenjdk, siRust,
-  siHtml5, siCss, siGnubash, siC, siCplusplus,
+  siHtml5, siCss, siGnubash, siC, siCplusplus, siSwift,
 } from 'simple-icons';
 
 export const LANGUAGE_COLORS: Record<string, string> = {
@@ -14,6 +14,7 @@ export const LANGUAGE_COLORS: Record<string, string> = {
   C: 'bg-slate-500',
   'C++': 'bg-pink-500',
   Rust: 'bg-red-500',
+  Swift: 'bg-orange-500',
 };
 
 export const getLanguageColor = (lang: string) => LANGUAGE_COLORS[lang] || 'bg-slate-400';
@@ -34,6 +35,7 @@ const LANGUAGE_ICONS: Record<string, LanguageIcon> = {
   Shell: siGnubash,
   C: siC,
   'C++': siCplusplus,
+  Swift: siSwift,
 };
 
 export const getLanguageIcon = (lang: string): LanguageIcon | null =>
