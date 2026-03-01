@@ -92,42 +92,43 @@ export function FeaturedProjects({ featured, pinned, user, aiSignals, aiPickReas
               rel="noreferrer"
               className="group bg-slate-900/40 border border-white/5 p-10 rounded-[2.5rem] hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-500 flex flex-col shadow-xl hover:shadow-cyan-500/5"
             >
-              {(isPinned || isAiPick) && (
-                <div className="flex items-center justify-between mb-6">
-                  <div
-                    className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${
-                      isPinned
-                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                        : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'
-                    }`}
-                  >
-                    {isPinned ? (
-                      <>
-                        <Pin className="w-3 h-3" />
-                        {t.badgePride}
-                      </>
-                    ) : (
-                      <>
-                        <Cpu className="w-3 h-3" />
-                        {t.badgeAiPick}
-                      </>
+              <div className="flex items-center justify-between mb-6 min-h-[1.5rem]">
+                {(isPinned || isAiPick) && (
+                  <div className="relative group/badge">
+                    <div
+                      className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 ${
+                        isPinned
+                          ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                          : 'bg-violet-500/20 text-violet-400 border border-violet-500/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'
+                      }`}
+                    >
+                      {isPinned ? (
+                        <>
+                          <Pin className="w-3 h-3" />
+                          {t.badgePride}
+                        </>
+                      ) : (
+                        <>
+                          <Cpu className="w-3 h-3" />
+                          {t.badgeAiPick}
+                        </>
+                      )}
+                    </div>
+                    {reasonText && (
+                      <div className="absolute left-0 top-full mt-2 z-50 w-64 px-4 py-3 rounded-xl bg-slate-800/95 backdrop-blur-sm border border-violet-500/20 shadow-xl shadow-violet-500/10 text-violet-300/90 text-xs leading-relaxed italic opacity-0 invisible group-hover/badge:opacity-100 group-hover/badge:visible transition-all duration-200 pointer-events-none">
+                        {reasonText}
+                      </div>
                     )}
                   </div>
-                </div>
-              )}
+                )}
+              </div>
 
               <h3 className="font-black text-xl md:text-2xl group-hover:text-cyan-400 transition-all mb-4 uppercase tracking-tighter break-all leading-tight min-h-[3.5rem] flex items-center">
                 {repo.name}
               </h3>
-              <p className="text-slate-400 text-sm line-clamp-2 mb-4 font-light leading-relaxed group-hover:text-slate-300 transition-colors">
+              <p className="text-slate-400 text-sm line-clamp-2 mb-10 flex-1 font-light leading-relaxed group-hover:text-slate-300 transition-colors">
                 {repo.description || t.noDescription}
               </p>
-              {reasonText && (
-                <p className="text-violet-400/70 text-xs leading-relaxed mb-6 line-clamp-3 border-l-2 border-violet-500/30 pl-3 italic">
-                  {reasonText}
-                </p>
-              )}
-              {!reasonText && <div className="mb-6" />}
 
               <div className="flex items-center gap-6 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                 {repo.primaryLanguage && (
