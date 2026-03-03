@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import google.generativeai as genai
 import sys
 import time
@@ -192,10 +193,19 @@ def analyze_portfolio():
 
         # --- Processing & Validation ---
         content = raw_response.replace("```json", "").replace("```", "").strip()
+
+        # Fix common JSON issues: trailing commas before } or ]
+        content = re.sub(r',\s*([\]}])', r'\1', content)
+
         try:
             analysis_data = json.loads(content)
         except Exception as e:
-            print(f"⚠️ JSON parsing failed, using minimal fallback: {e}")
+            print(f"⚠️ JSON parsing failed: {e}")
+            existing_path = "public/data/analysis.json"
+            if os.path.exists(existing_path):
+                print("↩️ Keeping existing analysis.json (not overwriting with fallback)")
+                sys.exit(1)
+            print("⚠️ No existing analysis.json found, using minimal fallback")
             analysis_data = {}
 
         # --- Strict Key Validation & Defaulting ---
