@@ -16,17 +16,17 @@ interface StatsGridProps {
 
 export function StatsGrid({ stats, user, t, deltas }: StatsGridProps) {
   const items = [
-    { label: t.repositories, value: user.public_repos, icon: Layers, color: 'from-blue-500 to-cyan-500', delta: deltas?.repoCount ?? null, isText: false },
-    { label: t.followers, value: user.followers, icon: Users, color: 'from-green-500 to-emerald-500', delta: deltas?.followers ?? null, isText: false },
-    { label: t.totalStars, value: stats.totalStars, icon: Star, color: 'from-yellow-500 to-orange-500', delta: deltas?.totalStars ?? null, isText: false },
-    { label: t.forksEarned, value: stats.totalForks, icon: GitFork, color: 'from-purple-500 to-pink-500', delta: deltas?.totalForks ?? null, isText: false },
-    { label: t.topLang, value: stats.languages[0]?.name || 'N/A', icon: Code2, color: 'from-cyan-500 to-blue-500', delta: null, isText: true },
+    { label: t.repositories, value: user.public_repos, icon: Layers, color: 'from-blue-500 to-cyan-500', delta: deltas?.repoCount ?? null },
+    { label: t.followers, value: user.followers, icon: Users, color: 'from-green-500 to-emerald-500', delta: deltas?.followers ?? null },
+    { label: t.totalStars, value: stats.totalStars, icon: Star, color: 'from-yellow-500 to-orange-500', delta: deltas?.totalStars ?? null },
+    { label: t.forksEarned, value: stats.totalForks, icon: GitFork, color: 'from-purple-500 to-pink-500', delta: deltas?.totalForks ?? null },
+    { label: t.topLang, value: stats.languages[0]?.name || 'N/A', icon: Code2, color: 'from-cyan-500 to-blue-500', delta: null },
   ];
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8 mb-20">
       {items.map((stat, i) => (
-        <div key={i} className="relative group overflow-hidden">
+        <div key={i} className="relative group">
           <div className="bg-slate-900/40 backdrop-blur-xl border border-white/5 p-6 md:p-8 rounded-[2rem] hover:border-white/10 transition-all duration-500 relative z-10">
             <div className="flex items-center justify-between mb-4">
               <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider whitespace-nowrap">{stat.label}</p>
@@ -35,11 +35,7 @@ export function StatsGrid({ stats, user, t, deltas }: StatsGridProps) {
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <p className={`font-black leading-none group-hover:scale-105 transition-transform origin-left duration-500 ${
-                stat.isText
-                  ? 'text-2xl md:text-[clamp(1.25rem,3vw,2.25rem)] break-all'
-                  : 'text-3xl md:text-4xl font-mono tracking-tighter'
-              }`}>
+              <p className="font-black tracking-tighter leading-none whitespace-nowrap group-hover:scale-105 transition-transform origin-left duration-500 text-2xl lg:text-[clamp(1.125rem,2vw,1.875rem)]">
                 {stat.value}
               </p>
               {stat.delta !== null && stat.delta > 0 && (
