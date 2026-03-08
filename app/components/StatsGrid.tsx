@@ -34,12 +34,8 @@ export function StatsGrid({ stats, user, t, deltas }: StatsGridProps) {
                 <stat.icon className="w-5 h-5 text-white" />
               </div>
             </div>
-            <div className="flex items-baseline gap-2">
-              <p className={`font-black group-hover:scale-105 transition-transform origin-left duration-500 ${
-                typeof stat.value === 'string'
-                  ? 'text-xl md:text-2xl font-bold truncate'
-                  : 'text-3xl md:text-4xl font-mono tracking-tighter'
-              }`}>
+            <div className="flex items-end gap-2 min-w-0 h-10 md:h-12">
+              <p className="text-3xl md:text-4xl font-black tracking-tighter leading-none group-hover:scale-105 transition-transform origin-left duration-500 truncate">
                 {stat.value}
               </p>
               {stat.delta !== null && stat.delta > 0 && (
