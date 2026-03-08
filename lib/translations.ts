@@ -24,7 +24,7 @@ export const translations = {
     repositories: "리포지토리",
     followers: "팔로워",
     totalStars: "총 스타 수",
-    forksEarned: "포크(Fork) 횟수",
+    forksEarned: "포크 횟수",
     topLang: "주요 언어",
     aiAnalysis: "AI 포트폴리오 분석",
     primaryStack: "주요 기술 스택",

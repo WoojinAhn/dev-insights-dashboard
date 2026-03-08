@@ -29,13 +29,17 @@ export function StatsGrid({ stats, user, t, deltas }: StatsGridProps) {
         <div key={i} className="relative group overflow-hidden">
           <div className="bg-slate-900/40 backdrop-blur-xl border border-white/5 p-6 md:p-8 rounded-[2rem] hover:border-white/10 transition-all duration-500 relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">{stat.label}</p>
+              <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider whitespace-nowrap">{stat.label}</p>
               <div className={`p-2 rounded-xl bg-gradient-to-br ${stat.color} bg-opacity-10`}>
                 <stat.icon className="w-5 h-5 text-white" />
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <p className="text-3xl md:text-4xl font-black font-mono tracking-tighter group-hover:scale-105 transition-transform origin-left duration-500">
+              <p className={`font-black group-hover:scale-105 transition-transform origin-left duration-500 ${
+                typeof stat.value === 'string'
+                  ? 'text-xl md:text-2xl font-bold truncate'
+                  : 'text-3xl md:text-4xl font-mono tracking-tighter'
+              }`}>
                 {stat.value}
               </p>
               {stat.delta !== null && stat.delta > 0 && (
