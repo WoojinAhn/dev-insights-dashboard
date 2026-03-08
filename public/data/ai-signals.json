@@ -23,7 +23,9 @@
     "claude-code"
   ],
   "hound": [],
-  "miniroom-demo": [],
+  "miniroom-demo": [
+    "claude-code"
+  ],
   "mobile-claude-setup": [
     "claude-code"
   ],
