@@ -1,5 +1,26 @@
 [
   {
+    "name": "rudel",
+    "description": "Claude Code Session Analytics",
+    "url": "https://github.com/WoojinAhn/rudel",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-03-14T16:51:51Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "parent": {
+      "name": "rudel",
+      "owner": {
+        "login": "obsessiondb"
+      },
+      "stargazerCount": 181,
+      "forkCount": 7
+    }
+  },
+  {
     "name": "CodexBar",
     "description": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
     "url": "https://github.com/WoojinAhn/CodexBar",
@@ -16,8 +37,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 8004,
-      "forkCount": 574
+      "stargazerCount": 8036,
+      "forkCount": 577
     }
   },
   {
@@ -37,8 +58,8 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 2519,
-      "forkCount": 151
+      "stargazerCount": 2608,
+      "forkCount": 160
     }
   },
   {
@@ -58,8 +79,8 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 116,
-      "forkCount": 23
+      "stargazerCount": 118,
+      "forkCount": 24
     }
   },
   {
@@ -79,8 +100,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 6269,
-      "forkCount": 1550
+      "stargazerCount": 6289,
+      "forkCount": 1554
     }
   },
   {
@@ -245,7 +266,7 @@
       "owner": {
         "login": "mapstruct"
       },
-      "stargazerCount": 7629,
+      "stargazerCount": 7630,
       "forkCount": 1012
     }
   },
@@ -348,8 +369,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 350884,
-      "forkCount": 43782
+      "stargazerCount": 350938,
+      "forkCount": 43783
     }
   },
   {
