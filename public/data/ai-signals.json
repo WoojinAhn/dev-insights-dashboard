@@ -6,6 +6,9 @@
   "backlog-idea-app": [
     "claude-code"
   ],
+  "cclanes": [
+    "claude-code"
+  ],
   "chrome-cookie-reader": [
     "claude-code"
   ],

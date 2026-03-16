@@ -8,7 +8,7 @@
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-03-15T14:38:42Z"
+    "updatedAt": "2026-03-16T15:10:41Z"
   },
   {
     "name": "cursor-docs-crawler",
@@ -24,17 +24,30 @@
     "updatedAt": "2026-03-02T15:40:01Z"
   },
   {
-    "name": "miniroom-demo",
-    "description": "Drag & drop retro miniroom decorator built with Next.js and TypeScript",
+    "name": "CursorMeter",
+    "description": "Lightweight macOS menu bar app for monitoring Cursor IDE usage at a glance",
     "stargazerCount": 1,
     "forkCount": 0,
-    "url": "https://github.com/WoojinAhn/miniroom-demo",
+    "url": "https://github.com/WoojinAhn/CursorMeter",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": {
-      "name": "TypeScript"
+      "name": "Swift"
     },
-    "updatedAt": "2026-03-08T13:08:53Z"
+    "updatedAt": "2026-03-16T04:53:31Z"
+  },
+  {
+    "name": "cclanes",
+    "description": "Poolside scoreboard for parallel vibe coding — per-repo work summaries via CLI",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/cclanes",
+    "isPrivate": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "updatedAt": "2026-03-15T16:28:54Z"
   },
   {
     "name": "claude-config",
@@ -47,32 +60,19 @@
     "primaryLanguage": {
       "name": "Shell"
     },
-    "updatedAt": "2026-03-10T17:27:45Z"
+    "updatedAt": "2026-03-16T05:52:21Z"
   },
   {
-    "name": "CursorMeter",
-    "description": "Lightweight macOS menu bar app for monitoring Cursor IDE usage at a glance",
-    "stargazerCount": 0,
+    "name": "miniroom-demo",
+    "description": "Drag & drop retro miniroom decorator built with Next.js and TypeScript",
+    "stargazerCount": 1,
     "forkCount": 0,
-    "url": "https://github.com/WoojinAhn/CursorMeter",
-    "isPrivate": false,
-    "isFork": false,
-    "primaryLanguage": {
-      "name": "Swift"
-    },
-    "updatedAt": "2026-03-15T05:14:11Z"
-  },
-  {
-    "name": "dev-insights-dashboard",
-    "description": "AI-powered developer portfolio dashboard that visualizes GitHub activity with Gemini AI insights",
-    "stargazerCount": 0,
-    "forkCount": 0,
-    "url": "https://github.com/WoojinAhn/dev-insights-dashboard",
+    "url": "https://github.com/WoojinAhn/miniroom-demo",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": {
       "name": "TypeScript"
     },
-    "updatedAt": "2026-03-14T15:32:35Z"
+    "updatedAt": "2026-03-08T13:08:53Z"
   }
 ]
