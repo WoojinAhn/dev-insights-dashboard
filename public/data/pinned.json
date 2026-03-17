@@ -2,13 +2,13 @@
   {
     "name": "github-star-checker",
     "description": "GitHub Actions workflow that monitors star changes across your repos and sends notifications",
-    "stargazerCount": 3,
-    "forkCount": 0,
+    "stargazerCount": 4,
+    "forkCount": 1,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-03-16T15:10:41Z"
+    "updatedAt": "2026-03-17T15:06:52Z"
   },
   {
     "name": "cursor-docs-crawler",
