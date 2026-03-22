@@ -9,6 +9,9 @@
   "cclanes": [
     "claude-code"
   ],
+  "ccrelay": [
+    "claude-code"
+  ],
   "chrome-cookie-reader": [
     "claude-code"
   ],
