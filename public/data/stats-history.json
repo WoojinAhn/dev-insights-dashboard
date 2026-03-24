@@ -3,13 +3,6 @@
     "date": "2026-03-01",
     "totalStars": 8,
     "totalForks": 0,
-    "repoCount": 15,
-    "followers": 14
-  },
-  {
-    "date": "2026-03-01",
-    "totalStars": 8,
-    "totalForks": 0,
     "repoCount": 16,
     "followers": 14
   },
@@ -219,6 +212,13 @@
   {
     "date": "2026-03-23",
     "totalStars": 11,
+    "totalForks": 1,
+    "repoCount": 20,
+    "followers": 14
+  },
+  {
+    "date": "2026-03-24",
+    "totalStars": 12,
     "totalForks": 1,
     "repoCount": 20,
     "followers": 14
