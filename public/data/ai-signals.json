@@ -29,6 +29,7 @@
     "claude-code"
   ],
   "hound": [],
+  "local-diffusion-lab": [],
   "local-llm-pipeline": [
     "claude-code"
   ],
