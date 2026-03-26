@@ -1,5 +1,26 @@
 [
   {
+    "name": "notebooklm-py",
+    "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
+    "url": "https://github.com/WoojinAhn/notebooklm-py",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-03-26T15:16:12Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "parent": {
+      "name": "notebooklm-py",
+      "owner": {
+        "login": "teng-lin"
+      },
+      "stargazerCount": 7656,
+      "forkCount": 950
+    }
+  },
+  {
     "name": "rudel",
     "description": "Claude Code Session Analytics",
     "url": "https://github.com/WoojinAhn/rudel",
@@ -16,8 +37,8 @@
       "owner": {
         "login": "obsessiondb"
       },
-      "stargazerCount": 215,
-      "forkCount": 10
+      "stargazerCount": 223,
+      "forkCount": 12
     }
   },
   {
@@ -37,8 +58,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 9317,
-      "forkCount": 682
+      "stargazerCount": 9388,
+      "forkCount": 687
     }
   },
   {
@@ -58,7 +79,7 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 2851,
+      "stargazerCount": 2862,
       "forkCount": 182
     }
   },
@@ -79,8 +100,8 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 123,
-      "forkCount": 26
+      "stargazerCount": 124,
+      "forkCount": 27
     }
   },
   {
@@ -100,8 +121,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 6580,
-      "forkCount": 1594
+      "stargazerCount": 6615,
+      "forkCount": 1601
     }
   },
   {
@@ -121,7 +142,7 @@
       "owner": {
         "login": "naver"
       },
-      "stargazerCount": 462,
+      "stargazerCount": 461,
       "forkCount": 49
     }
   },
@@ -369,8 +390,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 351661,
-      "forkCount": 43858
+      "stargazerCount": 351704,
+      "forkCount": 43864
     }
   },
   {
