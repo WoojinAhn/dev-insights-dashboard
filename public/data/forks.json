@@ -1,5 +1,26 @@
 [
   {
+    "name": "pycookiecheat",
+    "description": "Borrow cookies from your browser's authenticated session for use in Python scripts.",
+    "url": "https://github.com/WoojinAhn/pycookiecheat",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-03-29T16:15:49Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "parent": {
+      "name": "pycookiecheat",
+      "owner": {
+        "login": "n8henrie"
+      },
+      "stargazerCount": 810,
+      "forkCount": 112
+    }
+  },
+  {
     "name": "notebooklm-py",
     "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
     "url": "https://github.com/WoojinAhn/notebooklm-py",
@@ -16,8 +37,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 8111,
-      "forkCount": 1015
+      "stargazerCount": 8284,
+      "forkCount": 1029
     }
   },
   {
@@ -37,7 +58,7 @@
       "owner": {
         "login": "obsessiondb"
       },
-      "stargazerCount": 225,
+      "stargazerCount": 227,
       "forkCount": 12
     }
   },
@@ -58,8 +79,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 9544,
-      "forkCount": 696
+      "stargazerCount": 9598,
+      "forkCount": 701
     }
   },
   {
@@ -79,8 +100,8 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 2888,
-      "forkCount": 182
+      "stargazerCount": 2892,
+      "forkCount": 183
     }
   },
   {
@@ -100,7 +121,7 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 129,
+      "stargazerCount": 134,
       "forkCount": 28
     }
   },
@@ -121,8 +142,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 6703,
-      "forkCount": 1603
+      "stargazerCount": 6728,
+      "forkCount": 1611
     }
   },
   {
@@ -203,7 +224,7 @@
       "owner": {
         "login": "joneconsulting"
       },
-      "stargazerCount": 270,
+      "stargazerCount": 269,
       "forkCount": 195
     }
   },
@@ -287,7 +308,7 @@
       "owner": {
         "login": "mapstruct"
       },
-      "stargazerCount": 7634,
+      "stargazerCount": 7635,
       "forkCount": 1013
     }
   },
@@ -390,8 +411,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 351816,
-      "forkCount": 43867
+      "stargazerCount": 351871,
+      "forkCount": 43866
     }
   },
   {
@@ -411,7 +432,7 @@
       "owner": {
         "login": "ethereum"
       },
-      "stargazerCount": 1029,
+      "stargazerCount": 1028,
       "forkCount": 386
     }
   },
