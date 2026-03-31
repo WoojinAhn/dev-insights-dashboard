@@ -1,98 +1,85 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building tools that enhance developer productivity and streamline workflows. Their projects reflect a focus on automation, data management, and user experience, particularly in the context of AI and web applications.",
+    "summary": "The developer demonstrates a strong proficiency in building tools that enhance developer productivity and streamline workflows. Their portfolio showcases a diverse range of projects, particularly in Python and TypeScript, indicating a solid foundation in both backend and frontend development.",
     "strengths": [
       {
-        "strength": "Automation and Workflow Management",
-        "evidence": "The 'github-star-checker' repository showcases the ability to automate monitoring of GitHub stars, which enhances workflow efficiency.",
+        "strength": "Workflow Automation",
+        "evidence": "The 'github-star-checker' repository exemplifies the developer's ability to automate GitHub workflows by monitoring star changes and sending notifications.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
+      },
+      {
+        "strength": "AI Integration",
+        "evidence": "The 'dev-insights-dashboard' project highlights the developer's capability to integrate AI insights into applications, showcasing their understanding of AI technologies.",
+        "tag_en": "AI Tools",
+        "tag_ko": "AI 도구"
       },
       {
         "strength": "Cross-Platform Development",
-        "evidence": "The 'CursorMeter' project illustrates expertise in creating macOS applications, demonstrating versatility in platform-specific development.",
+        "evidence": "The 'CursorMeter' application demonstrates the developer's skill in creating macOS applications, indicating their versatility in cross-platform development.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "AI-Powered Solutions",
-        "evidence": "The 'dev-insights-dashboard' project integrates AI to visualize GitHub activity, showcasing a strong capability in leveraging AI for practical applications.",
-        "tag_en": "AI Solutions",
-        "tag_ko": "AI 솔루션"
-      },
-      {
-        "strength": "Web Application Development",
-        "evidence": "The 'backlog-idea-app' and 'supabase-anonymous-board' repositories highlight skills in developing web applications using modern frameworks like Next.js.",
-        "tag_en": "Web Apps",
-        "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "Python Proficiency",
-        "evidence": "Multiple projects, including 'cursor-docs-crawler' and 'local-llm-pipeline', demonstrate a strong command of Python for various applications.",
-        "tag_en": "Python",
-        "tag_ko": "파이썬"
+        "strength": "Documentation and Usability",
+        "evidence": "The 'cursor-docs-crawler' project shows the developer's focus on improving documentation accessibility, which enhances usability for end-users.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "The developer exhibits significant capabilities in integrating AI into applications, particularly in enhancing user experience and automating tasks."
+    "ai_summary": "The developer exhibits a strong understanding of AI technologies and their application in software development, particularly through projects that leverage AI for insights and automation."
   },
   "ko": {
-    "summary": "개발자는 개발자 생산성을 향상시키고 워크플로우를 간소화하는 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 프로젝트는 특히 AI와 웹 애플리케이션의 맥락에서 자동화, 데이터 관리 및 사용자 경험에 중점을 두고 있습니다.",
+    "summary": "개발자는 개발자의 생산성을 높이고 워크플로우를 간소화하는 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 포트폴리오는 특히 Python과 TypeScript에서 다양한 프로젝트를 선보이며, 백엔드 및 프론트엔드 개발 모두에 대한 탄탄한 기초를 나타냅니다.",
     "strengths": [
       {
-        "strength": "자동화 및 워크플로우 관리",
-        "evidence": "'github-star-checker' 레포는 GitHub 스타 모니터링을 자동화하는 능력을 보여주며, 워크플로우 효율성을 향상시킵니다.",
+        "strength": "워크플로우 자동화",
+        "evidence": "'github-star-checker' 레포는 GitHub 워크플로우를 자동화하여 스타 변경 사항을 모니터링하고 알림을 보내는 능력을 보여줍니다.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
       },
       {
+        "strength": "AI 통합",
+        "evidence": "'dev-insights-dashboard' 프로젝트는 AI 통찰력을 애플리케이션에 통합하는 능력을 강조하며, AI 기술에 대한 이해를 보여줍니다.",
+        "tag_en": "AI Tools",
+        "tag_ko": "AI 도구"
+      },
+      {
         "strength": "크로스 플랫폼 개발",
-        "evidence": "'CursorMeter' 프로젝트는 macOS 애플리케이션을 만드는 전문성을 보여주며, 플랫폼별 개발의 다재다능함을 입증합니다.",
+        "evidence": "'CursorMeter' 애플리케이션은 macOS 애플리케이션을 만드는 기술을 보여주며, 크로스 플랫폼 개발에서의 다재다능함을 나타냅니다.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "AI 기반 솔루션",
-        "evidence": "'dev-insights-dashboard' 프로젝트는 GitHub 활동을 시각화하기 위해 AI를 통합하여 실용적인 애플리케이션을 위한 AI 활용 능력을 보여줍니다.",
-        "tag_en": "AI Solutions",
-        "tag_ko": "AI 솔루션"
-      },
-      {
-        "strength": "웹 애플리케이션 개발",
-        "evidence": "'backlog-idea-app'와 'supabase-anonymous-board' 레포는 Next.js와 같은 현대적인 프레임워크를 사용하여 웹 애플리케이션을 개발하는 기술을 강조합니다.",
-        "tag_en": "Web Apps",
-        "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "파이썬 전문성",
-        "evidence": "'cursor-docs-crawler'와 'local-llm-pipeline'을 포함한 여러 프로젝트는 다양한 애플리케이션을 위한 파이썬에 대한 강한 명령을 보여줍니다.",
-        "tag_en": "Python",
-        "tag_ko": "파이썬"
+        "strength": "문서화 및 사용성",
+        "evidence": "'cursor-docs-crawler' 프로젝트는 문서 접근성을 개선하는 데 중점을 두어 최종 사용자에게 사용성을 높이는 것을 보여줍니다.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "개발자는 사용자 경험을 향상시키고 작업을 자동화하는 데 있어 AI를 애플리케이션에 통합하는 데 상당한 능력을 보여줍니다."
+    "ai_summary": "개발자는 AI 기술과 소프트웨어 개발에서의 적용에 대한 강한 이해를 보여주며, 특히 AI를 활용한 통찰력 및 자동화 프로젝트를 통해 이를 입증합니다."
   },
   "top_technologies": [
     "Python",
     "TypeScript",
     "Shell",
-    "Swift",
-    "Java"
+    "Swift"
   ],
   "recommended_featured": [
     {
       "name": "dev-insights-dashboard",
-      "reason_en": "This project stands out for its innovative use of AI to visualize developer activity, providing valuable insights into GitHub usage.",
-      "reason_ko": "이 프로젝트는 개발자 활동을 시각화하기 위해 AI를 혁신적으로 사용하여 GitHub 사용에 대한 귀중한 통찰력을 제공합니다."
+      "reason_en": "This project stands out due to its innovative use of AI to visualize GitHub activity, providing valuable insights for developers.",
+      "reason_ko": "이 프로젝트는 GitHub 활동을 시각화하기 위해 AI를 혁신적으로 활용하여 개발자에게 귀중한 통찰력을 제공합니다."
     },
     {
-      "name": "backlog-idea-app",
-      "reason_en": "This application effectively converts free-form ideas into structured GitHub issues, showcasing practical problem-solving skills.",
-      "reason_ko": "이 애플리케이션은 자유 형식의 아이디어를 구조화된 GitHub 이슈로 변환하여 실용적인 문제 해결 능력을 보여줍니다."
+      "name": "cursor-docs-crawler",
+      "reason_en": "This repository is notable for its focus on improving documentation accessibility, which is crucial for user experience.",
+      "reason_ko": "이 레포는 사용자 경험에 중요한 문서 접근성을 개선하는 데 중점을 두고 있어 주목할 만합니다."
     },
     {
       "name": "CursorMeter",
-      "reason_en": "This lightweight macOS app provides a unique solution for monitoring IDE usage, demonstrating a focus on user experience.",
-      "reason_ko": "이 경량 macOS 앱은 IDE 사용 모니터링을 위한 독특한 솔루션을 제공하여 사용자 경험에 중점을 두고 있음을 보여줍니다."
+      "reason_en": "This lightweight macOS application effectively monitors IDE usage, showcasing the developer's ability to create user-friendly tools.",
+      "reason_ko": "이 경량 macOS 애플리케이션은 IDE 사용량을 효과적으로 모니터링하여 개발자가 사용자 친화적인 도구를 만드는 능력을 보여줍니다."
     }
   ],
   "ai_capabilities": [
@@ -101,24 +88,24 @@
       "title_en": "Workflow Automation",
       "title_ko": "워크플로우 자동화",
       "score": 90,
-      "desc_en": "The 'github-star-checker' project exemplifies the developer's ability to automate workflows effectively, enhancing productivity.",
-      "desc_ko": "'github-star-checker' 프로젝트는 개발자가 워크플로우를 효과적으로 자동화하여 생산성을 향상시키는 능력을 보여줍니다."
+      "desc_en": "The 'github-star-checker' project demonstrates the developer's expertise in automating workflows, which enhances productivity.",
+      "desc_ko": "'github-star-checker' 프로젝트는 개발자가 워크플로우를 자동화하는 전문성을 보여주며, 이는 생산성을 향상시킵니다."
     },
     {
-      "key": "ai_visualization",
-      "title_en": "AI Visualization",
-      "title_ko": "AI 시각화",
+      "key": "ai_insights",
+      "title_en": "AI Insights",
+      "title_ko": "AI 통찰력",
       "score": 85,
-      "desc_en": "The 'dev-insights-dashboard' integrates AI to visualize GitHub activity, showcasing advanced capabilities in data representation.",
-      "desc_ko": "'dev-insights-dashboard'는 GitHub 활동을 시각화하기 위해 AI를 통합하여 데이터 표현에서 고급 능력을 보여줍니다."
+      "desc_en": "The 'dev-insights-dashboard' showcases the developer's ability to integrate AI insights into applications, providing valuable data visualization.",
+      "desc_ko": "'dev-insights-dashboard'는 개발자가 애플리케이션에 AI 통찰력을 통합하는 능력을 보여주며, 귀중한 데이터 시각화를 제공합니다."
     },
     {
       "key": "cross_platform_development",
       "title_en": "Cross-Platform Development",
       "title_ko": "크로스 플랫폼 개발",
       "score": 80,
-      "desc_en": "The 'CursorMeter' project demonstrates the developer's skill in creating cross-platform applications, particularly for macOS.",
-      "desc_ko": "'CursorMeter' 프로젝트는 개발자가 macOS를 위한 크로스 플랫폼 애플리케이션을 만드는 기술을 보여줍니다."
+      "desc_en": "The 'CursorMeter' application highlights the developer's skills in creating cross-platform applications for macOS.",
+      "desc_ko": "'CursorMeter' 애플리케이션은 개발자가 macOS용 크로스 플랫폼 애플리케이션을 만드는 기술을 강조합니다."
     }
   ],
   "interests": {
@@ -132,12 +119,12 @@
       },
       {
         "name": "Session Analytics",
-        "desc_en": "The 'rudel' repository indicates a focus on session analytics, reflecting a desire to understand user interactions with AI tools.",
-        "desc_ko": "'rudel' 레포는 세션 분석에 중점을 두고 있으며, AI 도구와의 사용자 상호작용을 이해하고자 하는 욕구를 반영합니다."
+        "desc_en": "The 'rudel' repository indicates a focus on session analytics, which can enhance user experience and application performance.",
+        "desc_ko": "'rudel' 레포는 사용자 경험과 애플리케이션 성능을 향상시킬 수 있는 세션 분석에 중점을 두고 있음을 나타냅니다."
       }
     ],
-    "desc_en": "The developer's interests in AI integration and session analytics suggest a commitment to enhancing user experiences through advanced technologies.",
-    "desc_ko": "개발자의 AI 통합 및 세션 분석에 대한 관심은 고급 기술을 통해 사용자 경험을 향상시키려는 의지를 나타냅니다."
+    "desc_en": "The developer's interests reflect a strong inclination towards AI technologies and their application in enhancing software development processes.",
+    "desc_ko": "개발자의 관심사는 AI 기술과 소프트웨어 개발 프로세스를 향상시키는 데 대한 강한 경향을 반영합니다."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
