@@ -1,5 +1,26 @@
 [
   {
+    "name": "superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "url": "https://github.com/WoojinAhn/superpowers",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-04-03T01:44:45Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Shell"
+    },
+    "parent": {
+      "name": "superpowers",
+      "owner": {
+        "login": "obra"
+      },
+      "stargazerCount": 133573,
+      "forkCount": 11114
+    }
+  },
+  {
     "name": "pycookiecheat",
     "description": "Borrow cookies from your browser's authenticated session for use in Python scripts.",
     "url": "https://github.com/WoojinAhn/pycookiecheat",
@@ -37,8 +58,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 8779,
-      "forkCount": 1103
+      "stargazerCount": 8904,
+      "forkCount": 1131
     }
   },
   {
@@ -79,8 +100,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 9805,
-      "forkCount": 729
+      "stargazerCount": 9880,
+      "forkCount": 731
     }
   },
   {
@@ -100,8 +121,8 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 2904,
-      "forkCount": 186
+      "stargazerCount": 2922,
+      "forkCount": 187
     }
   },
   {
@@ -121,8 +142,8 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 141,
-      "forkCount": 34
+      "stargazerCount": 145,
+      "forkCount": 35
     }
   },
   {
@@ -142,8 +163,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 6840,
-      "forkCount": 1654
+      "stargazerCount": 6862,
+      "forkCount": 1656
     }
   },
   {
@@ -266,7 +287,7 @@
       "owner": {
         "login": "naver"
       },
-      "stargazerCount": 697,
+      "stargazerCount": 696,
       "forkCount": 120
     }
   },
@@ -411,8 +432,8 @@
       "owner": {
         "login": "kamranahmedse"
       },
-      "stargazerCount": 352064,
-      "forkCount": 43863
+      "stargazerCount": 352140,
+      "forkCount": 43862
     }
   },
   {
