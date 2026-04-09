@@ -3,7 +3,9 @@
     "claude-code"
   ],
   "WoojinAhn": [],
-  "ai-tools-radar": [],
+  "ai-tools-radar": [
+    "claude-code"
+  ],
   "backlog-idea-app": [
     "claude-code"
   ],
