@@ -36,7 +36,7 @@ GitHub API ──→ refresh-data.sh ──→ public/data/*.json
 2. **AI 분석** (`analyze-portfolio.py`): 레포 데이터를 Gemini 2.0 Flash(폴백: GitHub Models GPT-4o-mini)에 전송, 한영 이중 언어 분석(강점, AI 역량, 연구 관심사) 생성.
 3. **AI 도구 탐지** (`detect-ai-tools.py`): 각 레포의 indicator 파일(`CLAUDE.md`, `.cursor/`, 의존성 파일 등)을 GitHub API로 스캔 — 규칙 기반, AI 토큰 추가 없음.
 
-프론트엔드는 단일 `'use client'` 페이지로, 런타임에 정적 JSON 파일을 fetch합니다.
+프론트엔드는 Next.js App Router 앱입니다. `app/page.tsx`는 서버 컴포넌트로 `fs`를 통해 JSON 파일을 읽고, 언어 전환·스크롤 상태를 처리하는 `'use client'` 래퍼로 데이터를 전달합니다.
 
 ## 주요 기능
 

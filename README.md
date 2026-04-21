@@ -36,7 +36,7 @@ GitHub API ──→ refresh-data.sh ──→ public/data/*.json
 2. **AI analysis** (`analyze-portfolio.py`): Sends repo data to Gemini 2.0 Flash (fallback: GitHub Models GPT-4o-mini), produces bilingual (en/ko) analysis with strengths, AI capabilities, and research interests.
 3. **AI tool detection** (`detect-ai-tools.py`): Scans each repo for indicator files (`CLAUDE.md`, `.cursor/`, dependency files, etc.) via GitHub API — rule-based, no extra AI tokens.
 
-The frontend is a single `'use client'` page that fetches these static JSON files at runtime.
+The frontend is a Next.js App Router app: `app/page.tsx` is a server component that reads the JSON files via `fs` and passes data to a `'use client'` wrapper for language toggle and scroll state.
 
 ## Features
 
