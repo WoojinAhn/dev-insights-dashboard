@@ -2,6 +2,7 @@ import { Star, GitFork, ChevronRight, Pin, Cpu } from 'lucide-react';
 import { siClaude, siCursor, siGooglegemini, siGithubcopilot, siWindsurf } from 'simple-icons';
 import { getLanguageColor, getLanguageIcon } from '@/lib/constants';
 import type { Repository, PinnedRepository, User } from '@/lib/data';
+import type { Lang } from '@/lib/translations';
 
 interface FeaturedProjectsProps {
   featured: (Repository | PinnedRepository)[];
@@ -9,7 +10,7 @@ interface FeaturedProjectsProps {
   user: User;
   aiSignals: Record<string, string[]>;
   aiPickReasons: Record<string, { reason_en: string; reason_ko: string }>;
-  lang: string;
+  lang: Lang;
   t: {
     featuredProjects: string;
     viewAll: string;

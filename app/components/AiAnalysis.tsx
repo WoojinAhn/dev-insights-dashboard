@@ -56,7 +56,6 @@ export function AiAnalysis({ analysis, lang, t }: AiAnalysisProps) {
             })}
           </div>
 
-          {/* AI Core Capabilities */}
           {analysis.ai_capabilities && (
             <div className="border-t border-white/5 pt-10 mt-10">
               <div className="flex items-center gap-3 mb-6">
@@ -93,7 +92,6 @@ export function AiAnalysis({ analysis, lang, t }: AiAnalysisProps) {
             </div>
           )}
 
-          {/* Interests / Research Keywords */}
           {analysis.interests && (
             <div className="border-t border-white/5 pt-10 mt-10">
               <div className="flex items-center gap-3 mb-6">
