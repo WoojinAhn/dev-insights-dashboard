@@ -104,7 +104,8 @@ export interface StatsDeltas {
 
 export interface LanguageStat {
   name: string;
-  count: number;
+  bytes: number;
+  repoCount: number;
 }
 
 export interface DashboardStats {
@@ -174,18 +175,20 @@ function computeStats(repos: Repository[]): DashboardStats {
   const totalStars = repos.reduce((acc, repo) => acc + (repo.stargazerCount || 0), 0);
   const totalForks = repos.reduce((acc, repo) => acc + (repo.forkCount || 0), 0);
 
-  const languageCounts: Record<string, number> = {};
+  const languageTotals: Record<string, { bytes: number; repoCount: number }> = {};
   repos.forEach((repo) => {
-    if (repo.primaryLanguage) {
-      const l = repo.primaryLanguage.name;
-      languageCounts[l] = (languageCounts[l] || 0) + 1;
-    }
+    repo.languages?.forEach(({ size, node }) => {
+      const entry = languageTotals[node.name] ?? { bytes: 0, repoCount: 0 };
+      entry.bytes += size;
+      entry.repoCount += 1;
+      languageTotals[node.name] = entry;
+    });
   });
 
-  const languages: LanguageStat[] = Object.entries(languageCounts)
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 5);
+  const languages: LanguageStat[] = Object.entries(languageTotals)
+    .map(([name, { bytes, repoCount }]) => ({ name, bytes, repoCount }))
+    .sort((a, b) => b.bytes - a.bytes)
+    .slice(0, 8);
 
   return { totalStars, totalForks, languages };
 }

@@ -8,7 +8,7 @@ interface PrimaryStackProps {
 }
 
 export function PrimaryStack({ stats, t }: PrimaryStackProps) {
-  const total = stats.languages.reduce((a, b) => a + b.count, 0);
+  const totalBytes = stats.languages.reduce((a, b) => a + b.bytes, 0);
 
   return (
     <section className="mb-20">
@@ -25,7 +25,7 @@ export function PrimaryStack({ stats, t }: PrimaryStackProps) {
             <div
               key={i}
               className={`${getLanguageColor(lang.name)} transition-all hover:brightness-110 relative group/bar`}
-              style={{ width: `${(lang.count / total) * 100}%` }}
+              style={{ width: `${(lang.bytes / totalBytes) * 100}%` }}
             >
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-[10px] rounded opacity-0 group-hover/bar:opacity-100 transition-opacity whitespace-nowrap border border-white/10 z-20">
                 {lang.name}
@@ -34,7 +34,7 @@ export function PrimaryStack({ stats, t }: PrimaryStackProps) {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.languages.map((lang: LanguageStat, i: number) => {
             const icon = getLanguageIcon(lang.name);
             return (
@@ -52,7 +52,7 @@ export function PrimaryStack({ stats, t }: PrimaryStackProps) {
                   </span>
                 </div>
                 <div className="text-xs text-slate-500 font-mono pl-7 uppercase tracking-widest">
-                  {lang.count} {t.repos}
+                  {lang.repoCount} {t.repos}
                 </div>
               </div>
             );
