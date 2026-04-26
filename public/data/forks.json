@@ -16,8 +16,8 @@
       "owner": {
         "login": "obra"
       },
-      "stargazerCount": 167375,
-      "forkCount": 14731
+      "stargazerCount": 168248,
+      "forkCount": 14849
     }
   },
   {
@@ -58,8 +58,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 11745,
-      "forkCount": 1590
+      "stargazerCount": 11850,
+      "forkCount": 1608
     }
   },
   {
@@ -100,8 +100,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 11178,
-      "forkCount": 847
+      "stargazerCount": 11247,
+      "forkCount": 851
     }
   },
   {
@@ -121,7 +121,7 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 3230,
+      "stargazerCount": 3235,
       "forkCount": 209
     }
   },
@@ -142,7 +142,7 @@
       "owner": {
         "login": "revfactory"
       },
-      "stargazerCount": 163,
+      "stargazerCount": 164,
       "forkCount": 49
     }
   },
@@ -163,8 +163,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 7278,
-      "forkCount": 1758
+      "stargazerCount": 7290,
+      "forkCount": 1757
     }
   },
   {
@@ -430,10 +430,10 @@
     "parent": {
       "name": "developer-roadmap",
       "owner": {
-        "login": "kamranahmedse"
+        "login": "nilbuild"
       },
-      "stargazerCount": 353601,
-      "forkCount": 43968
+      "stargazerCount": 353672,
+      "forkCount": 43970
     }
   },
   {
