@@ -1,5 +1,26 @@
 [
   {
+    "name": "insane-search",
+    "description": "Auto-bypass for blocked websites in Claude Code — Phase 0→3 adaptive scheduler, no API keys",
+    "url": "https://github.com/WoojinAhn/insane-search",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-05-05T10:11:56Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "parent": {
+      "name": "insane-search",
+      "owner": {
+        "login": "fivetaku"
+      },
+      "stargazerCount": 607,
+      "forkCount": 92
+    }
+  },
+  {
     "name": "superpowers",
     "description": "An agentic skills framework & software development methodology that works.",
     "url": "https://github.com/WoojinAhn/superpowers",
@@ -16,8 +37,8 @@
       "owner": {
         "login": "obra"
       },
-      "stargazerCount": 178100,
-      "forkCount": 15796
+      "stargazerCount": 179093,
+      "forkCount": 15909
     }
   },
   {
@@ -37,7 +58,7 @@
       "owner": {
         "login": "n8henrie"
       },
-      "stargazerCount": 812,
+      "stargazerCount": 811,
       "forkCount": 112
     }
   },
@@ -58,8 +79,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 12484,
-      "forkCount": 1740
+      "stargazerCount": 12570,
+      "forkCount": 1745
     }
   },
   {
@@ -79,7 +100,7 @@
       "owner": {
         "login": "obsessiondb"
       },
-      "stargazerCount": 263,
+      "stargazerCount": 269,
       "forkCount": 15
     }
   },
@@ -100,8 +121,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 11602,
-      "forkCount": 891
+      "stargazerCount": 11654,
+      "forkCount": 897
     }
   },
   {
@@ -121,7 +142,7 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 3287,
+      "stargazerCount": 3291,
       "forkCount": 213
     }
   },
@@ -163,8 +184,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 7412,
-      "forkCount": 1789
+      "stargazerCount": 7425,
+      "forkCount": 1790
     }
   },
   {
@@ -432,8 +453,8 @@
       "owner": {
         "login": "nilbuild"
       },
-      "stargazerCount": 354148,
-      "forkCount": 44010
+      "stargazerCount": 354217,
+      "forkCount": 44026
     }
   },
   {
