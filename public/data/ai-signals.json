@@ -25,6 +25,7 @@
   "cursor-docs-crawler": [
     "claude-code"
   ],
+  "custom-skills": [],
   "dev-insights-dashboard": [
     "claude-code"
   ],
