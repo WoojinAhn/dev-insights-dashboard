@@ -8,12 +8,12 @@
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-05-31T14:03:00Z"
+    "updatedAt": "2026-06-01T18:43:43Z"
   },
   {
     "name": "cursor-docs-crawler",
     "description": "Cursor documentation crawler - Convert docs.cursor.com to PDF",
-    "stargazerCount": 3,
+    "stargazerCount": 4,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/cursor-docs-crawler",
     "isPrivate": false,
@@ -21,7 +21,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-05-31T07:01:08Z"
+    "updatedAt": "2026-06-01T08:24:38Z"
   },
   {
     "name": "CursorMeter",
@@ -60,7 +60,7 @@
     "primaryLanguage": {
       "name": "Shell"
     },
-    "updatedAt": "2026-05-24T07:11:38Z"
+    "updatedAt": "2026-06-01T14:58:36Z"
   },
   {
     "name": "miniroom-demo",
