@@ -1,5 +1,26 @@
 [
   {
+    "name": "rudel",
+    "description": "Claude Code Session Analytics",
+    "url": "https://github.com/WoojinAhn/rudel",
+    "isPrivate": false,
+    "isFork": true,
+    "updatedAt": "2026-06-06T09:28:23Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "parent": {
+      "name": "rudel",
+      "owner": {
+        "login": "evrendom"
+      },
+      "stargazerCount": 283,
+      "forkCount": 16
+    }
+  },
+  {
     "name": "insane-search",
     "description": "Auto-bypass for blocked websites in Claude Code — Phase 0→3 adaptive scheduler, no API keys",
     "url": "https://github.com/WoojinAhn/insane-search",
@@ -16,7 +37,7 @@
       "owner": {
         "login": "fivetaku"
       },
-      "stargazerCount": 717,
+      "stargazerCount": 719,
       "forkCount": 122
     }
   },
@@ -37,8 +58,8 @@
       "owner": {
         "login": "obra"
       },
-      "stargazerCount": 218788,
-      "forkCount": 19466
+      "stargazerCount": 219438,
+      "forkCount": 19530
     }
   },
   {
@@ -79,29 +100,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 15938,
-      "forkCount": 2166
-    }
-  },
-  {
-    "name": "rudel",
-    "description": "Claude Code Session Analytics",
-    "url": "https://github.com/WoojinAhn/rudel",
-    "isPrivate": false,
-    "isFork": true,
-    "updatedAt": "2026-03-14T16:51:51Z",
-    "stargazerCount": 0,
-    "forkCount": 0,
-    "primaryLanguage": {
-      "name": "TypeScript"
-    },
-    "parent": {
-      "name": "rudel",
-      "owner": {
-        "login": "obsessiondb"
-      },
-      "stargazerCount": 283,
-      "forkCount": 16
+      "stargazerCount": 15986,
+      "forkCount": 2174
     }
   },
   {
@@ -121,8 +121,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 14284,
-      "forkCount": 1132
+      "stargazerCount": 14317,
+      "forkCount": 1137
     }
   },
   {
@@ -184,7 +184,7 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 7884,
+      "stargazerCount": 7894,
       "forkCount": 1888
     }
   },
@@ -330,7 +330,7 @@
         "login": "basdijkstra"
       },
       "stargazerCount": 330,
-      "forkCount": 177
+      "forkCount": 176
     }
   },
   {
@@ -350,8 +350,8 @@
       "owner": {
         "login": "mapstruct"
       },
-      "stargazerCount": 7661,
-      "forkCount": 1026
+      "stargazerCount": 7660,
+      "forkCount": 1025
     }
   },
   {
@@ -453,8 +453,8 @@
       "owner": {
         "login": "nilbuild"
       },
-      "stargazerCount": 356338,
-      "forkCount": 44178
+      "stargazerCount": 356398,
+      "forkCount": 44179
     }
   },
   {
