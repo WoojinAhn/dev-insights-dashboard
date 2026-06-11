@@ -1,111 +1,112 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building AI-driven applications and tools, particularly in the areas of TypeScript and Python. Their portfolio showcases a blend of innovative projects that leverage AI capabilities, web development, and automation.",
+    "summary": "The developer demonstrates a strong technical persona focused on building innovative applications that leverage AI and enhance user experience. Their work showcases a blend of frontend and backend development skills, particularly in the context of AI tools and productivity applications.",
     "strengths": [
       {
-        "strength": "AI-Driven Development",
-        "evidence": "The developer has created multiple projects that utilize AI, such as the 'dev-insights-dashboard' which visualizes GitHub activity with Gemini AI insights.",
+        "strength": "AI Tool Development",
+        "evidence": "The developer has created several AI-focused projects, such as 'dev-insights-dashboard' and 'custom-skills', which highlight their ability to integrate AI into practical applications.",
         "tag_en": "AI Tools",
         "tag_ko": "AI 도구"
       },
       {
-        "strength": "Web Application Development",
-        "evidence": "Projects like 'spotify-liked-artist-rank' and 'supabase-anonymous-board' highlight the developer's ability to create interactive web applications using TypeScript and Next.js.",
-        "tag_en": "Web Apps",
-        "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "Cross-Platform Solutions",
-        "evidence": "The 'CursorMeter' project demonstrates the developer's capability to build macOS applications, showcasing versatility across different platforms.",
+        "strength": "Cross-Platform Application Development",
+        "evidence": "The 'CursorMeter' and 'spotify-liked-artist-rank' projects illustrate the developer's capability to build applications for multiple platforms, including macOS and web.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "Automation and Monitoring",
-        "evidence": "The 'github-star-checker' project exemplifies the developer's skills in creating automation tools that monitor and notify changes in GitHub repositories.",
-        "tag_en": "Automation",
-        "tag_ko": "자동화"
+        "strength": "Data Visualization",
+        "evidence": "The 'dev-insights-dashboard' project showcases the developer's proficiency in visualizing complex data, particularly GitHub activity, using AI insights.",
+        "tag_en": "Data Visualization",
+        "tag_ko": "데이터 시각화"
+      },
+      {
+        "strength": "Web Development",
+        "evidence": "Projects like 'miniroom-demo' and 'supabase-anonymous-board' demonstrate the developer's skills in building modern web applications using frameworks like Next.js.",
+        "tag_en": "Web Development",
+        "tag_ko": "웹 개발"
       }
     ],
-    "ai_summary": "The developer exhibits a robust understanding of AI integration in software development, particularly through their projects that utilize AI for insights and automation."
+    "ai_summary": "The developer exhibits a strong focus on AI capabilities, particularly in creating tools that enhance developer productivity and streamline workflows."
   },
   "ko": {
-    "summary": "개발자는 AI 기반 애플리케이션 및 도구 구축에 강한 능력을 보여주며, 특히 TypeScript와 Python 분야에서 두드러진 성과를 보이고 있습니다. 그들의 포트폴리오는 AI 기능, 웹 개발 및 자동화를 활용한 혁신적인 프로젝트의 조화를 보여줍니다.",
+    "summary": "이 개발자는 AI를 활용하고 사용자 경험을 향상시키는 혁신적인 애플리케이션을 구축하는 데 중점을 둔 강력한 기술적 페르소나를 보여줍니다. 그들의 작업은 AI 도구 및 생산성 애플리케이션의 맥락에서 프론트엔드 및 백엔드 개발 기술의 혼합을 보여줍니다.",
     "strengths": [
       {
-        "strength": "AI 기반 개발",
-        "evidence": "'dev-insights-dashboard'와 같은 여러 프로젝트에서 AI를 활용하여 GitHub 활동을 시각화하는 능력을 보여줍니다.",
+        "strength": "AI 도구 개발",
+        "evidence": "'dev-insights-dashboard'와 'custom-skills'와 같은 여러 AI 중심 프로젝트를 통해 AI를 실용적인 애플리케이션에 통합하는 능력을 강조합니다.",
         "tag_en": "AI Tools",
         "tag_ko": "AI 도구"
       },
       {
-        "strength": "웹 애플리케이션 개발",
-        "evidence": "'spotify-liked-artist-rank'와 'supabase-anonymous-board'와 같은 프로젝트는 TypeScript와 Next.js를 사용하여 인터랙티브한 웹 애플리케이션을 만드는 능력을 강조합니다.",
-        "tag_en": "Web Apps",
-        "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "크로스 플랫폼 솔루션",
-        "evidence": "'CursorMeter' 프로젝트는 macOS 애플리케이션을 구축하는 개발자의 능력을 보여주며, 다양한 플랫폼에서의 다재다능함을 강조합니다.",
+        "strength": "크로스 플랫폼 애플리케이션 개발",
+        "evidence": "'CursorMeter'와 'spotify-liked-artist-rank' 프로젝트는 macOS 및 웹을 포함한 여러 플랫폼을 위한 애플리케이션을 구축하는 개발자의 능력을 보여줍니다.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "자동화 및 모니터링",
-        "evidence": "'github-star-checker' 프로젝트는 GitHub 리포지토리의 변화를 모니터링하고 알림을 생성하는 자동화 도구를 만드는 능력을 보여줍니다.",
-        "tag_en": "Automation",
-        "tag_ko": "자동화"
+        "strength": "데이터 시각화",
+        "evidence": "'dev-insights-dashboard' 프로젝트는 GitHub 활동과 같은 복잡한 데이터를 시각화하는 데 있어 개발자의 능숙함을 보여줍니다.",
+        "tag_en": "Data Visualization",
+        "tag_ko": "데이터 시각화"
+      },
+      {
+        "strength": "웹 개발",
+        "evidence": "'miniroom-demo'와 'supabase-anonymous-board'와 같은 프로젝트는 Next.js와 같은 프레임워크를 사용하여 현대적인 웹 애플리케이션을 구축하는 개발자의 기술을 보여줍니다.",
+        "tag_en": "Web Development",
+        "tag_ko": "웹 개발"
       }
     ],
-    "ai_summary": "개발자는 소프트웨어 개발에서 AI 통합에 대한 강력한 이해를 보여주며, 특히 AI를 활용하여 통찰력과 자동화를 제공하는 프로젝트를 통해 그 능력을 입증하고 있습니다."
+    "ai_summary": "이 개발자는 개발자의 생산성을 향상시키고 워크플로를 간소화하는 도구를 만드는 데 특히 중점을 두고 강력한 AI 능력을 보여줍니다."
   },
   "top_technologies": [
     "TypeScript",
     "Python",
     "Swift",
-    "Shell"
+    "Shell",
+    "Java"
   ],
   "recommended_featured": [
     {
       "name": "dev-insights-dashboard",
-      "reason_en": "This project stands out due to its innovative use of AI to visualize developer activity, providing valuable insights.",
-      "reason_ko": "이 프로젝트는 개발자 활동을 시각화하여 귀중한 통찰력을 제공하는 AI의 혁신적인 사용으로 돋보입니다."
+      "reason_en": "This project stands out due to its innovative use of AI to visualize GitHub activity, providing valuable insights for developers.",
+      "reason_ko": "이 프로젝트는 GitHub 활동을 시각화하기 위해 AI를 혁신적으로 활용하여 개발자에게 귀중한 통찰력을 제공합니다."
+    },
+    {
+      "name": "cursor-docs-crawler",
+      "reason_en": "This repository showcases the developer's ability to automate documentation processes, converting web content into PDF format.",
+      "reason_ko": "이 레포는 웹 콘텐츠를 PDF 형식으로 변환하여 문서화 프로세스를 자동화하는 개발자의 능력을 보여줍니다."
     },
     {
       "name": "spotify-liked-artist-rank",
-      "reason_en": "This web application effectively combines music data analysis with user interaction, showcasing the developer's web development skills.",
-      "reason_ko": "이 웹 애플리케이션은 음악 데이터 분석과 사용자 상호작용을 효과적으로 결합하여 개발자의 웹 개발 능력을 보여줍니다."
-    },
-    {
-      "name": "CursorMeter",
-      "reason_en": "This macOS application highlights the developer's ability to create user-friendly tools for monitoring IDE usage.",
-      "reason_ko": "이 macOS 애플리케이션은 IDE 사용 모니터링을 위한 사용자 친화적인 도구를 만드는 개발자의 능력을 강조합니다."
+      "reason_en": "This personal web app demonstrates the developer's skills in creating engaging user interfaces and handling data from external APIs.",
+      "reason_ko": "이 개인 웹 앱은 매력적인 사용자 인터페이스를 생성하고 외부 API에서 데이터를 처리하는 개발자의 기술을 보여줍니다."
     }
   ],
   "ai_capabilities": [
     {
-      "key": "ai_insight_visualization",
-      "title_en": "AI Insight Visualization",
-      "title_ko": "AI 통찰력 시각화",
+      "key": "ai_tool_integration",
+      "title_en": "AI Tool Integration",
+      "title_ko": "AI 도구 통합",
       "score": 90,
-      "desc_en": "The 'dev-insights-dashboard' project showcases the developer's ability to visualize insights derived from AI, enhancing developer productivity.",
-      "desc_ko": "'dev-insights-dashboard' 프로젝트는 AI에서 파생된 통찰력을 시각화하여 개발자 생산성을 향상시키는 능력을 보여줍니다."
+      "desc_en": "The developer effectively integrates AI tools into applications, as seen in 'custom-skills' which enhances AI agent capabilities.",
+      "desc_ko": "개발자는 'custom-skills'에서 AI 에이전트 기능을 향상시키는 것을 통해 애플리케이션에 AI 도구를 효과적으로 통합합니다."
     },
     {
-      "key": "automation_tools",
-      "title_en": "Automation Tools",
-      "title_ko": "자동화 도구",
+      "key": "data_analysis",
+      "title_en": "Data Analysis",
+      "title_ko": "데이터 분석",
       "score": 85,
-      "desc_en": "The 'github-star-checker' project exemplifies the developer's skills in creating automation tools that monitor and notify changes in repositories.",
-      "desc_ko": "'github-star-checker' 프로젝트는 리포지토리의 변화를 모니터링하고 알림을 생성하는 자동화 도구를 만드는 개발자의 능력을 보여줍니다."
+      "desc_en": "The 'dev-insights-dashboard' project exemplifies the developer's ability to analyze and visualize data effectively.",
+      "desc_ko": "'dev-insights-dashboard' 프로젝트는 개발자가 데이터를 효과적으로 분석하고 시각화하는 능력을 보여줍니다."
     },
     {
-      "key": "cross_platform_ai_apps",
-      "title_en": "Cross-Platform AI Applications",
-      "title_ko": "크로스 플랫폼 AI 애플리케이션",
+      "key": "automation_workflows",
+      "title_en": "Automation Workflows",
+      "title_ko": "자동화 워크플로",
       "score": 80,
-      "desc_en": "The 'CursorMeter' project demonstrates the developer's capability to build AI applications that function across different platforms.",
-      "desc_ko": "'CursorMeter' 프로젝트는 다양한 플랫폼에서 작동하는 AI 애플리케이션을 구축하는 개발자의 능력을 보여줍니다."
+      "desc_en": "The 'github-star-checker' project automates the monitoring of GitHub stars, showcasing the developer's skills in workflow automation.",
+      "desc_ko": "'github-star-checker' 프로젝트는 GitHub 스타 모니터링을 자동화하여 개발자의 워크플로 자동화 기술을 보여줍니다."
     }
   ],
   "interests": {
@@ -114,17 +115,17 @@
     "keywords": [
       {
         "name": "AI Integration",
-        "desc_en": "The developer shows interest in AI integration through their forked projects like 'rudel', which focuses on session analytics for Claude Code.",
-        "desc_ko": "개발자는 'rudel'과 같은 포크된 프로젝트를 통해 AI 통합에 관심을 보이며, 이는 Claude Code의 세션 분석에 중점을 두고 있습니다."
+        "desc_en": "The developer is interested in AI integration techniques, as evidenced by their work on projects like 'rudel' and 'notebooklm-py'.",
+        "desc_ko": "개발자는 'rudel' 및 'notebooklm-py'와 같은 프로젝트에서 그들의 작업을 통해 AI 통합 기술에 관심을 가지고 있습니다."
       },
       {
-        "name": "Web Development",
-        "desc_en": "The developer explores web development methodologies as seen in their forked project 'developer-roadmap', which outlines paths to becoming a web developer.",
-        "desc_ko": "개발자는 'developer-roadmap'과 같은 포크된 프로젝트를 통해 웹 개발 방법론을 탐구하고 있으며, 이는 웹 개발자가 되는 경로를 설명합니다."
+        "name": "Web Development Frameworks",
+        "desc_en": "The developer studies various web development frameworks, as shown by their interest in projects like 'dapp-bin' and 'santa-tracker-web'.",
+        "desc_ko": "개발자는 'dapp-bin' 및 'santa-tracker-web'와 같은 프로젝트에 대한 관심을 통해 다양한 웹 개발 프레임워크를 연구하고 있습니다."
       }
     ],
-    "desc_en": "The developer's interests reflect a strong inclination towards AI technologies and web development methodologies, as evidenced by their engagement with various forked repositories.",
-    "desc_ko": "개발자의 관심사는 AI 기술과 웹 개발 방법론에 대한 강한 성향을 반영하며, 이는 다양한 포크된 리포지토리와의 참여를 통해 입증됩니다."
+    "desc_en": "The developer's interests reflect a strong inclination towards AI and web technologies, indicating a desire to stay updated with the latest trends in these fields.",
+    "desc_ko": "개발자의 관심사는 AI 및 웹 기술에 대한 강한 경향을 반영하며, 이러한 분야의 최신 트렌드를 유지하고자 하는 욕구를 나타냅니다."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
