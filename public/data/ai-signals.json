@@ -40,6 +40,9 @@
   "local-llm-pipeline": [
     "claude-code"
   ],
+  "local-stt-pipeline": [
+    "claude-code"
+  ],
   "miniroom-demo": [
     "claude-code"
   ],
