@@ -1,141 +1,215 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building AI-driven applications and tools, particularly in the realm of speech recognition and developer productivity. Their portfolio showcases a blend of innovative solutions that leverage modern technologies and frameworks.",
+    "summary": "The developer demonstrates a strong proficiency in building AI-driven applications and tools, particularly in the realms of speech recognition, developer productivity, and web applications. Their portfolio showcases a diverse range of projects that leverage modern programming languages and frameworks, indicating a well-rounded technical skill set.",
     "strengths": [
       {
         "strength": "AI-Driven Applications",
-        "evidence": "The developer has created several projects such as 'local-stt-pipeline' for real-time speech-to-text processing and 'dev-insights-dashboard' which visualizes GitHub activity using AI insights.",
+        "evidence": "The developer has created several projects focused on AI, such as 'local-stt-pipeline' for real-time speech-to-text conversion and 'local-llm-pipeline' for local LLM stack implementation.",
         "tag_en": "AI Tools",
         "tag_ko": "AI 도구"
-      },
-      {
-        "strength": "Cross-Platform Development",
-        "evidence": "Projects like 'CursorMeter' and 'local-llm-pipeline' indicate the developer's ability to create applications that run on different platforms, including macOS and Apple Silicon.",
-        "tag_en": "Cross-Platform",
-        "tag_ko": "크로스 플랫폼"
       },
       {
         "strength": "Web Development",
-        "evidence": "The developer has demonstrated web development skills through projects like 'spotify-liked-artist-rank' and 'supabase-anonymous-board', utilizing frameworks such as Next.js and TypeScript.",
+        "evidence": "The developer has built multiple web applications, including 'spotify-liked-artist-rank' and 'supabase-anonymous-board', showcasing their skills in TypeScript and Next.js.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
       },
       {
-        "strength": "Automation and Workflow Tools",
-        "evidence": "The 'github-star-checker' project exemplifies the developer's capability in creating automation tools that enhance workflow efficiency.",
-        "tag_en": "Automation",
-        "tag_ko": "자동화"
-      }
-    ],
-    "ai_summary": "The developer exhibits a robust understanding of AI technologies, particularly in integrating AI capabilities into practical applications, as seen in their various projects.",
-    "top_technologies": [
-      "Python",
-      "TypeScript",
-      "Swift",
-      "Shell"
-    ]
-  },
-  "ko": {
-    "summary": "이 개발자는 AI 기반 애플리케이션 및 도구 구축에 강한 능력을 보여주며, 특히 음성 인식 및 개발자 생산성 분야에서 두각을 나타냅니다. 그들의 포트폴리오는 현대 기술과 프레임워크를 활용한 혁신적인 솔루션을 혼합하여 보여줍니다.",
-    "strengths": [
-      {
-        "strength": "AI 기반 애플리케이션",
-        "evidence": "'local-stt-pipeline'과 같은 실시간 음성-텍스트 변환 처리 프로젝트와 'dev-insights-dashboard'와 같은 AI 통찰력을 활용하여 GitHub 활동을 시각화하는 프로젝트를 통해 개발자의 능력을 보여줍니다.",
-        "tag_en": "AI Tools",
-        "tag_ko": "AI 도구"
-      },
-      {
-        "strength": "크로스 플랫폼 개발",
-        "evidence": "'CursorMeter'와 'local-llm-pipeline'과 같은 프로젝트는 macOS 및 Apple Silicon을 포함한 다양한 플랫폼에서 실행되는 애플리케이션을 만드는 능력을 나타냅니다.",
+        "strength": "Cross-Platform Development",
+        "evidence": "The 'CursorMeter' project demonstrates the developer's ability to create macOS applications, indicating proficiency in Swift and cross-platform development.",
         "tag_en": "Cross-Platform",
         "tag_ko": "크로스 플랫폼"
       },
       {
-        "strength": "웹 개발",
-        "evidence": "'spotify-liked-artist-rank'와 'supabase-anonymous-board'와 같은 프로젝트를 통해 Next.js 및 TypeScript와 같은 프레임워크를 활용한 웹 개발 기술을 보여줍니다.",
-        "tag_en": "Web Apps",
-        "tag_ko": "웹 앱"
-      },
-      {
-        "strength": "자동화 및 워크플로 도구",
-        "evidence": "'github-star-checker' 프로젝트는 워크플로 효율성을 향상시키는 자동화 도구를 만드는 개발자의 능력을 보여줍니다.",
+        "strength": "Automation and Monitoring",
+        "evidence": "The 'github-star-checker' project exemplifies the developer's capability in creating automation tools that monitor GitHub activities.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
+      },
+      {
+        "strength": "Documentation and Tooling",
+        "evidence": "The 'cursor-docs-crawler' project highlights the developer's focus on enhancing documentation accessibility through automated tools.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
       }
     ],
-    "ai_summary": "개발자는 AI 기술에 대한 강력한 이해를 보여주며, 다양한 프로젝트에서 AI 기능을 실제 애플리케이션에 통합하는 능력을 갖추고 있습니다.",
+    "ai_summary": "The developer exhibits a strong focus on AI capabilities, particularly in speech recognition and LLM integration, which are evident in their projects.",
     "top_technologies": [
       "Python",
       "TypeScript",
       "Swift",
       "Shell"
+    ],
+    "recommended_featured": [
+      {
+        "name": "local-llm-pipeline",
+        "reason_en": "This project showcases the developer's ability to implement a sophisticated local LLM stack, demonstrating advanced knowledge in AI and machine learning.",
+        "reason_ko": "이 프로젝트는 개발자가 복잡한 로컬 LLM 스택을 구현할 수 있는 능력을 보여주며, AI 및 머신러닝에 대한 고급 지식을 나타냅니다."
+      },
+      {
+        "name": "dev-insights-dashboard",
+        "reason_en": "This dashboard project highlights the integration of AI insights into developer productivity, showcasing the developer's focus on enhancing user experience.",
+        "reason_ko": "이 대시보드 프로젝트는 개발자의 생산성을 향상시키기 위해 AI 통찰력을 통합한 것을 강조하며, 사용자 경험 향상에 대한 개발자의 집중을 보여줍니다."
+      },
+      {
+        "name": "cursor-docs-crawler",
+        "reason_en": "This project demonstrates the developer's commitment to improving documentation accessibility, which is crucial for developer tools.",
+        "reason_ko": "이 프로젝트는 개발 도구에 중요한 문서 접근성을 개선하려는 개발자의 의지를 보여줍니다."
+      }
+    ],
+    "ai_capabilities": [
+      {
+        "key": "speech_recognition",
+        "title_en": "Speech Recognition",
+        "title_ko": "음성 인식",
+        "score": 90,
+        "desc_en": "The 'local-stt-pipeline' project illustrates the developer's expertise in implementing real-time speech-to-text solutions, showcasing advanced capabilities in speech recognition.",
+        "desc_ko": "'local-stt-pipeline' 프로젝트는 실시간 음성-텍스트 변환 솔루션을 구현하는 데 있어 개발자의 전문성을 보여주며, 음성 인식에 대한 고급 능력을 나타냅니다."
+      },
+      {
+        "key": "llm_integration",
+        "title_en": "LLM Integration",
+        "title_ko": "LLM 통합",
+        "score": 85,
+        "desc_en": "The 'local-llm-pipeline' project demonstrates the developer's ability to integrate large language models into applications, indicating strong skills in AI.",
+        "desc_ko": "'local-llm-pipeline' 프로젝트는 개발자가 대형 언어 모델을 애플리케이션에 통합할 수 있는 능력을 보여주며, AI에 대한 강력한 기술을 나타냅니다."
+      },
+      {
+        "key": "automation_tools",
+        "title_en": "Automation Tools",
+        "title_ko": "자동화 도구",
+        "score": 80,
+        "desc_en": "The 'github-star-checker' project exemplifies the developer's capability in creating automation tools that enhance productivity and monitoring.",
+        "desc_ko": "'github-star-checker' 프로젝트는 생산성과 모니터링을 향상시키는 자동화 도구를 만드는 개발자의 능력을 보여줍니다."
+      }
     ]
   },
-  "recommended_featured": [
-    {
-      "name": "local-stt-pipeline",
-      "reason_en": "This project showcases the developer's ability to implement real-time speech-to-text functionality, highlighting their expertise in AI and audio processing.",
-      "reason_ko": "이 프로젝트는 실시간 음성-텍스트 변환 기능을 구현하는 개발자의 능력을 보여주며, AI 및 오디오 처리 분야의 전문성을 강조합니다."
-    },
-    {
-      "name": "dev-insights-dashboard",
-      "reason_en": "This repository illustrates the integration of AI insights into a developer portfolio dashboard, demonstrating the developer's innovative approach to visualizing GitHub activity.",
-      "reason_ko": "이 레포는 AI 통찰력을 개발자 포트폴리오 대시보드에 통합한 사례로, GitHub 활동을 시각화하는 개발자의 혁신적인 접근 방식을 보여줍니다."
-    },
-    {
-      "name": "CursorMeter",
-      "reason_en": "This lightweight macOS application reflects the developer's capability in creating user-friendly tools that enhance productivity.",
-      "reason_ko": "이 경량 macOS 애플리케이션은 생산성을 향상시키는 사용자 친화적인 도구를 만드는 개발자의 능력을 반영합니다."
-    }
-  ],
-  "ai_capabilities": [
-    {
-      "key": "speech_recognition",
-      "title_en": "Speech Recognition",
-      "title_ko": "음성 인식",
-      "score": 90,
-      "desc_en": "The 'local-stt-pipeline' project demonstrates the developer's proficiency in implementing real-time speech recognition systems.",
-      "desc_ko": "'local-stt-pipeline' 프로젝트는 실시간 음성 인식 시스템을 구현하는 개발자의 능숙함을 보여줍니다."
-    },
-    {
-      "key": "developer_productivity",
-      "title_en": "Developer Productivity",
-      "title_ko": "개발자 생산성",
-      "score": 85,
-      "desc_en": "The 'dev-insights-dashboard' project highlights the developer's focus on enhancing developer productivity through AI insights.",
-      "desc_ko": "'dev-insights-dashboard' 프로젝트는 AI 통찰력을 통해 개발자 생산성을 향상시키려는 개발자의 집중을 강조합니다."
-    },
-    {
-      "key": "automation_tools",
-      "title_en": "Automation Tools",
-      "title_ko": "자동화 도구",
-      "score": 80,
-      "desc_en": "The 'github-star-checker' project exemplifies the developer's ability to create automation tools that streamline workflows.",
-      "desc_ko": "'github-star-checker' 프로젝트는 워크플로를 간소화하는 자동화 도구를 만드는 개발자의 능력을 보여줍니다."
-    }
-  ],
+  "ko": {
+    "summary": "개발자는 AI 기반 애플리케이션 및 도구를 구축하는 데 강한 능력을 보여주며, 특히 음성 인식, 개발자 생산성 및 웹 애플리케이션 분야에서 두각을 나타냅니다. 그들의 포트폴리오는 현대 프로그래밍 언어와 프레임워크를 활용한 다양한 프로젝트를 보여주며, 균형 잡힌 기술 세트를 나타냅니다.",
+    "strengths": [
+      {
+        "strength": "AI 기반 애플리케이션",
+        "evidence": "'local-stt-pipeline' 프로젝트는 실시간 음성-텍스트 변환을 위한 AI 중심의 프로젝트를 보여줍니다.",
+        "tag_en": "AI Tools",
+        "tag_ko": "AI 도구"
+      },
+      {
+        "strength": "웹 개발",
+        "evidence": "'spotify-liked-artist-rank'와 'supabase-anonymous-board'와 같은 여러 웹 애플리케이션을 구축하여 TypeScript 및 Next.js에 대한 기술을 보여줍니다.",
+        "tag_en": "Web Apps",
+        "tag_ko": "웹 앱"
+      },
+      {
+        "strength": "크로스 플랫폼 개발",
+        "evidence": "'CursorMeter' 프로젝트는 macOS 애플리케이션을 만드는 능력을 보여주며, Swift 및 크로스 플랫폼 개발에 대한 숙련도를 나타냅니다.",
+        "tag_en": "Cross-Platform",
+        "tag_ko": "크로스 플랫폼"
+      },
+      {
+        "strength": "자동화 및 모니터링",
+        "evidence": "'github-star-checker' 프로젝트는 GitHub 활동을 모니터링하는 자동화 도구를 만드는 개발자의 능력을 보여줍니다.",
+        "tag_en": "Automation",
+        "tag_ko": "자동화"
+      },
+      {
+        "strength": "문서화 및 도구 개발",
+        "evidence": "'cursor-docs-crawler' 프로젝트는 자동화 도구를 통해 문서 접근성을 향상시키려는 개발자의 노력을 보여줍니다.",
+        "tag_en": "Documentation",
+        "tag_ko": "문서화"
+      }
+    ],
+    "ai_summary": "개발자는 음성 인식 및 LLM 통합에 강한 집중을 보이며, 이는 그들의 프로젝트에서 분명히 드러납니다.",
+    "top_technologies": [
+      "Python",
+      "TypeScript",
+      "Swift",
+      "Shell"
+    ],
+    "recommended_featured": [
+      {
+        "name": "local-llm-pipeline",
+        "reason_en": "이 프로젝트는 개발자가 복잡한 로컬 LLM 스택을 구현할 수 있는 능력을 보여주며, AI 및 머신러닝에 대한 고급 지식을 나타냅니다.",
+        "reason_ko": "이 프로젝트는 개발자가 복잡한 로컬 LLM 스택을 구현할 수 있는 능력을 보여주며, AI 및 머신러닝에 대한 고급 지식을 나타냅니다."
+      },
+      {
+        "name": "dev-insights-dashboard",
+        "reason_en": "이 대시보드 프로젝트는 개발자의 생산성을 향상시키기 위해 AI 통찰력을 통합한 것을 강조하며, 사용자 경험 향상에 대한 개발자의 집중을 보여줍니다.",
+        "reason_ko": "이 대시보드 프로젝트는 개발자의 생산성을 향상시키기 위해 AI 통찰력을 통합한 것을 강조하며, 사용자 경험 향상에 대한 개발자의 집중을 보여줍니다."
+      },
+      {
+        "name": "cursor-docs-crawler",
+        "reason_en": "이 프로젝트는 개발 도구에 중요한 문서 접근성을 개선하려는 개발자의 의지를 보여줍니다.",
+        "reason_ko": "이 프로젝트는 개발 도구에 중요한 문서 접근성을 개선하려는 개발자의 의지를 보여줍니다."
+      }
+    ],
+    "ai_capabilities": [
+      {
+        "key": "speech_recognition",
+        "title_en": "음성 인식",
+        "title_ko": "Speech Recognition",
+        "score": 90,
+        "desc_en": "'local-stt-pipeline' 프로젝트는 실시간 음성-텍스트 변환 솔루션을 구현하는 데 있어 개발자의 전문성을 보여주며, 음성 인식에 대한 고급 능력을 나타냅니다.",
+        "desc_ko": "'local-stt-pipeline' 프로젝트는 실시간 음성-텍스트 변환 솔루션을 구현하는 데 있어 개발자의 전문성을 보여주며, 음성 인식에 대한 고급 능력을 나타냅니다."
+      },
+      {
+        "key": "llm_integration",
+        "title_en": "LLM 통합",
+        "title_ko": "LLM Integration",
+        "score": 85,
+        "desc_en": "'local-llm-pipeline' 프로젝트는 개발자가 대형 언어 모델을 애플리케이션에 통합할 수 있는 능력을 보여주며, AI에 대한 강력한 기술을 나타냅니다.",
+        "desc_ko": "'local-llm-pipeline' 프로젝트는 개발자가 대형 언어 모델을 애플리케이션에 통합할 수 있는 능력을 보여주며, AI에 대한 강력한 기술을 나타냅니다."
+      },
+      {
+        "key": "automation_tools",
+        "title_en": "자동화 도구",
+        "title_ko": "Automation Tools",
+        "score": 80,
+        "desc_en": "'github-star-checker' 프로젝트는 생산성과 모니터링을 향상시키는 자동화 도구를 만드는 개발자의 능력을 보여줍니다.",
+        "desc_ko": "'github-star-checker' 프로젝트는 생산성과 모니터링을 향상시키는 자동화 도구를 만드는 개발자의 능력을 보여줍니다."
+      }
+    ]
+  },
   "interests": {
     "title_en": "Research Interests",
     "title_ko": "연구 관심사",
     "keywords": [
       {
         "name": "AI Integration",
-        "desc_en": "The developer has shown interest in AI integration through their forked repositories like 'rudel', which focuses on session analytics for Claude Code.",
-        "desc_ko": "개발자는 'rudel'과 같은 포크된 레포를 통해 AI 통합에 대한 관심을 보여주며, 이는 Claude Code의 세션 분석에 중점을 두고 있습니다."
+        "desc_en": "The developer has forked several repositories related to AI integration, such as 'rudel' and 'notebooklm-py', indicating a strong interest in enhancing AI capabilities.",
+        "desc_ko": "개발자는 'rudel' 및 'notebooklm-py'와 같은 AI 통합 관련 여러 레포를 포크하여 AI 기능 향상에 대한 강한 관심을 나타냅니다."
       },
       {
         "name": "Web Development Frameworks",
-        "desc_en": "The developer explores various web development frameworks, as seen in their forked repository 'CodexBar', which provides usage stats for OpenAI Codex.",
-        "desc_ko": "개발자는 OpenAI Codex의 사용 통계를 제공하는 포크된 레포 'CodexBar'에서 볼 수 있듯이 다양한 웹 개발 프레임워크를 탐구하고 있습니다."
+        "desc_en": "The developer has shown interest in web development frameworks by forking projects like 'dapp-bin' and 'santa-tracker-web', which indicates a focus on modern web technologies.",
+        "desc_ko": "개발자는 'dapp-bin' 및 'santa-tracker-web'와 같은 프로젝트를 포크하여 현대 웹 기술에 대한 관심을 나타냅니다."
       }
     ],
-    "desc_en": "The developer's interests reflect a strong inclination towards AI technologies and web development frameworks, indicating a desire to stay updated with the latest trends in these fields.",
-    "desc_ko": "개발자의 관심사는 AI 기술과 웹 개발 프레임워크에 대한 강한 경향을 반영하며, 이러한 분야의 최신 트렌드를 유지하려는 욕구를 나타냅니다."
+    "desc_en": "The developer's interests reflect a commitment to exploring advanced AI techniques and modern web development practices.",
+    "desc_ko": "개발자의 관심사는 고급 AI 기술과 현대 웹 개발 관행을 탐구하려는 의지를 반영합니다."
   },
   "top_technologies": [
     "TypeScript",
     "Python",
     "Java"
+  ],
+  "recommended_featured": [],
+  "ai_capabilities": [
+    {
+      "key": "llm_integration",
+      "title_en": "LLM Integration",
+      "title_ko": "LLM 통합",
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
+    },
+    {
+      "key": "workflow_automation",
+      "title_en": "Workflow Automation",
+      "title_ko": "워크플로우 자동화",
+      "score": 0,
+      "desc_en": "Pending...",
+      "desc_ko": "분석 중..."
+    }
   ],
   "model_provider": "GPT-4o-mini (GitHub)"
 }
