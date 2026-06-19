@@ -8,7 +8,7 @@
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-06-18T17:19:41Z"
+    "updatedAt": "2026-06-19T16:10:24Z"
   },
   {
     "name": "cursor-docs-crawler",
@@ -50,19 +50,6 @@
     "updatedAt": "2026-04-01T16:53:04Z"
   },
   {
-    "name": "claude-config",
-    "description": "Sync and manage Claude Code global/home-level settings across machines",
-    "stargazerCount": 0,
-    "forkCount": 0,
-    "url": "https://github.com/WoojinAhn/claude-config",
-    "isPrivate": false,
-    "isFork": false,
-    "primaryLanguage": {
-      "name": "Shell"
-    },
-    "updatedAt": "2026-06-12T11:23:22Z"
-  },
-  {
     "name": "miniroom-demo",
     "description": "Drag & drop retro miniroom decorator built with Next.js and TypeScript",
     "stargazerCount": 1,
@@ -74,5 +61,18 @@
       "name": "TypeScript"
     },
     "updatedAt": "2026-04-08T02:00:24Z"
+  },
+  {
+    "name": "local-stt-pipeline",
+    "description": "Local real-time Korean speech-to-text (mlx-whisper + silero-vad) for Apple Silicon",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "url": "https://github.com/WoojinAhn/local-stt-pipeline",
+    "isPrivate": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "updatedAt": "2026-06-14T06:25:21Z"
   }
 ]
