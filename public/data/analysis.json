@@ -1,84 +1,85 @@
 {
   "en": {
-    "summary": "The developer demonstrates a strong proficiency in building AI-driven applications and tools, particularly in the realms of TypeScript and Python. Their portfolio showcases a diverse range of projects that leverage AI capabilities, indicating a focus on enhancing developer productivity and user experience.",
+    "summary": "The developer demonstrates a strong technical persona focused on building AI-driven applications and tools. Their portfolio showcases a blend of web development, automation, and machine learning capabilities, particularly in the context of enhancing developer productivity and experience.",
     "strengths": [
       {
-        "strength": "AI-Driven Development",
-        "evidence": "The developer has created several AI-focused projects, such as 'dev-insights-dashboard' which visualizes GitHub activity using AI insights.",
+        "strength": "AI-Powered Tools Development",
+        "evidence": "The developer created multiple AI-driven applications, such as the 'dev-insights-dashboard' which visualizes GitHub activity using AI insights.",
         "tag_en": "AI Tools",
         "tag_ko": "AI 도구"
       },
       {
         "strength": "Web Application Development",
-        "evidence": "Projects like 'spotify-liked-artist-rank' and 'miniroom-demo' highlight the developer's ability to create interactive web applications using TypeScript.",
+        "evidence": "Projects like 'spotify-liked-artist-rank' and 'miniroom-demo' highlight the developer's proficiency in building interactive web applications using TypeScript and Next.js.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
       },
       {
-        "strength": "Local Machine Learning Solutions",
-        "evidence": "The 'local-llm-pipeline' and 'local-stt-pipeline' projects demonstrate the developer's expertise in implementing local machine learning solutions on Apple Silicon.",
-        "tag_en": "Machine Learning",
-        "tag_ko": "기계 학습"
+        "strength": "Local Machine Learning Pipelines",
+        "evidence": "The 'local-llm-pipeline' and 'local-stt-pipeline' projects showcase the developer's ability to implement complex machine learning pipelines on local hardware.",
+        "tag_en": "ML Pipelines",
+        "tag_ko": "ML 파이프라인"
       },
       {
-        "strength": "Automation and Monitoring Tools",
-        "evidence": "The 'github-star-checker' and 'CursorMeter' projects showcase the developer's skills in creating automation and monitoring tools for enhanced productivity.",
+        "strength": "Automation and Monitoring",
+        "evidence": "The 'github-star-checker' and 'CursorMeter' projects reflect the developer's skills in creating automation tools that monitor and enhance user experience.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
       }
     ],
-    "ai_summary": "The developer exhibits a robust understanding of AI integration in software development, particularly through their projects that utilize AI for enhancing user interaction and automating workflows."
+    "ai_summary": "The developer exhibits a strong focus on integrating AI capabilities into their projects, enhancing both functionality and user experience through intelligent automation and insights."
   },
   "ko": {
-    "summary": "개발자는 TypeScript와 Python 분야에서 AI 기반 애플리케이션 및 도구를 구축하는 데 강한 능력을 보여줍니다. 그들의 포트폴리오는 AI 기능을 활용하는 다양한 프로젝트를 선보이며, 개발자 생산성과 사용자 경험 향상에 중점을 두고 있음을 나타냅니다.",
+    "summary": "개발자는 AI 기반 애플리케이션 및 도구 구축에 중점을 둔 강력한 기술 인물을 보여줍니다. 그들의 포트폴리오는 개발자 생산성과 경험을 향상시키는 데 특히 중점을 둔 웹 개발, 자동화 및 머신 러닝 능력의 조화를 보여줍니다.",
     "strengths": [
       {
-        "strength": "AI 기반 개발",
-        "evidence": "'dev-insights-dashboard'와 같은 여러 AI 중심 프로젝트를 통해 개발자는 AI 통찰력을 사용하여 GitHub 활동을 시각화하는 능력을 보여줍니다.",
+        "strength": "AI 기반 도구 개발",
+        "evidence": "'dev-insights-dashboard'와 같은 여러 AI 기반 애플리케이션을 개발하여 GitHub 활동을 AI 통찰력으로 시각화하는 능력을 보여줍니다.",
         "tag_en": "AI Tools",
         "tag_ko": "AI 도구"
       },
       {
         "strength": "웹 애플리케이션 개발",
-        "evidence": "'spotify-liked-artist-rank'와 'miniroom-demo'와 같은 프로젝트는 TypeScript를 사용하여 상호작용 웹 애플리케이션을 만드는 능력을 강조합니다.",
+        "evidence": "'spotify-liked-artist-rank'와 'miniroom-demo' 프로젝트는 TypeScript와 Next.js를 사용하여 상호작용하는 웹 애플리케이션을 구축하는 능력을 강조합니다.",
         "tag_en": "Web Apps",
         "tag_ko": "웹 앱"
       },
       {
-        "strength": "로컬 기계 학습 솔루션",
-        "evidence": "'local-llm-pipeline'과 'local-stt-pipeline' 프로젝트는 Apple Silicon에서 로컬 기계 학습 솔루션을 구현하는 데 있어 개발자의 전문성을 보여줍니다.",
-        "tag_en": "Machine Learning",
-        "tag_ko": "기계 학습"
+        "strength": "로컬 머신 러닝 파이프라인",
+        "evidence": "'local-llm-pipeline'과 'local-stt-pipeline' 프로젝트는 로컬 하드웨어에서 복잡한 머신 러닝 파이프라인을 구현하는 능력을 보여줍니다.",
+        "tag_en": "ML Pipelines",
+        "tag_ko": "ML 파이프라인"
       },
       {
-        "strength": "자동화 및 모니터링 도구",
-        "evidence": "'github-star-checker'와 'CursorMeter' 프로젝트는 생산성을 높이기 위한 자동화 및 모니터링 도구를 만드는 데 있어 개발자의 기술을 보여줍니다.",
+        "strength": "자동화 및 모니터링",
+        "evidence": "'github-star-checker'와 'CursorMeter' 프로젝트는 사용자 경험을 모니터링하고 향상시키는 자동화 도구를 만드는 능력을 반영합니다.",
         "tag_en": "Automation",
         "tag_ko": "자동화"
       }
     ],
-    "ai_summary": "개발자는 사용자 상호작용을 향상하고 워크플로우를 자동화하기 위해 AI를 통합하는 데 있어 강력한 이해를 보여줍니다."
+    "ai_summary": "개발자는 프로젝트에 AI 기능을 통합하는 데 강한 집중력을 보이며, 지능형 자동화 및 통찰력을 통해 기능성과 사용자 경험을 향상시키고 있습니다."
   },
   "top_technologies": [
     "TypeScript",
     "Python",
-    "Swift"
+    "Swift",
+    "Next.js"
   ],
   "recommended_featured": [
     {
       "name": "dev-insights-dashboard",
-      "reason_en": "This project stands out as it combines AI insights with GitHub activity visualization, showcasing the developer's ability to integrate AI into practical applications.",
-      "reason_ko": "이 프로젝트는 AI 통찰력과 GitHub 활동 시각화를 결합하여 개발자가 AI를 실용적인 애플리케이션에 통합하는 능력을 보여줍니다."
+      "reason_en": "This project stands out due to its innovative use of AI to visualize developer activity, providing valuable insights.",
+      "reason_ko": "이 프로젝트는 개발자 활동을 시각화하기 위해 AI를 혁신적으로 사용하여 귀중한 통찰력을 제공합니다."
     },
     {
       "name": "local-llm-pipeline",
-      "reason_en": "This repository highlights the developer's expertise in building local machine learning solutions tailored for Apple Silicon, demonstrating advanced technical skills.",
-      "reason_ko": "이 레포는 Apple Silicon에 맞춘 로컬 기계 학습 솔루션을 구축하는 데 있어 개발자의 전문성을 강조하며, 고급 기술 능력을 보여줍니다."
+      "reason_en": "This repository showcases advanced machine learning techniques implemented on local hardware, demonstrating technical depth.",
+      "reason_ko": "이 레포는 로컬 하드웨어에서 구현된 고급 머신 러닝 기술을 보여주며 기술적 깊이를 나타냅니다."
     },
     {
       "name": "spotify-liked-artist-rank",
-      "reason_en": "This web application effectively ranks artists based on user preferences, showcasing the developer's skills in creating engaging user interfaces.",
-      "reason_ko": "이 웹 애플리케이션은 사용자 선호도에 따라 아티스트를 효과적으로 순위 매기며, 개발자의 매력적인 사용자 인터페이스를 만드는 기술을 보여줍니다."
+      "reason_en": "This web application effectively combines user interaction with data analysis, showcasing the developer's web development skills.",
+      "reason_ko": "이 웹 애플리케이션은 사용자 상호작용과 데이터 분석을 효과적으로 결합하여 개발자의 웹 개발 기술을 보여줍니다."
     }
   ],
   "ai_capabilities": [
@@ -87,24 +88,24 @@
       "title_en": "LLM Integration",
       "title_ko": "LLM 통합",
       "score": 85,
-      "desc_en": "The developer effectively integrates large language models in projects like 'local-llm-pipeline', demonstrating a strong capability in leveraging AI for practical applications.",
-      "desc_ko": "'local-llm-pipeline'과 같은 프로젝트에서 대형 언어 모델을 효과적으로 통합하여 AI를 실용적인 애플리케이션에 활용하는 강한 능력을 보여줍니다."
+      "desc_en": "The developer effectively integrates large language models into applications, as seen in the 'local-llm-pipeline' project which utilizes advanced AI techniques.",
+      "desc_ko": "'local-llm-pipeline' 프로젝트에서 고급 AI 기술을 활용하여 대형 언어 모델을 애플리케이션에 효과적으로 통합합니다."
     },
     {
-      "key": "workflow_automation",
-      "title_en": "Workflow Automation",
-      "title_ko": "워크플로우 자동화",
+      "key": "automation_tools",
+      "title_en": "Automation Tools",
+      "title_ko": "자동화 도구",
       "score": 80,
-      "desc_en": "The 'github-star-checker' project exemplifies the developer's ability to automate workflows, enhancing productivity through intelligent notifications.",
-      "desc_ko": "'github-star-checker' 프로젝트는 지능형 알림을 통해 생산성을 높이는 워크플로우 자동화 능력을 보여줍니다."
+      "desc_en": "The developer creates automation tools that enhance productivity, exemplified by the 'github-star-checker' which monitors repository star changes.",
+      "desc_ko": "'github-star-checker' 프로젝트에서 리포지토리 스타 변화를 모니터링하는 자동화 도구를 생성하여 생산성을 향상시킵니다."
     },
     {
-      "key": "ai_insights",
-      "title_en": "AI Insights",
-      "title_ko": "AI 통찰력",
+      "key": "data_visualization",
+      "title_en": "Data Visualization",
+      "title_ko": "데이터 시각화",
       "score": 90,
-      "desc_en": "The 'dev-insights-dashboard' project showcases the developer's ability to provide actionable insights using AI, significantly improving user experience.",
-      "desc_ko": "'dev-insights-dashboard' 프로젝트는 AI를 사용하여 실행 가능한 통찰력을 제공하는 개발자의 능력을 보여주며, 사용자 경험을 크게 향상시킵니다."
+      "desc_en": "The developer excels in data visualization techniques, particularly in the 'dev-insights-dashboard' which provides insightful analytics.",
+      "desc_ko": "'dev-insights-dashboard' 프로젝트에서 통찰력 있는 분석을 제공하는 데이터 시각화 기술에 뛰어납니다."
     }
   ],
   "interests": {
@@ -113,17 +114,17 @@
     "keywords": [
       {
         "name": "AI Integration",
-        "desc_en": "The developer shows interest in AI integration through their forked projects like 'rudel', which focuses on analytics for AI sessions.",
-        "desc_ko": "개발자는 AI 세션 분석에 중점을 둔 'rudel'과 같은 포크된 프로젝트를 통해 AI 통합에 대한 관심을 보입니다."
+        "desc_en": "The developer studies AI integration techniques, as evidenced by their interest in projects like 'rudel' which focuses on analytics for AI sessions.",
+        "desc_ko": "개발자는 AI 세션 분석에 중점을 둔 'rudel'과 같은 프로젝트에 대한 관심을 통해 AI 통합 기술을 연구합니다."
       },
       {
         "name": "Web Development",
-        "desc_en": "The developer explores web development methodologies as seen in their forked repository 'developer-roadmap', which outlines paths for becoming a web developer.",
-        "desc_ko": "개발자는 웹 개발자가 되는 경로를 설명하는 포크된 레포 'developer-roadmap'에서 웹 개발 방법론을 탐구합니다."
+        "desc_en": "The developer explores modern web development practices, reflected in their engagement with projects like 'dapp-bin' which focuses on decentralized applications.",
+        "desc_ko": "개발자는 분산 애플리케이션에 중점을 둔 'dapp-bin'과 같은 프로젝트에 참여하여 현대 웹 개발 관행을 탐구합니다."
       }
     ],
-    "desc_en": "The developer's interests reflect a strong inclination towards AI and web development, as evidenced by their engagement with various related projects.",
-    "desc_ko": "개발자의 관심사는 다양한 관련 프로젝트에 참여함으로써 AI 및 웹 개발에 대한 강한 경향을 반영합니다."
+    "desc_en": "The developer's research interests include AI integration and modern web development practices, as demonstrated by their engagement with various projects.",
+    "desc_ko": "개발자의 연구 관심사는 AI 통합 및 현대 웹 개발 관행을 포함하며, 다양한 프로젝트에 참여하여 이를 보여줍니다."
   },
   "model_provider": "GPT-4o-mini (GitHub)"
 }
