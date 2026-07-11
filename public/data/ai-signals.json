@@ -23,7 +23,9 @@
     "claude-code"
   ],
   "custom-skills": [],
-  "dev-insights-dashboard": [],
+  "dev-insights-dashboard": [
+    "claude-code"
+  ],
   "github-star-checker": [
     "claude-code"
   ],
