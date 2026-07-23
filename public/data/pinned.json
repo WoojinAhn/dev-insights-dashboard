@@ -8,12 +8,12 @@
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-07-22T14:15:57Z"
+    "updatedAt": "2026-07-23T15:19:34Z"
   },
   {
     "name": "cursor-docs-crawler",
     "description": "Cursor documentation crawler - Convert docs.cursor.com to PDF",
-    "stargazerCount": 4,
+    "stargazerCount": 3,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/cursor-docs-crawler",
     "isPrivate": false,
@@ -21,12 +21,12 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-07-22T01:18:04Z"
+    "updatedAt": "2026-07-23T13:03:56Z"
   },
   {
     "name": "CursorMeter",
     "description": "Lightweight macOS menu bar app for monitoring Cursor IDE usage at a glance",
-    "stargazerCount": 5,
+    "stargazerCount": 7,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/CursorMeter",
     "isPrivate": false,
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Swift"
     },
-    "updatedAt": "2026-07-22T06:13:05Z"
+    "updatedAt": "2026-07-23T13:24:24Z"
   },
   {
     "name": "cclanes",
