@@ -2,7 +2,7 @@
   {
     "name": "CursorMeter",
     "description": "Lightweight macOS menu bar app for monitoring Cursor IDE usage at a glance",
-    "stargazerCount": 7,
+    "stargazerCount": 8,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/CursorMeter",
     "isPrivate": false,
@@ -10,18 +10,18 @@
     "primaryLanguage": {
       "name": "Swift"
     },
-    "updatedAt": "2026-07-25T15:10:43Z"
+    "updatedAt": "2026-07-26T13:54:28Z"
   },
   {
     "name": "github-star-checker",
     "description": "GitHub Actions workflow that monitors star changes across your repos and sends notifications",
-    "stargazerCount": 4,
+    "stargazerCount": 5,
     "forkCount": 1,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-07-25T15:11:24Z"
+    "updatedAt": "2026-07-26T15:11:26Z"
   },
   {
     "name": "cursor-docs-crawler",
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-07-25T01:22:11Z"
+    "updatedAt": "2026-07-26T06:09:34Z"
   },
   {
     "name": "cclanes",
