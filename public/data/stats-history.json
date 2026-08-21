@@ -1,12 +1,5 @@
 [
   {
-    "date": "2026-07-19",
-    "totalStars": 15,
-    "totalForks": 1,
-    "repoCount": 25,
-    "followers": 25
-  },
-  {
     "date": "2026-07-20",
     "totalStars": 16,
     "totalForks": 1,
@@ -222,5 +215,12 @@
     "totalForks": 1,
     "repoCount": 25,
     "followers": 37
+  },
+  {
+    "date": "2026-08-21",
+    "totalStars": 20,
+    "totalForks": 1,
+    "repoCount": 25,
+    "followers": 27
   }
 ]
