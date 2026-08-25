@@ -12,7 +12,7 @@
       "name": "TypeScript"
     },
     "parent": {
-      "name": "rudel",
+      "name": "cli",
       "owner": {
         "login": "opalinehq"
       },
@@ -37,8 +37,8 @@
       "owner": {
         "login": "fivetaku"
       },
-      "stargazerCount": 2401,
-      "forkCount": 293
+      "stargazerCount": 2406,
+      "forkCount": 292
     }
   },
   {
@@ -58,8 +58,8 @@
       "owner": {
         "login": "obra"
       },
-      "stargazerCount": 276958,
-      "forkCount": 24778
+      "stargazerCount": 277417,
+      "forkCount": 24821
     }
   },
   {
@@ -100,8 +100,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 18895,
-      "forkCount": 2548
+      "stargazerCount": 18921,
+      "forkCount": 2552
     }
   },
   {
@@ -121,8 +121,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 20531,
-      "forkCount": 1767
+      "stargazerCount": 20565,
+      "forkCount": 1774
     }
   },
   {
@@ -142,7 +142,7 @@
       "owner": {
         "login": "agenticnotetaking"
       },
-      "stargazerCount": 3481,
+      "stargazerCount": 3480,
       "forkCount": 220
     }
   },
@@ -184,7 +184,7 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 8710,
+      "stargazerCount": 8716,
       "forkCount": 2092
     }
   },
@@ -350,8 +350,8 @@
       "owner": {
         "login": "mapstruct"
       },
-      "stargazerCount": 7681,
-      "forkCount": 1048
+      "stargazerCount": 7682,
+      "forkCount": 1049
     }
   },
   {
@@ -453,8 +453,8 @@
       "owner": {
         "login": "nilbuild"
       },
-      "stargazerCount": 365311,
-      "forkCount": 44846
+      "stargazerCount": 365367,
+      "forkCount": 44852
     }
   },
   {
