@@ -10,18 +10,18 @@
     "primaryLanguage": {
       "name": "Swift"
     },
-    "updatedAt": "2026-08-17T06:29:23Z"
+    "updatedAt": "2026-08-26T06:18:20Z"
   },
   {
     "name": "github-star-checker",
     "description": "GitHub Actions workflow that monitors star changes across your repos and sends notifications",
-    "stargazerCount": 4,
+    "stargazerCount": 5,
     "forkCount": 1,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-08-25T15:16:34Z"
+    "updatedAt": "2026-08-26T15:23:27Z"
   },
   {
     "name": "cursor-docs-crawler",
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-08-25T00:30:21Z"
+    "updatedAt": "2026-08-26T00:32:01Z"
   },
   {
     "name": "cclanes",
