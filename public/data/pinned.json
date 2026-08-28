@@ -15,18 +15,18 @@
   {
     "name": "github-star-checker",
     "description": "GitHub Actions workflow that monitors star changes across your repos and sends notifications",
-    "stargazerCount": 5,
+    "stargazerCount": 6,
     "forkCount": 1,
     "url": "https://github.com/WoojinAhn/github-star-checker",
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-08-26T15:23:27Z"
+    "updatedAt": "2026-08-26T17:14:13Z"
   },
   {
     "name": "cursor-docs-crawler",
     "description": "Cursor documentation crawler - Convert docs.cursor.com to PDF",
-    "stargazerCount": 3,
+    "stargazerCount": 4,
     "forkCount": 0,
     "url": "https://github.com/WoojinAhn/cursor-docs-crawler",
     "isPrivate": false,
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-08-26T00:32:01Z"
+    "updatedAt": "2026-08-27T05:21:51Z"
   },
   {
     "name": "cclanes",
