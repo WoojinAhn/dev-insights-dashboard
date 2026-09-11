@@ -2,7 +2,7 @@
   {
     "name": "CursorMeter",
     "description": "Lightweight macOS menu bar app for monitoring Cursor IDE usage at a glance",
-    "stargazerCount": 12,
+    "stargazerCount": 13,
     "forkCount": 1,
     "url": "https://github.com/WoojinAhn/CursorMeter",
     "isPrivate": false,
@@ -10,7 +10,7 @@
     "primaryLanguage": {
       "name": "Swift"
     },
-    "updatedAt": "2026-09-10T15:39:39Z"
+    "updatedAt": "2026-09-11T16:16:08Z"
   },
   {
     "name": "github-star-checker",
@@ -21,7 +21,7 @@
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-09-10T14:19:34Z"
+    "updatedAt": "2026-09-11T14:14:40Z"
   },
   {
     "name": "cursor-docs-crawler",
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-09-09T01:47:51Z"
+    "updatedAt": "2026-09-11T01:42:04Z"
   },
   {
     "name": "cclanes",
