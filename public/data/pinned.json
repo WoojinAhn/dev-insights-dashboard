@@ -3,7 +3,7 @@
     "name": "CursorMeter",
     "description": "Lightweight macOS menu bar app for monitoring Cursor IDE usage at a glance",
     "stargazerCount": 13,
-    "forkCount": 1,
+    "forkCount": 2,
     "url": "https://github.com/WoojinAhn/CursorMeter",
     "isPrivate": false,
     "isFork": false,
@@ -21,7 +21,7 @@
     "isPrivate": false,
     "isFork": false,
     "primaryLanguage": null,
-    "updatedAt": "2026-09-21T19:15:12Z"
+    "updatedAt": "2026-09-22T14:37:48Z"
   },
   {
     "name": "cursor-docs-crawler",
@@ -34,7 +34,7 @@
     "primaryLanguage": {
       "name": "Python"
     },
-    "updatedAt": "2026-09-20T08:23:57Z"
+    "updatedAt": "2026-09-22T02:04:05Z"
   },
   {
     "name": "cclanes",
