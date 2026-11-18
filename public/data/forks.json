@@ -5,16 +5,16 @@
     "url": "https://github.com/WoojinAhn/rudel",
     "isPrivate": false,
     "isFork": true,
-    "updatedAt": "2026-08-24T15:30:29Z",
+    "updatedAt": "2026-11-18T18:58:25Z",
     "stargazerCount": 0,
     "forkCount": 0,
     "primaryLanguage": {
       "name": "TypeScript"
     },
     "parent": {
-      "name": "cli",
+      "name": "opaline",
       "owner": {
-        "login": "opalinehq"
+        "login": "evrendom"
       },
       "stargazerCount": 310,
       "forkCount": 15
@@ -37,7 +37,7 @@
       "owner": {
         "login": "fivetaku"
       },
-      "stargazerCount": 2701,
+      "stargazerCount": 2707,
       "forkCount": 307
     }
   },
@@ -58,8 +58,8 @@
       "owner": {
         "login": "obra"
       },
-      "stargazerCount": 319280,
-      "forkCount": 28473
+      "stargazerCount": 321284,
+      "forkCount": 28549
     }
   },
   {
@@ -100,8 +100,8 @@
       "owner": {
         "login": "teng-lin"
       },
-      "stargazerCount": 20269,
-      "forkCount": 2690
+      "stargazerCount": 20282,
+      "forkCount": 2691
     }
   },
   {
@@ -121,8 +121,8 @@
       "owner": {
         "login": "steipete"
       },
-      "stargazerCount": 23199,
-      "forkCount": 2237
+      "stargazerCount": 23213,
+      "forkCount": 2239
     }
   },
   {
@@ -184,8 +184,8 @@
       "owner": {
         "login": "anthropics"
       },
-      "stargazerCount": 9996,
-      "forkCount": 2283
+      "stargazerCount": 10009,
+      "forkCount": 2285
     }
   },
   {
@@ -309,7 +309,7 @@
         "login": "naver"
       },
       "stargazerCount": 699,
-      "forkCount": 127
+      "forkCount": 128
     }
   },
   {
@@ -453,8 +453,8 @@
       "owner": {
         "login": "nilbuild"
       },
-      "stargazerCount": 372238,
-      "forkCount": 46508
+      "stargazerCount": 372318,
+      "forkCount": 46511
     }
   },
   {
@@ -474,8 +474,8 @@
       "owner": {
         "login": "ethereum"
       },
-      "stargazerCount": 1022,
-      "forkCount": 395
+      "stargazerCount": 1021,
+      "forkCount": 393
     }
   },
   {
